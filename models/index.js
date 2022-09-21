@@ -1,11 +1,10 @@
-// @ts-check
-import { initSchema } from '@aws-amplify/datastore';
-import { schema } from './schema';
+import {SkillLink} from '../src/ui-components';
 
+export default function Home() {
+  return(
+    <div>
+      <SkillLink />
+    </div>
 
-
-const { Skill } = initSchema(schema);
-
-export {
-  Skill
+  )
 };
