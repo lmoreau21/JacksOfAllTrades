@@ -1,9 +1,5 @@
 {
   "dependencies": {
     "aws-amplify": "^4.3.36"
-  },
-  "scripts": {
-    "build": "webpack --config webpack.config.js"
-  }
-  
+  }  
 }
