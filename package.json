@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "aws-amplify": "^4.3.36"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+
   }
+  
 }
