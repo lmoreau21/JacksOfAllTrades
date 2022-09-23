@@ -95,9 +95,14 @@ CODEGEN="{\
 }"
 
 AUTHCONFIG="{\
-\"facebookAppIdUserPool\":\"888888888888888\",\
-\"facebookAppSecretUserPool\":\"88888888888888888\"\
-}"
+\"googleAppIdUserPool\":\"888888888888888\",\ 
+\"googleAppSecretUserPool\":\"88888888888888888\"\
+}" 
+
+# Changed from these lines
+#\"facebookAppIdUserPool\":\"888888888888888\",\ 
+#\"facebookAppSecretUserPool\":\"88888888888888888\"\
+#}"
 
 CATEGORIES="{\
 \"auth\":$AUTHCONFIG\
