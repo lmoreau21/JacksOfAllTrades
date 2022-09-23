@@ -1,17 +1,15 @@
-import {SkillLink} from '../src/ui-components';
-
+// @ts-check
 import { initSchema } from '@aws-amplify/datastore';
 import { schema } from './schema';
 
 
 
-const { Skill } = initSchema(schema);
+const { Roles, UserRolesReference, Logins, Users, SkillProfile } = initSchema(schema);
 
-export default function Home() {
-  return(
-    <div>
-      <SkillLink/>
-    </div>
-
-  )
+export {
+  Roles,
+  UserRolesReference,
+  Logins,
+  Users,
+  SkillProfile
 };
