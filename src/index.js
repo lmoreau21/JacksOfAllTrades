@@ -17,7 +17,7 @@ root.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
 */
-import {HeroLayout1} from "/Users/alecp/JacksOfAllTrades/src/ui-components";
+import {HeroLayout1} from "../src/ui-components";
 
 export default function Home (){
   return (
