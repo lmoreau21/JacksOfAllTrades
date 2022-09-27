@@ -3,9 +3,9 @@ import '../styles/globals.css'
 import {Amplify} from 'aws-amplify'
 import config from '../src/aws-exports'
 
-import {AmplifyProvider} from '../node_modules/@aws-amplify/ui-react'
+import {AmplifyProvider} from '@aws-amplify/ui-react'
 //import { Component } from 'react';
-import {studioTheme} from '../src/ui-components'
+import {studioTheme} from '@aws-amplify/ui-react'
 
 import '@aws-amplify/ui-react/styles.css';
 
