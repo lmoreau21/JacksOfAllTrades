@@ -1,7 +1,7 @@
-/*
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+//import '/index.css';
 import App from './App';
 import reportWebVitals from './react-app/src/reportWebVitals';
 
@@ -16,7 +16,6 @@ root.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 
-*/
 import {HeroLayout1} from "../src/ui-components";
 
 export default function Home (){
