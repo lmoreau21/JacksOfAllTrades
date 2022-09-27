@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './src/jacksofalltrades/src/App';
+import reportWebVitals from './src/jacksofalltrades/src/reportWebVitals';
 
 import { Amplify } from 'aws-amplify';
 import awsExports from './aws-exports';
