@@ -1,4 +1,49 @@
 /*
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
+import './App.css';
+
+import {Amplify} from 'aws-amplify'
+import config from '../src/aws-exports'
+import {AmplifyProvider} from '@aws-amplify/ui-react'
+import {Login, studioTheme} from '../src/ui-components'
+import '@aws-amplify/ui-react/styles.css'
+//import { SignUp } from '@aws-amplify/ui-react/dist/types/components/Authenticator/SignUp';
+Amplify.configure(config)
+function App({Component, pageProps}) {
+  return (
+    <AmplifyProvider theme={Login}>
+      
+      <Component {...pageProps}/>
+    </AmplifyProvider>
+  );
+}
+
+export default App;
+*/
+import './App.css';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
+import './App.css';
+
+import {Amplify} from 'aws-amplify'
+import config from '../src/aws-exports'
+import {AmplifyProvider} from '@aws-amplify/ui-react'
+import {Login, studioTheme} from '../src/ui-components'
+import '@aws-amplify/ui-react/styles.css'
+Amplify.configure(config)
+function App({Component, pageProps}) {
+  return (
+    <AmplifyProvider theme={Login}>
+            <Component {...pageProps}/>
+      </AmplifyProvider>
+    );
+}
+
+export default App;
+/*
 import logo from './logo.svg';
 import './App.css';
 
@@ -24,7 +69,7 @@ function App() {
 }
 
 export default App;
-*/
+
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -113,4 +158,4 @@ return (
 }
 
 export default App;
-
+*/

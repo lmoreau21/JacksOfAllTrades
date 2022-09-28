@@ -1,0 +1,39 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-jacksofalltrades-staging-184202-authRole",
+      "UnauthRoleArn": "arn:aws:iam::473277448697:role/amplify-jacksofalltrades-staging-184202-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::473277448697:role/amplify-jacksofalltrades-staging-184202-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
+      "UnauthRoleName": "amplify-jacksofalltrades-staging-184202-unauthRole",
+      "StackName": "amplify-jacksofalltrades-staging-184202",
+      "StackId": "arn:aws:cloudformation:us-east-1:473277448697:stack/amplify-jacksofalltrades-staging-184202/ecb03580-345c-11ed-ae28-0e6cbdd23f15",
+      "AmplifyAppId": "d1ukjek0j1m8s5",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "JacksOfAllTrades": {}
+      },
+      "function": {
+        "JacksOfAllTradesDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
+          "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-42435778705678527944-build.zip"
+        },
+        "JacksOfAllTradesCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
+          "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-59706234776972356d50-build.zip"
+        },
+        "JacksOfAllTradesVerifyAuthChallengeResponse": {
+          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
+          "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-472b3838783449577767-build.zip"
+        },
+        "JacksOfAllTradesCustomMessage": {
+          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
+          "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-4a4567726e4751567a39-build.zip"
+        }
+      }
+    }
+  }
+}
