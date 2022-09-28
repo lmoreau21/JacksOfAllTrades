@@ -1,0 +1,51 @@
+type Roles @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  roleName: String!
+  description: String!
+  isEnabled: Boolean!
+  displayName: String!
+  visable: Boolean!
+  userRolesReferenceID: ID @index(name: "byUserRolesReference")
+}
+
+type UserRolesReference @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userID: ID!
+  roleID: ID!
+  userRoles: [Roles] @hasMany(indexName: "byUserRolesReference", fields: ["id"])
+}
+
+type Logins @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userName: String!
+  userPassword: String!
+  Users: Users @hasOne
+}
+
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  userName: String!
+  userEmail: AWSEmail!
+  UserRolesReference: UserRolesReference @hasOne
+}
+
+type SkillProfile @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  description: String!
+  time: String!
+  photo: AWSURL!
+  difficulty: String!
+  category: String!
+  userInteraction: AWSJSON
+  videoRights: String
+  authorAccountID: ID!
+  video: AWSURL
+  instructions: String!
+  materialsList: String
+  requiresMaterials: Boolean!
+  photoRights: String
+  instructionRights: String
+} 

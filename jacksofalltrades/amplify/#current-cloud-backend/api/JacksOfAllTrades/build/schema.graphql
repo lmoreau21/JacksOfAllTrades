@@ -1,0 +1,578 @@
+
+type Roles @aws_iam @aws_api_key {
+  id: ID!
+  roleName: String!
+  description: String!
+  isEnabled: Boolean!
+  displayName: String!
+  visable: Boolean!
+  userRolesReferenceID: ID
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+}
+
+type UserRolesReference @aws_iam @aws_api_key {
+  id: ID!
+  userID: ID!
+  roleID: ID!
+  userRoles(filter: ModelRolesFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelRolesConnection
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+}
+
+type Logins @aws_iam @aws_api_key {
+  id: ID!
+  userName: String!
+  userPassword: String!
+  Users: Users
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+  loginsUsersId: ID
+}
+
+type Users @aws_iam @aws_api_key {
+  id: ID!
+  firstName: String!
+  lastName: String!
+  userName: String!
+  userEmail: AWSEmail!
+  UserRolesReference: UserRolesReference
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+  usersUserRolesReferenceId: ID
+}
+
+type SkillProfile @aws_iam @aws_api_key {
+  id: ID!
+  title: String!
+  description: String!
+  time: String!
+  photo: AWSURL!
+  difficulty: String!
+  category: String!
+  userInteraction: AWSJSON
+  videoRights: String
+  authorAccountID: ID!
+  video: AWSURL
+  instructions: String!
+  materialsList: String
+  requiresMaterials: Boolean!
+  photoRights: String
+  instructionRights: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+  _version: Int!
+  _deleted: Boolean
+  _lastChangedAt: AWSTimestamp!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelRolesConnection @aws_api_key @aws_iam {
+  items: [Roles]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelRolesFilterInput {
+  id: ModelIDInput
+  roleName: ModelStringInput
+  description: ModelStringInput
+  isEnabled: ModelBooleanInput
+  displayName: ModelStringInput
+  visable: ModelBooleanInput
+  userRolesReferenceID: ModelIDInput
+  and: [ModelRolesFilterInput]
+  or: [ModelRolesFilterInput]
+  not: ModelRolesFilterInput
+}
+
+type Query {
+  getRoles(id: ID!): Roles @aws_api_key @aws_iam
+  listRoles(filter: ModelRolesFilterInput, limit: Int, nextToken: String): ModelRolesConnection @aws_api_key @aws_iam
+  syncRoles(filter: ModelRolesFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelRolesConnection @aws_api_key @aws_iam
+  getUserRolesReference(id: ID!): UserRolesReference @aws_api_key @aws_iam
+  listUserRolesReferences(filter: ModelUserRolesReferenceFilterInput, limit: Int, nextToken: String): ModelUserRolesReferenceConnection @aws_api_key @aws_iam
+  syncUserRolesReferences(filter: ModelUserRolesReferenceFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelUserRolesReferenceConnection @aws_api_key @aws_iam
+  getLogins(id: ID!): Logins @aws_api_key @aws_iam
+  listLogins(filter: ModelLoginsFilterInput, limit: Int, nextToken: String): ModelLoginsConnection @aws_api_key @aws_iam
+  syncLogins(filter: ModelLoginsFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelLoginsConnection @aws_api_key @aws_iam
+  getUsers(id: ID!): Users @aws_api_key @aws_iam
+  listUsers(filter: ModelUsersFilterInput, limit: Int, nextToken: String): ModelUsersConnection @aws_api_key @aws_iam
+  syncUsers(filter: ModelUsersFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelUsersConnection @aws_api_key @aws_iam
+  getSkillProfile(id: ID!): SkillProfile @aws_api_key @aws_iam
+  listSkillProfiles(filter: ModelSkillProfileFilterInput, limit: Int, nextToken: String): ModelSkillProfileConnection @aws_api_key @aws_iam
+  syncSkillProfiles(filter: ModelSkillProfileFilterInput, limit: Int, nextToken: String, lastSync: AWSTimestamp): ModelSkillProfileConnection @aws_api_key @aws_iam
+}
+
+input ModelRolesConditionInput {
+  roleName: ModelStringInput
+  description: ModelStringInput
+  isEnabled: ModelBooleanInput
+  displayName: ModelStringInput
+  visable: ModelBooleanInput
+  userRolesReferenceID: ModelIDInput
+  and: [ModelRolesConditionInput]
+  or: [ModelRolesConditionInput]
+  not: ModelRolesConditionInput
+}
+
+input CreateRolesInput {
+  id: ID
+  roleName: String!
+  description: String!
+  isEnabled: Boolean!
+  displayName: String!
+  visable: Boolean!
+  userRolesReferenceID: ID
+  _version: Int
+}
+
+input UpdateRolesInput {
+  id: ID!
+  roleName: String
+  description: String
+  isEnabled: Boolean
+  displayName: String
+  visable: Boolean
+  userRolesReferenceID: ID
+  _version: Int
+}
+
+input DeleteRolesInput {
+  id: ID!
+  _version: Int
+}
+
+type Mutation {
+  createRoles(input: CreateRolesInput!, condition: ModelRolesConditionInput): Roles @aws_api_key @aws_iam
+  updateRoles(input: UpdateRolesInput!, condition: ModelRolesConditionInput): Roles @aws_api_key @aws_iam
+  deleteRoles(input: DeleteRolesInput!, condition: ModelRolesConditionInput): Roles @aws_api_key @aws_iam
+  createUserRolesReference(input: CreateUserRolesReferenceInput!, condition: ModelUserRolesReferenceConditionInput): UserRolesReference @aws_api_key @aws_iam
+  updateUserRolesReference(input: UpdateUserRolesReferenceInput!, condition: ModelUserRolesReferenceConditionInput): UserRolesReference @aws_api_key @aws_iam
+  deleteUserRolesReference(input: DeleteUserRolesReferenceInput!, condition: ModelUserRolesReferenceConditionInput): UserRolesReference @aws_api_key @aws_iam
+  createLogins(input: CreateLoginsInput!, condition: ModelLoginsConditionInput): Logins @aws_api_key @aws_iam
+  updateLogins(input: UpdateLoginsInput!, condition: ModelLoginsConditionInput): Logins @aws_api_key @aws_iam
+  deleteLogins(input: DeleteLoginsInput!, condition: ModelLoginsConditionInput): Logins @aws_api_key @aws_iam
+  createUsers(input: CreateUsersInput!, condition: ModelUsersConditionInput): Users @aws_api_key @aws_iam
+  updateUsers(input: UpdateUsersInput!, condition: ModelUsersConditionInput): Users @aws_api_key @aws_iam
+  deleteUsers(input: DeleteUsersInput!, condition: ModelUsersConditionInput): Users @aws_api_key @aws_iam
+  createSkillProfile(input: CreateSkillProfileInput!, condition: ModelSkillProfileConditionInput): SkillProfile @aws_api_key @aws_iam
+  updateSkillProfile(input: UpdateSkillProfileInput!, condition: ModelSkillProfileConditionInput): SkillProfile @aws_api_key @aws_iam
+  deleteSkillProfile(input: DeleteSkillProfileInput!, condition: ModelSkillProfileConditionInput): SkillProfile @aws_api_key @aws_iam
+}
+
+type Subscription {
+  onCreateRoles: Roles @aws_subscribe(mutations: ["createRoles"]) @aws_api_key @aws_iam
+  onUpdateRoles: Roles @aws_subscribe(mutations: ["updateRoles"]) @aws_api_key @aws_iam
+  onDeleteRoles: Roles @aws_subscribe(mutations: ["deleteRoles"]) @aws_api_key @aws_iam
+  onCreateUserRolesReference: UserRolesReference @aws_subscribe(mutations: ["createUserRolesReference"]) @aws_api_key @aws_iam
+  onUpdateUserRolesReference: UserRolesReference @aws_subscribe(mutations: ["updateUserRolesReference"]) @aws_api_key @aws_iam
+  onDeleteUserRolesReference: UserRolesReference @aws_subscribe(mutations: ["deleteUserRolesReference"]) @aws_api_key @aws_iam
+  onCreateLogins: Logins @aws_subscribe(mutations: ["createLogins"]) @aws_api_key @aws_iam
+  onUpdateLogins: Logins @aws_subscribe(mutations: ["updateLogins"]) @aws_api_key @aws_iam
+  onDeleteLogins: Logins @aws_subscribe(mutations: ["deleteLogins"]) @aws_api_key @aws_iam
+  onCreateUsers: Users @aws_subscribe(mutations: ["createUsers"]) @aws_api_key @aws_iam
+  onUpdateUsers: Users @aws_subscribe(mutations: ["updateUsers"]) @aws_api_key @aws_iam
+  onDeleteUsers: Users @aws_subscribe(mutations: ["deleteUsers"]) @aws_api_key @aws_iam
+  onCreateSkillProfile: SkillProfile @aws_subscribe(mutations: ["createSkillProfile"]) @aws_api_key @aws_iam
+  onUpdateSkillProfile: SkillProfile @aws_subscribe(mutations: ["updateSkillProfile"]) @aws_api_key @aws_iam
+  onDeleteSkillProfile: SkillProfile @aws_subscribe(mutations: ["deleteSkillProfile"]) @aws_api_key @aws_iam
+}
+
+type ModelUserRolesReferenceConnection @aws_api_key @aws_iam {
+  items: [UserRolesReference]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelUserRolesReferenceFilterInput {
+  id: ModelIDInput
+  userID: ModelIDInput
+  roleID: ModelIDInput
+  and: [ModelUserRolesReferenceFilterInput]
+  or: [ModelUserRolesReferenceFilterInput]
+  not: ModelUserRolesReferenceFilterInput
+}
+
+input ModelUserRolesReferenceConditionInput {
+  userID: ModelIDInput
+  roleID: ModelIDInput
+  and: [ModelUserRolesReferenceConditionInput]
+  or: [ModelUserRolesReferenceConditionInput]
+  not: ModelUserRolesReferenceConditionInput
+}
+
+input CreateUserRolesReferenceInput {
+  id: ID
+  userID: ID!
+  roleID: ID!
+  _version: Int
+}
+
+input UpdateUserRolesReferenceInput {
+  id: ID!
+  userID: ID
+  roleID: ID
+  _version: Int
+}
+
+input DeleteUserRolesReferenceInput {
+  id: ID!
+  _version: Int
+}
+
+type ModelLoginsConnection @aws_api_key @aws_iam {
+  items: [Logins]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelLoginsFilterInput {
+  id: ModelIDInput
+  userName: ModelStringInput
+  userPassword: ModelStringInput
+  and: [ModelLoginsFilterInput]
+  or: [ModelLoginsFilterInput]
+  not: ModelLoginsFilterInput
+  loginsUsersId: ModelIDInput
+}
+
+input ModelLoginsConditionInput {
+  userName: ModelStringInput
+  userPassword: ModelStringInput
+  and: [ModelLoginsConditionInput]
+  or: [ModelLoginsConditionInput]
+  not: ModelLoginsConditionInput
+  loginsUsersId: ModelIDInput
+}
+
+input CreateLoginsInput {
+  id: ID
+  userName: String!
+  userPassword: String!
+  _version: Int
+  loginsUsersId: ID
+}
+
+input UpdateLoginsInput {
+  id: ID!
+  userName: String
+  userPassword: String
+  _version: Int
+  loginsUsersId: ID
+}
+
+input DeleteLoginsInput {
+  id: ID!
+  _version: Int
+}
+
+type ModelUsersConnection @aws_api_key @aws_iam {
+  items: [Users]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelUsersFilterInput {
+  id: ModelIDInput
+  firstName: ModelStringInput
+  lastName: ModelStringInput
+  userName: ModelStringInput
+  userEmail: ModelStringInput
+  and: [ModelUsersFilterInput]
+  or: [ModelUsersFilterInput]
+  not: ModelUsersFilterInput
+  usersUserRolesReferenceId: ModelIDInput
+}
+
+input ModelUsersConditionInput {
+  firstName: ModelStringInput
+  lastName: ModelStringInput
+  userName: ModelStringInput
+  userEmail: ModelStringInput
+  and: [ModelUsersConditionInput]
+  or: [ModelUsersConditionInput]
+  not: ModelUsersConditionInput
+  usersUserRolesReferenceId: ModelIDInput
+}
+
+input CreateUsersInput {
+  id: ID
+  firstName: String!
+  lastName: String!
+  userName: String!
+  userEmail: AWSEmail!
+  _version: Int
+  usersUserRolesReferenceId: ID
+}
+
+input UpdateUsersInput {
+  id: ID!
+  firstName: String
+  lastName: String
+  userName: String
+  userEmail: AWSEmail
+  _version: Int
+  usersUserRolesReferenceId: ID
+}
+
+input DeleteUsersInput {
+  id: ID!
+  _version: Int
+}
+
+type ModelSkillProfileConnection @aws_api_key @aws_iam {
+  items: [SkillProfile]!
+  nextToken: String
+  startedAt: AWSTimestamp
+}
+
+input ModelSkillProfileFilterInput {
+  id: ModelIDInput
+  title: ModelStringInput
+  description: ModelStringInput
+  time: ModelStringInput
+  photo: ModelStringInput
+  difficulty: ModelStringInput
+  category: ModelStringInput
+  userInteraction: ModelStringInput
+  videoRights: ModelStringInput
+  authorAccountID: ModelIDInput
+  video: ModelStringInput
+  instructions: ModelStringInput
+  materialsList: ModelStringInput
+  requiresMaterials: ModelBooleanInput
+  photoRights: ModelStringInput
+  instructionRights: ModelStringInput
+  and: [ModelSkillProfileFilterInput]
+  or: [ModelSkillProfileFilterInput]
+  not: ModelSkillProfileFilterInput
+}
+
+input ModelSkillProfileConditionInput {
+  title: ModelStringInput
+  description: ModelStringInput
+  time: ModelStringInput
+  photo: ModelStringInput
+  difficulty: ModelStringInput
+  category: ModelStringInput
+  userInteraction: ModelStringInput
+  videoRights: ModelStringInput
+  authorAccountID: ModelIDInput
+  video: ModelStringInput
+  instructions: ModelStringInput
+  materialsList: ModelStringInput
+  requiresMaterials: ModelBooleanInput
+  photoRights: ModelStringInput
+  instructionRights: ModelStringInput
+  and: [ModelSkillProfileConditionInput]
+  or: [ModelSkillProfileConditionInput]
+  not: ModelSkillProfileConditionInput
+}
+
+input CreateSkillProfileInput {
+  id: ID
+  title: String!
+  description: String!
+  time: String!
+  photo: AWSURL!
+  difficulty: String!
+  category: String!
+  userInteraction: AWSJSON
+  videoRights: String
+  authorAccountID: ID!
+  video: AWSURL
+  instructions: String!
+  materialsList: String
+  requiresMaterials: Boolean!
+  photoRights: String
+  instructionRights: String
+  _version: Int
+}
+
+input UpdateSkillProfileInput {
+  id: ID!
+  title: String
+  description: String
+  time: String
+  photo: AWSURL
+  difficulty: String
+  category: String
+  userInteraction: AWSJSON
+  videoRights: String
+  authorAccountID: ID
+  video: AWSURL
+  instructions: String
+  materialsList: String
+  requiresMaterials: Boolean
+  photoRights: String
+  instructionRights: String
+  _version: Int
+}
+
+input DeleteSkillProfileInput {
+  id: ID!
+  _version: Int
+}
+

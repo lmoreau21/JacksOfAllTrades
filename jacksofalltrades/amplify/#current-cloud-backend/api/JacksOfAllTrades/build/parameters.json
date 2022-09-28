@@ -1,0 +1,13 @@
+{
+    "AppSyncApiName": "JacksOfAllTrades",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "S3DeploymentBucket": "amplify-jacksofalltrades-staging-184202-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/8e31593b5148cccfbcd1889d05bdf0622d7ea7d9"
+}
