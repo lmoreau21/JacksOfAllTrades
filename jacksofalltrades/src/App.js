@@ -24,7 +24,7 @@ export default App;
 */
 import './App.css';
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 
 import './App.css';
 
@@ -33,6 +33,7 @@ import config from '../src/aws-exports'
 import {AmplifyProvider} from '@aws-amplify/ui-react'
 import {Login, studioTheme} from '../src/ui-components'
 import '@aws-amplify/ui-react/styles.css'
+
 Amplify.configure(config)
 function App({Component, pageProps}) {
   return (

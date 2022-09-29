@@ -6,14 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { SkillProfile } from "../models";
-import { FlexProps } from "@aws-amplify/ui-react";
-import { SyntheticEvent } from "react";
-export declare type SkillProfileProps = React.PropsWithChildren<Partial<FlexProps> & {
-    skillProfile?: SkillProfile;
-    video?: (event: SyntheticEvent) => void;
-    rectangle1199?: React.ReactNode;
-} & {
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type Rectangle1198Props = React.PropsWithChildren<Partial<ViewProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function SkillProfile(props: SkillProfileProps): React.ReactElement;
+export default function Rectangle1198(props: Rectangle1198Props): React.ReactElement;

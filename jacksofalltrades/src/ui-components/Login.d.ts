@@ -8,6 +8,8 @@ import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type LoginProps = React.PropsWithChildren<Partial<ViewProps> & {
+    signinBox?: React.ReactNode;
+} & {
     property1?: "Default";
 } & {
     overrides?: EscapeHatchProps | undefined | null;

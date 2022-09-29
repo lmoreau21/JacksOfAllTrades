@@ -86,12 +86,12 @@
         "UserPoolId": "us-east-1_tUXG4OIm4",
         "AppClientIDWeb": "63grrvnf8bl4b9fuc3e2ilbkma",
         "AppClientID": "5ll42mmlu2d55lao7ulicbrfkt",
-        "IdentityPoolId": "us-east-1:a270b6cc-64c9-42c2-ad01-eba02b7083be",
+        "IdentityPoolId": "us-east-1:26aeaacc-9a1b-4b75-8830-0c8545333e63",
         "UserPoolArn": "arn:aws:cognito-idp:us-east-1:473277448697:userpool/us-east-1_tUXG4OIm4",
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "JacksOfAllTrades"
       },
-      "lastPushTimeStamp": "2022-09-28T17:03:50.969Z",
+      "lastPushTimeStamp": "2022-09-29T20:57:05.145Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/auth/JacksOfAllTrades-cloudformation-template.json",
         "logicalId": "authJacksOfAllTrades"
@@ -123,7 +123,7 @@
         "GraphQLAPIEndpointOutput": "https://54daliyahrhb5fqxoaidoqy2f4.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-wist2b6lmvdwdm5yqmaz5cv2ou"
       },
-      "lastPushTimeStamp": "2022-09-28T17:03:50.969Z",
+      "lastPushTimeStamp": "2022-09-29T20:57:05.145Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiJacksOfAllTrades"
@@ -142,7 +142,7 @@
         "Name": "JacksOfAllTradesDefineAuthChallenge-staging",
         "LambdaExecutionRole": "JacksOfAllTradesDefineAuthChallenge-staging"
       },
-      "lastPushTimeStamp": "2022-09-28T17:03:50.969Z",
+      "lastPushTimeStamp": "2022-09-29T20:57:05.145Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/function/JacksOfAllTradesDefineAuthChallenge-cloudformation-template.json",
         "logicalId": "functionJacksOfAllTradesDefineAuthChallenge"
@@ -151,9 +151,9 @@
         "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
         "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-42435778705678527944-build.zip"
       },
-      "lastBuildTimeStamp": "2022-09-28T17:02:47.254Z",
+      "lastBuildTimeStamp": "2022-09-29T20:56:00.959Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2022-09-28T17:02:47.302Z",
+      "lastPackageTimeStamp": "2022-09-29T20:56:01.005Z",
       "distZipFilename": "JacksOfAllTradesDefineAuthChallenge-42435778705678527944-build.zip",
       "lastPushDirHash": "eFa0Xvh6G6jYnRfIYPOZc8rtTWw="
     },
@@ -167,7 +167,7 @@
         "Name": "JacksOfAllTradesCreateAuthChallenge-staging",
         "LambdaExecutionRole": "JacksOfAllTradesCreateAuthChallenge-staging"
       },
-      "lastPushTimeStamp": "2022-09-28T17:03:50.969Z",
+      "lastPushTimeStamp": "2022-09-29T20:57:05.145Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/function/JacksOfAllTradesCreateAuthChallenge-cloudformation-template.json",
         "logicalId": "functionJacksOfAllTradesCreateAuthChallenge"
@@ -176,9 +176,9 @@
         "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
         "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-59706234776972356d50-build.zip"
       },
-      "lastBuildTimeStamp": "2022-09-28T17:02:47.255Z",
+      "lastBuildTimeStamp": "2022-09-29T20:56:00.960Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2022-09-28T17:02:47.305Z",
+      "lastPackageTimeStamp": "2022-09-29T20:56:01.011Z",
       "distZipFilename": "JacksOfAllTradesCreateAuthChallenge-59706234776972356d50-build.zip",
       "lastPushDirHash": "uYog27WjwTXuJvGYuPJaa4pPJQE="
     },
@@ -192,7 +192,7 @@
         "Name": "JacksOfAllTradesVerifyAuthChallengeResponse-staging",
         "LambdaExecutionRole": "JacksOfAllTradesVerifyAuthChallengeResponse-staging"
       },
-      "lastPushTimeStamp": "2022-09-28T17:03:50.969Z",
+      "lastPushTimeStamp": "2022-09-29T20:57:05.145Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/function/JacksOfAllTradesVerifyAuthChallengeResponse-cloudformation-template.json",
         "logicalId": "functionJacksOfAllTradesVerifyAuthChallengeResponse"
@@ -201,9 +201,9 @@
         "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
         "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-472b3838783449577767-build.zip"
       },
-      "lastBuildTimeStamp": "2022-09-28T17:02:47.256Z",
+      "lastBuildTimeStamp": "2022-09-29T20:56:00.961Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2022-09-28T17:02:47.603Z",
+      "lastPackageTimeStamp": "2022-09-29T20:56:01.203Z",
       "distZipFilename": "JacksOfAllTradesVerifyAuthChallengeResponse-472b3838783449577767-build.zip",
       "lastPushDirHash": "ySv2n9NrQFLuEd22dVm5xpwXczc="
     },
@@ -217,7 +217,7 @@
         "Name": "JacksOfAllTradesCustomMessage-staging",
         "LambdaExecutionRole": "JacksOfAllTradesCustomMessage-staging"
       },
-      "lastPushTimeStamp": "2022-09-28T17:03:50.969Z",
+      "lastPushTimeStamp": "2022-09-29T20:57:05.145Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/function/JacksOfAllTradesCustomMessage-cloudformation-template.json",
         "logicalId": "functionJacksOfAllTradesCustomMessage"
@@ -226,9 +226,9 @@
         "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
         "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-4a4567726e4751567a39-build.zip"
       },
-      "lastBuildTimeStamp": "2022-09-28T17:02:47.257Z",
+      "lastBuildTimeStamp": "2022-09-29T20:56:00.962Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2022-09-28T17:02:47.310Z",
+      "lastPackageTimeStamp": "2022-09-29T20:56:01.015Z",
       "distZipFilename": "JacksOfAllTradesCustomMessage-4a4567726e4751567a39-build.zip",
       "lastPushDirHash": "IikfOP+qlD3mC2rRhLUkfacJ3GI="
     }

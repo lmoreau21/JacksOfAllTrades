@@ -6,10 +6,17 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
 export default function SkillProfile(props) {
-  const { skillProfile, overrides, ...rest } = props;
+  const { skillProfile, video, rectangle1199, overrides, ...rest } = props;
+  const rectangleOneOneNineNineOnClick = useNavigateAction({
+    type: "url",
+    url: "https://www.youtube.com/watch?v=9V8N4VG_Yqc",
+  });
   return (
     <Flex
       gap="24px"
@@ -31,26 +38,6 @@ export default function SkillProfile(props) {
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Frame 401")}
       >
-        <View
-          width="1135px"
-          height="455px"
-          shrink="0"
-          overflow="hidden"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 419 [container")}
-        >
-          <View
-            width="1135px"
-            height="455px"
-            position="absolute"
-            top="0px"
-            left="0px"
-            padding="0px 0px 0px 0px"
-            backgroundColor="rgba(217,217,217,1)"
-            {...getOverrideProps(overrides, "Rectangle 1191")}
-          ></View>
-        </View>
         <Flex
           gap="32px"
           direction="column"
@@ -72,6 +59,18 @@ export default function SkillProfile(props) {
             orientation="horizontal"
             {...getOverrideProps(overrides, "Divider35122563")}
           ></Divider>
+          <View
+            width="1118px"
+            height="363px"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            backgroundColor="rgba(217,217,217,1)"
+            onClick={() => {
+              rectangleOneOneNineNineOnClick();
+            }}
+            {...getOverrideProps(overrides, "Rectangle 1199")}
+          ></View>
           <Flex
             gap="8px"
             direction="column"
