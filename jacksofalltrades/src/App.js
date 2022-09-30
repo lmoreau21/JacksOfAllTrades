@@ -29,9 +29,9 @@ import React, { useState } from 'react';
 import './App.css';
 
 import {Amplify} from 'aws-amplify'
-import config from '../src/aws-exports'
+import config from './aws-exports'
 import {AmplifyProvider} from '@aws-amplify/ui-react'
-import {Login, studioTheme} from '../src/ui-components'
+import {Login, studioTheme} from './ui-components'
 import '@aws-amplify/ui-react/styles.css'
 
 Amplify.configure(config)
