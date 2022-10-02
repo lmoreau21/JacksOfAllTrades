@@ -33,6 +33,7 @@ import config from './aws-exports'
 import {AmplifyProvider} from '@aws-amplify/ui-react'
 import {Login, studioTheme} from './ui-components'
 import '@aws-amplify/ui-react/styles.css'
+Amplify.configure(aws_exports);
 
 Amplify.configure(config)
 function App({Component, pageProps}) {
