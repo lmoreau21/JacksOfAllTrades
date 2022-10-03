@@ -21,7 +21,7 @@ function App({Component, pageProps}) {
 }
 
 export default App;
-*/
+
 import './App.css';
 import React, { useState } from 'react';
 //import ReactDOM from 'react-dom';
@@ -33,7 +33,7 @@ import config from './aws-exports'
 import {AmplifyProvider} from '@aws-amplify/ui-react'
 import {Login, studioTheme} from './ui-components'
 import '@aws-amplify/ui-react/styles.css'
-Amplify.configure(aws_exports);
+//Amplify.configure(aws_exports);
 
 Amplify.configure(config)
 function App({Component, pageProps}) {
@@ -45,33 +45,29 @@ function App({Component, pageProps}) {
 }
 
 export default App;
-/*
+*/
+
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
+import './App.css';
+
+import {Amplify} from 'aws-amplify'
+import config from '../src/aws-exports'
+import {AmplifyProvider} from '@aws-amplify/ui-react'
+import {studioTheme,Login} from '../src/ui-components'
+import '@aws-amplify/ui-react/styles.css'
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Login/>
   );
 }
 
 export default App;
-
+/*
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
