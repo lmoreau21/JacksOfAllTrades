@@ -47,7 +47,7 @@ function App({Component, pageProps}) {
 export default App;
 */
 
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import './App.css';
@@ -62,7 +62,9 @@ import './App.css';
 
 function App() {
   return (
-    <Login/>
+    <AmplifyProvider theme={studioTheme}>
+      <Login/>
+    </AmplifyProvider>
   );
 }
 

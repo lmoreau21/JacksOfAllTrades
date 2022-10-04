@@ -14,7 +14,7 @@ Amplify.configure(config)
 
 ReactDOM.render(
   <AmplifyProvider>
-    <Login />  
+    <App />  
   </AmplifyProvider>,
   document.getElementById('root')
 );  
