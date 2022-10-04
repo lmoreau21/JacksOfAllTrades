@@ -31,10 +31,10 @@ export default function SkillLink(props) {
     >
       <View
         padding="0px 0px 0px 0px"
-        width="649px"
-        height="206px"
+        width="615px"
+        height="209px"
         position="absolute"
-        top="22px"
+        top="19px"
         left="23px"
         {...getOverrideProps(overrides, "Text")}
       >
@@ -49,7 +49,7 @@ export default function SkillLink(props) {
           direction="column"
           justifyContent="flex-start"
           position="absolute"
-          top="0px"
+          top="3px"
           left="0px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
@@ -61,17 +61,17 @@ export default function SkillLink(props) {
         ></Text>
         <Text
           fontFamily="Kameron"
-          fontSize="16px"
+          fontSize="18px"
           fontWeight="400"
           color="rgba(0,0,0,1)"
-          lineHeight="18.75px"
+          lineHeight="21.09375px"
           textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
           position="absolute"
           top="0px"
-          left="608px"
+          left="569px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Time:"
@@ -90,7 +90,7 @@ export default function SkillLink(props) {
           width="355px"
           height="144px"
           position="absolute"
-          top="62px"
+          top="65px"
           left="0px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"

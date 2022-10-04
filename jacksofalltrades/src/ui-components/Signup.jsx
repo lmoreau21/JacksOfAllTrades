@@ -9,6 +9,7 @@ import React from "react";
 import {
   getOverrideProps,
   useDataStoreCreateAction,
+  useNavigateAction,
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
 import { UserRolesReference, Users } from "../models";
@@ -24,6 +25,10 @@ export default function Signup(props) {
     textAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
     setTextAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
   ] = useStateMutationAction("");
+  const logoThreeFiveThreeSevenTwoFiveSixTwoOnClick = useNavigateAction({
+    type: "url",
+    url: "/login",
+  });
   const signinBoxOnClick = useDataStoreCreateAction({
     fields: {
       firstName: textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
@@ -179,6 +184,9 @@ export default function Signup(props) {
         position="absolute"
         top="139px"
         left="855px"
+        onClick={() => {
+          logoThreeFiveThreeSevenTwoFiveSixTwoOnClick();
+        }}
         {...getOverrideProps(overrides, "Logo35372562")}
       >
         <View

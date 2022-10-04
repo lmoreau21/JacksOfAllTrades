@@ -1,3 +1,28 @@
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route}
+    from 'react-router-dom';
+import './pages/login.js'
+import './pages/signup.js'
+
+//import Home from './pages'
+import Login from './pages/login'
+import Signup from './pages/signup'
+
+function App() {
+return (
+    <Router>
+    <Routes>
+        <Route exact path='/' element={<Login/>} />
+        <Route path='/login' element={<Login/>} />
+        <Route path='/signup' element={<Signup/>} />
+    </Routes>
+    </Router>
+);
+}
+  
+export default App;
+
 /*
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
@@ -45,7 +70,7 @@ function App({Component, pageProps}) {
 }
 
 export default App;
-*/
+
 
 import React, { Component, useState } from 'react';
 import ReactDOM from 'react-dom';
@@ -69,7 +94,8 @@ function App() {
 }
 
 export default App;
-/*
+
+
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 

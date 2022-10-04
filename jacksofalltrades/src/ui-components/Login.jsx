@@ -10,8 +10,12 @@ import {
   getOverrideProps,
   getOverridesFromVariants,
   mergeVariantsAndOverrides,
+  useDataStoreCreateAction,
   useNavigateAction,
+  useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
+import { Logins } from "../models";
+import { schema } from "../models/schema";
 import { Icon, Text, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function Login(props) {
   const { signinBox, roles, overrides: overridesProp, ...rest } = props;
@@ -82,11 +86,28 @@ export default function Login(props) {
     getOverridesFromVariants(variants, props),
     overridesProp || {}
   );
-  const signUpOnClick = useNavigateAction({ type: "url", url: "/SignUp" });
-  const signinboxOnClick = useNavigateAction({ type: "url", url: "/Homepage" });
+  const [emailValue, setEmailValue] = useStateMutationAction("");
+  const [passwordValue, setPasswordValue] = useStateMutationAction("");
+  const signUpOnClick = useNavigateAction({ type: "url", url: "/signup" });
+  const signinboxOnClick = useNavigateAction({ type: "url", url: "/signup" });
   const signinBoxOnClick = useNavigateAction({
     type: "url",
     url: "/skilllink",
+  });
+  const rectangleOneOneEightTwoOnClick = useNavigateAction({
+    type: "url",
+    url: "/signup",
+  });
+  const frameFourOneEightOnClick = useDataStoreCreateAction({
+    fields: { userName: emailValue, userPassword: passwordValue },
+    model: Logins,
+    schema: schema,
+  });
+  const pathEightOnClick = useNavigateAction({ type: "url", url: "/signup" });
+  const vectorThreeFiveTwoOneTwoSixOneFourOnClick = useDataStoreCreateAction({
+    fields: { userName: emailValue, userPassword: passwordValue },
+    model: Logins,
+    schema: schema,
   });
   return (
     <View
@@ -305,6 +326,9 @@ export default function Login(props) {
         transform="rotate(30.98deg)"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(255,250,250,1)"
+        onClick={() => {
+          rectangleOneOneEightTwoOnClick();
+        }}
         {...getOverrideProps(overrides, "Rectangle 1182")}
       ></View>
       <Text
@@ -395,6 +419,9 @@ export default function Login(props) {
         top="0px"
         left="0px"
         padding="0px 0px 0px 0px"
+        onClick={() => {
+          frameFourOneEightOnClick();
+        }}
         {...getOverrideProps(overrides, "Frame 418")}
       >
         <View
@@ -609,6 +636,9 @@ export default function Login(props) {
             bottom="54.77%"
             left="34.59%"
             right="44.9%"
+            onClick={() => {
+              pathEightOnClick();
+            }}
             {...getOverrideProps(overrides, "Path 8")}
           ></Icon>
           <Icon
@@ -724,6 +754,9 @@ export default function Login(props) {
             bottom="20.4%"
             left="48.27%"
             right="41.25%"
+            onClick={() => {
+              vectorThreeFiveTwoOneTwoSixOneFourOnClick();
+            }}
             {...getOverrideProps(overrides, "Vector35212614")}
           ></Icon>
           <Icon
@@ -1114,6 +1147,10 @@ export default function Login(props) {
           isDisabled={false}
           labelHidden={false}
           variation="default"
+          value={passwordValue}
+          onChange={(event) => {
+            setPasswordValue(event.target.value);
+          }}
           {...getOverrideProps(overrides, "Password")}
         ></TextAreaField>
         <TextAreaField
@@ -1133,6 +1170,10 @@ export default function Login(props) {
           isDisabled={false}
           labelHidden={false}
           variation="default"
+          value={emailValue}
+          onChange={(event) => {
+            setEmailValue(event.target.value);
+          }}
           {...getOverrideProps(overrides, "Email")}
         ></TextAreaField>
       </View>
