@@ -3,9 +3,9 @@
   "name": "Jacks Of All Trades",
   "icons": [
     {
-      "src": "logo.png",
-      "type": "image/png",
-      "sizes": "192x192"
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "images": "image/x-icon"
     }
   ],
   "start_url": ".",
