@@ -59,8 +59,8 @@ export declare class Logins {
 
 export declare class Users {
   readonly id: string;
-  readonly firstName: string;
-  readonly lastName: string;
+  readonly firstName?: string | null;
+  readonly lastName?: string | null;
   readonly userName: string;
   readonly userEmail: string;
   readonly UserRolesReference?: UserRolesReference | null;

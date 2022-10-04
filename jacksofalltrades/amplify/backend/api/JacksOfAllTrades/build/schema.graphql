@@ -41,8 +41,8 @@ type Logins @aws_iam @aws_api_key {
 
 type Users @aws_iam @aws_api_key {
   id: ID!
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   userName: String!
   userEmail: AWSEmail!
   UserRolesReference: UserRolesReference
@@ -459,8 +459,8 @@ input ModelUsersConditionInput {
 
 input CreateUsersInput {
   id: ID
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   userName: String!
   userEmail: AWSEmail!
   _version: Int

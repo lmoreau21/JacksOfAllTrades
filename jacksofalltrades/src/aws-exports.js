@@ -39,4 +39,4 @@ const awsmobile = {
 };
 
 
-module.exports = {default: awsmobile};
+export default awsmobile;

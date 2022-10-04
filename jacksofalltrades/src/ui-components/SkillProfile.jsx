@@ -64,6 +64,8 @@ export default function SkillProfile(props) {
             height="363px"
             shrink="0"
             position="relative"
+            border="1px SOLID rgba(0,0,0,1)"
+            boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             padding="0px 0px 0px 0px"
             backgroundColor="rgba(217,217,217,1)"
             onClick={() => {

@@ -284,14 +284,14 @@ export const schema = {
                     "name": "firstName",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "lastName": {
                     "name": "lastName",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "userName": {
@@ -531,5 +531,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "b69a5e9c6deb16f3c74720a528e10783"
+    "version": "f7f5cced6eaa36151a696de3d64778b9"
 };

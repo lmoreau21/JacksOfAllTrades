@@ -169,7 +169,7 @@
           ]
         },
         "Handler": "index.handler",
-        "Runtime": "nodejs12.x"
+        "Runtime": "nodejs14.x"
       },
       "DependsOn": [
         "authTriggerFnServiceRoleDefaultPolicyEC9285A8",
@@ -218,7 +218,7 @@
             }
           }
         ],
-        "nonce": "cb3754f0-cee3-4a57-8412-dd2852bd0066"
+        "nonce": "db04a082-cd84-4922-a265-f839a8465471"
       },
       "UpdateReplacePolicy": "Delete",
       "DeletionPolicy": "Delete"

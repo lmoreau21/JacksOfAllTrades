@@ -10,11 +10,14 @@ import {
   getOverrideProps,
   getOverridesFromVariants,
   mergeVariantsAndOverrides,
+  useDataStoreCreateAction,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
-import { Icon, Text, TextAreaField, View } from "@aws-amplify/ui-react";
+import { Users } from "../models";
+import { schema } from "../models/schema";
+import { Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Login(props) {
-  const { signinBox, roles, overrides: overridesProp, ...rest } = props;
+  const { signinBox, overrides: overridesProp, ...rest } = props;
   const variants = [
     {
       overrides: {
@@ -27,7 +30,6 @@ export default function Login(props) {
         "Rectangle 1177": {},
         "Sign in Box": {},
         "SIGN IN34902661": {},
-        "Sign in box": {},
         "Ellipse 134992567": {},
         "Rectangle 1180": {},
         "Rectangle 1181": {},
@@ -35,24 +37,14 @@ export default function Login(props) {
         J35022958: {},
         J35022959: {},
         "Jack of All Trades": {},
+        "Rectangle 1184": {},
+        "Rectangle 1185": {},
         "Rectangle 1186": {},
         "Rectangle 1187": {},
+        username: {},
+        password: {},
         "Rectangle 1188": {},
         "Rectangle 1189": {},
-        "Path 1": {},
-        "Path 2": {},
-        "Path 22": {},
-        "Path 23": {},
-        "Path 6": {},
-        "Path 7": {},
-        "Ellipse 135212608": {},
-        "Path 8": {},
-        "Rectangle 1": {},
-        "Ellipse 2": {},
-        "Rectangle 2": {},
-        "Ellipse 3": {},
-        Vector35212614: {},
-        "Ellipse 7": {},
         "Ellipse 8": {},
         "Ellipse 9": {},
         "Ellipse 10": {},
@@ -69,10 +61,7 @@ export default function Login(props) {
         "Path 101": {},
         "Path 102": {},
         "undraw_access_account_re_8spm 1": {},
-        Password: {},
-        Email: {},
         "Frame 418": {},
-        "Rectangle 1197": {},
         Login: {},
       },
       variantValues: { property1: "Default" },
@@ -82,11 +71,14 @@ export default function Login(props) {
     getOverridesFromVariants(variants, props),
     overridesProp || {}
   );
-  const signUpOnClick = useNavigateAction({ type: "url", url: "/SignUp" });
-  const signinboxOnClick = useNavigateAction({ type: "url", url: "/Homepage" });
   const signinBoxOnClick = useNavigateAction({
     type: "url",
     url: "/skilllink",
+  });
+  const usernameOnClick = useDataStoreCreateAction({
+    fields: {},
+    model: Users,
+    schema: schema,
   });
   return (
     <View
@@ -159,9 +151,6 @@ export default function Login(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Sign Up"
-        onClick={() => {
-          signUpOnClick();
-        }}
         {...getOverrideProps(overrides, "Sign Up")}
       ></Text>
       <Text
@@ -211,50 +200,37 @@ export default function Login(props) {
         {...getOverrideProps(overrides, "Rectangle 1177")}
       ></View>
       <View
-        padding="0px 0px 0px 0px"
         width="195px"
         height="48px"
         position="absolute"
-        top="515px"
+        top="431px"
         left="177px"
+        boxShadow="0px 10px 20px rgba(0, 0, 0, 0.17000000178813934)"
+        padding="0px 0px 0px 0px"
+        backgroundImage="linear-gradient(45deg, rgba(147,35,35,1), rgba(154,136,136,0.87), rgba(53,10,10,0.08))"
         onClick={() => {
-          signinboxOnClick();
+          signinBoxOnClick();
         }}
-        {...getOverrideProps(overrides, "Sign in box")}
-      >
-        <View
-          width="195px"
-          height="48px"
-          position="absolute"
-          top="0px"
-          left="0px"
-          boxShadow="0px 10px 20px rgba(0, 0, 0, 0.17000000178813934)"
-          padding="0px 0px 0px 0px"
-          backgroundImage="linear-gradient(45deg, rgba(147,35,35,1), rgba(154,136,136,0.87), rgba(53,10,10,0.08))"
-          onClick={() => {
-            signinBoxOnClick();
-          }}
-          {...getOverrideProps(overrides, "Sign in Box")}
-        ></View>
-        <Text
-          fontFamily="Kameron"
-          fontSize="25px"
-          fontWeight="400"
-          color="rgba(252,233,233,1)"
-          lineHeight="37.5px"
-          textAlign="left"
-          display="flex"
-          direction="column"
-          justifyContent="flex-start"
-          position="absolute"
-          top="5px"
-          left="52px"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="SIGN IN"
-          {...getOverrideProps(overrides, "SIGN IN34902661")}
-        ></Text>
-      </View>
+        {...getOverrideProps(overrides, "Sign in Box")}
+      ></View>
+      <Text
+        fontFamily="Kameron"
+        fontSize="25px"
+        fontWeight="400"
+        color="rgba(252,233,233,1)"
+        lineHeight="37.5px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        position="absolute"
+        top="436px"
+        left="229px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="SIGN IN"
+        {...getOverrideProps(overrides, "SIGN IN34902661")}
+      ></Text>
       <Icon
         width="388px"
         height="398px"
@@ -369,6 +345,26 @@ export default function Login(props) {
         {...getOverrideProps(overrides, "Jack of All Trades")}
       ></Text>
       <View
+        width="267px"
+        height="1px"
+        position="absolute"
+        top="343px"
+        left="177px"
+        padding="0px 0px 0px 0px"
+        backgroundColor="rgba(0,0,0,1)"
+        {...getOverrideProps(overrides, "Rectangle 1184")}
+      ></View>
+      <View
+        width="267px"
+        height="1px"
+        position="absolute"
+        top="378px"
+        left="177px"
+        padding="0px 0px 0px 0px"
+        backgroundColor="rgba(0,0,0,1)"
+        {...getOverrideProps(overrides, "Rectangle 1185")}
+      ></View>
+      <View
         width="378px"
         height="1px"
         position="absolute"
@@ -388,6 +384,49 @@ export default function Login(props) {
         backgroundColor="rgba(77,0,0,1)"
         {...getOverrideProps(overrides, "Rectangle 1187")}
       ></View>
+      <Text
+        fontFamily="Kameron"
+        fontSize="13px"
+        fontWeight="400"
+        color="rgba(104,112,120,1)"
+        lineHeight="30px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        width="265px"
+        height="26px"
+        position="absolute"
+        top="321px"
+        left="177px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="username"
+        onClick={() => {
+          usernameOnClick();
+        }}
+        {...getOverrideProps(overrides, "username")}
+      ></Text>
+      <Text
+        fontFamily="Kameron"
+        fontSize="13px"
+        fontWeight="400"
+        color="rgba(104,112,120,1)"
+        lineHeight="30px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        width="265px"
+        height="26px"
+        position="absolute"
+        top="356px"
+        left="177px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="password"
+        {...getOverrideProps(overrides, "password")}
+      ></Text>
       <View
         width="1188px"
         height="758px"
@@ -1097,55 +1136,7 @@ export default function Login(props) {
             {...getOverrideProps(overrides, "Path 102")}
           ></Icon>
         </View>
-        <TextAreaField
-          display="flex"
-          gap="0"
-          position="absolute"
-          top="407px"
-          left="173px"
-          direction="column"
-          width="291px"
-          height="64px"
-          justifyContent="center"
-          padding="0px 0px 0px 0px"
-          label="Password:"
-          placeholder="enter your password"
-          size="default"
-          isDisabled={false}
-          labelHidden={false}
-          variation="default"
-          {...getOverrideProps(overrides, "Password")}
-        ></TextAreaField>
-        <TextAreaField
-          display="flex"
-          gap="0"
-          position="absolute"
-          top="328px"
-          left="173px"
-          direction="column"
-          width="291px"
-          height="64px"
-          justifyContent="center"
-          padding="0px 0px 0px 0px"
-          label="Email Address:"
-          placeholder="enter your email"
-          size="default"
-          isDisabled={false}
-          labelHidden={false}
-          variation="default"
-          {...getOverrideProps(overrides, "Email")}
-        ></TextAreaField>
       </View>
-      <View
-        width="267px"
-        height="1px"
-        position="absolute"
-        top="404px"
-        left="178px"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(0,0,0,1)"
-        {...getOverrideProps(overrides, "Rectangle 1197")}
-      ></View>
     </View>
   );
 }
