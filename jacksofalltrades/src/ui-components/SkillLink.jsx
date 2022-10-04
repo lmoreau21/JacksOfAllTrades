@@ -29,84 +29,75 @@ export default function SkillLink(props) {
       {...rest}
       {...getOverrideProps(overrides, "SkillLink")}
     >
-      <Text
-        fontFamily="Inter"
-        fontSize="20px"
-        fontWeight="700"
-        color="rgba(0,0,0,1)"
-        lineHeight="23.4375px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
+      <View
+        padding="0px 0px 0px 0px"
+        width="649px"
+        height="206px"
         position="absolute"
         top="22px"
         left="23px"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children={skillProfile?.title}
-        onClick={() => {
-          skillNameOnClick();
-        }}
-        {...getOverrideProps(overrides, "Skill Name")}
-      ></Text>
-      <Text
-        fontFamily="Inter"
-        fontSize="16px"
-        fontWeight="500"
-        color="rgba(0,0,0,1)"
-        lineHeight="18.75px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        position="absolute"
-        top="22px"
-        left="631px"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="Time:"
-        {...getOverrideProps(overrides, "Time:")}
-      ></Text>
-      <Text
-        fontFamily="Inter"
-        fontSize="16px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="18.75px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        width="89px"
-        position="absolute"
-        top="22px"
-        left="680px"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children={skillProfile?.time}
-        {...getOverrideProps(overrides, "num")}
-      ></Text>
-      <Text
-        fontFamily="Inter"
-        fontSize="12px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="14.0625px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        width="463px"
-        height="225px"
-        position="absolute"
-        top="70px"
-        left="23px"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children={skillProfile?.description}
-        {...getOverrideProps(overrides, "Description")}
-      ></Text>
+        {...getOverrideProps(overrides, "Text")}
+      >
+        <Text
+          fontFamily="Kameron"
+          fontSize="20px"
+          fontWeight="700"
+          color="rgba(0,0,0,1)"
+          lineHeight="23.4375px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          position="absolute"
+          top="0px"
+          left="0px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={skillProfile?.title}
+          onClick={() => {
+            skillNameOnClick();
+          }}
+          {...getOverrideProps(overrides, "Skill Name")}
+        ></Text>
+        <Text
+          fontFamily="Kameron"
+          fontSize="16px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="18.75px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          position="absolute"
+          top="0px"
+          left="608px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Time:"
+          {...getOverrideProps(overrides, "Time:")}
+        ></Text>
+        <Text
+          fontFamily="Kameron"
+          fontSize="16px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="18.75px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          width="355px"
+          height="144px"
+          position="absolute"
+          top="62px"
+          left="0px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children={skillProfile?.description}
+          {...getOverrideProps(overrides, "Description")}
+        ></Text>
+      </View>
       <Icon
         width="747px"
         height="0px"
@@ -124,18 +115,18 @@ export default function SkillLink(props) {
         left="22px"
         transformOrigin="top left"
         transform="rotate(0deg)"
-        {...getOverrideProps(overrides, "Line 3")}
+        {...getOverrideProps(overrides, "Line")}
       ></Icon>
       <Image
-        width="270px"
-        height="225px"
+        width="286px"
+        height="239px"
         position="absolute"
-        top="70px"
-        left="499px"
+        top="65px"
+        left="483px"
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         padding="0px 0px 0px 0px"
         src={skillProfile?.photo}
-        {...getOverrideProps(overrides, "Rectangle 1164")}
+        {...getOverrideProps(overrides, "Skill Image")}
       ></Image>
     </View>
   );

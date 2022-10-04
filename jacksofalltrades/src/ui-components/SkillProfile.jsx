@@ -36,6 +36,7 @@ export default function SkillProfile(props) {
         basis="1135px"
         position="relative"
         padding="0px 0px 0px 0px"
+        backgroundColor="rgba(255,255,255,1)"
         {...getOverrideProps(overrides, "Frame 401")}
       >
         <Flex
