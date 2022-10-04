@@ -8,12 +8,13 @@ import config from './aws-exports'
 import Amplify from 'aws-amplify';
 import { AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
+import { Login } from './ui-components';
 
 Amplify.configure(config)
 
 ReactDOM.render(
   <AmplifyProvider>
-    <App />  
+    <Login />  
   </AmplifyProvider>,
   document.getElementById('root')
 );  
