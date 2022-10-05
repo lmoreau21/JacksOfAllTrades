@@ -11,5 +11,48 @@
       "StackId": "arn:aws:cloudformation:us-east-1:473277448697:stack/amplify-jacksofalltrades-dev-163942/3963f890-44f6-11ed-a9c7-0e8dec65c45f",
       "AmplifyAppId": "d3hi9mzn0coe5y"
     }
+  },
+  "auth": {
+    "jacksofalltrades9b9a0612": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/jacksofalltrades9b9a0612-cloudformation-template.json",
+        "logicalId": "authjacksofalltrades9b9a0612"
+      },
+      "lastPushTimeStamp": "2022-10-05T22:34:01.310Z",
+      "output": {
+        "UserPoolId": "us-east-1_dEYvOyCeJ",
+        "AppClientIDWeb": "sid3ofehs775vr5divrg44bjs",
+        "AppClientID": "3he1hej6voqc6e2k6e1v2m0kkm",
+        "IdentityPoolId": "us-east-1:8f6dee1d-56f5-49a0-913a-6b16da9c2392",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:473277448697:userpool/us-east-1_dEYvOyCeJ",
+        "IdentityPoolName": "jacksofalltrades9b9a0612_identitypool_9b9a0612__dev",
+        "UserPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612"
+      },
+      "lastPushDirHash": "a+3ybGvoLokNbvGsIblc5Awz7D0="
+    }
   }
 }

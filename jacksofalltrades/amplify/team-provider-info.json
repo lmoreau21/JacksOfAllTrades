@@ -10,6 +10,11 @@
       "StackName": "amplify-jacksofalltrades-dev-163942",
       "StackId": "arn:aws:cloudformation:us-east-1:473277448697:stack/amplify-jacksofalltrades-dev-163942/3963f890-44f6-11ed-a9c7-0e8dec65c45f",
       "AmplifyAppId": "d3hi9mzn0coe5y"
+    },
+    "categories": {
+      "auth": {
+        "jacksofalltrades9b9a0612": {}
+      }
     }
   }
 }
