@@ -262,7 +262,7 @@
           "usernameAttributes": "email",
           "useDefault": "manual",
           "userPoolGroups": false,
-          "userPoolGroupList": "",
+          "userPoolGroupList": "JacksOfAllTrades",
           "adminQueries": false,
           "thirdPartyAuth": true,
           "authProviders": "",
@@ -290,6 +290,51 @@
           },
           "authTriggerConnections": "{\"triggerType\":\"DefineAuthChallenge\",\"lambdaFunctionName\":\"JacksOfAllTradesDefineAuthChallenge\"},{\"triggerType\":\"CreateAuthChallenge\",\"lambdaFunctionName\":\"JacksOfAllTradesCreateAuthChallenge\"},{\"triggerType\":\"VerifyAuthChallengeResponse\",\"lambdaFunctionName\":\"JacksOfAllTradesVerifyAuthChallengeResponse\"},{\"triggerType\":\"CustomMessage\",\"lambdaFunctionName\":\"JacksOfAllTradesCustomMessage\"}",
           "permissions": "",
+          "env": "staging"
+        }
+      }
+    },
+    "authuserPoolGroups": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "Parameters": {
+          "AuthRoleArn": {
+            "Fn::GetAtt": [
+              "AuthRole",
+              "Arn"
+            ]
+          },
+          "UnauthRoleArn": {
+            "Fn::GetAtt": [
+              "UnauthRole",
+              "Arn"
+            ]
+          },
+          "authJacksOfAllTradesUserPoolId": {
+            "Fn::GetAtt": [
+              "authJacksOfAllTrades",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "authJacksOfAllTradesAppClientIDWeb": {
+            "Fn::GetAtt": [
+              "authJacksOfAllTrades",
+              "Outputs.AppClientIDWeb"
+            ]
+          },
+          "authJacksOfAllTradesAppClientID": {
+            "Fn::GetAtt": [
+              "authJacksOfAllTrades",
+              "Outputs.AppClientID"
+            ]
+          },
+          "authJacksOfAllTradesIdentityPoolId": {
+            "Fn::GetAtt": [
+              "authJacksOfAllTrades",
+              "Outputs.IdentityPoolId"
+            ]
+          },
           "env": "staging"
         }
       }
@@ -322,7 +367,7 @@
           "modules": "captcha-define-challenge",
           "resourceName": "JacksOfAllTradesDefineAuthChallenge",
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-42435778705678527944-build.zip",
+          "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-316e49325970464c3749-build.zip",
           "env": "staging"
         }
       }
@@ -335,7 +380,7 @@
           "modules": "captcha-create-challenge",
           "resourceName": "JacksOfAllTradesCreateAuthChallenge",
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-59706234776972356d50-build.zip",
+          "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-43704a31386566614a66-build.zip",
           "env": "staging"
         }
       }
@@ -348,7 +393,8 @@
           "modules": "captcha-verify",
           "resourceName": "JacksOfAllTradesVerifyAuthChallengeResponse",
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-4b6e614f365a62323346-build.zip",
+          "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-523974725a6256526346-build.zip",
+          "RECAPTCHASECRET": "6LdkKToiAAAAAHN5HQE3Lp_vQMyMizJ6llCvxLti",
           "env": "staging"
         }
       }
@@ -361,7 +407,10 @@
           "modules": "verification-link",
           "resourceName": "JacksOfAllTradesCustomMessage",
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-4a4567726e4751567a39-build.zip",
+          "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-6a685969624e58487269-build.zip",
+          "REDIRECTURL": "https://main.d1ukjek0j1m8s5.amplifyapp.com/home",
+          "EMAILSUBJECT": "Jacks Of All Trades Confirmation",
+          "EMAILMESSAGE": "",
           "env": "staging"
         }
       }

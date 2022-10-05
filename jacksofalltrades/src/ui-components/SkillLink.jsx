@@ -10,12 +10,12 @@ import {
   getOverrideProps,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
-import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
+import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function SkillLink(props) {
   const { skillProfile, overrides, ...rest } = props;
   const skillNameOnClick = useNavigateAction({
     type: "url",
-    url: "/SkillProfile",
+    url: `${"/"}${skillProfile?.id}`,
   });
   return (
     <View
@@ -23,16 +23,17 @@ export default function SkillLink(props) {
       height="311px"
       overflow="hidden"
       position="relative"
+      border="3px SOLID rgba(0,0,0,1)"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(255,255,255,1)"
+      backgroundColor="rgba(245,188,188,1)"
       {...rest}
       {...getOverrideProps(overrides, "SkillLink")}
     >
       <View
         padding="0px 0px 0px 0px"
-        width="615px"
-        height="209px"
+        width="739px"
+        height="256px"
         position="absolute"
         top="19px"
         left="23px"
@@ -59,24 +60,60 @@ export default function SkillLink(props) {
           }}
           {...getOverrideProps(overrides, "Skill Name")}
         ></Text>
-        <Text
-          fontFamily="Kameron"
-          fontSize="18px"
-          fontWeight="400"
-          color="rgba(0,0,0,1)"
-          lineHeight="21.09375px"
-          textAlign="left"
-          display="flex"
-          direction="column"
-          justifyContent="flex-start"
+        <View
+          padding="0px 0px 0px 0px"
+          width="88px"
+          height="21px"
           position="absolute"
           top="0px"
-          left="569px"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Time:"
-          {...getOverrideProps(overrides, "Time:")}
-        ></Text>
+          left="651px"
+          {...getOverrideProps(overrides, "Group 1")}
+        >
+          <Flex
+            gap="6px"
+            position="absolute"
+            bottom="0px"
+            right="0px"
+            justifyContent="center"
+            padding="0px 0px 0px 0px"
+            {...getOverrideProps(overrides, "Frame 420")}
+          >
+            <Text
+              fontFamily="Kameron"
+              fontSize="18px"
+              fontWeight="400"
+              color="rgba(0,0,0,1)"
+              lineHeight="21.09375px"
+              textAlign="left"
+              display="flex"
+              direction="column"
+              justifyContent="center"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
+              children="Time:"
+              {...getOverrideProps(overrides, "Time:")}
+            ></Text>
+            <Text
+              fontFamily="Kameron"
+              fontSize="18px"
+              fontWeight="400"
+              color="rgba(0,0,0,1)"
+              lineHeight="21.09375px"
+              textAlign="left"
+              display="flex"
+              direction="column"
+              justifyContent="center"
+              shrink="0"
+              position="relative"
+              padding="0px 0px 0px 0px"
+              whiteSpace="pre-wrap"
+              children={skillProfile?.time}
+              {...getOverrideProps(overrides, "num")}
+            ></Text>
+          </Flex>
+        </View>
         <Text
           fontFamily="Kameron"
           fontSize="16px"
@@ -87,10 +124,10 @@ export default function SkillLink(props) {
           display="flex"
           direction="column"
           justifyContent="flex-start"
-          width="355px"
-          height="144px"
+          width="443px"
+          height="204px"
           position="absolute"
-          top="65px"
+          top="52px"
           left="0px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
@@ -98,36 +135,27 @@ export default function SkillLink(props) {
           {...getOverrideProps(overrides, "Description")}
         ></Text>
       </View>
-      <Icon
-        width="747px"
-        height="0px"
-        viewBox={{ minX: 0, minY: 0, width: 747, height: 1 }}
-        paths={[
-          {
-            d: "M0 0L747 0L747 -1L0 -1L0 0Z",
-            stroke: "rgba(0,0,0,1)",
-            fillRule: "nonzero",
-            strokeWidth: 1,
-          },
-        ]}
-        position="absolute"
-        top="55.5px"
-        left="22px"
-        transformOrigin="top left"
-        transform="rotate(0deg)"
-        {...getOverrideProps(overrides, "Line")}
-      ></Icon>
       <Image
         width="286px"
         height="239px"
         position="absolute"
-        top="65px"
-        left="483px"
+        top="61px"
+        left="487px"
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         padding="0px 0px 0px 0px"
         src={skillProfile?.photo}
         {...getOverrideProps(overrides, "Skill Image")}
       ></Image>
+      <View
+        width="745px"
+        height="1px"
+        position="absolute"
+        top="47px"
+        left="17px"
+        padding="0px 0px 0px 0px"
+        backgroundColor="rgba(0,0,0,1)"
+        {...getOverrideProps(overrides, "Rectangle 1200")}
+      ></View>
     </View>
   );
 }

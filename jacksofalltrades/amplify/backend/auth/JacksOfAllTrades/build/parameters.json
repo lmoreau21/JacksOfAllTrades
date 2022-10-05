@@ -42,7 +42,9 @@
   ],
   "useDefault": "manual",
   "userPoolGroups": false,
-  "userPoolGroupList": [],
+  "userPoolGroupList": [
+    "JacksOfAllTrades"
+  ],
   "adminQueries": false,
   "thirdPartyAuth": true,
   "authProviders": [],

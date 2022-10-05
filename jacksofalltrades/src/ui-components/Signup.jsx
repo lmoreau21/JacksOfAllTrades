@@ -1608,7 +1608,7 @@ export default function Signup(props) {
         width="165px"
         height="38px"
         position="absolute"
-        top="583px"
+        top="591px"
         left="561px"
         {...getOverrideProps(overrides, "Sign up box")}
       >
@@ -1619,8 +1619,9 @@ export default function Signup(props) {
           top="0px"
           left="0px"
           boxShadow="0px 10px 20px rgba(0, 0, 0, 0.17000000178813934)"
+          borderRadius="8px"
           padding="0px 0px 0px 0px"
-          backgroundImage="linear-gradient(45deg, rgba(147,35,35,1), rgba(154,136,136,0.87), rgba(53,10,10,0.08))"
+          backgroundColor="rgba(157,101,101,1)"
           onClick={() => {
             signinBoxOnClick();
           }}

@@ -14,25 +14,33 @@
     },
     "categories": {
       "auth": {
-        "JacksOfAllTrades": {}
+        "JacksOfAllTrades": {},
+        "userPoolGroups": {}
       },
       "function": {
         "JacksOfAllTradesDefineAuthChallenge": {
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-42435778705678527944-build.zip"
+          "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-316e49325970464c3749-build.zip"
         },
         "JacksOfAllTradesCreateAuthChallenge": {
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-59706234776972356d50-build.zip"
+          "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-43704a31386566614a66-build.zip"
         },
         "JacksOfAllTradesVerifyAuthChallengeResponse": {
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-4b6e614f365a62323346-build.zip"
+          "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-523974725a6256526346-build.zip",
+          "RECAPTCHASECRET": "6LdkKToiAAAAAHN5HQE3Lp_vQMyMizJ6llCvxLti"
         },
         "JacksOfAllTradesCustomMessage": {
           "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-4a4567726e4751567a39-build.zip"
+          "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-6a685969624e58487269-build.zip",
+          "REDIRECTURL": "https://main.d1ukjek0j1m8s5.amplifyapp.com/home",
+          "EMAILSUBJECT": "Jacks Of All Trades Confirmation",
+          "EMAILMESSAGE": ""
         }
+      },
+      "api": {
+        "JacksOfAllTrades": {}
       }
     }
   }

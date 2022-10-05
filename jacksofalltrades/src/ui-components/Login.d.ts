@@ -6,13 +6,9 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { Users } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type LoginProps = React.PropsWithChildren<Partial<ViewProps> & {
-    signinBox?: React.ReactNode;
-    roles?: Users;
-} & {
-    property1?: "Default";
+    frame418?: React.ReactNode;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
