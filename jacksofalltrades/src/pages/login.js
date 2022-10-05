@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 import '../App.css';
@@ -19,3 +20,13 @@ const login = () => {
 }
 
 export default login;
+/*
+import { AmplifyTheme } from 'aws-amplify-react-native';
+
+const MySectionHeader = Object.assign({}, AmplifyTheme.sectionHeader, { background: 'orange' });
+const MyTheme = Object.assign({}, AmplifyTheme, { sectionHeader: MySectionHeader });
+
+<Authenticator theme={MyTheme} />
+
+export default withAuthenticator(App);
+*/

@@ -22,7 +22,7 @@ export default signup;
 /*
 import { Auth } from 'aws-amplify';
 
-async function signUp() {
+async function signup() {
     try {
         const { user } = await Auth.signUp({
             username,
