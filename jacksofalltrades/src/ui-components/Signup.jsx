@@ -25,10 +25,20 @@ export default function Signup(props) {
     textAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
     setTextAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
   ] = useStateMutationAction("");
+  const [logInInsteadColor, setLogInInsteadColor] = useStateMutationAction(
+    "rgba(104,112,120,1)"
+  );
   const logoThreeFiveThreeSevenTwoFiveSixTwoOnClick = useNavigateAction({
     type: "url",
     url: "/login",
   });
+  const logInInsteadOnClick = useNavigateAction({ type: "url", url: "/login" });
+  const logInInsteadOnMouseOver = () => {
+    setLogInInsteadColor("#950404");
+  };
+  const logInInsteadOnMouseOut = () => {
+    setLogInInsteadColor("#687078");
+  };
   const signinBoxOnClick = useDataStoreCreateAction({
     fields: {
       firstName: textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
@@ -1497,43 +1507,6 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262612")}
         ></Icon>
       </View>
-      <View
-        width="165px"
-        height="35px"
-        position="absolute"
-        top="583px"
-        left="561px"
-        boxShadow="0px 10px 20px rgba(0, 0, 0, 0.17000000178813934)"
-        padding="0px 0px 0px 0px"
-        backgroundImage="linear-gradient(45deg, rgba(147,35,35,1), rgba(154,136,136,0.87), rgba(53,10,10,0.08))"
-        onClick={() => {
-          signinBoxOnClick();
-        }}
-        {...getOverrideProps(overrides, "Sign in Box")}
-      ></View>
-      <Text
-        fontFamily="Kameron"
-        fontSize="25px"
-        fontWeight="400"
-        color="rgba(252,233,233,1)"
-        lineHeight="37.5px"
-        textAlign="left"
-        display="flex"
-        direction="column"
-        justifyContent="flex-start"
-        width="99px"
-        height="38px"
-        position="absolute"
-        top="583px"
-        left="596px"
-        padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="SIGN UP"
-        onClick={() => {
-          sIGNUPOnClick();
-        }}
-        {...getOverrideProps(overrides, "SIGN UP")}
-      ></Text>
       <TextAreaField
         display="flex"
         gap="0"
@@ -1603,6 +1576,80 @@ export default function Signup(props) {
         variation="default"
         {...getOverrideProps(overrides, "TextAreaField35372578")}
       ></TextAreaField>
+      <Text
+        fontFamily="Kameron"
+        fontSize="16px"
+        fontWeight="400"
+        color={logInInsteadColor}
+        lineHeight="24px"
+        textAlign="center"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        position="absolute"
+        top="626px"
+        left="588px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="Log In Instead"
+        onClick={() => {
+          logInInsteadOnClick();
+        }}
+        onMouseOver={() => {
+          logInInsteadOnMouseOver();
+        }}
+        onMouseOut={() => {
+          logInInsteadOnMouseOut();
+        }}
+        {...getOverrideProps(overrides, "Log In Instead")}
+      ></Text>
+      <View
+        padding="0px 0px 0px 0px"
+        width="165px"
+        height="38px"
+        position="absolute"
+        top="583px"
+        left="561px"
+        {...getOverrideProps(overrides, "Sign up box")}
+      >
+        <View
+          width="165px"
+          height="35px"
+          position="absolute"
+          top="0px"
+          left="0px"
+          boxShadow="0px 10px 20px rgba(0, 0, 0, 0.17000000178813934)"
+          padding="0px 0px 0px 0px"
+          backgroundImage="linear-gradient(45deg, rgba(147,35,35,1), rgba(154,136,136,0.87), rgba(53,10,10,0.08))"
+          onClick={() => {
+            signinBoxOnClick();
+          }}
+          {...getOverrideProps(overrides, "Sign in Box")}
+        ></View>
+        <Text
+          fontFamily="Kameron"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(252,233,233,1)"
+          lineHeight="37.5px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          width="99px"
+          height="38px"
+          position="absolute"
+          top="0px"
+          left="35px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="SIGN UP"
+          onClick={() => {
+            sIGNUPOnClick();
+          }}
+          {...getOverrideProps(overrides, "SIGN UP")}
+        ></Text>
+      </View>
     </View>
   );
 }
