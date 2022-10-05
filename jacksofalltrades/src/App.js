@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Routes, Route}
 import './pages/login.js'
 import './pages/signup.js'
 import './pages/home.js'
-
+import './aws-exports'
+import awsmobile from './aws-exports';
 //import Home from './pages'
 import Login from './pages/login'
 import Signup from './pages/signup'
@@ -15,8 +16,8 @@ function App() {
 return (
     <Router>
     <Routes>
-        <Route exact path='/' element={<Login/>} />
-        <Route exact path='/home' element={<Home/>} />
+        <Route exact path='/' element={<aws-exports/>} />
+        <Route path='/home' element={<Home/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
     </Routes>

@@ -1,47 +1,15 @@
 {
-  "staging": {
+  "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-jacksofalltrades-staging-184202-authRole",
-      "UnauthRoleArn": "arn:aws:iam::473277448697:role/amplify-jacksofalltrades-staging-184202-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::473277448697:role/amplify-jacksofalltrades-staging-184202-authRole",
+      "AuthRoleName": "amplify-jacksofalltrades-dev-163942-authRole",
+      "UnauthRoleArn": "arn:aws:iam::473277448697:role/amplify-jacksofalltrades-dev-163942-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::473277448697:role/amplify-jacksofalltrades-dev-163942-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-      "UnauthRoleName": "amplify-jacksofalltrades-staging-184202-unauthRole",
-      "StackName": "amplify-jacksofalltrades-staging-184202",
-      "StackId": "arn:aws:cloudformation:us-east-1:473277448697:stack/amplify-jacksofalltrades-staging-184202/ecb03580-345c-11ed-ae28-0e6cbdd23f15",
-      "AmplifyAppId": "d1ukjek0j1m8s5",
-      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-staging-184202-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
-    },
-    "categories": {
-      "auth": {
-        "JacksOfAllTrades": {},
-        "userPoolGroups": {}
-      },
-      "function": {
-        "JacksOfAllTradesDefineAuthChallenge": {
-          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesDefineAuthChallenge-316e49325970464c3749-build.zip"
-        },
-        "JacksOfAllTradesCreateAuthChallenge": {
-          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesCreateAuthChallenge-43704a31386566614a66-build.zip"
-        },
-        "JacksOfAllTradesVerifyAuthChallengeResponse": {
-          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesVerifyAuthChallengeResponse-523974725a6256526346-build.zip",
-          "RECAPTCHASECRET": "6LdkKToiAAAAAHN5HQE3Lp_vQMyMizJ6llCvxLti"
-        },
-        "JacksOfAllTradesCustomMessage": {
-          "deploymentBucketName": "amplify-jacksofalltrades-staging-184202-deployment",
-          "s3Key": "amplify-builds/JacksOfAllTradesCustomMessage-6a685969624e58487269-build.zip",
-          "REDIRECTURL": "https://main.d1ukjek0j1m8s5.amplifyapp.com/home",
-          "EMAILSUBJECT": "Jacks Of All Trades Confirmation",
-          "EMAILMESSAGE": ""
-        }
-      },
-      "api": {
-        "JacksOfAllTrades": {}
-      }
+      "DeploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
+      "UnauthRoleName": "amplify-jacksofalltrades-dev-163942-unauthRole",
+      "StackName": "amplify-jacksofalltrades-dev-163942",
+      "StackId": "arn:aws:cloudformation:us-east-1:473277448697:stack/amplify-jacksofalltrades-dev-163942/3963f890-44f6-11ed-a9c7-0e8dec65c45f",
+      "AmplifyAppId": "d3hi9mzn0coe5y"
     }
   }
 }

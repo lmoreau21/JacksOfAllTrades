@@ -1,7 +1,0 @@
-{
-    "AppSyncApiName": "JacksOfAllTrades",
-    "DynamoDBBillingMode": "PAY_PER_REQUEST",
-    "DynamoDBEnableServerSideEncryption": false,
-    "S3DeploymentBucket": "amplify-jacksofalltrades-staging-184202-deployment",
-    "S3DeploymentRootKey": "amplify-appsync-files/4913def30bc696cdbe4f994e3c81b73d1b37bb51"
-}
