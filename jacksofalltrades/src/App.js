@@ -6,26 +6,39 @@ import './pages/login.js'
 import './pages/signup.js'
 import './pages/home.js'
 import './aws-exports'
+
 import awsmobile from './aws-exports';
+
 //import Home from './pages'
+
 import Login from './pages/login'
 import Signup from './pages/signup'
 import Home from './pages/home'
 
-function App() {
+import { Amplify, Auth } from 'aws-amplify';
+import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
+
+
+function App({signOut,user}) {
 return (
-    <Router>
+  <>
+  <Router>
     <Routes>
-        <Route exact path='/' element={<Home/>} />
+        <Route exact path='/' element={<Home/>}/>
         <Route path='/home' element={<Home/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
     </Routes>
-    </Router>
+  </Router>
+  </>
 );
 }
   
-export default App;
+export default withAuthenticator(App);
 
 /*
 import React, { useState } from 'react';
