@@ -16,7 +16,7 @@ function App() {
 return (
     <Router>
     <Routes>
-        <Route exact path='/' element={<aws-exports/>} />
+        <Route exact path='/' element={<Home/>} />
         <Route path='/home' element={<Home/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/signup' element={<Signup/>} />
