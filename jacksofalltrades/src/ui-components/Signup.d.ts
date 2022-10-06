@@ -6,11 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { Logins } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type SignupProps = React.PropsWithChildren<Partial<ViewProps> & {
-    logins?: Logins;
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Signup(props: SignupProps): React.ReactElement;

@@ -19,7 +19,9 @@
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
-        "socialProviders": [],
+        "socialProviders": [
+          "GOOGLE"
+        ],
         "usernameAttributes": [
           "EMAIL"
         ],
@@ -28,7 +30,12 @@
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
-          "passwordPolicyCharacters": []
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
         },
         "mfaConfiguration": "OFF",
         "mfaTypes": [
@@ -38,11 +45,6 @@
           "EMAIL"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/jacksofalltrades9b9a0612-cloudformation-template.json",
-        "logicalId": "authjacksofalltrades9b9a0612"
-      },
-      "lastPushTimeStamp": "2022-10-05T22:34:01.310Z",
       "output": {
         "UserPoolId": "us-east-1_dEYvOyCeJ",
         "AppClientIDWeb": "sid3ofehs775vr5divrg44bjs",
@@ -50,9 +52,47 @@
         "IdentityPoolId": "us-east-1:8f6dee1d-56f5-49a0-913a-6b16da9c2392",
         "UserPoolArn": "arn:aws:cognito-idp:us-east-1:473277448697:userpool/us-east-1_dEYvOyCeJ",
         "IdentityPoolName": "jacksofalltrades9b9a0612_identitypool_9b9a0612__dev",
-        "UserPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612"
+        "UserPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612",
+        "HostedUIDomain": "m8iykpfptfad-dev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"],\"LogoutURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"]}"
       },
-      "lastPushDirHash": "a+3ybGvoLokNbvGsIblc5Awz7D0="
+      "lastPushTimeStamp": "2022-10-06T20:09:53.875Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/jacksofalltrades9b9a0612-cloudformation-template.json",
+        "logicalId": "authjacksofalltrades9b9a0612"
+      },
+      "lastPushDirHash": "KdnTXF58Nb98g9dE/Te9AdimcZs="
+    }
+  },
+  "api": {
+    "JacksOfAllTrades": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
+            }
+          },
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            }
+          ]
+        },
+        "GraphQLAPIIdOutput": "p4kfy6ms3rbdzahagmixxr675a",
+        "GraphQLAPIEndpointOutput": "https://i2clieojxjfy5daw6ll5uy453a.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-bf5d6ukafnhztgvwxuw2wx5onq"
+      },
+      "lastPushTimeStamp": "2022-10-06T20:09:53.820Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiJacksOfAllTrades"
+      }
     }
   }
 }

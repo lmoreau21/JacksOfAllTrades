@@ -6,17 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text, View } from "@aws-amplify/ui-react";
 export default function SkillLink(props) {
-  const { skillProfile, overrides, ...rest } = props;
-  const skillNameOnClick = useNavigateAction({
-    type: "url",
-    url: `${"/"}${skillProfile?.id}`,
-  });
+  const { overrides, ...rest } = props;
   return (
     <View
       width="790px"
@@ -54,10 +47,7 @@ export default function SkillLink(props) {
           left="0px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={skillProfile?.title}
-          onClick={() => {
-            skillNameOnClick();
-          }}
+          children="Skill Name"
           {...getOverrideProps(overrides, "Skill Name")}
         ></Text>
         <View
@@ -109,7 +99,7 @@ export default function SkillLink(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={skillProfile?.time}
+              children="num"
               {...getOverrideProps(overrides, "num")}
             ></Text>
           </Flex>
@@ -131,7 +121,7 @@ export default function SkillLink(props) {
           left="0px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={skillProfile?.description}
+          children="Description"
           {...getOverrideProps(overrides, "Description")}
         ></Text>
       </View>
@@ -143,7 +133,6 @@ export default function SkillLink(props) {
         left="487px"
         boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
         padding="0px 0px 0px 0px"
-        src={skillProfile?.photo}
         {...getOverrideProps(overrides, "Skill Image")}
       ></Image>
       <View

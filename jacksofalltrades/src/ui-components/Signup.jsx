@@ -6,54 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useDataStoreCreateAction,
-  useNavigateAction,
-  useStateMutationAction,
-} from "@aws-amplify/ui-react/internal";
-import { UserRolesReference, Users } from "../models";
-import { schema } from "../models/schema";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Icon, Text, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function Signup(props) {
-  const { logins, overrides, ...rest } = props;
-  const [
-    textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
-    setTextAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
-  ] = useStateMutationAction("");
-  const [
-    textAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
-    setTextAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
-  ] = useStateMutationAction("");
-  const [logInInsteadColor, setLogInInsteadColor] = useStateMutationAction(
-    "rgba(104,112,120,1)"
-  );
-  const logoThreeFiveThreeSevenTwoFiveSixTwoOnClick = useNavigateAction({
-    type: "url",
-    url: "/login",
-  });
-  const logInInsteadOnClick = useNavigateAction({ type: "url", url: "/login" });
-  const logInInsteadOnMouseOver = () => {
-    setLogInInsteadColor("#950404");
-  };
-  const logInInsteadOnMouseOut = () => {
-    setLogInInsteadColor("#687078");
-  };
-  const signinBoxOnClick = useDataStoreCreateAction({
-    fields: {
-      firstName: textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
-      lastName: textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
-      userName: textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue,
-      userEmail: textAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue,
-    },
-    model: Users,
-    schema: schema,
-  });
-  const sIGNUPOnClick = useDataStoreCreateAction({
-    fields: {},
-    model: UserRolesReference,
-    schema: schema,
-  });
+  const { overrides, ...rest } = props;
   return (
     <View
       width="1388px"
@@ -194,9 +150,6 @@ export default function Signup(props) {
         position="absolute"
         top="139px"
         left="855px"
-        onClick={() => {
-          logoThreeFiveThreeSevenTwoFiveSixTwoOnClick();
-        }}
         {...getOverrideProps(overrides, "Logo35372562")}
       >
         <View
@@ -1524,12 +1477,6 @@ export default function Signup(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue}
-        onChange={(event) => {
-          setTextAreaFieldThreeFiveThreeSevenTwoFiveSixThreeValue(
-            event.target.value
-          );
-        }}
         {...getOverrideProps(overrides, "TextAreaField35372563")}
       ></TextAreaField>
       <TextAreaField
@@ -1549,12 +1496,6 @@ export default function Signup(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue}
-        onChange={(event) => {
-          setTextAreaFieldThreeFiveThreeSevenTwoFiveSevenOneValue(
-            event.target.value
-          );
-        }}
         {...getOverrideProps(overrides, "TextAreaField35372571")}
       ></TextAreaField>
       <TextAreaField
@@ -1580,7 +1521,7 @@ export default function Signup(props) {
         fontFamily="Kameron"
         fontSize="16px"
         fontWeight="400"
-        color={logInInsteadColor}
+        color="rgba(104,112,120,1)"
         lineHeight="24px"
         textAlign="center"
         display="flex"
@@ -1592,15 +1533,6 @@ export default function Signup(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Log In Instead"
-        onClick={() => {
-          logInInsteadOnClick();
-        }}
-        onMouseOver={() => {
-          logInInsteadOnMouseOver();
-        }}
-        onMouseOut={() => {
-          logInInsteadOnMouseOut();
-        }}
         {...getOverrideProps(overrides, "Log In Instead")}
       ></Text>
       <View
@@ -1622,9 +1554,6 @@ export default function Signup(props) {
           borderRadius="8px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(157,101,101,1)"
-          onClick={() => {
-            signinBoxOnClick();
-          }}
           {...getOverrideProps(overrides, "Sign in Box")}
         ></View>
         <Text
@@ -1645,9 +1574,6 @@ export default function Signup(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="SIGN UP"
-          onClick={() => {
-            sIGNUPOnClick();
-          }}
           {...getOverrideProps(overrides, "SIGN UP")}
         ></Text>
       </View>

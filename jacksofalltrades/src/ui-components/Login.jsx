@@ -6,32 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-  useStateMutationAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function Login(props) {
-  const { frame418, overrides, ...rest } = props;
-  const [signUpColor, setSignUpColor] = useStateMutationAction(
-    "rgba(104,112,120,1)"
-  );
-  const [signinBoxBackgroundColor, setSigninBoxBackgroundColor] =
-    useStateMutationAction("#9D6565");
-  const signUpOnMouseEnter = () => {
-    setSignUpColor("#932323");
-  };
-  const signUpOnMouseLeave = () => {
-    setSignUpColor("#687078");
-  };
-  const signUpOnClick = useNavigateAction({ type: "url", url: "/signup" });
-  const signinBoxOnMouseLeave = () => {
-    setSigninBoxBackgroundColor("#9D6565");
-  };
-  const signinBoxOnMouseEnter = () => {
-    setSigninBoxBackgroundColor("#687078");
-  };
+  const { overrides, ...rest } = props;
   return (
     <View
       width="1388px"
@@ -341,7 +319,7 @@ export default function Login(props) {
             fontFamily="Kameron"
             fontSize="16px"
             fontWeight="400"
-            color={signUpColor}
+            color="rgba(104,112,120,1)"
             lineHeight="24px"
             textAlign="left"
             display="flex"
@@ -353,15 +331,6 @@ export default function Login(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Sign Up"
-            onMouseEnter={() => {
-              signUpOnMouseEnter();
-            }}
-            onMouseLeave={() => {
-              signUpOnMouseLeave();
-            }}
-            onClick={() => {
-              signUpOnClick();
-            }}
             {...getOverrideProps(overrides, "Sign Up")}
           ></Text>
           <View
@@ -382,13 +351,7 @@ export default function Login(props) {
               boxShadow="0px 10px 20px rgba(0, 0, 0, 0.17000000178813934)"
               borderRadius="8px"
               padding="0px 0px 0px 0px"
-              backgroundColor={signinBoxBackgroundColor}
-              onMouseLeave={() => {
-                signinBoxOnMouseLeave();
-              }}
-              onMouseEnter={() => {
-                signinBoxOnMouseEnter();
-              }}
+              backgroundColor="rgba(157,101,101,1)"
               {...getOverrideProps(overrides, "Sign in Box")}
             ></View>
             <Text

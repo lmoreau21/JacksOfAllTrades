@@ -1,14 +1,6 @@
 import { ModelInit, MutableModel } from "@aws-amplify/datastore";
 
-type RolesMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
-
-type UserRolesReferenceMetaData = {
-  readOnlyFields: 'createdAt' | 'updatedAt';
-}
-
-type LoginsMetaData = {
+type SignInMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
@@ -16,80 +8,112 @@ type UsersMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type SkillProfileMetaData = {
+type ExistingUserMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class Roles {
-  readonly id: string;
-  readonly roleName: string;
-  readonly description: string;
-  readonly isEnabled: boolean;
-  readonly displayName: string;
-  readonly visable: boolean;
-  readonly userRolesReferenceID?: string | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-  constructor(init: ModelInit<Roles, RolesMetaData>);
-  static copyOf(source: Roles, mutator: (draft: MutableModel<Roles, RolesMetaData>) => MutableModel<Roles, RolesMetaData> | void): Roles;
+type SignUpMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class UserRolesReference {
-  readonly id: string;
-  readonly userID: string;
-  readonly roleID: string;
-  readonly userRoles?: (Roles | null)[] | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-  constructor(init: ModelInit<UserRolesReference, UserRolesReferenceMetaData>);
-  static copyOf(source: UserRolesReference, mutator: (draft: MutableModel<UserRolesReference, UserRolesReferenceMetaData>) => MutableModel<UserRolesReference, UserRolesReferenceMetaData> | void): UserRolesReference;
+type SkillprofileMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class Logins {
+type SignInUsersMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type UsersExistingUserMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+export declare class SignIn {
   readonly id: string;
-  readonly userName: string;
+  readonly userEmail: string;
   readonly userPassword: string;
-  readonly Users?: Users | null;
+  readonly userConfirmPassword: string;
+  readonly usersSignIns?: (SignInUsers | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  readonly loginsUsersId?: string | null;
-  constructor(init: ModelInit<Logins, LoginsMetaData>);
-  static copyOf(source: Logins, mutator: (draft: MutableModel<Logins, LoginsMetaData>) => MutableModel<Logins, LoginsMetaData> | void): Logins;
+  constructor(init: ModelInit<SignIn, SignInMetaData>);
+  static copyOf(source: SignIn, mutator: (draft: MutableModel<SignIn, SignInMetaData>) => MutableModel<SignIn, SignInMetaData> | void): SignIn;
 }
 
 export declare class Users {
   readonly id: string;
-  readonly firstName?: string | null;
-  readonly lastName?: string | null;
-  readonly userName: string;
+  readonly firstName: string;
+  readonly lastName: string;
   readonly userEmail: string;
-  readonly UserRolesReference?: UserRolesReference | null;
+  readonly existingUsers?: (UsersExistingUser | null)[] | null;
+  readonly signins?: (SignInUsers | null)[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  readonly usersUserRolesReferenceId?: string | null;
   constructor(init: ModelInit<Users, UsersMetaData>);
   static copyOf(source: Users, mutator: (draft: MutableModel<Users, UsersMetaData>) => MutableModel<Users, UsersMetaData> | void): Users;
 }
 
-export declare class SkillProfile {
+export declare class ExistingUser {
   readonly id: string;
-  readonly title: string;
-  readonly description: string;
-  readonly time: string;
-  readonly photo: string;
-  readonly difficulty: string;
-  readonly category: string;
-  readonly userInteraction?: string | null;
-  readonly videoRights?: string | null;
-  readonly authorAccountID: string;
-  readonly video?: string | null;
-  readonly instructions: string;
-  readonly materialsList?: string | null;
-  readonly requiresMaterials: boolean;
-  readonly photoRights?: string | null;
-  readonly instructionRights?: string | null;
+  readonly userName?: string | null;
+  readonly userEmail?: string | null;
+  readonly isTrue?: boolean | null;
+  readonly isCurrentUser?: UsersExistingUser[] | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  constructor(init: ModelInit<SkillProfile, SkillProfileMetaData>);
-  static copyOf(source: SkillProfile, mutator: (draft: MutableModel<SkillProfile, SkillProfileMetaData>) => MutableModel<SkillProfile, SkillProfileMetaData> | void): SkillProfile;
+  constructor(init: ModelInit<ExistingUser, ExistingUserMetaData>);
+  static copyOf(source: ExistingUser, mutator: (draft: MutableModel<ExistingUser, ExistingUserMetaData>) => MutableModel<ExistingUser, ExistingUserMetaData> | void): ExistingUser;
+}
+
+export declare class SignUp {
+  readonly id: string;
+  readonly userEmail: string;
+  readonly userPassword: string;
+  readonly userConfirmPassword: string;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<SignUp, SignUpMetaData>);
+  static copyOf(source: SignUp, mutator: (draft: MutableModel<SignUp, SignUpMetaData>) => MutableModel<SignUp, SignUpMetaData> | void): SignUp;
+}
+
+export declare class Skillprofile {
+  readonly id: string;
+  readonly title?: string | null;
+  readonly description?: string | null;
+  readonly instructions?: string | null;
+  readonly instructionRights?: string | null;
+  readonly category?: string | null;
+  readonly difficultyLevel?: string | null;
+  readonly materialsRequired?: boolean | null;
+  readonly timeEstimate?: string | null;
+  readonly photo?: string | null;
+  readonly photoRights?: string | null;
+  readonly video?: string | null;
+  readonly videoRights?: string | null;
+  readonly creator?: string | null;
+  readonly skillId?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Skillprofile, SkillprofileMetaData>);
+  static copyOf(source: Skillprofile, mutator: (draft: MutableModel<Skillprofile, SkillprofileMetaData>) => MutableModel<Skillprofile, SkillprofileMetaData> | void): Skillprofile;
+}
+
+export declare class SignInUsers {
+  readonly id: string;
+  readonly signIn: SignIn;
+  readonly users: Users;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<SignInUsers, SignInUsersMetaData>);
+  static copyOf(source: SignInUsers, mutator: (draft: MutableModel<SignInUsers, SignInUsersMetaData>) => MutableModel<SignInUsers, SignInUsersMetaData> | void): SignInUsers;
+}
+
+export declare class UsersExistingUser {
+  readonly id: string;
+  readonly users: Users;
+  readonly existingUser: ExistingUser;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<UsersExistingUser, UsersExistingUserMetaData>);
+  static copyOf(source: UsersExistingUser, mutator: (draft: MutableModel<UsersExistingUser, UsersExistingUserMetaData>) => MutableModel<UsersExistingUser, UsersExistingUserMetaData> | void): UsersExistingUser;
 }

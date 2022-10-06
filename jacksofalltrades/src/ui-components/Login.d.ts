@@ -8,8 +8,6 @@ import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type LoginProps = React.PropsWithChildren<Partial<ViewProps> & {
-    frame418?: React.ReactNode;
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Login(props: LoginProps): React.ReactElement;

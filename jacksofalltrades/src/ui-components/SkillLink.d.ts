@@ -6,11 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { SkillProfile } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type SkillLinkProps = React.PropsWithChildren<Partial<ViewProps> & {
-    skillProfile?: SkillProfile;
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function SkillLink(props: SkillLinkProps): React.ReactElement;
