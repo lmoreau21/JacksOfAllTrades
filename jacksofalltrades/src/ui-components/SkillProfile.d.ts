@@ -5,9 +5,12 @@
  **************************************************************************/
 
 import React from "react";
+import { Skillprofile } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type SkillProfileProps = React.PropsWithChildren<Partial<FlexProps> & {
+    skillprofile?: Skillprofile;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function SkillProfile(props: SkillProfileProps): React.ReactElement;

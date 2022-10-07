@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route}
+import { BrowserRouter as Router, Routes, Route, BrowserRouter}
     from 'react-router-dom';
 import './pages/login.js'
 import './pages/signup.js'
@@ -14,27 +14,31 @@ import awsmobile from './aws-exports';
 import Login from './pages/login'
 import Signup from './pages/signup'
 import Home from './pages/home'
-
+import SkillDisplay from './pages/skillprofile';
+import SkillList from './pages/skilllist'
 import { Amplify, Auth } from 'aws-amplify';
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from './aws-exports';
+import { TopBar } from './ui-components';
+
 Amplify.configure(awsconfig);
 
 
 
 function App({signOut,user}) {
 return (
-  <>
-  <Router>
-    <Routes>
-        <Route exact path='/' element={<Home/>}/>
-        <Route path='/home' element={<Home/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/signup' element={<Signup/>} />
-    </Routes>
-  </Router>
-  </>
+  <BrowserRouter>
+    <div>
+      <TopBar/>
+      <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route path='/skilllist' element={<SkillList/>} />
+          <Route path='/skillprofile' element={<SkillDisplay/>} />
+          <Route path='/signup' element={<Signup/>} />
+      </Routes>
+    </div>
+  </BrowserRouter>
 );
 }
   

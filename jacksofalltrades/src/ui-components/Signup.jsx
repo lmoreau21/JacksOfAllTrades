@@ -6,10 +6,19 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useStateMutationAction,
+} from "@aws-amplify/ui-react/internal";
 import { Icon, Text, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function Signup(props) {
   const { overrides, ...rest } = props;
+  const [logInInsteadColor, setLogInInsteadColor] = useStateMutationAction(
+    "rgba(104,112,120,1)"
+  );
+  const logInInsteadOnMouseOver = () => {
+    setLogInInsteadColor("000000");
+  };
   return (
     <View
       width="1388px"
@@ -274,7 +283,7 @@ export default function Signup(props) {
         fontFamily="Kameron"
         fontSize="32px"
         fontWeight="400"
-        color="rgba(77,0,0,1)"
+        color="rgba(77,0,26,1)"
         lineHeight="48px"
         textAlign="center"
         display="flex"
@@ -1521,7 +1530,7 @@ export default function Signup(props) {
         fontFamily="Kameron"
         fontSize="16px"
         fontWeight="400"
-        color="rgba(104,112,120,1)"
+        color={logInInsteadColor}
         lineHeight="24px"
         textAlign="center"
         display="flex"
@@ -1533,6 +1542,9 @@ export default function Signup(props) {
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Log In Instead"
+        onMouseOver={() => {
+          logInInsteadOnMouseOver();
+        }}
         {...getOverrideProps(overrides, "Log In Instead")}
       ></Text>
       <View
@@ -1560,7 +1572,7 @@ export default function Signup(props) {
           fontFamily="Kameron"
           fontSize="25px"
           fontWeight="400"
-          color="rgba(252,233,233,1)"
+          color="rgba(254,230,238,1)"
           lineHeight="37.5px"
           textAlign="left"
           display="flex"

@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
+import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Homepage(props) {
   const { overrides, ...rest } = props;
   return (
@@ -24,9 +24,9 @@ export default function Homepage(props) {
       <View
         padding="0px 0px 0px 0px"
         width="1503px"
-        height="2874px"
+        height="3028px"
         position="absolute"
-        top="-572px"
+        top="-726px"
         left="0px"
         {...getOverrideProps(overrides, "Background")}
       >
@@ -34,7 +34,7 @@ export default function Homepage(props) {
           width="1503px"
           height="2302px"
           position="absolute"
-          top="572px"
+          top="726px"
           left="0px"
           padding="0px 0px 0px 0px"
           backgroundImage="linear-gradient(-45deg, rgba(147,37,37,1), rgba(167,152,152,1))"
@@ -53,24 +53,24 @@ export default function Homepage(props) {
           ]}
           position="absolute"
           top="1144px"
-          left="1334px"
+          left="1317px"
           transformOrigin="top left"
           transform="rotate(-180deg)"
           {...getOverrideProps(overrides, "Ellipse 11")}
         ></Icon>
         <Text
           fontFamily="Kameron"
-          fontSize="31px"
+          fontSize="35px"
           fontWeight="400"
           color="rgba(215,226,238,1)"
-          lineHeight="36.328125px"
+          lineHeight="41.015625px"
           textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
           position="absolute"
-          top="821px"
-          left="611px"
+          top="984px"
+          left="593px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Learning made easy"
@@ -78,445 +78,225 @@ export default function Homepage(props) {
         ></Text>
         <Text
           fontFamily="Kameron"
-          fontSize="56px"
+          fontSize="70px"
           fontWeight="400"
           color="rgba(0,0,0,1)"
-          lineHeight="65.625px"
+          lineHeight="82.03125px"
           textAlign="left"
           display="flex"
           direction="column"
           justifyContent="flex-start"
           position="absolute"
-          top="722px"
-          left="466px"
+          top="874px"
+          left="395px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="The Jacks of All Trades"
           {...getOverrideProps(overrides, "The Jacks of All Trades (title)")}
         ></Text>
+        <View
+          width="686px"
+          height="4px"
+          position="absolute"
+          top="1316px"
+          left="593px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(0,0,0,1)"
+          {...getOverrideProps(overrides, "Line")}
+        ></View>
+        <View
+          width="686px"
+          height="4px"
+          position="absolute"
+          top="1399px"
+          left="593px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(0,0,0,1)"
+          {...getOverrideProps(overrides, "Line 2")}
+        ></View>
       </View>
-      <Flex
-        gap="32px"
-        position="absolute"
-        top="0px"
-        left="0px"
-        width="1503px"
-        height="80px"
-        justifyContent="flex-end"
-        alignItems="center"
-        boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+      <View
         padding="0px 0px 0px 0px"
-        backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "Top Bar")}
+        width="235px"
+        height="103px"
+        position="absolute"
+        top="852px"
+        left="80px"
+        {...getOverrideProps(overrides, "Settings Icon")}
       >
-        <Flex
-          padding="0px 0px 0px 0px"
-          width="48px"
-          height="68.79px"
-          shrink="0"
-          position="relative"
-          {...getOverrideProps(overrides, "Logo")}
-        >
-          <View
-            width="29px"
-            height="43px"
-            position="absolute"
-            top="0px"
-            left="23.14px"
-            transformOrigin="top left"
-            transform="rotate(30.98deg)"
-            padding="0px 0px 0px 0px"
-            backgroundColor="rgba(220,220,220,1)"
-            {...getOverrideProps(overrides, "Rectangle 1191")}
-          ></View>
-          <View
-            width="29px"
-            height="43px"
-            position="absolute"
-            top="8px"
-            left="22.14px"
-            transformOrigin="top left"
-            transform="rotate(30.98deg)"
-            padding="0px 0px 0px 0px"
-            backgroundColor="rgba(242,236,236,1)"
-            {...getOverrideProps(overrides, "Rectangle 1192")}
-          ></View>
-          <View
-            width="29px"
-            height="43px"
-            position="absolute"
-            top="17px"
-            left="22.14px"
-            transformOrigin="top left"
-            transform="rotate(30.98deg)"
-            padding="0px 0px 0px 0px"
-            backgroundColor="rgba(255,250,250,1)"
-            {...getOverrideProps(overrides, "Rectangle 1193")}
-          ></View>
-          <Text
-            fontFamily="Inter"
-            fontSize="12px"
-            fontWeight="400"
-            color="rgba(0,0,0,1)"
-            lineHeight="18px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            position="absolute"
-            top="26px"
-            left="40.88px"
-            transformOrigin="top left"
-            transform="rotate(33.29deg)"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="J"
-            {...getOverrideProps(overrides, "J35522618")}
-          ></Text>
-          <Text
-            fontFamily="Inter"
-            fontSize="12px"
-            fontWeight="400"
-            color="rgba(0,0,0,1)"
-            lineHeight="18px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            position="absolute"
-            top="41px"
-            left="9.88px"
-            transformOrigin="top left"
-            transform="rotate(33.29deg)"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="J"
-            {...getOverrideProps(overrides, "J35522619")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="4px"
+        <Icon
+          width="106px"
+          height="103px"
+          viewBox={{ minX: 0, minY: 0, width: 106, height: 103 }}
+          paths={[
+            {
+              d: "M106 51.5C106 79.9427 82.2711 103 53 103C23.7289 103 0 79.9427 0 51.5C0 23.0573 23.7289 0 53 0C82.2711 0 106 23.0573 106 51.5Z",
+              fill: "rgba(255,255,255,1)",
+              fillRule: "nonzero",
+            },
+          ]}
+          position="absolute"
+          top="0px"
+          left="0px"
+          {...getOverrideProps(overrides, "circle3")}
+        ></Icon>
+        <Text
+          fontFamily="Kameron"
+          fontSize="29px"
+          fontWeight="400"
+          color="rgba(255,255,255,1)"
+          lineHeight="33.984375px"
+          textAlign="left"
+          display="flex"
           direction="column"
-          width="300px"
-          shrink="0"
-          height="32px"
-          position="relative"
+          justifyContent="flex-start"
+          position="absolute"
+          top="13px"
+          left="130px"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "SearchField")}
-        ></Flex>
-        <Flex
-          gap="40px"
-          width="647px"
-          alignItems="center"
-          grow="1"
-          basis="647.0014038085938px"
-          height="24px"
-          position="relative"
+          whiteSpace="pre-wrap"
+          children="Settings"
+          {...getOverrideProps(overrides, "Settings")}
+        ></Text>
+      </View>
+      <View
+        padding="0px 0px 0px 0px"
+        width="214px"
+        height="103px"
+        position="absolute"
+        top="697px"
+        left="80px"
+        {...getOverrideProps(overrides, "Profile Icon")}
+      >
+        <Icon
+          width="106px"
+          height="103px"
+          viewBox={{ minX: 0, minY: 0, width: 106, height: 103 }}
+          paths={[
+            {
+              d: "M106 51.5C106 79.9427 82.2711 103 53 103C23.7289 103 0 79.9427 0 51.5C0 23.0573 23.7289 0 53 0C82.2711 0 106 23.0573 106 51.5Z",
+              fill: "rgba(255,255,255,1)",
+              fillRule: "nonzero",
+            },
+          ]}
+          position="absolute"
+          top="0px"
+          left="0px"
+          {...getOverrideProps(overrides, "circle2")}
+        ></Icon>
+        <Text
+          fontFamily="Kameron"
+          fontSize="29px"
+          fontWeight="400"
+          color="rgba(255,255,255,1)"
+          lineHeight="33.984375px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          position="absolute"
+          top="13px"
+          left="130px"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 32135522628")}
-        >
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(0,0,0,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.01px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Home"
-            {...getOverrideProps(overrides, "Home")}
-          ></Text>
-          <Text
-            fontFamily="Inter"
-            fontSize="16px"
-            fontWeight="400"
-            color="rgba(0,0,0,1)"
-            lineHeight="24px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.01px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="About"
-            {...getOverrideProps(overrides, "About")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="32px"
-          width="412px"
-          justifyContent="center"
-          alignItems="flex-start"
-          shrink="0"
-          alignSelf="stretch"
-          position="relative"
-          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Profile"
           {...getOverrideProps(overrides, "Profile")}
-        >
-          <View
-            width="190px"
-            height="1px"
-            grow="1"
-            basis="190px"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Divider")}
-          ></View>
-          <Flex
-            gap="129px"
-            width="190px"
-            alignItems="center"
-            grow="1"
-            basis="190px"
-            height="48px"
-            position="relative"
-            padding="0px 32px 0px 32px"
-            {...getOverrideProps(overrides, "Frame 416")}
-          >
-            <Flex
-              gap="16px"
-              width="1px"
-              alignItems="center"
-              grow="1"
-              basis="1px"
-              height="48px"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 415")}
-            >
-              <View
-                width="48px"
-                height="48px"
-                shrink="0"
-                position="relative"
-                borderRadius="40px"
-                padding="0px 0px 0px 0px"
-                backgroundColor="rgba(196,196,196,1)"
-                {...getOverrideProps(overrides, "Rectangle 1163")}
-              ></View>
-              <Flex
-                gap="0"
-                direction="column"
-                width="100px"
-                shrink="0"
-                height="24px"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 32135522766")}
-              >
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(13,26,38,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="flex"
-                  direction="column"
-                  justifyContent="flex-start"
-                  letterSpacing="0.01px"
-                  shrink="0"
-                  alignSelf="stretch"
-                  objectFit="cover"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Name"
-                  {...getOverrideProps(overrides, "Name")}
-                ></Text>
-              </Flex>
-            </Flex>
-            <View
-              width="24px"
-              height="24px"
-              shrink="0"
-              overflow="hidden"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Icon35522769")}
-            ></View>
-          </Flex>
-        </Flex>
-      </Flex>
-      <Flex
-        gap="32px"
-        position="absolute"
-        top="286px"
-        left="0px"
-        direction="column"
-        width="208px"
-        height="2248px"
+        ></Text>
+        <Image
+          width="92px"
+          height="88px"
+          position="absolute"
+          top="8px"
+          left="7px"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "profile icon")}
+        ></Image>
+      </View>
+      <View
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Frame 32135522648")}
+        width="317px"
+        height="103px"
+        position="absolute"
+        top="542px"
+        left="80px"
+        {...getOverrideProps(overrides, "Learning Icon")}
       >
-        <Flex
-          gap="32px"
+        <Icon
+          width="106px"
+          height="103px"
+          viewBox={{ minX: 0, minY: 0, width: 106, height: 103 }}
+          paths={[
+            {
+              d: "M106 51.5C106 79.9427 82.2711 103 53 103C23.7289 103 0 79.9427 0 51.5C0 23.0573 23.7289 0 53 0C82.2711 0 106 23.0573 106 51.5Z",
+              fill: "rgba(255,255,255,1)",
+              fillRule: "nonzero",
+            },
+          ]}
+          position="absolute"
+          top="0px"
+          left="0px"
+          {...getOverrideProps(overrides, "circle1")}
+        ></Icon>
+        <Image
+          width="86px"
+          height="87px"
+          position="absolute"
+          top="8px"
+          left="10px"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "brain icon")}
+        ></Image>
+        <Text
+          fontFamily="Kameron"
+          fontSize="29px"
+          fontWeight="400"
+          color="rgba(255,255,255,1)"
+          lineHeight="33.984375px"
+          textAlign="left"
+          display="flex"
           direction="column"
-          width="247px"
-          height="1825px"
-          shrink="0"
-          position="relative"
-          padding="0px 32px 0px 32px"
-          {...getOverrideProps(overrides, "Side bar")}
-        >
-          <Flex
-            gap="16px"
-            direction="column"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 414")}
-          >
-            <Text
-              fontFamily="Inter"
-              fontSize="16px"
-              fontWeight="700"
-              color="rgba(255,240,240,1)"
-              lineHeight="24px"
-              textAlign="left"
-              display="flex"
-              direction="column"
-              justifyContent="flex-start"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Let’s get started!"
-              {...getOverrideProps(overrides, "Let\u2019s get started!")}
-            ></Text>
-            <Flex
-              gap="16px"
-              width="fit-content"
-              alignItems="center"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Account Frame")}
-            >
-              <View
-                width="24px"
-                height="24px"
-                shrink="0"
-                overflow="hidden"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Icon35522654")}
-              ></View>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color="rgba(255,240,240,1)"
-                lineHeight="24px"
-                textAlign="left"
-                display="flex"
-                direction="column"
-                justifyContent="flex-start"
-                letterSpacing="0.01px"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Account"
-                {...getOverrideProps(overrides, "Account")}
-              ></Text>
-            </Flex>
-            <Flex
-              gap="16px"
-              width="fit-content"
-              alignItems="center"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Start Learning Frame")}
-            >
-              <View
-                width="24px"
-                height="24px"
-                shrink="0"
-                overflow="hidden"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Icon35522657")}
-              ></View>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color="rgba(255,240,240,1)"
-                lineHeight="24px"
-                textAlign="left"
-                display="flex"
-                direction="column"
-                justifyContent="flex-start"
-                letterSpacing="0.01px"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Start Learning"
-                {...getOverrideProps(overrides, "Start Learning")}
-              ></Text>
-            </Flex>
-            <Flex
-              gap="16px"
-              direction="column"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Frame 413")}
-            >
-              <Flex
-                gap="16px"
-                width="fit-content"
-                alignItems="center"
-                shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                {...getOverrideProps(overrides, "Frame 323")}
-              >
-                <View
-                  width="24px"
-                  height="24px"
-                  shrink="0"
-                  overflow="hidden"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  {...getOverrideProps(overrides, "Icon35522720")}
-                ></View>
-                <Text
-                  fontFamily="Inter"
-                  fontSize="16px"
-                  fontWeight="400"
-                  color="rgba(255,240,240,1)"
-                  lineHeight="24px"
-                  textAlign="left"
-                  display="flex"
-                  direction="column"
-                  justifyContent="flex-start"
-                  letterSpacing="0.01px"
-                  shrink="0"
-                  position="relative"
-                  padding="0px 0px 0px 0px"
-                  whiteSpace="pre-wrap"
-                  children="Post Tutorial"
-                  {...getOverrideProps(overrides, "Post Tutorial")}
-                ></Text>
-              </Flex>
-            </Flex>
-          </Flex>
-        </Flex>
-      </Flex>
+          justifyContent="flex-start"
+          position="absolute"
+          top="13px"
+          left="130px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Start Learning"
+          {...getOverrideProps(overrides, "Start Learning")}
+        ></Text>
+      </View>
+      <Text
+        fontFamily="Kaisei Tokumin"
+        fontSize="58px"
+        fontWeight="700"
+        color="rgba(255,255,255,1)"
+        lineHeight="67.96875px"
+        textAlign="left"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        width="771px"
+        height="144px"
+        position="absolute"
+        top="501px"
+        left="595px"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="Learn skills the easy way,&#xA;use Jacks of All Trades."
+        {...getOverrideProps(
+          overrides,
+          "Learn skills the easy way, use Jacks of All Trades."
+        )}
+      ></Text>
+      <Image
+        width="85px"
+        height="86px"
+        position="absolute"
+        top="861px"
+        left="90px"
+        padding="0px 0px 0px 0px"
+        {...getOverrideProps(overrides, "PngItem_1649963 1")}
+      ></Image>
     </View>
   );
 }

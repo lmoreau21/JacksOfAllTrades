@@ -49,14 +49,14 @@
         "UserPoolId": "us-east-1_dEYvOyCeJ",
         "AppClientIDWeb": "sid3ofehs775vr5divrg44bjs",
         "AppClientID": "3he1hej6voqc6e2k6e1v2m0kkm",
+        "HostedUIDomain": "m8iykpfptfad-dev",
         "IdentityPoolId": "us-east-1:8f6dee1d-56f5-49a0-913a-6b16da9c2392",
         "UserPoolArn": "arn:aws:cognito-idp:us-east-1:473277448697:userpool/us-east-1_dEYvOyCeJ",
         "IdentityPoolName": "jacksofalltrades9b9a0612_identitypool_9b9a0612__dev",
-        "UserPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612",
-        "HostedUIDomain": "m8iykpfptfad-dev",
-        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"],\"LogoutURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"]}"
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"],\"LogoutURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"]}",
+        "UserPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612"
       },
-      "lastPushTimeStamp": "2022-10-06T20:09:53.875Z",
+      "lastPushTimeStamp": "2022-10-06T20:35:41.867Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/jacksofalltrades9b9a0612-cloudformation-template.json",
         "logicalId": "authjacksofalltrades9b9a0612"
@@ -88,11 +88,12 @@
         "GraphQLAPIEndpointOutput": "https://i2clieojxjfy5daw6ll5uy453a.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-bf5d6ukafnhztgvwxuw2wx5onq"
       },
-      "lastPushTimeStamp": "2022-10-06T20:09:53.820Z",
+      "lastPushTimeStamp": "2022-10-06T20:35:41.867Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiJacksOfAllTrades"
-      }
+      },
+      "lastPushDirHash": "Pjz9e15l3YcRnMwgYOV1yutwEuc="
     }
   }
 }

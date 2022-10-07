@@ -9,24 +9,25 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
 export default function SkillProfile(props) {
-  const { overrides, ...rest } = props;
+  const { skillprofile, overrides, ...rest } = props;
   return (
     <Flex
       gap="24px"
-      width="1160px"
+      width="1134px"
+      height="1181px"
       alignItems="flex-start"
       position="relative"
       padding="0px 0px 147px 0px"
+      backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "SkillProfile")}
     >
       <Flex
         gap="0"
         direction="column"
-        width="1135px"
-        height="1131px"
-        grow="1"
-        basis="1135px"
+        width="1134px"
+        height="1278px"
+        shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(255,255,255,1)"
@@ -35,6 +36,7 @@ export default function SkillProfile(props) {
         <Flex
           gap="32px"
           direction="column"
+          height="1137px"
           shrink="0"
           alignSelf="stretch"
           objectFit="cover"
@@ -54,14 +56,14 @@ export default function SkillProfile(props) {
             {...getOverrideProps(overrides, "Divider35122563")}
           ></Divider>
           <View
-            width="1118px"
+            width="1134px"
             height="363px"
             shrink="0"
             position="relative"
             border="1px SOLID rgba(0,0,0,1)"
             boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             padding="0px 0px 0px 0px"
-            backgroundColor="rgba(217,217,217,1)"
+            backgroundColor="rgba(241,239,239,1)"
             {...getOverrideProps(overrides, "Rectangle 1199")}
           ></View>
           <Flex
@@ -92,7 +94,7 @@ export default function SkillProfile(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Skill Name"
+              children={skillprofile?.title}
               {...getOverrideProps(overrides, "Skill Name")}
             ></Text>
           </Flex>
@@ -283,16 +285,18 @@ export default function SkillProfile(props) {
           children="Complete Skill"
           {...getOverrideProps(overrides, "Button")}
         ></Button>
+        <Flex
+          gap="8px"
+          direction="column"
+          height="32px"
+          shrink="0"
+          alignSelf="stretch"
+          objectFit="cover"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Frame 9")}
+        ></Flex>
       </Flex>
-      <Divider
-        height="1098px"
-        shrink="0"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        size="small"
-        orientation="vertical"
-        {...getOverrideProps(overrides, "Divider29766965")}
-      ></Divider>
     </Flex>
   );
 }

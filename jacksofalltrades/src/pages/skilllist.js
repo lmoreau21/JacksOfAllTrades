@@ -11,7 +11,7 @@ import '@aws-amplify/ui-react/styles.css'
 
 Amplify.configure(config)
 
-const SkillList = () => {
+const SkillDisplay = () => {
   return (
     <AmplifyProvider theme={studioTheme}>
       <SkillList/>
@@ -19,7 +19,7 @@ const SkillList = () => {
   );
 }
 
-export default SkillList;
+export default SkillDisplay;
 /*
 import { AmplifyTheme } from 'aws-amplify-react-native';
 
