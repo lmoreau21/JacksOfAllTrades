@@ -13,7 +13,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function SkillLink(props) {
-  const { skillprofile, overrides, ...rest } = props;
+  const {skillprofile, overrides, ...rest } = props;
   const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
     useStateMutationAction("rgba(251,182,205,1)");
   const skillLinkOnMouseOver = () => {
@@ -24,7 +24,7 @@ export default function SkillLink(props) {
   };
   const skillLinkOnClick = useNavigateAction({
     type: "url",
-    url: "/skillprofile",
+    url: `${"/skillprofile/"}${skillprofile?.id}`,
   });
   return (
     <View
@@ -33,7 +33,7 @@ export default function SkillLink(props) {
       overflow="hidden"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      padding="0px 0px 0px 0px"
+      padding="1px 1px 1px 1px"
       backgroundImage="linear-gradient(-81deg, rgba(148,42,42,1), rgba(167,151,151,1))"
       onMouseOver={() => {
         skillLinkOnMouseOver();

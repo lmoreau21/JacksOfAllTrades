@@ -25,15 +25,19 @@ export default function SkillList(props) {
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
+      backgroundColor="rgba(206,195,200,1)"
       type="list"
       isSearchable="true"
       isPaginated={true}
       searchPlaceholder="Search..."
       itemsPerPage={5}
+      
       direction="column"
-      alignItems="stretch"
+      alignItems="center"
       justifyContent="center"
+    
       items={items || []}
+      
       {...rest}
       {...getOverrideProps(overrides, "SkillList")}
     >
@@ -44,6 +48,7 @@ export default function SkillList(props) {
           {...(overrideItems && overrideItems({ item, index }))}
         ></SkillLink>
       )}
+
     </Collection>
   );
 }

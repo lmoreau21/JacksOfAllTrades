@@ -8,14 +8,22 @@ import config from './aws-exports'
 import Amplify from 'aws-amplify';
 import { AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
-import { Login } from './ui-components';
+import { Login, studioTheme } from './ui-components';
 
 Amplify.configure(config)
 
 ReactDOM.render(
-  <AmplifyProvider>
-    <App />  
-  </AmplifyProvider>,
+  <div
+  style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  }}
+  >
+    <AmplifyProvider theme={studioTheme}>
+      <App />  
+    </AmplifyProvider>
+  </div>,
   document.getElementById('root')
 );  
 

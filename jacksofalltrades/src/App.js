@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+//import './App.css';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter}
     from 'react-router-dom';
 import './pages/login.js'
 import './pages/signup.js'
 import './pages/home.js'
 import './aws-exports'
+import { useEffect, useState } from 'react';
 
 import awsmobile from './aws-exports';
 
@@ -17,16 +18,18 @@ import Home from './pages/home'
 import SkillDisplay from './pages/skillprofile';
 import SkillList from './pages/skilllist'
 import { Amplify, Auth } from 'aws-amplify';
-import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
+import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from './aws-exports';
-import { TopBar } from './ui-components';
+import { studioTheme, TopBar } from './ui-components';
+import { Skillprofile } from './models';
 
 Amplify.configure(awsconfig);
 
 
 
 function App({signOut,user}) {
+  
 return (
   <BrowserRouter>
     <div>
@@ -34,7 +37,7 @@ return (
       <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route path='/skilllist' element={<SkillList/>} />
-          <Route path='/skillprofile' element={<SkillDisplay/>} />
+          <Route path = {`${"/skillprofile/"}${Skillprofile?.id}`} element={<SkillDisplay/>} />
           <Route path='/signup' element={<Signup/>} />
       </Routes>
     </div>

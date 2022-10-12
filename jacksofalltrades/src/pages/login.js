@@ -1,8 +1,6 @@
 
 import React from 'react';
 
-import '../App.css';
-
 import {Amplify} from 'aws-amplify'
 import config from '../aws-exports'
 import {AmplifyProvider} from '@aws-amplify/ui-react'

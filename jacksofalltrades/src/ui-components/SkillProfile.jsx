@@ -10,6 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
 export default function SkillProfile(props) {
   const { skillprofile, overrides, ...rest } = props;
+  
   return (
     <Flex
       gap="24px"
