@@ -17,6 +17,7 @@ import Signup from './pages/signup'
 import Home from './pages/home'
 import SkillDisplay from './pages/skillprofile';
 import SkillList from './pages/skilllist'
+import NoPage from './pages/nopage'
 import { Amplify, Auth } from 'aws-amplify';
 import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
@@ -36,8 +37,10 @@ return (
       <TopBar/>
       <Routes>
           <Route exact path='/' element={<Home/>}/>
+          <Route path='/*' element={<NoPage/>}/>
           <Route path='/skilllist' element={<SkillList/>} />
-          <Route path = {`${"/skillprofile/"}${Skillprofile?.id}`} element={<SkillDisplay/>} />
+          <Route path = '/skillprofile/*' element={<SkillDisplay/>} />
+          <Route path = {`${"/skillprofile/"}${Skillprofile.id}`} element={<SkillDisplay/>} />
           <Route path='/signup' element={<Signup/>} />
       </Routes>
     </div>
