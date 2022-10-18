@@ -13,7 +13,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function SkillLink(props) {
-  const {skillprofile, overrides, ...rest } = props;
+  const { skillprofile, overrides, ...rest } = props;
   const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
     useStateMutationAction("rgba(251,182,205,1)");
   const skillLinkOnMouseOver = () => {
@@ -24,7 +24,7 @@ export default function SkillLink(props) {
   };
   const skillLinkOnClick = useNavigateAction({
     type: "url",
-    url: `${"/skillprofile/"}${skillprofile?.id}`,
+    url: `${"/"}${skillprofile?.id}`,
   });
   return (
     <View
@@ -33,7 +33,7 @@ export default function SkillLink(props) {
       overflow="hidden"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      padding="1px 1px 1px 1px"
+      padding="0px 0px 0px 0px"
       backgroundImage="linear-gradient(-81deg, rgba(148,42,42,1), rgba(167,151,151,1))"
       onMouseOver={() => {
         skillLinkOnMouseOver();
@@ -48,6 +48,26 @@ export default function SkillLink(props) {
       {...getOverrideProps(overrides, "SkillLink")}
     >
       <View
+        width="1227px"
+        height="311px"
+        position="absolute"
+        top="0px"
+        left="-219px"
+        padding="0px 0px 0px 0px"
+        backgroundColor="rgba(217,217,217,1)"
+        {...getOverrideProps(overrides, "Rectangle 1200")}
+      ></View>
+      <View
+        width="1035px"
+        height="851px"
+        position="absolute"
+        top="-4558px"
+        left="-2793px"
+        padding="0px 0px 0px 0px"
+        backgroundColor="rgba(255,255,255,1)"
+        {...getOverrideProps(overrides, "Frame 417")}
+      ></View>
+      <View
         width="790px"
         height="311px"
         position="absolute"
@@ -59,7 +79,7 @@ export default function SkillLink(props) {
         {...getOverrideProps(overrides, "Link Border")}
       ></View>
       <View
-        width="782px"
+        width="1333px"
         height="303px"
         position="absolute"
         top="4px"

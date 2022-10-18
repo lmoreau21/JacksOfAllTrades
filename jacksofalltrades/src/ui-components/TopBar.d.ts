@@ -6,8 +6,11 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { Skillprofile } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type TopBarProps = React.PropsWithChildren<Partial<FlexProps> & {
+    skillprofile?: Skillprofile;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function TopBar(props: TopBarProps): React.ReactElement;

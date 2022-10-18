@@ -34,6 +34,7 @@ export default function SideBar(props) {
         <Flex
           gap="16px"
           direction="column"
+          width="fit-content"
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
@@ -133,6 +134,7 @@ export default function SideBar(props) {
           <Flex
             gap="16px"
             direction="column"
+            width="fit-content"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"

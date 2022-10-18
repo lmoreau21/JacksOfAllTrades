@@ -9,6 +9,7 @@ export { default as Homepage } from "./Homepage";
 export { default as Rectangle1198 } from "./Rectangle1198";
 export { default as SkillLink } from "./SkillLink";
 export { default as Dontusethis } from "./Dontusethis";
+export { default as Profilepage } from "./Profilepage";
 export { default as TopBar } from "./TopBar";
 export { default as SideBar } from "./SideBar";
 export { default as SkillList } from "./SkillList";

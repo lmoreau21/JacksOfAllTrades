@@ -299,10 +299,10 @@ export default function Signup(props) {
       ></Text>
       <Text
         fontFamily="Kameron"
-        fontSize="16px"
+        fontSize="35px"
         fontWeight="400"
         color="rgba(104,112,120,1)"
-        lineHeight="24px"
+        lineHeight="52.5px"
         textAlign="left"
         display="flex"
         direction="column"
@@ -1528,17 +1528,17 @@ export default function Signup(props) {
       ></TextAreaField>
       <Text
         fontFamily="Kameron"
-        fontSize="16px"
+        fontSize="35px"
         fontWeight="400"
         color={logInInsteadColor}
-        lineHeight="24px"
+        lineHeight="52.5px"
         textAlign="center"
         display="flex"
         direction="column"
         justifyContent="flex-start"
         position="absolute"
         top="626px"
-        left="588px"
+        left="528px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Log In Instead"
@@ -1570,10 +1570,10 @@ export default function Signup(props) {
         ></View>
         <Text
           fontFamily="Kameron"
-          fontSize="25px"
+          fontSize="45px"
           fontWeight="400"
           color="rgba(254,230,238,1)"
-          lineHeight="37.5px"
+          lineHeight="67.5px"
           textAlign="left"
           display="flex"
           direction="column"

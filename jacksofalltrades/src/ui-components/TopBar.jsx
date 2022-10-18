@@ -11,14 +11,27 @@ import {
   useAuth,
   useAuthSignOutAction,
   useNavigateAction,
+  useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text, View } from "@aws-amplify/ui-react";
 export default function TopBar(props) {
-  const { overrides, ...rest } = props;
+  const { skillprofile, overrides, ...rest } = props;
   const authAttributes = useAuth().user?.attributes ?? {};
+  const [skillColor, setSkillColor] = useStateMutationAction("#000000");
   const homeOnClick = useNavigateAction({ type: "url", url: "/" });
   const aboutOnClick = useAuthSignOutAction({ global: true });
   const skillOnClick = useNavigateAction({ type: "url", url: "/skilllist" });
+  const skillOnMouseOver = () => {
+    setSkillColor("#9a4c4c");
+  };
+  const skillOnMouseLeave = () => {
+    setSkillColor("#000000");
+  };
+  const calanderOnMouseOver = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "/404",
+  });
   return (
     <Flex
       gap="39px"
@@ -173,7 +186,7 @@ export default function TopBar(props) {
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color={skillColor}
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -184,9 +197,15 @@ export default function TopBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Skill"
+          children="Skill List"
           onClick={() => {
             skillOnClick();
+          }}
+          onMouseOver={() => {
+            skillOnMouseOver();
+          }}
+          onMouseLeave={() => {
+            skillOnMouseLeave();
           }}
           {...getOverrideProps(overrides, "Skill")}
         ></Text>
@@ -206,6 +225,9 @@ export default function TopBar(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="Calander"
+          onMouseOver={() => {
+            calanderOnMouseOver();
+          }}
           {...getOverrideProps(overrides, "Calander")}
         ></Text>
       </Flex>
@@ -231,20 +253,18 @@ export default function TopBar(props) {
         {...getOverrideProps(overrides, "Profile")}
       >
         <View
-          width="326.5px"
-          height="1px"
-          grow="1"
-          basis="326.5px"
+          width="240px"
+          height="11px"
+          shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Divider")}
         ></View>
         <Flex
           gap="129px"
-          width="326.5px"
+          width="100%"
           alignItems="center"
           grow="1"
-          basis="326.5px"
           height="48px"
           position="relative"
           padding="0px 32px 0px 32px"
@@ -252,10 +272,9 @@ export default function TopBar(props) {
         >
           <Flex
             gap="16px"
-            width="109.5px"
+            width="100%"
             alignItems="center"
             grow="1"
-            basis="109.5px"
             height="48px"
             position="relative"
             padding="0px 0px 0px 0px"

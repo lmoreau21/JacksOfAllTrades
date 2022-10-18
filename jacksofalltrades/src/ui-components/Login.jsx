@@ -92,7 +92,7 @@ export default function Login(props) {
       >
         <Flex
           padding="0px 0px 0px 0px"
-          width="392px"
+          width="426px"
           height="564px"
           shrink="0"
           position="relative"
@@ -126,10 +126,10 @@ export default function Login(props) {
           ></Icon>
           <Text
             fontFamily="Kameron"
-            fontSize="25px"
+            fontSize="45px"
             fontWeight="400"
             color="rgba(77,0,26,1)"
-            lineHeight="37.5px"
+            lineHeight="67.5px"
             textAlign="left"
             display="flex"
             direction="column"
@@ -144,10 +144,10 @@ export default function Login(props) {
           ></Text>
           <Text
             fontFamily="Kameron"
-            fontSize="16px"
+            fontSize="35px"
             fontWeight="400"
             color="rgba(104,112,120,1)"
-            lineHeight="24px"
+            lineHeight="52.5px"
             textAlign="left"
             display="flex"
             direction="column"
@@ -317,10 +317,10 @@ export default function Login(props) {
           ></TextAreaField>
           <Text
             fontFamily="Kameron"
-            fontSize="16px"
+            fontSize="35px"
             fontWeight="400"
             color="rgba(104,112,120,1)"
-            lineHeight="24px"
+            lineHeight="52.5px"
             textAlign="left"
             display="flex"
             direction="column"
@@ -335,8 +335,8 @@ export default function Login(props) {
           ></Text>
           <View
             padding="0px 0px 0px 0px"
-            width="195px"
-            height="48px"
+            width="215px"
+            height="73px"
             position="absolute"
             top="431px"
             left="60px"
@@ -356,10 +356,10 @@ export default function Login(props) {
             ></View>
             <Text
               fontFamily="Kameron"
-              fontSize="25px"
+              fontSize="45px"
               fontWeight="400"
               color="rgba(255,255,255,1)"
-              lineHeight="37.5px"
+              lineHeight="67.5px"
               textAlign="left"
               display="flex"
               direction="column"
