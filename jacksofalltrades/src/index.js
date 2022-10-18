@@ -15,6 +15,9 @@ Amplify.configure(config)
 ReactDOM.render(
   <div
   style={{
+    width: '100vw',
+    padding: '0px',
+    backgroundColor: "#D3D3D3",
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'

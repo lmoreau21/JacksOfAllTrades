@@ -12,9 +12,13 @@ Amplify.configure(config)
 const SkillDisplay = () => {
 
   return (
+    <div style={{padding: "30px", display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'}}>
     <AmplifyProvider theme={studioTheme}>
       <SkillList/>
     </AmplifyProvider>
+    </div>
   );
 }
 
