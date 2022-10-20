@@ -33,7 +33,7 @@ type SignUp @model @auth(rules: [{allow: public}]) {
 
 type Skillprofile @model @auth(rules: [
   {allow: public, operations: [read]},
-  {allow: groups: ["Instructor", "Admin"]}
+  {allow: groups, groups: ["Instructor", "Admin"]}
   ]) {
     id: ID!
     title: String
