@@ -13,7 +13,17 @@
     },
     "categories": {
       "auth": {
-        "jacksofalltrades9b9a0612": {}
+        "jacksofalltrades9b9a0612": {},
+        "userPoolGroups": {}
+      },
+      "storage": {
+        "s39e3a50d5": {}
+      },
+      "function": {
+        "S3Triggerbab38022": {
+          "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
+          "s3Key": "amplify-builds/S3Triggerbab38022-43353175737845753353-build.zip"
+        }
       }
     }
   }

@@ -17,9 +17,25 @@ import { Flex, Text, View } from "@aws-amplify/ui-react";
 export default function TopBar(props) {
   const { skillprofile, overrides, ...rest } = props;
   const authAttributes = useAuth().user?.attributes ?? {};
+  const [homeColor, setHomeColor] = useStateMutationAction("rgba(0,0,0,1)");
+  const [aboutColor, setAboutColor] = useStateMutationAction("rgba(0,0,0,1)");
   const [skillColor, setSkillColor] = useStateMutationAction("#000000");
+  const [calanderColor, setCalanderColor] =
+    useStateMutationAction("rgba(0,0,0,1)");
   const homeOnClick = useNavigateAction({ type: "url", url: "/" });
+  const homeOnMouseLeave = () => {
+    setHomeColor("#000000");
+  };
+  const homeOnMouseOver = () => {
+    setHomeColor("#9a4c4c");
+  };
   const aboutOnClick = useAuthSignOutAction({ global: true });
+  const aboutOnMouseLeave = () => {
+    setAboutColor("#000000");
+  };
+  const aboutOnMouseOver = () => {
+    setAboutColor("#9a4c4c");
+  };
   const skillOnClick = useNavigateAction({ type: "url", url: "/skilllist" });
   const skillOnMouseOver = () => {
     setSkillColor("#9a4c4c");
@@ -27,11 +43,12 @@ export default function TopBar(props) {
   const skillOnMouseLeave = () => {
     setSkillColor("#000000");
   };
-  const calanderOnMouseOver = useNavigateAction({
-    target: "_blank",
-    type: "url",
-    url: "/404",
-  });
+  const calanderOnMouseOver = () => {
+    setCalanderColor("#9a4c4c");
+  };
+  const calanderOnMouseLeave = () => {
+    setCalanderColor("#000000");
+  };
   return (
     <Flex
       gap="39px"
@@ -144,7 +161,7 @@ export default function TopBar(props) {
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color={homeColor}
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -159,13 +176,19 @@ export default function TopBar(props) {
           onClick={() => {
             homeOnClick();
           }}
+          onMouseLeave={() => {
+            homeOnMouseLeave();
+          }}
+          onMouseOver={() => {
+            homeOnMouseOver();
+          }}
           {...getOverrideProps(overrides, "Home")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color={aboutColor}
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -179,6 +202,12 @@ export default function TopBar(props) {
           children="Sign Out"
           onClick={() => {
             aboutOnClick();
+          }}
+          onMouseLeave={() => {
+            aboutOnMouseLeave();
+          }}
+          onMouseOver={() => {
+            aboutOnMouseOver();
           }}
           {...getOverrideProps(overrides, "About")}
         ></Text>
@@ -213,7 +242,7 @@ export default function TopBar(props) {
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color="rgba(0,0,0,1)"
+          color={calanderColor}
           lineHeight="24px"
           textAlign="left"
           display="flex"
@@ -224,9 +253,12 @@ export default function TopBar(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Calander"
+          children="Calendar"
           onMouseOver={() => {
             calanderOnMouseOver();
+          }}
+          onMouseLeave={() => {
+            calanderOnMouseLeave();
           }}
           {...getOverrideProps(overrides, "Calander")}
         ></Text>

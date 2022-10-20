@@ -184,7 +184,7 @@
           "authSelections": "identityPoolAndUserPool",
           "useDefault": "manual",
           "usernameAttributes": "email",
-          "userPoolGroupList": "",
+          "userPoolGroupList": "Admin,Instructor,User",
           "serviceName": "Cognito",
           "usernameCaseSensitive": false,
           "useEnabledMfas": true,
@@ -210,8 +210,53 @@
           "hostedUIDomainName": "m8iykpfptfad",
           "authProvidersUserPool": "Google",
           "hostedUIProviderMeta": "[{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
+          "hostedUIProviderCreds": "[]",
           "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"],\"LogoutURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"]}",
-          "hostedUIProviderCreds": "[{\"ProviderName\":\"Google\",\"client_id\":\"121464894501-ls5dk96edur8rp0vu9popnqbotdsr6uk.apps.googleusercontent.com\",\"client_secret\":\"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\"}]",
+          "env": "dev"
+        }
+      }
+    },
+    "authuserPoolGroups": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "Parameters": {
+          "AuthRoleArn": {
+            "Fn::GetAtt": [
+              "AuthRole",
+              "Arn"
+            ]
+          },
+          "UnauthRoleArn": {
+            "Fn::GetAtt": [
+              "UnauthRole",
+              "Arn"
+            ]
+          },
+          "authjacksofalltrades9b9a0612UserPoolId": {
+            "Fn::GetAtt": [
+              "authjacksofalltrades9b9a0612",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "authjacksofalltrades9b9a0612AppClientIDWeb": {
+            "Fn::GetAtt": [
+              "authjacksofalltrades9b9a0612",
+              "Outputs.AppClientIDWeb"
+            ]
+          },
+          "authjacksofalltrades9b9a0612AppClientID": {
+            "Fn::GetAtt": [
+              "authjacksofalltrades9b9a0612",
+              "Outputs.AppClientID"
+            ]
+          },
+          "authjacksofalltrades9b9a0612IdentityPoolId": {
+            "Fn::GetAtt": [
+              "authjacksofalltrades9b9a0612",
+              "Outputs.IdentityPoolId"
+            ]
+          },
           "env": "dev"
         }
       }
@@ -231,7 +276,51 @@
             "Ref": "UnauthRoleName"
           },
           "S3DeploymentBucket": "amplify-jacksofalltrades-dev-163942-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/7ef63df49457c81dae50eba78c5ce3e9e015f2cb",
+          "S3DeploymentRootKey": "amplify-appsync-files/a298e61cf23c82b86b6eaad399ca9b20d2c4fcff",
+          "env": "dev"
+        }
+      }
+    },
+    "storages39e3a50d5": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "Parameters": {
+          "bucketName": "jacksofalltrades212f85e205a64dde82391216b940ac9",
+          "selectedGuestPermissions": "",
+          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "s3PrivatePolicy": "Private_policy_9e3a50d5",
+          "s3ProtectedPolicy": "Protected_policy_9e3a50d5",
+          "s3PublicPolicy": "Public_policy_9e3a50d5",
+          "s3ReadPolicy": "read_policy_9e3a50d5",
+          "s3UploadsPolicy": "Uploads_policy_9e3a50d5",
+          "authPolicyName": "s3_amplify_9e3a50d5",
+          "unauthPolicyName": "s3_amplify_9e3a50d5",
+          "AuthenticatedAllowList": "ALLOW",
+          "GuestAllowList": "DISALLOW",
+          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedUploads": "s3:PutObject",
+          "s3PermissionsGuestPublic": "DISALLOW",
+          "s3PermissionsGuestUploads": "DISALLOW",
+          "env": "dev"
+        }
+      }
+    },
+    "functionS3Triggerbab38022": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/function/S3Triggerbab38022-cloudformation-template.json",
+        "Parameters": {
+          "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
+          "s3Key": "amplify-builds/S3Triggerbab38022-43353175737845753353-build.zip",
           "env": "dev"
         }
       }

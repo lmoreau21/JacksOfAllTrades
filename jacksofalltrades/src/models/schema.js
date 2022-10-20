@@ -146,6 +146,13 @@ export const schema = {
                         "associatedWith": "users"
                     }
                 },
+                "group": {
+                    "name": "group",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -661,5 +668,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "a808dde794d15d0e3c0213627469861d"
+    "version": "076d66a92a42b0767d3103eef5537ba7"
 };

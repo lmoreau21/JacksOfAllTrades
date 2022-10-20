@@ -10,6 +10,11 @@ export type AmplifyDependentResourcesAttributes = {
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
             "AppClientID": "string"
+        },
+        "userPoolGroups": {
+            "AdminGroupRole": "string",
+            "InstructorGroupRole": "string",
+            "UserGroupRole": "string"
         }
     },
     "api": {
@@ -17,6 +22,20 @@ export type AmplifyDependentResourcesAttributes = {
             "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "storage": {
+        "s39e3a50d5": {
+            "BucketName": "string",
+            "Region": "string"
+        }
+    },
+    "function": {
+        "S3Triggerbab38022": {
+            "Name": "string",
+            "Arn": "string",
+            "Region": "string",
+            "LambdaExecutionRole": "string"
         }
     }
 }

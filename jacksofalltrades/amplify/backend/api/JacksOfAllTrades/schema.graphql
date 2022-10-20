@@ -21,6 +21,7 @@ type Users @model @auth(rules: [{allow: public}]) {
   userEmail: AWSEmail!
   existingUsers: [ExistingUser] @manyToMany(relationName: "UsersExistingUser")
   signins: [SignIn] @manyToMany(relationName: "SignInUsers")
+  group: String
 }
 
 type SignUp @model @auth(rules: [{allow: public}]) {

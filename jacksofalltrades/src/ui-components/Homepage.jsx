@@ -1286,6 +1286,7 @@ export default function Homepage(props) {
           top="152px"
           left="601px"
           padding="0px 0px 0px 0px"
+          srcSet=""
           {...getOverrideProps(overrides, "Check mark 2")}
         ></Image>
         <Image
@@ -1295,6 +1296,7 @@ export default function Homepage(props) {
           top="11px"
           left="601px"
           padding="0px 0px 0px 0px"
+          src=""
           {...getOverrideProps(overrides, "Check mark 1")}
         ></Image>
         <Text

@@ -47,6 +47,7 @@ export declare class Users {
   readonly userEmail: string;
   readonly existingUsers?: (UsersExistingUser | null)[] | null;
   readonly signins?: (SignInUsers | null)[] | null;
+  readonly group?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
   constructor(init: ModelInit<Users, UsersMetaData>);
