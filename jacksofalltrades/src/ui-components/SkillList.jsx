@@ -14,7 +14,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import SkillLink from "./SkillLink";
 import { Collection } from "@aws-amplify/ui-react";
-export default function SkillList(props) {
+export default function SkillList() {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const itemsPagination = { sort: (s) => s.title(SortDirection.ASCENDING) };
   const itemsDataStore = useDataStoreBinding({
