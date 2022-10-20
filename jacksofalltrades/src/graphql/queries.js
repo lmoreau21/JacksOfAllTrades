@@ -1,89 +1,14 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getRoles = /* GraphQL */ `
-  query GetRoles($id: ID!) {
-    getRoles(id: $id) {
+export const getSignIn = /* GraphQL */ `
+  query GetSignIn($id: ID!) {
+    getSignIn(id: $id) {
       id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const listRoles = /* GraphQL */ `
-  query ListRoles(
-    $filter: ModelRolesFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listRoles(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        roleName
-        description
-        isEnabled
-        displayName
-        visable
-        userRolesReferenceID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const syncRoles = /* GraphQL */ `
-  query SyncRoles(
-    $filter: ModelRolesFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncRoles(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        roleName
-        description
-        isEnabled
-        displayName
-        visable
-        userRolesReferenceID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-      }
-      nextToken
-      startedAt
-    }
-  }
-`;
-export const getUserRolesReference = /* GraphQL */ `
-  query GetUserRolesReference($id: ID!) {
-    getUserRolesReference(id: $id) {
-      id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -95,21 +20,18 @@ export const getUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const listUserRolesReferences = /* GraphQL */ `
-  query ListUserRolesReferences(
-    $filter: ModelUserRolesReferenceFilterInput
+export const listSignIns = /* GraphQL */ `
+  query ListSignIns(
+    $filter: ModelSignInFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listUserRolesReferences(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-    ) {
+    listSignIns(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        userID
-        roleID
+        userEmail
+        userPassword
+        userConfirmPassword
         createdAt
         updatedAt
         _version
@@ -121,14 +43,14 @@ export const listUserRolesReferences = /* GraphQL */ `
     }
   }
 `;
-export const syncUserRolesReferences = /* GraphQL */ `
-  query SyncUserRolesReferences(
-    $filter: ModelUserRolesReferenceFilterInput
+export const syncSignIns = /* GraphQL */ `
+  query SyncSignIns(
+    $filter: ModelSignInFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncUserRolesReferences(
+    syncSignIns(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -136,8 +58,9 @@ export const syncUserRolesReferences = /* GraphQL */ `
     ) {
       items {
         id
-        userID
-        roleID
+        userEmail
+        userPassword
+        userConfirmPassword
         createdAt
         updatedAt
         _version
@@ -149,65 +72,56 @@ export const syncUserRolesReferences = /* GraphQL */ `
     }
   }
 `;
-export const getLogins = /* GraphQL */ `
-  query GetLogins($id: ID!) {
-    getLogins(id: $id) {
+export const getExistingUser = /* GraphQL */ `
+  query GetExistingUser($id: ID!) {
+    getExistingUser(id: $id) {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
-export const listLogins = /* GraphQL */ `
-  query ListLogins(
-    $filter: ModelLoginsFilterInput
+export const listExistingUsers = /* GraphQL */ `
+  query ListExistingUsers(
+    $filter: ModelExistingUserFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listLogins(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listExistingUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         userName
-        userPassword
+        userEmail
+        isTrue
         createdAt
         updatedAt
         _version
         _deleted
         _lastChangedAt
-        loginsUsersId
       }
       nextToken
       startedAt
     }
   }
 `;
-export const syncLogins = /* GraphQL */ `
-  query SyncLogins(
-    $filter: ModelLoginsFilterInput
+export const syncExistingUsers = /* GraphQL */ `
+  query SyncExistingUsers(
+    $filter: ModelExistingUserFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncLogins(
+    syncExistingUsers(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -216,13 +130,13 @@ export const syncLogins = /* GraphQL */ `
       items {
         id
         userName
-        userPassword
+        userEmail
+        isTrue
         createdAt
         updatedAt
         _version
         _deleted
         _lastChangedAt
-        loginsUsersId
       }
       nextToken
       startedAt
@@ -235,24 +149,20 @@ export const getUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
-        id
-        userID
-        roleID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
@@ -267,14 +177,12 @@ export const listUsers = /* GraphQL */ `
         id
         firstName
         lastName
-        userName
         userEmail
         createdAt
         updatedAt
         _version
         _deleted
         _lastChangedAt
-        usersUserRolesReferenceId
       }
       nextToken
       startedAt
@@ -298,39 +206,25 @@ export const syncUsers = /* GraphQL */ `
         id
         firstName
         lastName
-        userName
         userEmail
         createdAt
         updatedAt
         _version
         _deleted
         _lastChangedAt
-        usersUserRolesReferenceId
       }
       nextToken
       startedAt
     }
   }
 `;
-export const getSkillProfile = /* GraphQL */ `
-  query GetSkillProfile($id: ID!) {
-    getSkillProfile(id: $id) {
+export const getSignUp = /* GraphQL */ `
+  query GetSignUp($id: ID!) {
+    getSignUp(id: $id) {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      userEmail
+      userPassword
+      userConfirmPassword
       createdAt
       updatedAt
       _version
@@ -339,30 +233,18 @@ export const getSkillProfile = /* GraphQL */ `
     }
   }
 `;
-export const listSkillProfiles = /* GraphQL */ `
-  query ListSkillProfiles(
-    $filter: ModelSkillProfileFilterInput
+export const listSignUps = /* GraphQL */ `
+  query ListSignUps(
+    $filter: ModelSignUpFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listSkillProfiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listSignUps(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
-        title
-        description
-        time
-        photo
-        difficulty
-        category
-        userInteraction
-        videoRights
-        authorAccountID
-        video
-        instructions
-        materialsList
-        requiresMaterials
-        photoRights
-        instructionRights
+        userEmail
+        userPassword
+        userConfirmPassword
         createdAt
         updatedAt
         _version
@@ -374,14 +256,103 @@ export const listSkillProfiles = /* GraphQL */ `
     }
   }
 `;
-export const syncSkillProfiles = /* GraphQL */ `
-  query SyncSkillProfiles(
-    $filter: ModelSkillProfileFilterInput
+export const syncSignUps = /* GraphQL */ `
+  query SyncSignUps(
+    $filter: ModelSignUpFilterInput
     $limit: Int
     $nextToken: String
     $lastSync: AWSTimestamp
   ) {
-    syncSkillProfiles(
+    syncSignUps(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getSkillprofile = /* GraphQL */ `
+  query GetSkillprofile($id: ID!) {
+    getSkillprofile(id: $id) {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listSkillprofiles = /* GraphQL */ `
+  query ListSkillprofiles(
+    $filter: ModelSkillprofileFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSkillprofiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        title
+        description
+        instructions
+        instructionRights
+        category
+        difficultyLevel
+        materialsRequired
+        timeEstimate
+        photo
+        photoRights
+        video
+        videoRights
+        creator
+        skillId
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncSkillprofiles = /* GraphQL */ `
+  query SyncSkillprofiles(
+    $filter: ModelSkillprofileFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncSkillprofiles(
       filter: $filter
       limit: $limit
       nextToken: $nextToken
@@ -391,19 +362,194 @@ export const syncSkillProfiles = /* GraphQL */ `
         id
         title
         description
-        time
-        photo
-        difficulty
-        category
-        userInteraction
-        videoRights
-        authorAccountID
-        video
         instructions
-        materialsList
-        requiresMaterials
-        photoRights
         instructionRights
+        category
+        difficultyLevel
+        materialsRequired
+        timeEstimate
+        photo
+        photoRights
+        video
+        videoRights
+        creator
+        skillId
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getSignInUsers = /* GraphQL */ `
+  query GetSignInUsers($id: ID!) {
+    getSignInUsers(id: $id) {
+      id
+      signInID
+      usersID
+      signIn {
+        id
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listSignInUsers = /* GraphQL */ `
+  query ListSignInUsers(
+    $filter: ModelSignInUsersFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSignInUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        signInID
+        usersID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncSignInUsers = /* GraphQL */ `
+  query SyncSignInUsers(
+    $filter: ModelSignInUsersFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncSignInUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        signInID
+        usersID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getUsersExistingUser = /* GraphQL */ `
+  query GetUsersExistingUser($id: ID!) {
+    getUsersExistingUser(id: $id) {
+      id
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listUsersExistingUsers = /* GraphQL */ `
+  query ListUsersExistingUsers(
+    $filter: ModelUsersExistingUserFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listUsersExistingUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        existingUserID
+        usersID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncUsersExistingUsers = /* GraphQL */ `
+  query SyncUsersExistingUsers(
+    $filter: ModelUsersExistingUserFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncUsersExistingUsers(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        existingUserID
+        usersID
         createdAt
         updatedAt
         _version

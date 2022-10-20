@@ -1,79 +1,17 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createRoles = /* GraphQL */ `
-  mutation CreateRoles(
-    $input: CreateRolesInput!
-    $condition: ModelRolesConditionInput
+export const createSignIn = /* GraphQL */ `
+  mutation CreateSignIn(
+    $input: CreateSignInInput!
+    $condition: ModelSignInConditionInput
   ) {
-    createRoles(input: $input, condition: $condition) {
+    createSignIn(input: $input, condition: $condition) {
       id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const updateRoles = /* GraphQL */ `
-  mutation UpdateRoles(
-    $input: UpdateRolesInput!
-    $condition: ModelRolesConditionInput
-  ) {
-    updateRoles(input: $input, condition: $condition) {
-      id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const deleteRoles = /* GraphQL */ `
-  mutation DeleteRoles(
-    $input: DeleteRolesInput!
-    $condition: ModelRolesConditionInput
-  ) {
-    deleteRoles(input: $input, condition: $condition) {
-      id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const createUserRolesReference = /* GraphQL */ `
-  mutation CreateUserRolesReference(
-    $input: CreateUserRolesReferenceInput!
-    $condition: ModelUserRolesReferenceConditionInput
-  ) {
-    createUserRolesReference(input: $input, condition: $condition) {
-      id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -85,16 +23,17 @@ export const createUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const updateUserRolesReference = /* GraphQL */ `
-  mutation UpdateUserRolesReference(
-    $input: UpdateUserRolesReferenceInput!
-    $condition: ModelUserRolesReferenceConditionInput
+export const updateSignIn = /* GraphQL */ `
+  mutation UpdateSignIn(
+    $input: UpdateSignInInput!
+    $condition: ModelSignInConditionInput
   ) {
-    updateUserRolesReference(input: $input, condition: $condition) {
+    updateSignIn(input: $input, condition: $condition) {
       id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -106,16 +45,17 @@ export const updateUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const deleteUserRolesReference = /* GraphQL */ `
-  mutation DeleteUserRolesReference(
-    $input: DeleteUserRolesReferenceInput!
-    $condition: ModelUserRolesReferenceConditionInput
+export const deleteSignIn = /* GraphQL */ `
+  mutation DeleteSignIn(
+    $input: DeleteSignInInput!
+    $condition: ModelSignInConditionInput
   ) {
-    deleteUserRolesReference(input: $input, condition: $condition) {
+    deleteSignIn(input: $input, condition: $condition) {
       id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -127,96 +67,69 @@ export const deleteUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const createLogins = /* GraphQL */ `
-  mutation CreateLogins(
-    $input: CreateLoginsInput!
-    $condition: ModelLoginsConditionInput
+export const createExistingUser = /* GraphQL */ `
+  mutation CreateExistingUser(
+    $input: CreateExistingUserInput!
+    $condition: ModelExistingUserConditionInput
   ) {
-    createLogins(input: $input, condition: $condition) {
+    createExistingUser(input: $input, condition: $condition) {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
-export const updateLogins = /* GraphQL */ `
-  mutation UpdateLogins(
-    $input: UpdateLoginsInput!
-    $condition: ModelLoginsConditionInput
+export const updateExistingUser = /* GraphQL */ `
+  mutation UpdateExistingUser(
+    $input: UpdateExistingUserInput!
+    $condition: ModelExistingUserConditionInput
   ) {
-    updateLogins(input: $input, condition: $condition) {
+    updateExistingUser(input: $input, condition: $condition) {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
-export const deleteLogins = /* GraphQL */ `
-  mutation DeleteLogins(
-    $input: DeleteLoginsInput!
-    $condition: ModelLoginsConditionInput
+export const deleteExistingUser = /* GraphQL */ `
+  mutation DeleteExistingUser(
+    $input: DeleteExistingUserInput!
+    $condition: ModelExistingUserConditionInput
   ) {
-    deleteLogins(input: $input, condition: $condition) {
+    deleteExistingUser(input: $input, condition: $condition) {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
@@ -229,24 +142,20 @@ export const createUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
-        id
-        userID
-        roleID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
@@ -259,24 +168,20 @@ export const updateUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
-        id
-        userID
-        roleID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
@@ -289,12 +194,189 @@ export const deleteUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createSignUp = /* GraphQL */ `
+  mutation CreateSignUp(
+    $input: CreateSignUpInput!
+    $condition: ModelSignUpConditionInput
+  ) {
+    createSignUp(input: $input, condition: $condition) {
+      id
+      userEmail
+      userPassword
+      userConfirmPassword
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateSignUp = /* GraphQL */ `
+  mutation UpdateSignUp(
+    $input: UpdateSignUpInput!
+    $condition: ModelSignUpConditionInput
+  ) {
+    updateSignUp(input: $input, condition: $condition) {
+      id
+      userEmail
+      userPassword
+      userConfirmPassword
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteSignUp = /* GraphQL */ `
+  mutation DeleteSignUp(
+    $input: DeleteSignUpInput!
+    $condition: ModelSignUpConditionInput
+  ) {
+    deleteSignUp(input: $input, condition: $condition) {
+      id
+      userEmail
+      userPassword
+      userConfirmPassword
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createSkillprofile = /* GraphQL */ `
+  mutation CreateSkillprofile(
+    $input: CreateSkillprofileInput!
+    $condition: ModelSkillprofileConditionInput
+  ) {
+    createSkillprofile(input: $input, condition: $condition) {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateSkillprofile = /* GraphQL */ `
+  mutation UpdateSkillprofile(
+    $input: UpdateSkillprofileInput!
+    $condition: ModelSkillprofileConditionInput
+  ) {
+    updateSkillprofile(input: $input, condition: $condition) {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteSkillprofile = /* GraphQL */ `
+  mutation DeleteSkillprofile(
+    $input: DeleteSkillprofileInput!
+    $condition: ModelSkillprofileConditionInput
+  ) {
+    deleteSkillprofile(input: $input, condition: $condition) {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createSignInUsers = /* GraphQL */ `
+  mutation CreateSignInUsers(
+    $input: CreateSignInUsersInput!
+    $condition: ModelSignInUsersConditionInput
+  ) {
+    createSignInUsers(input: $input, condition: $condition) {
+      id
+      signInID
+      usersID
+      signIn {
         id
-        userID
-        roleID
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
         createdAt
         updatedAt
         _version
@@ -306,32 +388,40 @@ export const deleteUsers = /* GraphQL */ `
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
-export const createSkillProfile = /* GraphQL */ `
-  mutation CreateSkillProfile(
-    $input: CreateSkillProfileInput!
-    $condition: ModelSkillProfileConditionInput
+export const updateSignInUsers = /* GraphQL */ `
+  mutation UpdateSignInUsers(
+    $input: UpdateSignInUsersInput!
+    $condition: ModelSignInUsersConditionInput
   ) {
-    createSkillProfile(input: $input, condition: $condition) {
+    updateSignInUsers(input: $input, condition: $condition) {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      signInID
+      usersID
+      signIn {
+        id
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
@@ -340,28 +430,37 @@ export const createSkillProfile = /* GraphQL */ `
     }
   }
 `;
-export const updateSkillProfile = /* GraphQL */ `
-  mutation UpdateSkillProfile(
-    $input: UpdateSkillProfileInput!
-    $condition: ModelSkillProfileConditionInput
+export const deleteSignInUsers = /* GraphQL */ `
+  mutation DeleteSignInUsers(
+    $input: DeleteSignInUsersInput!
+    $condition: ModelSignInUsersConditionInput
   ) {
-    updateSkillProfile(input: $input, condition: $condition) {
+    deleteSignInUsers(input: $input, condition: $condition) {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      signInID
+      usersID
+      signIn {
+        id
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
@@ -370,28 +469,115 @@ export const updateSkillProfile = /* GraphQL */ `
     }
   }
 `;
-export const deleteSkillProfile = /* GraphQL */ `
-  mutation DeleteSkillProfile(
-    $input: DeleteSkillProfileInput!
-    $condition: ModelSkillProfileConditionInput
+export const createUsersExistingUser = /* GraphQL */ `
+  mutation CreateUsersExistingUser(
+    $input: CreateUsersExistingUserInput!
+    $condition: ModelUsersExistingUserConditionInput
   ) {
-    deleteSkillProfile(input: $input, condition: $condition) {
+    createUsersExistingUser(input: $input, condition: $condition) {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateUsersExistingUser = /* GraphQL */ `
+  mutation UpdateUsersExistingUser(
+    $input: UpdateUsersExistingUserInput!
+    $condition: ModelUsersExistingUserConditionInput
+  ) {
+    updateUsersExistingUser(input: $input, condition: $condition) {
+      id
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteUsersExistingUser = /* GraphQL */ `
+  mutation DeleteUsersExistingUser(
+    $input: DeleteUsersExistingUserInput!
+    $condition: ModelUsersExistingUserConditionInput
+  ) {
+    deleteUsersExistingUser(input: $input, condition: $condition) {
+      id
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version

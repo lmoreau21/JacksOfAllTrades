@@ -40,9 +40,10 @@ return (
       <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route path='/*' element={<NoPage/>}/>
-          <Route path='/skilllist' element={<SkillList/>} />
-          <Route path = '/skillprofile/:skillID' element={<SkillDisplay/>} />
+          <Route exact path='/skilllist' element={<SkillList/>} />
+          <Route path = '/skillprofile/:skillid' element={<SkillDisplay/>} />
           <Route path = {`${"/skillprofile/"}${Skillprofile.id}`} element={<SkillDisplay/>} />
+                 
           <Route path='/signup' element={<Signup/>} />
       </Routes>
      

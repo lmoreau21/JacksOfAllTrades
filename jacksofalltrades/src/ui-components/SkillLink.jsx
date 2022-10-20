@@ -24,7 +24,7 @@ export default function SkillLink(props) {
   };
   const skillLinkOnClick = useNavigateAction({
     type: "url",
-    url: `${"/"}${skillprofile?.id}`,
+    url: `${"/skillprofile/"}${skillprofile?.id}`,
   });
   return (
     <View

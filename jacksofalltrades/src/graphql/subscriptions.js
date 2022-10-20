@@ -1,67 +1,14 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateRoles = /* GraphQL */ `
-  subscription OnCreateRoles {
-    onCreateRoles {
+export const onCreateSignIn = /* GraphQL */ `
+  subscription OnCreateSignIn {
+    onCreateSignIn {
       id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const onUpdateRoles = /* GraphQL */ `
-  subscription OnUpdateRoles {
-    onUpdateRoles {
-      id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const onDeleteRoles = /* GraphQL */ `
-  subscription OnDeleteRoles {
-    onDeleteRoles {
-      id
-      roleName
-      description
-      isEnabled
-      displayName
-      visable
-      userRolesReferenceID
-      createdAt
-      updatedAt
-      _version
-      _deleted
-      _lastChangedAt
-    }
-  }
-`;
-export const onCreateUserRolesReference = /* GraphQL */ `
-  subscription OnCreateUserRolesReference {
-    onCreateUserRolesReference {
-      id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -73,13 +20,14 @@ export const onCreateUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateUserRolesReference = /* GraphQL */ `
-  subscription OnUpdateUserRolesReference {
-    onUpdateUserRolesReference {
+export const onUpdateSignIn = /* GraphQL */ `
+  subscription OnUpdateSignIn {
+    onUpdateSignIn {
       id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -91,13 +39,14 @@ export const onUpdateUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteUserRolesReference = /* GraphQL */ `
-  subscription OnDeleteUserRolesReference {
-    onDeleteUserRolesReference {
+export const onDeleteSignIn = /* GraphQL */ `
+  subscription OnDeleteSignIn {
+    onDeleteSignIn {
       id
-      userID
-      roleID
-      userRoles {
+      userEmail
+      userPassword
+      userConfirmPassword
+      usersSignIns {
         nextToken
         startedAt
       }
@@ -109,87 +58,60 @@ export const onDeleteUserRolesReference = /* GraphQL */ `
     }
   }
 `;
-export const onCreateLogins = /* GraphQL */ `
-  subscription OnCreateLogins {
-    onCreateLogins {
+export const onCreateExistingUser = /* GraphQL */ `
+  subscription OnCreateExistingUser {
+    onCreateExistingUser {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
-export const onUpdateLogins = /* GraphQL */ `
-  subscription OnUpdateLogins {
-    onUpdateLogins {
+export const onUpdateExistingUser = /* GraphQL */ `
+  subscription OnUpdateExistingUser {
+    onUpdateExistingUser {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
-export const onDeleteLogins = /* GraphQL */ `
-  subscription OnDeleteLogins {
-    onDeleteLogins {
+export const onDeleteExistingUser = /* GraphQL */ `
+  subscription OnDeleteExistingUser {
+    onDeleteExistingUser {
       id
       userName
-      userPassword
-      Users {
-        id
-        firstName
-        lastName
-        userName
-        userEmail
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
-        usersUserRolesReferenceId
+      userEmail
+      isTrue
+      isCurrentUser {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      loginsUsersId
     }
   }
 `;
@@ -199,24 +121,20 @@ export const onCreateUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
-        id
-        userID
-        roleID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
@@ -226,24 +144,20 @@ export const onUpdateUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
-        id
-        userID
-        roleID
-        createdAt
-        updatedAt
-        _version
-        _deleted
-        _lastChangedAt
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
       }
       createdAt
       updatedAt
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
@@ -253,12 +167,168 @@ export const onDeleteUsers = /* GraphQL */ `
       id
       firstName
       lastName
-      userName
       userEmail
-      UserRolesReference {
+      existingUsers {
+        nextToken
+        startedAt
+      }
+      signins {
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateSignUp = /* GraphQL */ `
+  subscription OnCreateSignUp {
+    onCreateSignUp {
+      id
+      userEmail
+      userPassword
+      userConfirmPassword
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateSignUp = /* GraphQL */ `
+  subscription OnUpdateSignUp {
+    onUpdateSignUp {
+      id
+      userEmail
+      userPassword
+      userConfirmPassword
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteSignUp = /* GraphQL */ `
+  subscription OnDeleteSignUp {
+    onDeleteSignUp {
+      id
+      userEmail
+      userPassword
+      userConfirmPassword
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateSkillprofile = /* GraphQL */ `
+  subscription OnCreateSkillprofile {
+    onCreateSkillprofile {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateSkillprofile = /* GraphQL */ `
+  subscription OnUpdateSkillprofile {
+    onUpdateSkillprofile {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteSkillprofile = /* GraphQL */ `
+  subscription OnDeleteSkillprofile {
+    onDeleteSkillprofile {
+      id
+      title
+      description
+      instructions
+      instructionRights
+      category
+      difficultyLevel
+      materialsRequired
+      timeEstimate
+      photo
+      photoRights
+      video
+      videoRights
+      creator
+      skillId
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateSignInUsers = /* GraphQL */ `
+  subscription OnCreateSignInUsers {
+    onCreateSignInUsers {
+      id
+      signInID
+      usersID
+      signIn {
         id
-        userID
-        roleID
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
         createdAt
         updatedAt
         _version
@@ -270,29 +340,37 @@ export const onDeleteUsers = /* GraphQL */ `
       _version
       _deleted
       _lastChangedAt
-      usersUserRolesReferenceId
     }
   }
 `;
-export const onCreateSkillProfile = /* GraphQL */ `
-  subscription OnCreateSkillProfile {
-    onCreateSkillProfile {
+export const onUpdateSignInUsers = /* GraphQL */ `
+  subscription OnUpdateSignInUsers {
+    onUpdateSignInUsers {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      signInID
+      usersID
+      signIn {
+        id
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
@@ -301,25 +379,34 @@ export const onCreateSkillProfile = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateSkillProfile = /* GraphQL */ `
-  subscription OnUpdateSkillProfile {
-    onUpdateSkillProfile {
+export const onDeleteSignInUsers = /* GraphQL */ `
+  subscription OnDeleteSignInUsers {
+    onDeleteSignInUsers {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      signInID
+      usersID
+      signIn {
+        id
+        userEmail
+        userPassword
+        userConfirmPassword
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
@@ -328,25 +415,106 @@ export const onUpdateSkillProfile = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteSkillProfile = /* GraphQL */ `
-  subscription OnDeleteSkillProfile {
-    onDeleteSkillProfile {
+export const onCreateUsersExistingUser = /* GraphQL */ `
+  subscription OnCreateUsersExistingUser {
+    onCreateUsersExistingUser {
       id
-      title
-      description
-      time
-      photo
-      difficulty
-      category
-      userInteraction
-      videoRights
-      authorAccountID
-      video
-      instructions
-      materialsList
-      requiresMaterials
-      photoRights
-      instructionRights
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateUsersExistingUser = /* GraphQL */ `
+  subscription OnUpdateUsersExistingUser {
+    onUpdateUsersExistingUser {
+      id
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteUsersExistingUser = /* GraphQL */ `
+  subscription OnDeleteUsersExistingUser {
+    onDeleteUsersExistingUser {
+      id
+      existingUserID
+      usersID
+      existingUser {
+        id
+        userName
+        userEmail
+        isTrue
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      users {
+        id
+        firstName
+        lastName
+        userEmail
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
       createdAt
       updatedAt
       _version
