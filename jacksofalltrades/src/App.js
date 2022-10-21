@@ -34,17 +34,16 @@ function App({signOut,user}) {
   
 return (
   <BrowserRouter>
-    <div style={{}}>     
+    <div>     
         
       <TopBar/>
       
       <Routes>
           <Route exact path='/' element={<Home/>}/>
+          <Route exact path='/Homepage' element={<Home/>}/>
           <Route path='/*' element={<NoPage/>}/>
           <Route exact path='/skilllist' element={<SkillList/>} />
           <Route path = '/skillprofile/:skillid' element={<SkillDisplay/>} />
-          <Route path = {`${"/skillprofile/"}${Skillprofile.id}`} element={<SkillDisplay/>} />
-                 
           <Route path='/signup' element={<Signup/>} />
       </Routes>
      

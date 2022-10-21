@@ -1,0 +1,29 @@
+{
+  "resourceName": "s39e3a50d5",
+  "policyUUID": "9e3a50d5",
+  "bucketName": "jacksofalltrades212f85e205a64dde82391216b940ac9",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "groupAccess": {
+    "Admin": [
+      "CREATE_AND_UPDATE",
+      "READ",
+      "DELETE"
+    ],
+    "Instructor": [
+      "CREATE_AND_UPDATE",
+      "READ",
+      "DELETE"
+    ],
+    "User": [
+      "READ"
+    ]
+  }
+}

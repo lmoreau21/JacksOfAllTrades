@@ -36,12 +36,13 @@ function SkillDisplay(props) {
     >
       
       {(item, index) => (
-
+        <div style={{margin:'auto', width:'75%', padding:'10px'}}>
         <SkillProfile
           skillprofile={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         ></SkillProfile>
+        </div>
       )}
     </Collection>
   );
