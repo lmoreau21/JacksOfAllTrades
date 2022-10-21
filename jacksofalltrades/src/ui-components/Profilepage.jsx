@@ -37,8 +37,28 @@ export default function Profilepage(props) {
           top="0px"
           left="0px"
           padding="0px 0px 0px 0px"
-          backgroundColor="rgba(148,41,41,1)"
+          backgroundImage="linear-gradient(-45deg, rgba(167,83,83,1), rgba(167,153,153,1))"
           {...getOverrideProps(overrides, "background")}
+        ></View>
+        <View
+          width="982px"
+          height="6px"
+          position="absolute"
+          top="497px"
+          left="0px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(0,0,0,1)"
+          {...getOverrideProps(overrides, "Line36122570")}
+        ></View>
+        <View
+          width="982px"
+          height="6px"
+          position="absolute"
+          top="305px"
+          left="0px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(0,0,0,1)"
+          {...getOverrideProps(overrides, "Line36142577")}
         ></View>
         <View
           width="337px"
@@ -48,8 +68,8 @@ export default function Profilepage(props) {
           left="23px"
           borderRadius="48px"
           padding="0px 0px 0px 0px"
-          backgroundColor="rgba(0,0,0,1)"
-          {...getOverrideProps(overrides, "Rectangle 1202")}
+          backgroundColor="rgba(209,150,150,1)"
+          {...getOverrideProps(overrides, "Box 2")}
         ></View>
         <View
           width="337px"
@@ -59,8 +79,8 @@ export default function Profilepage(props) {
           left="588px"
           borderRadius="48px"
           padding="0px 0px 0px 0px"
-          backgroundColor="rgba(0,0,0,1)"
-          {...getOverrideProps(overrides, "Rectangle 1203")}
+          backgroundColor="rgba(209,150,150,1)"
+          {...getOverrideProps(overrides, "Box 1")}
         ></View>
       </View>
       <Icon
@@ -81,10 +101,10 @@ export default function Profilepage(props) {
       ></Icon>
       <Text
         fontFamily="Kameron"
-        fontSize="45px"
+        fontSize="30px"
         fontWeight="400"
         color="rgba(255,255,255,1)"
-        lineHeight="67.5px"
+        lineHeight="24px"
         textAlign="left"
         display="flex"
         direction="column"
@@ -101,10 +121,10 @@ export default function Profilepage(props) {
       ></Text>
       <Text
         fontFamily="Kameron"
-        fontSize="35px"
+        fontSize="28px"
         fontWeight="400"
         color="rgba(255,255,255,1)"
-        lineHeight="52.5px"
+        lineHeight="42px"
         textAlign="center"
         display="flex"
         direction="column"
@@ -119,16 +139,26 @@ export default function Profilepage(props) {
         children="# Topics Learned"
         {...getOverrideProps(overrides, "# Topics Learned")}
       ></Text>
-      <View
-        width="982px"
-        height="11px"
+      <Text
+        fontFamily="Kameron"
+        fontSize="28px"
+        fontWeight="400"
+        color="rgba(255,255,255,1)"
+        lineHeight="24px"
+        textAlign="center"
+        display="flex"
+        direction="column"
+        justifyContent="flex-start"
+        width="324px"
+        height="294px"
         position="absolute"
-        top="475px"
-        left="229px"
+        top="516px"
+        left="824px"
         padding="0px 0px 0px 0px"
-        backgroundColor="rgba(0,0,0,1)"
-        {...getOverrideProps(overrides, "Rectangle 1201")}
-      ></View>
+        whiteSpace="pre-wrap"
+        children="Streak: #"
+        {...getOverrideProps(overrides, "Streak: #")}
+      ></Text>
     </View>
   );
 }

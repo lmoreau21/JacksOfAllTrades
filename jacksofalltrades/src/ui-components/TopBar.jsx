@@ -15,14 +15,14 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Flex, Text, View } from "@aws-amplify/ui-react";
 export default function TopBar(props) {
-  const { skillprofile, overrides, ...rest } = props;
+  const { skillprofile, signUp, overrides, ...rest } = props;
   const authAttributes = useAuth().user?.attributes ?? {};
   const [homeColor, setHomeColor] = useStateMutationAction("rgba(0,0,0,1)");
   const [aboutColor, setAboutColor] = useStateMutationAction("rgba(0,0,0,1)");
   const [skillColor, setSkillColor] = useStateMutationAction("#000000");
   const [calanderColor, setCalanderColor] =
     useStateMutationAction("rgba(0,0,0,1)");
-  const homeOnClick = useNavigateAction({ type: "url", url: "/" });
+  const homeOnClick = useNavigateAction({ type: "url", url: "/Homepage/" });
   const homeOnMouseLeave = () => {
     setHomeColor("#000000");
   };
@@ -37,11 +37,11 @@ export default function TopBar(props) {
     setAboutColor("#9a4c4c");
   };
   const skillOnClick = useNavigateAction({ type: "url", url: "/skilllist" });
-  const skillOnMouseOver = () => {
-    setSkillColor("#9a4c4c");
-  };
   const skillOnMouseLeave = () => {
     setSkillColor("#000000");
+  };
+  const skillOnMouseOver = () => {
+    setSkillColor("#9a4c4c");
   };
   const calanderOnMouseOver = () => {
     setCalanderColor("#9a4c4c");
@@ -49,16 +49,18 @@ export default function TopBar(props) {
   const calanderOnMouseLeave = () => {
     setCalanderColor("#000000");
   };
+  const calanderOnClick = useNavigateAction({ type: "url", url: "/404/" });
+  const iconOnClick = useNavigateAction({ type: "url", url: "/Settingspage/" });
   return (
     <Flex
       gap="39px"
-      width="1503px"
       height="80px"
       alignItems="center"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      padding="0px 0px 0px 19px"
+      padding="0px 92px 0px 19px"
       backgroundColor="rgba(255,255,255,1)"
+      width=""
       {...rest}
       {...getOverrideProps(overrides, "TopBar")}
     >
@@ -230,11 +232,11 @@ export default function TopBar(props) {
           onClick={() => {
             skillOnClick();
           }}
-          onMouseOver={() => {
-            skillOnMouseOver();
-          }}
           onMouseLeave={() => {
             skillOnMouseLeave();
+          }}
+          onMouseOver={() => {
+            skillOnMouseOver();
           }}
           {...getOverrideProps(overrides, "Skill")}
         ></Text>
@@ -260,6 +262,9 @@ export default function TopBar(props) {
           onMouseLeave={() => {
             calanderOnMouseLeave();
           }}
+          onClick={() => {
+            calanderOnClick();
+          }}
           {...getOverrideProps(overrides, "Calander")}
         ></Text>
       </Flex>
@@ -271,6 +276,7 @@ export default function TopBar(props) {
         height="32px"
         position="relative"
         padding="0px 0px 0px 0px"
+        display=""
         {...getOverrideProps(overrides, "SearchField")}
       ></Flex>
       <Flex
@@ -312,16 +318,6 @@ export default function TopBar(props) {
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "Frame 415")}
           >
-            <View
-              width="48px"
-              height="48px"
-              shrink="0"
-              position="relative"
-              borderRadius="40px"
-              padding="0px 0px 0px 0px"
-              backgroundColor="#123456"
-              {...getOverrideProps(overrides, "Rectangle 1163")}
-            ></View>
             <Flex
               gap="0"
               direction="column"
@@ -353,6 +349,16 @@ export default function TopBar(props) {
                 {...getOverrideProps(overrides, "Name")}
               ></Text>
             </Flex>
+            <View
+              width="48px"
+              height="48px"
+              shrink="0"
+              position="relative"
+              borderRadius="40px"
+              padding="0px 0px 0px 0px"
+              backgroundColor="#123456"
+              {...getOverrideProps(overrides, "Profile Image")}
+            ></View>
           </Flex>
           <View
             width="24px"
@@ -361,6 +367,9 @@ export default function TopBar(props) {
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
+            onClick={() => {
+              iconOnClick();
+            }}
             {...getOverrideProps(overrides, "Icon")}
           ></View>
         </Flex>

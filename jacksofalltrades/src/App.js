@@ -34,7 +34,8 @@ function App({signOut,user}) {
   
 return (
   <BrowserRouter>
-    <div>
+    <div style={{}}>     
+        
       <TopBar/>
       
       <Routes>

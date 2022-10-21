@@ -56,12 +56,11 @@
         "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"],\"LogoutURLs\":[\"https://main.d3hi9mzn0coe5y.amplifyapp.com/login\"]}",
         "UserPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612"
       },
-      "lastPushTimeStamp": "2022-10-20T20:21:30.448Z",
+      "lastPushTimeStamp": "2022-10-20T22:01:57.911Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/jacksofalltrades9b9a0612-cloudformation-template.json",
         "logicalId": "authjacksofalltrades9b9a0612"
-      },
-      "lastPushDirHash": "dbXv8Ml/jdDMt6HJwgV4MXsGPCo="
+      }
     },
     "userPoolGroups": {
       "service": "Cognito-UserPool-Groups",
@@ -78,17 +77,16 @@
           ]
         }
       ],
-      "lastPushTimeStamp": "2022-10-20T20:21:31.244Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
-        "logicalId": "authuserPoolGroups"
-      },
       "output": {
         "UserGroupRole": "arn:aws:iam::473277448697:role/us-east-1_dEYvOyCeJ-UserGroupRole",
         "InstructorGroupRole": "arn:aws:iam::473277448697:role/us-east-1_dEYvOyCeJ-InstructorGroupRole",
         "AdminGroupRole": "arn:aws:iam::473277448697:role/us-east-1_dEYvOyCeJ-AdminGroupRole"
       },
-      "lastPushDirHash": "UHc8iBNZWVy86Pp1QHKDUyTovlE=",
+      "lastPushTimeStamp": "2022-10-20T22:01:58.510Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "logicalId": "authuserPoolGroups"
+      },
       "userPoolGroups": {
         "service": "Cognito-UserPool-Groups",
         "providerPlugin": "awscloudformation",
@@ -118,6 +116,7 @@
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 30,
+              "apiKeyExpirationDate": "2022-11-19T21:25:12.794Z",
               "description": "api key description"
             }
           },
@@ -131,29 +130,56 @@
         "GraphQLAPIEndpointOutput": "https://i2clieojxjfy5daw6ll5uy453a.appsync-api.us-east-1.amazonaws.com/graphql",
         "GraphQLAPIKeyOutput": "da2-bf5d6ukafnhztgvwxuw2wx5onq"
       },
-      "lastPushTimeStamp": "2022-10-20T20:21:30.485Z",
+      "lastPushTimeStamp": "2022-10-20T22:01:57.932Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiJacksOfAllTrades"
-      },
-      "lastPushDirHash": "GzZyE/u0/BWKPqX4dC6c81XpCH4="
+      }
     }
   },
   "storage": {
     "s39e3a50d5": {
       "service": "S3",
       "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "lastPushTimeStamp": "2022-10-20T20:21:33.905Z",
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
-        "logicalId": "storages39e3a50d5"
-      },
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "jacksofalltrades9b9a0612",
+          "attributes": [
+            "UserPoolId"
+          ]
+        },
+        {
+          "category": "auth",
+          "resourceName": "userPoolGroups",
+          "attributes": [
+            "AdminGroupRole"
+          ]
+        },
+        {
+          "category": "auth",
+          "resourceName": "userPoolGroups",
+          "attributes": [
+            "InstructorGroupRole"
+          ]
+        },
+        {
+          "category": "auth",
+          "resourceName": "userPoolGroups",
+          "attributes": [
+            "UserGroupRole"
+          ]
+        }
+      ],
       "output": {
         "BucketName": "jacksofalltrades212f85e205a64dde82391216b940ac9163942-dev",
         "Region": "us-east-1"
       },
-      "lastPushDirHash": "nqzy//Onp0jNG14hoJpJhad+6Q0="
+      "lastPushTimeStamp": "2022-10-20T22:02:01.867Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages39e3a50d5"
+      }
     }
   },
   "function": {
@@ -161,26 +187,21 @@
       "service": "Lambda",
       "providerPlugin": "awscloudformation",
       "build": true,
-      "lastBuildTimeStamp": "2022-10-20T20:15:50.544Z",
-      "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2022-10-20T20:15:50.575Z",
-      "distZipFilename": "S3Triggerbab38022-43353175737845753353-build.zip",
-      "s3Bucket": {
-        "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
-        "s3Key": "amplify-builds/S3Triggerbab38022-43353175737845753353-build.zip"
-      },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/function/S3Triggerbab38022-cloudformation-template.json",
-        "logicalId": "functionS3Triggerbab38022"
-      },
-      "lastPushTimeStamp": "2022-10-20T20:21:30.506Z",
       "output": {
         "Region": "us-east-1",
         "Arn": "arn:aws:lambda:us-east-1:473277448697:function:S3Triggerbab38022-dev",
         "Name": "S3Triggerbab38022-dev",
         "LambdaExecutionRole": "S3Triggerbab38022LambdaRolebab38022-dev"
       },
-      "lastPushDirHash": "lTSyZIOeROL2IwTkYMrMbmsffys="
+      "lastPushTimeStamp": "2022-10-20T22:01:57.969Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/function/S3Triggerbab38022-cloudformation-template.json",
+        "logicalId": "functionS3Triggerbab38022"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
+        "s3Key": "amplify-builds/S3Triggerbab38022-4d664270336d492f7673-build.zip"
+      }
     }
   }
 }

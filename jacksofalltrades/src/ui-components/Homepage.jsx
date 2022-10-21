@@ -37,7 +37,7 @@ export default function Homepage(props) {
           top="726px"
           left="0px"
           padding="0px 0px 0px 0px"
-          backgroundImage="linear-gradient(-45deg, rgba(147,37,37,1), rgba(167,152,152,1))"
+          backgroundImage="linear-gradient(-45deg, rgba(147,38,38,1), rgba(167,152,152,1))"
           {...getOverrideProps(overrides, "Red Background")}
         ></View>
         <View
@@ -138,6 +138,7 @@ export default function Homepage(props) {
           top="9px"
           left="10px"
           padding="0px 0px 0px 0px"
+          src="https://img.icons8.com/ios/344/settings--v1.png"
           {...getOverrideProps(overrides, "Setting Gear")}
         ></Image>
         <Text
@@ -209,6 +210,7 @@ export default function Homepage(props) {
           top="8px"
           left="7px"
           padding="0px 0px 0px 0px"
+          src="https://img.icons8.com/small/344/gender-neutral-user.png"
           {...getOverrideProps(overrides, "profile icon")}
         ></Image>
       </View>
@@ -244,6 +246,7 @@ export default function Homepage(props) {
           top="8px"
           left="10px"
           padding="0px 0px 0px 0px"
+          src="https://img.icons8.com/ios/344/brain--v1.png"
           {...getOverrideProps(overrides, "brain icon")}
         ></Image>
         <Text
@@ -1277,6 +1280,7 @@ export default function Homepage(props) {
           top="307px"
           left="601px"
           padding="0px 0px 0px 0px"
+          src="https://img.icons8.com/small/344/checked-checkbox.png"
           {...getOverrideProps(overrides, "Check mark 3")}
         ></Image>
         <Image
@@ -1286,7 +1290,7 @@ export default function Homepage(props) {
           top="152px"
           left="601px"
           padding="0px 0px 0px 0px"
-          srcSet=""
+          src="https://img.icons8.com/small/344/checked-checkbox.png"
           {...getOverrideProps(overrides, "Check mark 2")}
         ></Image>
         <Image
@@ -1296,7 +1300,7 @@ export default function Homepage(props) {
           top="11px"
           left="601px"
           padding="0px 0px 0px 0px"
-          src=""
+          src="https://img.icons8.com/small/344/checked-checkbox.png"
           {...getOverrideProps(overrides, "Check mark 1")}
         ></Image>
         <Text

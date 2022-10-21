@@ -6,10 +6,18 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
 export default function SkillProfile(props) {
-  const { skillprofile, overrides, ...rest } = props;
+  const { skillprofile, rectangle1199, overrides, ...rest } = props;
+  const rectangleOneOneNineNineOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: skillprofile?.video,
+  });
   return (
     <Flex
       gap="24px"
@@ -64,6 +72,9 @@ export default function SkillProfile(props) {
             boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             padding="0px 0px 0px 0px"
             backgroundColor="rgba(241,239,239,1)"
+            onClick={() => {
+              rectangleOneOneNineNineOnClick();
+            }}
             {...getOverrideProps(overrides, "Rectangle 1199")}
           ></View>
           <Flex
@@ -144,7 +155,7 @@ export default function SkillProfile(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Insert Skill Description"
+              children={skillprofile?.description}
               {...getOverrideProps(overrides, "Insert Skill Description")}
             ></Text>
           </Flex>
@@ -205,7 +216,7 @@ export default function SkillProfile(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Insert instructions"
+              children={skillprofile?.instructions}
               {...getOverrideProps(overrides, "Insert instructions")}
             ></Text>
           </Flex>
@@ -266,7 +277,7 @@ export default function SkillProfile(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Insert Source"
+              children={skillprofile?.instructionRights}
               {...getOverrideProps(overrides, "Insert Source")}
             ></Text>
           </Flex>

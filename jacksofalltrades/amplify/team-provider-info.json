@@ -22,7 +22,7 @@
       "function": {
         "S3Triggerbab38022": {
           "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
-          "s3Key": "amplify-builds/S3Triggerbab38022-43353175737845753353-build.zip"
+          "s3Key": "amplify-builds/S3Triggerbab38022-4d664270336d492f7673-build.zip"
         }
       }
     }

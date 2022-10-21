@@ -92,7 +92,7 @@ export default function Login(props) {
       >
         <Flex
           padding="0px 0px 0px 0px"
-          width="426px"
+          width="392px"
           height="564px"
           shrink="0"
           position="relative"
@@ -126,10 +126,10 @@ export default function Login(props) {
           ></Icon>
           <Text
             fontFamily="Kameron"
-            fontSize="45px"
+            fontSize="24px"
             fontWeight="400"
             color="rgba(77,0,26,1)"
-            lineHeight="67.5px"
+            lineHeight="36px"
             textAlign="left"
             display="flex"
             direction="column"
@@ -144,10 +144,10 @@ export default function Login(props) {
           ></Text>
           <Text
             fontFamily="Kameron"
-            fontSize="35px"
+            fontSize="15px"
             fontWeight="400"
             color="rgba(104,112,120,1)"
-            lineHeight="52.5px"
+            lineHeight="22.5px"
             textAlign="left"
             display="flex"
             direction="column"
@@ -248,7 +248,7 @@ export default function Login(props) {
           </View>
           <Text
             fontFamily="Marcellus SC"
-            fontSize="16px"
+            fontSize="22px"
             fontWeight="400"
             color="rgba(0,0,0,1)"
             lineHeight="20px"
@@ -256,12 +256,12 @@ export default function Login(props) {
             display="flex"
             direction="column"
             justifyContent="center"
-            letterSpacing="1.45px"
+            letterSpacing="2.05px"
             width="137px"
             height="48px"
             position="absolute"
             top="44px"
-            left="89px"
+            left="100px"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Jack of All Trades"
@@ -317,17 +317,17 @@ export default function Login(props) {
           ></TextAreaField>
           <Text
             fontFamily="Kameron"
-            fontSize="35px"
+            fontSize="15px"
             fontWeight="400"
             color="rgba(104,112,120,1)"
-            lineHeight="52.5px"
+            lineHeight="22.5px"
             textAlign="left"
             display="flex"
             direction="column"
             justifyContent="flex-start"
             position="absolute"
-            top="56px"
-            left="298px"
+            top="31px"
+            left="301px"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Sign Up"
@@ -335,8 +335,8 @@ export default function Login(props) {
           ></Text>
           <View
             padding="0px 0px 0px 0px"
-            width="215px"
-            height="73px"
+            width="195px"
+            height="48px"
             position="absolute"
             top="431px"
             left="60px"
@@ -356,17 +356,17 @@ export default function Login(props) {
             ></View>
             <Text
               fontFamily="Kameron"
-              fontSize="45px"
+              fontSize="27px"
               fontWeight="400"
               color="rgba(255,255,255,1)"
-              lineHeight="67.5px"
+              lineHeight="40.5px"
               textAlign="left"
               display="flex"
               direction="column"
               justifyContent="flex-start"
               position="absolute"
-              top="5px"
-              left="52px"
+              top="3px"
+              left="49px"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
               children="SIGN IN"

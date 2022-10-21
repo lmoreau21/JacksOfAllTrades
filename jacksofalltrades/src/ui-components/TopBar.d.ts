@@ -6,10 +6,11 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { Skillprofile } from "../models";
+import { SignUp, Skillprofile } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type TopBarProps = React.PropsWithChildren<Partial<FlexProps> & {
     skillprofile?: Skillprofile;
+    signUp?: SignUp;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;

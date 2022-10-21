@@ -281,17 +281,17 @@ export default function Signup(props) {
       ></View>
       <Text
         fontFamily="Kameron"
-        fontSize="32px"
+        fontSize="27px"
         fontWeight="400"
         color="rgba(77,0,26,1)"
-        lineHeight="48px"
+        lineHeight="40.5px"
         textAlign="center"
         display="flex"
         direction="column"
         justifyContent="flex-start"
         position="absolute"
         top="220px"
-        left="658px"
+        left="667px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="SIGN UP"
@@ -299,10 +299,10 @@ export default function Signup(props) {
       ></Text>
       <Text
         fontFamily="Kameron"
-        fontSize="35px"
+        fontSize="15px"
         fontWeight="400"
         color="rgba(104,112,120,1)"
-        lineHeight="52.5px"
+        lineHeight="22.5px"
         textAlign="left"
         display="flex"
         direction="column"
@@ -1528,17 +1528,17 @@ export default function Signup(props) {
       ></TextAreaField>
       <Text
         fontFamily="Kameron"
-        fontSize="35px"
+        fontSize="15px"
         fontWeight="400"
         color={logInInsteadColor}
-        lineHeight="52.5px"
+        lineHeight="22.5px"
         textAlign="center"
         display="flex"
         direction="column"
         justifyContent="flex-start"
         position="absolute"
         top="626px"
-        left="528px"
+        left="591px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
         children="Log In Instead"
@@ -1570,10 +1570,10 @@ export default function Signup(props) {
         ></View>
         <Text
           fontFamily="Kameron"
-          fontSize="45px"
+          fontSize="24px"
           fontWeight="400"
           color="rgba(254,230,238,1)"
-          lineHeight="67.5px"
+          lineHeight="36px"
           textAlign="left"
           display="flex"
           direction="column"

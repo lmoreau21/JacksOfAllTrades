@@ -2,7 +2,7 @@
   "version": "1",
   "cognitoConfig": {
     "identityPoolName": "jacksofalltrades9b9a0612_identitypool_9b9a0612",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "jackso9b9a0612",
     "userPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612",
     "autoVerifiedAttributes": [

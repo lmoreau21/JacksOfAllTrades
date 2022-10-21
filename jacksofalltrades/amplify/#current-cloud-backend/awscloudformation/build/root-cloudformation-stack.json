@@ -158,7 +158,7 @@
         "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/auth/jacksofalltrades9b9a0612-cloudformation-template.json",
         "Parameters": {
           "identityPoolName": "jacksofalltrades9b9a0612_identitypool_9b9a0612",
-          "allowUnauthenticatedIdentities": false,
+          "allowUnauthenticatedIdentities": true,
           "resourceNameTruncated": "jackso9b9a0612",
           "userPoolName": "jacksofalltrades9b9a0612_userpool_9b9a0612",
           "autoVerifiedAttributes": "email",
@@ -276,7 +276,7 @@
             "Ref": "UnauthRoleName"
           },
           "S3DeploymentBucket": "amplify-jacksofalltrades-dev-163942-deployment",
-          "S3DeploymentRootKey": "amplify-appsync-files/a298e61cf23c82b86b6eaad399ca9b20d2c4fcff",
+          "S3DeploymentRootKey": "amplify-appsync-files/1795378b51565d01e5c926549cec84940ce1ddc8",
           "env": "dev"
         }
       }
@@ -287,7 +287,7 @@
         "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "Parameters": {
           "bucketName": "jacksofalltrades212f85e205a64dde82391216b940ac9",
-          "selectedGuestPermissions": "",
+          "selectedGuestPermissions": "s3:GetObject,s3:ListBucket",
           "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
           "unauthRoleName": {
             "Ref": "UnauthRoleName"
@@ -303,13 +303,37 @@
           "authPolicyName": "s3_amplify_9e3a50d5",
           "unauthPolicyName": "s3_amplify_9e3a50d5",
           "AuthenticatedAllowList": "ALLOW",
-          "GuestAllowList": "DISALLOW",
+          "GuestAllowList": "ALLOW",
           "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
           "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
           "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
           "s3PermissionsAuthenticatedUploads": "s3:PutObject",
-          "s3PermissionsGuestPublic": "DISALLOW",
+          "s3PermissionsGuestPublic": "s3:GetObject",
           "s3PermissionsGuestUploads": "DISALLOW",
+          "authjacksofalltrades9b9a0612UserPoolId": {
+            "Fn::GetAtt": [
+              "authjacksofalltrades9b9a0612",
+              "Outputs.UserPoolId"
+            ]
+          },
+          "authuserPoolGroupsAdminGroupRole": {
+            "Fn::GetAtt": [
+              "authuserPoolGroups",
+              "Outputs.AdminGroupRole"
+            ]
+          },
+          "authuserPoolGroupsInstructorGroupRole": {
+            "Fn::GetAtt": [
+              "authuserPoolGroups",
+              "Outputs.InstructorGroupRole"
+            ]
+          },
+          "authuserPoolGroupsUserGroupRole": {
+            "Fn::GetAtt": [
+              "authuserPoolGroups",
+              "Outputs.UserGroupRole"
+            ]
+          },
           "env": "dev"
         }
       }
@@ -320,7 +344,7 @@
         "TemplateURL": "https://s3.amazonaws.com/amplify-jacksofalltrades-dev-163942-deployment/amplify-cfn-templates/function/S3Triggerbab38022-cloudformation-template.json",
         "Parameters": {
           "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
-          "s3Key": "amplify-builds/S3Triggerbab38022-43353175737845753353-build.zip",
+          "s3Key": "amplify-builds/S3Triggerbab38022-4d664270336d492f7673-build.zip",
           "env": "dev"
         }
       }
