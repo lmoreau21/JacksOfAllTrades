@@ -31,24 +31,20 @@ type SignUp @model @auth(rules: [{allow: public}]) {
   userConfirmPassword: String!
 }
 
-type Skillprofile @model @auth(rules: [
-  {allow: public, operations: [read]},
-  {allow: groups, groups: ["Instructor", "Admin"]}
-  ]) {
-    id: ID!
-    title: String
-    description: String
-    instructions: String
-    instructionRights: String
-    category: String
-    difficultyLevel: String
-    materialsRequired: Boolean
-    timeEstimate: String
-    photo: AWSURL
-    photoRights: String
-    video: AWSURL
-    videoRights: String
-    creator: String
-    skillId: ID
+type Skillprofile @model @auth(rules: [{allow: public}, {allow: groups, groups: ["Admin"], operations: [read, create, update, delete]}, {allow: groups, groups: ["Instructor"], operations: [read, create, update, delete]}, {allow: groups, groups: ["User"], operations: [read]}]) {
+  id: ID!
+  title: String
+  description: String
+  instructions: String
+  instructionRights: String
+  category: String
+  difficultyLevel: String
+  materialsRequired: Boolean
+  timeEstimate: String
+  photo: AWSURL
+  photoRights: String
+  video: AWSURL
+  videoRights: String
+  creator: String
+  skillId: ID
 }
- 
