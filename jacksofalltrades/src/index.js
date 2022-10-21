@@ -17,7 +17,7 @@ root.render(
   <div
   style={{
     width: '100%',
-    padding: '20px',
+    paddingLeft: '20px',
     backgroundColor: "#D3D3D3",
     display: 'flex',
     alignItems: 'center',
