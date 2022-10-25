@@ -5,11 +5,12 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import SkillProfile from "../ui-components/SkillProfile";
+import SkillProfilewithVideo from "../ui-components/SkillProfilewithVideo";
 import { Collection } from "@aws-amplify/ui-react";
 import { useParams } from "react-router-dom";
 import Amplify from "aws-amplify";
 import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
+
 function SkillDisplay(props) {
   const {skillid} = useParams()
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
@@ -36,13 +37,15 @@ function SkillDisplay(props) {
     >
       
       {(item, index) => (
-        <div style={{margin:'auto', width:'75%', padding:'10px'}}>
-        <SkillProfile
+          <SkillProfilewithVideo
+          
           skillprofile={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></SkillProfile>
-        </div>
+        >
+          
+        </SkillProfilewithVideo>
+        
       )}
     </Collection>
   );
