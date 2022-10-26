@@ -124,10 +124,10 @@
     }
   },
   "function": {
-    "S3Triggerbab38022": {
-      "service": "Lambda",
+    "PostConfirmation": {
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "build": true
+      "service": "Lambda"
     }
   }
 }

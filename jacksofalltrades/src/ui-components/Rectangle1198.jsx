@@ -14,12 +14,22 @@ export default function Rectangle1198(props) {
     <View
       width="927px"
       height="559px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
       {...getOverrideProps(overrides, "Rectangle1198")}
     >
       <View
+        width="927px"
+        height="559px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="0%"
         bottom="0%"

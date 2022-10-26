@@ -31,7 +31,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "function": {
-        "S3Triggerbab38022": {
+        "PostConfirmation": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",

@@ -14,6 +14,10 @@ export default function Login(props) {
     <View
       width="1388px"
       height="758px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -24,6 +28,10 @@ export default function Login(props) {
       <View
         width="1388px"
         height="758px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="0px"
         left="0px"
@@ -34,6 +42,10 @@ export default function Login(props) {
         padding="0px 0px 0px 0px"
         width="1324px"
         height="730px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="5px"
         left="33px"
@@ -42,6 +54,10 @@ export default function Login(props) {
         <View
           width="447.25px"
           height="1px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="729px"
           left="0px"
@@ -52,6 +68,10 @@ export default function Login(props) {
         <View
           width="1.18px"
           height="730px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="0px"
@@ -62,6 +82,10 @@ export default function Login(props) {
         <View
           width="425.95px"
           height="1px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="729px"
           left="898.05px"
@@ -72,6 +96,10 @@ export default function Login(props) {
         <View
           width="1.18px"
           height="730px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="1322.82px"
@@ -82,11 +110,14 @@ export default function Login(props) {
       </View>
       <Flex
         gap="0"
+        direction="row"
+        width="unset"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
         position="absolute"
         top="88px"
         left="299px"
-        justifyContent="center"
-        alignItems="center"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Frame 419")}
       >
@@ -94,6 +125,10 @@ export default function Login(props) {
           padding="0px 0px 0px 0px"
           width="392px"
           height="564px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
           {...getOverrideProps(overrides, "Sign In Panel")}
@@ -101,6 +136,10 @@ export default function Login(props) {
           <View
             width="392px"
             height="564px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="0px"
             left="0px"
@@ -119,6 +158,10 @@ export default function Login(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="24px"
             left="32px"
@@ -131,9 +174,13 @@ export default function Login(props) {
             color="rgba(77,0,26,1)"
             lineHeight="36px"
             textAlign="left"
-            display="flex"
+            display="block"
             direction="column"
-            justifyContent="flex-start"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
             position="absolute"
             top="165px"
             left="57px"
@@ -149,9 +196,13 @@ export default function Login(props) {
             color="rgba(104,112,120,1)"
             lineHeight="22.5px"
             textAlign="left"
-            display="flex"
+            display="block"
             direction="column"
-            justifyContent="flex-start"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
             position="absolute"
             top="203px"
             left="57px"
@@ -164,6 +215,10 @@ export default function Login(props) {
             padding="0px 0px 0px 0px"
             width="48px"
             height="68.79px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="28px"
             left="37px"
@@ -172,6 +227,10 @@ export default function Login(props) {
             <View
               width="29px"
               height="43px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0px"
               left="23.14px"
@@ -184,6 +243,10 @@ export default function Login(props) {
             <View
               width="29px"
               height="43px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="8px"
               left="22.14px"
@@ -196,6 +259,10 @@ export default function Login(props) {
             <View
               width="29px"
               height="43px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="17px"
               left="22.14px"
@@ -212,9 +279,13 @@ export default function Login(props) {
               color="rgba(0,0,0,1)"
               lineHeight="18px"
               textAlign="left"
-              display="flex"
+              display="block"
               direction="column"
-              justifyContent="flex-start"
+              justifyContent="unset"
+              width="unset"
+              height="unset"
+              gap="unset"
+              alignItems="unset"
               position="absolute"
               top="26px"
               left="40.88px"
@@ -232,9 +303,13 @@ export default function Login(props) {
               color="rgba(0,0,0,1)"
               lineHeight="18px"
               textAlign="left"
-              display="flex"
+              display="block"
               direction="column"
-              justifyContent="flex-start"
+              justifyContent="unset"
+              width="unset"
+              height="unset"
+              gap="unset"
+              alignItems="unset"
               position="absolute"
               top="41px"
               left="9.88px"
@@ -253,12 +328,14 @@ export default function Login(props) {
             color="rgba(0,0,0,1)"
             lineHeight="20px"
             textAlign="center"
-            display="flex"
+            display="block"
             direction="column"
-            justifyContent="center"
+            justifyContent="unset"
             letterSpacing="2.05px"
             width="137px"
             height="48px"
+            gap="unset"
+            alignItems="unset"
             position="absolute"
             top="44px"
             left="100px"
@@ -270,6 +347,10 @@ export default function Login(props) {
           <View
             width="267px"
             height="1px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="320px"
             left="61px"
@@ -280,13 +361,14 @@ export default function Login(props) {
           <TextAreaField
             display="flex"
             gap="0"
-            position="absolute"
-            top="323px"
-            left="56px"
             direction="column"
             width="291px"
             height="71px"
             justifyContent="center"
+            alignItems="flex-start"
+            position="absolute"
+            top="323px"
+            left="56px"
             padding="0px 0px 0px 0px"
             label="Password:"
             placeholder="enter your password"
@@ -299,13 +381,14 @@ export default function Login(props) {
           <TextAreaField
             display="flex"
             gap="0"
-            position="absolute"
-            top="237px"
-            left="56px"
             direction="column"
             width="291px"
             height="71px"
             justifyContent="center"
+            alignItems="flex-start"
+            position="absolute"
+            top="237px"
+            left="56px"
             padding="0px 0px 0px 0px"
             label="Email Address:"
             placeholder="enter your email"
@@ -322,9 +405,13 @@ export default function Login(props) {
             color="rgba(104,112,120,1)"
             lineHeight="22.5px"
             textAlign="left"
-            display="flex"
+            display="block"
             direction="column"
-            justifyContent="flex-start"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
             position="absolute"
             top="31px"
             left="301px"
@@ -337,6 +424,10 @@ export default function Login(props) {
             padding="0px 0px 0px 0px"
             width="195px"
             height="48px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="431px"
             left="60px"
@@ -345,6 +436,10 @@ export default function Login(props) {
             <View
               width="195px"
               height="48px"
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0px"
               left="0px"
@@ -361,9 +456,13 @@ export default function Login(props) {
               color="rgba(255,255,255,1)"
               lineHeight="40.5px"
               textAlign="left"
-              display="flex"
+              display="block"
               direction="column"
-              justifyContent="flex-start"
+              justifyContent="unset"
+              width="unset"
+              height="unset"
+              gap="unset"
+              alignItems="unset"
               position="absolute"
               top="3px"
               left="49px"
@@ -378,6 +477,10 @@ export default function Login(props) {
           padding="0px 0px 0px 0px"
           width="398px"
           height="564px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           shrink="0"
           position="relative"
           {...getOverrideProps(overrides, "Side Graphic")}
@@ -385,6 +488,10 @@ export default function Login(props) {
           <View
             width="398px"
             height="564px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="0px"
             left="0px"
@@ -403,6 +510,10 @@ export default function Login(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="69.28px"
             left="3.5px"
@@ -411,16 +522,20 @@ export default function Login(props) {
           <View
             width="315px"
             height="309px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
+            overflow="hidden"
             position="absolute"
             top="88px"
             left="41px"
-            overflow="hidden"
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "Graphic")}
           >
             <Icon
-              width="72.7197265625px"
-              height="66.67578125px"
+              width="72.72px"
+              height="66.68px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -434,6 +549,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="78.08%"
               bottom="0.35%"
@@ -442,8 +561,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 1")}
             ></Icon>
             <Icon
-              width="40.376953125px"
-              height="90.74755859375px"
+              width="40.38px"
+              height="90.75px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -457,6 +576,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="70.25%"
               bottom="0.39%"
@@ -465,8 +588,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 2")}
             ></Icon>
             <Icon
-              width="157.0517578125px"
-              height="308.0439453125px"
+              width="157.05px"
+              height="308.04px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -480,6 +603,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0%"
               bottom="0.31%"
@@ -488,8 +615,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 22")}
             ></Icon>
             <Icon
-              width="141.9091796875px"
-              height="294.08447265625px"
+              width="141.91px"
+              height="294.08px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -503,6 +630,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="2.26%"
               bottom="2.57%"
@@ -511,8 +642,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 23")}
             ></Icon>
             <Icon
-              width="15.51171875px"
-              height="20.2255859375px"
+              width="15.51px"
+              height="20.23px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -526,6 +657,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="31.73%"
               bottom="61.72%"
@@ -534,8 +669,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 6")}
             ></Icon>
             <Icon
-              width="15.51171875px"
-              height="20.2255859375px"
+              width="15.51px"
+              height="20.23px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -549,6 +684,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="31.73%"
               bottom="61.72%"
@@ -557,8 +696,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 7")}
             ></Icon>
             <Icon
-              width="20.6796875px"
-              height="20.2255859375px"
+              width="20.68px"
+              height="20.23px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -572,6 +711,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="31.73%"
               bottom="61.72%"
@@ -580,8 +723,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 135212608")}
             ></Icon>
             <Icon
-              width="64.591796875px"
-              height="63.1728515625px"
+              width="64.59px"
+              height="63.17px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -595,6 +738,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="24.78%"
               bottom="54.77%"
@@ -603,8 +750,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 8")}
             ></Icon>
             <Icon
-              width="92.4267578125px"
-              height="0.8466796875px"
+              width="92.43px"
+              height="0.85px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -618,6 +765,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="59.85%"
               bottom="39.88%"
@@ -626,8 +777,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Rectangle 1")}
             ></Icon>
             <Icon
-              width="5.837890625px"
-              height="5.70947265625px"
+              width="5.84px"
+              height="5.71px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -641,6 +792,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="56.29%"
               bottom="41.86%"
@@ -649,8 +804,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 2")}
             ></Icon>
             <Icon
-              width="92.4267578125px"
-              height="0.8466796875px"
+              width="92.43px"
+              height="0.85px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -664,6 +819,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="69.08%"
               bottom="30.64%"
@@ -672,8 +831,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Rectangle 2")}
             ></Icon>
             <Icon
-              width="5.837890625px"
-              height="5.70947265625px"
+              width="5.84px"
+              height="5.71px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -687,6 +846,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="65.53%"
               bottom="32.63%"
@@ -695,8 +858,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 3")}
             ></Icon>
             <Icon
-              width="33.015625px"
-              height="13.7353515625px"
+              width="33.02px"
+              height="13.74px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -710,6 +873,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="75.16%"
               bottom="20.4%"
@@ -718,8 +885,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212614")}
             ></Icon>
             <Icon
-              width="5.837890625px"
-              height="5.70947265625px"
+              width="5.84px"
+              height="5.71px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -733,6 +900,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="56.29%"
               bottom="41.86%"
@@ -741,8 +912,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 7")}
             ></Icon>
             <Icon
-              width="5.837890625px"
-              height="5.70947265625px"
+              width="5.84px"
+              height="5.71px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -756,6 +927,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="56.29%"
               bottom="41.86%"
@@ -764,8 +939,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 8")}
             ></Icon>
             <Icon
-              width="5.837890625px"
-              height="5.70947265625px"
+              width="5.84px"
+              height="5.71px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -779,6 +954,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="65.53%"
               bottom="32.63%"
@@ -787,8 +966,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 9")}
             ></Icon>
             <Icon
-              width="5.837890625px"
-              height="5.70947265625px"
+              width="5.84px"
+              height="5.71px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -802,6 +981,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="65.53%"
               bottom="32.63%"
@@ -810,8 +993,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Ellipse 10")}
             ></Icon>
             <Icon
-              width="305.9931640625px"
-              height="1.0078125px"
+              width="305.99px"
+              height="1.01px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -825,6 +1008,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="99.67%"
               bottom="0%"
@@ -833,8 +1020,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 88")}
             ></Icon>
             <Icon
-              width="33.919921875px"
-              height="20.6201171875px"
+              width="33.92px"
+              height="20.62px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -848,6 +1035,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="61.46%"
               bottom="31.86%"
@@ -856,8 +1047,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212620")}
             ></Icon>
             <Icon
-              width="7.65234375px"
-              height="19.55908203125px"
+              width="7.65px"
+              height="19.56px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -871,6 +1062,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="92.06%"
               bottom="1.61%"
@@ -879,8 +1074,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212621")}
             ></Icon>
             <Icon
-              width="16.294921875px"
-              height="6.1572265625px"
+              width="16.29px"
+              height="6.16px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -894,6 +1089,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="97.92%"
               bottom="0.09%"
@@ -902,8 +1101,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212622")}
             ></Icon>
             <Icon
-              width="9.5751953125px"
-              height="19.9619140625px"
+              width="9.58px"
+              height="19.96px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -917,6 +1116,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="91.62%"
               bottom="1.92%"
@@ -925,8 +1128,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212623")}
             ></Icon>
             <Icon
-              width="16.833984375px"
-              height="7.68994140625px"
+              width="16.29px"
+              height="6.16px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -940,6 +1143,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="97.93%"
               bottom="0.08%"
@@ -950,8 +1157,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212624")}
             ></Icon>
             <Icon
-              width="20.7744140625px"
-              height="20.3173828125px"
+              width="20.77px"
+              height="20.32px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -965,6 +1172,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="48.19%"
               bottom="45.24%"
@@ -973,8 +1184,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212625")}
             ></Icon>
             <Icon
-              width="41.3896484375px"
-              height="71.49169921875px"
+              width="41.39px"
+              height="71.49px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -988,6 +1199,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="73.97%"
               bottom="2.89%"
@@ -996,8 +1211,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212626")}
             ></Icon>
             <Icon
-              width="35.830078125px"
-              height="62.69140625px"
+              width="35.83px"
+              height="62.69px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1011,6 +1226,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="55.75%"
               bottom="23.96%"
@@ -1019,8 +1238,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 99")}
             ></Icon>
             <Icon
-              width="33.8251953125px"
-              height="22.80029296875px"
+              width="33.83px"
+              height="22.8px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1034,6 +1253,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="62.84%"
               bottom="29.78%"
@@ -1042,8 +1265,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Vector35212628")}
             ></Icon>
             <Icon
-              width="15.34765625px"
-              height="21.255859375px"
+              width="15.35px"
+              height="21.26px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1057,6 +1280,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="57.64%"
               bottom="35.48%"
@@ -1065,8 +1292,8 @@ export default function Login(props) {
               {...getOverrideProps(overrides, "Path 101")}
             ></Icon>
             <Icon
-              width="21.2529296875px"
-              height="17.6943359375px"
+              width="21.25px"
+              height="17.69px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1080,6 +1307,10 @@ export default function Login(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="46.89%"
               bottom="47.39%"

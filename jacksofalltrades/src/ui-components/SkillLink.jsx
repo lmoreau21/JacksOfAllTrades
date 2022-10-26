@@ -29,7 +29,11 @@ export default function SkillLink(props) {
   return (
     <View
       width="790px"
-      height="311px"
+      height="317px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       overflow="hidden"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
@@ -49,7 +53,11 @@ export default function SkillLink(props) {
     >
       <View
         width="1227px"
-        height="311px"
+        height="308px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="0px"
         left="-219px"
@@ -60,6 +68,10 @@ export default function SkillLink(props) {
       <View
         width="1035px"
         height="851px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="-4558px"
         left="-2793px"
@@ -69,7 +81,11 @@ export default function SkillLink(props) {
       ></View>
       <View
         width="790px"
-        height="311px"
+        height="317px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="0px"
         left="0px"
@@ -79,8 +95,12 @@ export default function SkillLink(props) {
         {...getOverrideProps(overrides, "Link Border")}
       ></View>
       <View
-        width="1333px"
-        height="303px"
+        width="781px"
+        height="313px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="4px"
         left="4px"
@@ -106,6 +126,10 @@ export default function SkillLink(props) {
             fillRule: "nonzero",
           },
         ]}
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="60px"
         left="20px"
@@ -114,6 +138,10 @@ export default function SkillLink(props) {
       <View
         width="745px"
         height="1px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="47px"
         left="17px"
@@ -124,6 +152,10 @@ export default function SkillLink(props) {
       <View
         width="286px"
         height="239px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="53px"
         left="488px"
@@ -132,28 +164,82 @@ export default function SkillLink(props) {
       ></View>
       <View
         padding="0px 0px 0px 0px"
-        width="739px"
-        height="264px"
+        width="738px"
+        height="237px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
-        top="19px"
+        top="25px"
         left="23px"
         {...getOverrideProps(overrides, "Text")}
       >
-        <View
+        <Text
+          fontFamily="Kameron"
+          fontSize="14px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="16.40625px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="415px"
+          height="189.78px"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="calc(50% - 94.89px - -23.61px)"
+          left="0px"
           padding="0px 0px 0px 0px"
-          width="88px"
-          height="21px"
+          whiteSpace="pre-wrap"
+          children={skillprofile?.description}
+          {...getOverrideProps(overrides, "Description")}
+        ></Text>
+        <Flex
+          gap="392px"
+          direction="row"
+          width="unset"
+          height="unset"
+          justifyContent="flex-start"
+          alignItems="center"
           position="absolute"
           top="0px"
-          left="651px"
-          {...getOverrideProps(overrides, "Group 1")}
+          left="0px"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Frame 2")}
         >
+          <Text
+            fontFamily="Kameron"
+            fontSize="20px"
+            fontWeight="700"
+            color="rgba(0,0,0,1)"
+            lineHeight="23.4375px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="258px"
+            height="22px"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children={skillprofile?.title}
+            {...getOverrideProps(overrides, "Skill Name")}
+          ></Text>
           <Flex
             gap="6px"
-            position="absolute"
-            bottom="0px"
-            right="0px"
-            justifyContent="center"
+            direction="row"
+            width="unset"
+            height="16px"
+            justifyContent="flex-end"
+            alignItems="flex-start"
+            shrink="0"
+            position="relative"
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "Frame 420")}
           >
@@ -164,9 +250,13 @@ export default function SkillLink(props) {
               color="rgba(0,0,0,1)"
               lineHeight="21.09375px"
               textAlign="left"
-              display="flex"
+              display="block"
               direction="column"
-              justifyContent="center"
+              justifyContent="unset"
+              width="unset"
+              height="unset"
+              gap="unset"
+              alignItems="unset"
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
@@ -181,9 +271,13 @@ export default function SkillLink(props) {
               color="rgba(0,0,0,1)"
               lineHeight="21.09375px"
               textAlign="left"
-              display="flex"
+              display="block"
               direction="column"
-              justifyContent="center"
+              justifyContent="unset"
+              width="unset"
+              height="unset"
+              gap="unset"
+              alignItems="unset"
               shrink="0"
               position="relative"
               padding="0px 0px 0px 0px"
@@ -192,56 +286,47 @@ export default function SkillLink(props) {
               {...getOverrideProps(overrides, "num")}
             ></Text>
           </Flex>
-        </View>
-        <Text
-          fontFamily="Kameron"
-          fontSize="14px"
-          fontWeight="400"
-          color="rgba(0,0,0,1)"
-          lineHeight="16.40625px"
-          textAlign="left"
-          display="flex"
-          direction="column"
-          justifyContent="flex-start"
-          width="415px"
-          height="213px"
-          position="absolute"
-          top="calc(50% - 106.5px - -25.5px)"
-          left="8px"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children={skillprofile?.description}
-          {...getOverrideProps(overrides, "Description")}
-        ></Text>
-        <Text
-          fontFamily="Kameron"
-          fontSize="20px"
-          fontWeight="700"
-          color="rgba(0,0,0,1)"
-          lineHeight="23.4375px"
-          textAlign="left"
-          display="flex"
-          direction="column"
-          justifyContent="flex-start"
-          position="absolute"
-          top="3px"
-          left="0px"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children={skillprofile?.title}
-          {...getOverrideProps(overrides, "Skill Name")}
-        ></Text>
+        </Flex>
       </View>
       <Image
         width="293px"
         height="232px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="60px"
         left="469px"
         padding="0px 0px 0px 0px"
+        objectFit="cover"
         src={skillprofile?.photo}
         {...getOverrideProps(overrides, "Logo 1")}
       ></Image>
+      <Text
+        fontFamily="Kameron"
+        fontSize="40px"
+        fontWeight="700"
+        color="rgba(0,0,0,1)"
+        lineHeight="46.875px"
+        textAlign="left"
+        display="block"
+        direction="column"
+        justifyContent="unset"
+        width="unset"
+        height="unset"
+        gap="unset"
+        alignItems="unset"
+        position="absolute"
+        top="235.56px"
+        left="535px"
+        transformOrigin="top left"
+        transform="rotate(-45deg)"
+        padding="0px 0px 0px 0px"
+        whiteSpace="pre-wrap"
+        children="Completed"
+        {...getOverrideProps(overrides, "Completed")}
+      ></Text>
     </View>
   );
 }

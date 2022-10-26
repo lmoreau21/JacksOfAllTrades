@@ -345,6 +345,8 @@ export default function TopBar(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
+                top="15px"
+                left="200px"
                 children={authAttributes["email"]}
                 {...getOverrideProps(overrides, "Name")}
               ></Text>
@@ -367,6 +369,7 @@ export default function TopBar(props) {
             overflow="hidden"
             position="relative"
             padding="0px 0px 0px 0px"
+            left="70px"
             onClick={() => {
               iconOnClick();
             }}

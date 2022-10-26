@@ -6,14 +6,22 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function Homepage(props) {
-  const { overrides, ...rest } = props;
+  const { Line1, overrides, ...rest } = props;
+  const learningIconOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <View
       width="1503px"
       height="2302px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -25,6 +33,10 @@ export default function Homepage(props) {
         padding="0px 0px 0px 0px"
         width="1503px"
         height="3028px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="-726px"
         left="0px"
@@ -33,6 +45,10 @@ export default function Homepage(props) {
         <View
           width="1503px"
           height="2302px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="726px"
           left="0px"
@@ -44,6 +60,10 @@ export default function Homepage(props) {
           padding="0px 0px 0px 0px"
           width="1164px"
           height="1144px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="153px"
@@ -60,6 +80,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="1144px"
             left="1164px"
@@ -74,9 +98,13 @@ export default function Homepage(props) {
             color="rgba(215,226,238,1)"
             lineHeight="58.59375px"
             textAlign="left"
-            display="flex"
+            display="block"
             direction="column"
-            justifyContent="flex-start"
+            justifyContent="unset"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
             position="absolute"
             top="933px"
             left="374px"
@@ -92,10 +120,14 @@ export default function Homepage(props) {
             color="rgba(0,0,0,1)"
             lineHeight="105.46875px"
             textAlign="left"
-            display="flex"
+            display="block"
             direction="column"
-            justifyContent="flex-start"
+            justifyContent="unset"
             textDecoration="underline"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
             position="absolute"
             top="789px"
             left="123px"
@@ -110,6 +142,10 @@ export default function Homepage(props) {
         padding="0px 0px 0px 0px"
         width="235px"
         height="103px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="852px"
         left="80px"
@@ -126,6 +162,10 @@ export default function Homepage(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="0px"
@@ -134,10 +174,15 @@ export default function Homepage(props) {
         <Image
           width="85px"
           height="86px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="9px"
           left="10px"
           padding="0px 0px 0px 0px"
+          objectFit="cover"
           src="https://img.icons8.com/ios/344/settings--v1.png"
           {...getOverrideProps(overrides, "Setting Gear")}
         ></Image>
@@ -148,9 +193,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="33.984375px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="13px"
           left="130px"
@@ -164,6 +213,10 @@ export default function Homepage(props) {
         padding="0px 0px 0px 0px"
         width="214px"
         height="103px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="697px"
         left="80px"
@@ -180,6 +233,10 @@ export default function Homepage(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="0px"
@@ -192,9 +249,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="33.984375px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="13px"
           left="130px"
@@ -206,10 +267,15 @@ export default function Homepage(props) {
         <Image
           width="92px"
           height="88px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="8px"
           left="7px"
           padding="0px 0px 0px 0px"
+          objectFit="cover"
           src="https://img.icons8.com/small/344/gender-neutral-user.png"
           {...getOverrideProps(overrides, "profile icon")}
         ></Image>
@@ -218,9 +284,16 @@ export default function Homepage(props) {
         padding="0px 0px 0px 0px"
         width="317px"
         height="103px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="542px"
         left="80px"
+        onClick={() => {
+          learningIconOnClick();
+        }}
         {...getOverrideProps(overrides, "Learning Icon")}
       >
         <Icon
@@ -234,6 +307,10 @@ export default function Homepage(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="0px"
@@ -242,10 +319,15 @@ export default function Homepage(props) {
         <Image
           width="86px"
           height="87px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="8px"
           left="10px"
           padding="0px 0px 0px 0px"
+          objectFit="cover"
           src="https://img.icons8.com/ios/344/brain--v1.png"
           {...getOverrideProps(overrides, "brain icon")}
         ></Image>
@@ -256,9 +338,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="33.984375px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="13px"
           left="130px"
@@ -272,6 +358,10 @@ export default function Homepage(props) {
         padding="0px 0px 0px 0px"
         width="1259px"
         height="1653px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="539px"
         left="266px"
@@ -281,6 +371,10 @@ export default function Homepage(props) {
           padding="0px 0px 0px 0px"
           width="1046px"
           height="927px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="82px"
           left="126px"
@@ -289,8 +383,12 @@ export default function Homepage(props) {
           <View
             width="686px"
             height="4px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
-            top="473px"
+            top="455px"
             left="360px"
             padding="0px 0px 0px 0px"
             backgroundColor="rgba(0,0,0,1)"
@@ -299,6 +397,10 @@ export default function Homepage(props) {
           <View
             width="686px"
             height="4px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="556px"
             left="360px"
@@ -309,6 +411,10 @@ export default function Homepage(props) {
           <View
             width="354px"
             height="4px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="294px"
             left="571px"
@@ -319,6 +425,10 @@ export default function Homepage(props) {
           <View
             width="116px"
             height="4px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="137px"
             left="581px"
@@ -329,6 +439,10 @@ export default function Homepage(props) {
           <View
             width="200px"
             height="4px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="0px"
             left="577px"
@@ -339,6 +453,10 @@ export default function Homepage(props) {
           <View
             width="731px"
             height="4px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="923px"
             left="0px"
@@ -350,16 +468,20 @@ export default function Homepage(props) {
         <View
           width="972px"
           height="538px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          overflow="hidden"
           position="absolute"
           top="1115px"
           left="0px"
-          overflow="hidden"
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "graphic")}
         >
           <Icon
-            width="163.0810546875px"
-            height="186.8994140625px"
+            width="163.08px"
+            height="186.9px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -373,6 +495,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="37.55%"
             bottom="27.71%"
@@ -381,8 +507,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102505")}
           ></Icon>
           <Icon
-            width="51.1884765625px"
-            height="62.912109375px"
+            width="51.19px"
+            height="62.91px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -396,6 +522,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="17.91%"
             bottom="70.4%"
@@ -404,8 +534,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102506")}
           ></Icon>
           <Icon
-            width="92.498046875px"
-            height="100.162109375px"
+            width="92.5px"
+            height="100.16px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -419,6 +549,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="5.51%"
             bottom="75.87%"
@@ -427,8 +561,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102507")}
           ></Icon>
           <Icon
-            width="108.9287109375px"
-            height="99.16015625px"
+            width="108.93px"
+            height="99.16px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -442,6 +576,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="3.69%"
             bottom="77.88%"
@@ -450,8 +588,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102508")}
           ></Icon>
           <Icon
-            width="141.2646484375px"
-            height="275.6708984375px"
+            width="141.26px"
+            height="275.67px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -465,6 +603,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="22.96%"
             bottom="25.8%"
@@ -474,6 +616,12 @@ export default function Homepage(props) {
           ></Icon>
           <View
             padding="0px 0px 0px 0px"
+            width="108.36px"
+            height="223.39px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="32.68%"
             bottom="25.8%"
@@ -482,8 +630,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Group36102510")}
           >
             <Icon
-              width="31.7568359375px"
-              height="36.439453125px"
+              width="31.76px"
+              height="36.44px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -497,6 +645,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="83.69%"
               bottom="0%"
@@ -505,8 +657,8 @@ export default function Homepage(props) {
               {...getOverrideProps(overrides, "Vector36102511")}
             ></Icon>
             <Icon
-              width="108.30078125px"
-              height="223.39453125px"
+              width="108.3px"
+              height="223.39px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -520,6 +672,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0%"
               bottom="0%"
@@ -528,8 +684,8 @@ export default function Homepage(props) {
               {...getOverrideProps(overrides, "Vector36102512")}
             ></Icon>
             <Icon
-              width="0.0556640625px"
-              height="0.607421875px"
+              width="0.06px"
+              height="0.61px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -543,6 +699,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="12.23%"
               bottom="87.5%"
@@ -552,8 +712,8 @@ export default function Homepage(props) {
             ></Icon>
           </View>
           <Icon
-            width="621.3642578125px"
-            height="21.94140625px"
+            width="621.36px"
+            height="21.94px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -567,6 +727,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="85.39%"
             bottom="10.54%"
@@ -575,8 +739,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102514")}
           ></Icon>
           <Icon
-            width="354.5830078125px"
-            height="21.94140625px"
+            width="354.58px"
+            height="21.94px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -590,6 +754,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="95.92%"
             bottom="0%"
@@ -598,8 +766,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102515")}
           ></Icon>
           <Icon
-            width="54.1318359375px"
-            height="53.6650390625px"
+            width="54.13px"
+            height="53.67px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -613,6 +781,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="15.13%"
             bottom="74.89%"
@@ -621,8 +793,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102516")}
           ></Icon>
           <Icon
-            width="54.1318359375px"
-            height="53.6650390625px"
+            width="54.13px"
+            height="53.67px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -636,6 +808,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="15.13%"
             bottom="74.89%"
@@ -644,8 +820,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102517")}
           ></Icon>
           <Icon
-            width="186.0498046875px"
-            height="193.5478515625px"
+            width="186.05px"
+            height="193.55px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -659,6 +835,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="15.13%"
             bottom="48.89%"
@@ -667,8 +847,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102518")}
           ></Icon>
           <Icon
-            width="136.11328125px"
-            height="164.955078125px"
+            width="136.11px"
+            height="164.96px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -682,6 +862,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="41.63%"
             bottom="27.71%"
@@ -690,8 +874,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102519")}
           ></Icon>
           <Icon
-            width="23.3173828125px"
-            height="37.3896484375px"
+            width="23.32px"
+            height="37.39px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -705,6 +889,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="65.34%"
             bottom="27.71%"
@@ -713,8 +901,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102520")}
           ></Icon>
           <Icon
-            width="155.341796875px"
-            height="115.9873046875px"
+            width="155.34px"
+            height="115.99px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -728,6 +916,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="50.73%"
             bottom="27.71%"
@@ -736,8 +928,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102521")}
           ></Icon>
           <Icon
-            width="78.43359375px"
-            height="15.263671875px"
+            width="78.43px"
+            height="15.26px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -751,6 +943,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="69.45%"
             bottom="27.71%"
@@ -759,8 +955,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102522")}
           ></Icon>
           <Icon
-            width="65.884765625px"
-            height="54.1591796875px"
+            width="65.88px"
+            height="54.16px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -774,6 +970,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="21.61%"
             bottom="68.32%"
@@ -782,8 +982,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102523")}
           ></Icon>
           <Icon
-            width="65.884765625px"
-            height="54.1591796875px"
+            width="65.88px"
+            height="54.16px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -797,6 +997,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="21.61%"
             bottom="68.32%"
@@ -805,8 +1009,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102524")}
           ></Icon>
           <Icon
-            width="54.4140625px"
-            height="102.9990234375px"
+            width="54.41px"
+            height="103px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -820,6 +1024,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="38.03%"
             bottom="42.82%"
@@ -831,8 +1039,8 @@ export default function Homepage(props) {
             )}
           ></Icon>
           <Icon
-            width="161.2685546875px"
-            height="240.0517578125px"
+            width="161.27px"
+            height="240.05px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -846,6 +1054,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="27.67%"
             bottom="27.71%"
@@ -855,6 +1067,12 @@ export default function Homepage(props) {
           ></Icon>
           <View
             padding="0px 0px 0px 0px"
+            width="52.7px"
+            height="238.9px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="27.88%"
             bottom="27.71%"
@@ -863,8 +1081,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Group36102527")}
           >
             <Icon
-              width="27.16796875px"
-              height="14.9736328125px"
+              width="27.17px"
+              height="14.97px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -878,6 +1096,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="93.73%"
               bottom="0%"
@@ -886,8 +1108,8 @@ export default function Homepage(props) {
               {...getOverrideProps(overrides, "Vector36102528")}
             ></Icon>
             <Icon
-              width="52.703125px"
-              height="238.8994140625px"
+              width="52.7px"
+              height="238.9px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -901,6 +1123,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0%"
               bottom="0%"
@@ -910,8 +1136,8 @@ export default function Homepage(props) {
             ></Icon>
           </View>
           <Icon
-            width="129.6279296875px"
-            height="181.0693359375px"
+            width="129.63px"
+            height="181.07px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -925,6 +1151,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="31.92%"
             bottom="34.42%"
@@ -934,7 +1164,7 @@ export default function Homepage(props) {
           ></Icon>
           <Icon
             width="972px"
-            height="51.3994140625px"
+            height="51.4px"
             viewBox={{ minX: 0, minY: 0, width: 972, height: 51.3994140625 }}
             paths={[
               {
@@ -943,6 +1173,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="64.65%"
             bottom="25.8%"
@@ -951,8 +1185,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102531")}
           ></Icon>
           <Icon
-            width="190.546875px"
-            height="123.166015625px"
+            width="190.55px"
+            height="123.17px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -966,6 +1200,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="47.02%"
             bottom="30.08%"
@@ -974,8 +1212,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102532")}
           ></Icon>
           <Icon
-            width="73.833984375px"
-            height="79.951171875px"
+            width="73.83px"
+            height="79.95px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -989,6 +1227,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="7.56%"
             bottom="77.58%"
@@ -997,8 +1239,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102533")}
           ></Icon>
           <Icon
-            width="69.751953125px"
-            height="184.1298828125px"
+            width="69.75px"
+            height="184.13px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -1012,6 +1254,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="33.12%"
             bottom="32.65%"
@@ -1020,8 +1266,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102534")}
           ></Icon>
           <Icon
-            width="190.546875px"
-            height="123.166015625px"
+            width="190.55px"
+            height="123.17px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -1035,6 +1281,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="47.02%"
             bottom="30.08%"
@@ -1043,8 +1293,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102535")}
           ></Icon>
           <Icon
-            width="58.310546875px"
-            height="27.927734375px"
+            width="58.31px"
+            height="27.93px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -1058,6 +1308,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="64.84%"
             bottom="29.97%"
@@ -1066,8 +1320,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102536")}
           ></Icon>
           <Icon
-            width="65.0986328125px"
-            height="109.5546875px"
+            width="65.1px"
+            height="109.55px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -1081,6 +1335,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="17.64%"
             bottom="62%"
@@ -1089,8 +1347,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Vector36102537")}
           ></Icon>
           <Icon
-            width="154.3544921875px"
-            height="262.2373046875px"
+            width="154.35px"
+            height="262.24px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -1104,6 +1362,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="0.69%"
             bottom="50.57%"
@@ -1113,6 +1375,12 @@ export default function Homepage(props) {
           ></Icon>
           <View
             padding="0px 0px 0px 0px"
+            width="104.73px"
+            height="150.61px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="0%"
             bottom="72.01%"
@@ -1121,8 +1389,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Group36102539")}
           >
             <Icon
-              width="80.3740234375px"
-              height="87.033203125px"
+              width="80.37px"
+              height="87.03px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1136,6 +1404,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="31.98%"
               bottom="10.24%"
@@ -1144,8 +1416,8 @@ export default function Homepage(props) {
               {...getOverrideProps(overrides, "Vector36102540")}
             ></Icon>
             <Icon
-              width="104.734375px"
-              height="138.0654296875px"
+              width="104.73px"
+              height="138.07px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1159,6 +1431,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0%"
               bottom="8.33%"
@@ -1167,8 +1443,8 @@ export default function Homepage(props) {
               {...getOverrideProps(overrides, "Vector36102541")}
             ></Icon>
             <Icon
-              width="33.0595703125px"
-              height="85.6767578125px"
+              width="33.06px"
+              height="85.68px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1182,6 +1458,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="43.11%"
               bottom="0%"
@@ -1192,6 +1472,12 @@ export default function Homepage(props) {
           </View>
           <View
             padding="0px 0px 0px 0px"
+            width="186.88px"
+            height="234.07px"
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="27.76%"
             bottom="28.73%"
@@ -1200,8 +1486,8 @@ export default function Homepage(props) {
             {...getOverrideProps(overrides, "Group36102543")}
           >
             <Icon
-              width="80.345703125px"
-              height="63.935546875px"
+              width="80.35px"
+              height="63.94px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1215,6 +1501,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="72.69%"
               bottom="0%"
@@ -1226,8 +1516,8 @@ export default function Homepage(props) {
               )}
             ></Icon>
             <Icon
-              width="149.5302734375px"
-              height="208.6572265625px"
+              width="149.53px"
+              height="208.66px"
               viewBox={{
                 minX: 0,
                 minY: 0,
@@ -1241,6 +1531,10 @@ export default function Homepage(props) {
                   fillRule: "nonzero",
                 },
               ]}
+              display="block"
+              gap="unset"
+              alignItems="unset"
+              justifyContent="unset"
               position="absolute"
               top="0%"
               bottom="10.86%"
@@ -1250,8 +1544,8 @@ export default function Homepage(props) {
             ></Icon>
           </View>
           <Icon
-            width="190.546875px"
-            height="123.166015625px"
+            width="190.55px"
+            height="123.17px"
             viewBox={{
               minX: 0,
               minY: 0,
@@ -1265,6 +1559,10 @@ export default function Homepage(props) {
                 fillRule: "nonzero",
               },
             ]}
+            display="block"
+            gap="unset"
+            alignItems="unset"
+            justifyContent="unset"
             position="absolute"
             top="47.02%"
             bottom="30.08%"
@@ -1276,30 +1574,45 @@ export default function Homepage(props) {
         <Image
           width="82px"
           height="71px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="307px"
           left="601px"
           padding="0px 0px 0px 0px"
+          objectFit="cover"
           src="https://img.icons8.com/small/344/checked-checkbox.png"
           {...getOverrideProps(overrides, "Check mark 3")}
         ></Image>
         <Image
           width="82px"
           height="71px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="152px"
           left="601px"
           padding="0px 0px 0px 0px"
+          objectFit="cover"
           src="https://img.icons8.com/small/344/checked-checkbox.png"
           {...getOverrideProps(overrides, "Check mark 2")}
         ></Image>
         <Image
           width="82px"
           height="71px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="11px"
           left="601px"
           padding="0px 0px 0px 0px"
+          objectFit="cover"
           src="https://img.icons8.com/small/344/checked-checkbox.png"
           {...getOverrideProps(overrides, "Check mark 1")}
         ></Image>
@@ -1310,11 +1623,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="67.96875px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
           width="771px"
           height="144px"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="466px"
           left="488px"
@@ -1333,11 +1648,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="67.96875px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
           width="341px"
           height="96px"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="295px"
           left="703px"
@@ -1353,11 +1670,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="67.96875px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
           width="118px"
           height="74px"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="141px"
           left="707px"
@@ -1373,11 +1692,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="67.96875px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
           width="204px"
           height="96px"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="0px"
           left="707px"
@@ -1393,11 +1714,13 @@ export default function Homepage(props) {
           color="rgba(255,255,255,1)"
           lineHeight="100.78125px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
           width="757px"
           height="117px"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="888px"
           left="131px"

@@ -7,8 +7,8 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { Skillprofile } from "../models";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type SkillProfileProps = React.PropsWithChildren<Partial<FlexProps> & {
+import { ViewProps } from "@aws-amplify/ui-react";
+export declare type SkillProfileProps = React.PropsWithChildren<Partial<ViewProps> & {
     skillprofile?: Skillprofile;
     rectangle1199?: React.ReactNode;
 } & {

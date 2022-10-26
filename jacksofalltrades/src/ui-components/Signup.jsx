@@ -23,6 +23,10 @@ export default function Signup(props) {
     <View
       width="1388px"
       height="1019px"
+      display="block"
+      gap="unset"
+      alignItems="unset"
+      justifyContent="unset"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
@@ -34,6 +38,10 @@ export default function Signup(props) {
         padding="0px 0px 0px 0px"
         width="485px"
         height="814px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="85px"
         left="477px"
@@ -42,6 +50,10 @@ export default function Signup(props) {
         <View
           width="485px"
           height="814px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="0px"
@@ -60,6 +72,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="37px"
           left="33px"
@@ -70,6 +86,10 @@ export default function Signup(props) {
         padding="0px 0px 0px 0px"
         width="48px"
         height="68.79px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="133px"
         left="532px"
@@ -78,6 +98,10 @@ export default function Signup(props) {
         <View
           width="29px"
           height="43px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="23.14px"
@@ -90,6 +114,10 @@ export default function Signup(props) {
         <View
           width="29px"
           height="43px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="8px"
           left="22.14px"
@@ -102,6 +130,10 @@ export default function Signup(props) {
         <View
           width="29px"
           height="43px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="17px"
           left="22.14px"
@@ -118,9 +150,13 @@ export default function Signup(props) {
           color="rgba(0,0,0,1)"
           lineHeight="18px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="26px"
           left="40.88px"
@@ -138,9 +174,13 @@ export default function Signup(props) {
           color="rgba(0,0,0,1)"
           lineHeight="18px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="41px"
           left="9.88px"
@@ -156,6 +196,10 @@ export default function Signup(props) {
         padding="0px 0px 0px 0px"
         width="48px"
         height="68.79px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="139px"
         left="855px"
@@ -164,6 +208,10 @@ export default function Signup(props) {
         <View
           width="29px"
           height="43px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="23.14px"
@@ -176,6 +224,10 @@ export default function Signup(props) {
         <View
           width="29px"
           height="43px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="8px"
           left="22.14px"
@@ -188,6 +240,10 @@ export default function Signup(props) {
         <View
           width="29px"
           height="43px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="17px"
           left="22.14px"
@@ -204,9 +260,13 @@ export default function Signup(props) {
           color="rgba(0,0,0,1)"
           lineHeight="18px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="26px"
           left="40.88px"
@@ -224,9 +284,13 @@ export default function Signup(props) {
           color="rgba(0,0,0,1)"
           lineHeight="18px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
+          width="unset"
+          height="unset"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="41px"
           left="9.88px"
@@ -245,12 +309,14 @@ export default function Signup(props) {
         color="rgba(0,0,0,1)"
         lineHeight="20px"
         textAlign="center"
-        display="flex"
+        display="block"
         direction="column"
-        justifyContent="center"
+        justifyContent="unset"
         letterSpacing="2.25px"
         width="422px"
         height="48px"
+        gap="unset"
+        alignItems="unset"
         position="absolute"
         top="149px"
         left="509px"
@@ -262,6 +328,10 @@ export default function Signup(props) {
       <View
         width="267px"
         height="1px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="397px"
         left="579px"
@@ -272,6 +342,10 @@ export default function Signup(props) {
       <View
         width="267px"
         height="1px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="490px"
         left="579px"
@@ -286,9 +360,13 @@ export default function Signup(props) {
         color="rgba(77,0,26,1)"
         lineHeight="40.5px"
         textAlign="center"
-        display="flex"
+        display="block"
         direction="column"
-        justifyContent="flex-start"
+        justifyContent="unset"
+        width="unset"
+        height="unset"
+        gap="unset"
+        alignItems="unset"
         position="absolute"
         top="220px"
         left="667px"
@@ -304,9 +382,13 @@ export default function Signup(props) {
         color="rgba(104,112,120,1)"
         lineHeight="22.5px"
         textAlign="left"
-        display="flex"
+        display="block"
         direction="column"
-        justifyContent="flex-start"
+        justifyContent="unset"
+        width="unset"
+        height="unset"
+        gap="unset"
+        alignItems="unset"
         position="absolute"
         top="268px"
         left="658px"
@@ -318,16 +400,20 @@ export default function Signup(props) {
       <View
         width="285px"
         height="197px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        overflow="hidden"
         position="absolute"
         top="654px"
         left="577px"
-        overflow="hidden"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "undraw_playing_cards_cywn 1")}
       >
         <Icon
-          width="124.705078125px"
-          height="196.6328125px"
+          width="124.71px"
+          height="196.63px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -341,6 +427,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0%"
           bottom="0.18%"
@@ -349,8 +439,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262562")}
         ></Icon>
         <Icon
-          width="15.6552734375px"
-          height="18.4794921875px"
+          width="15.65px"
+          height="18.48px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -364,6 +454,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="5.02%"
           bottom="85.6%"
@@ -372,8 +466,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262563")}
         ></Icon>
         <Icon
-          width="4.6787109375px"
-          height="8.43359375px"
+          width="4.68px"
+          height="8.43px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -387,6 +481,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="15.38%"
           bottom="80.34%"
@@ -395,8 +493,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262564")}
         ></Icon>
         <Icon
-          width="15.7509765625px"
-          height="18.4765625px"
+          width="15.75px"
+          height="18.48px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -410,6 +508,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="87.06%"
           bottom="3.56%"
@@ -418,8 +520,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262565")}
         ></Icon>
         <Icon
-          width="9.9755859375px"
-          height="9.87109375px"
+          width="9.98px"
+          height="9.87px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -433,6 +535,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="81.08%"
           bottom="13.91%"
@@ -441,8 +547,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262566")}
         ></Icon>
         <Icon
-          width="18.3046875px"
-          height="22.7626953125px"
+          width="18.3px"
+          height="22.76px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -456,6 +562,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="50.71%"
           bottom="37.74%"
@@ -464,8 +574,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262567")}
         ></Icon>
         <Icon
-          width="18.3046875px"
-          height="22.7626953125px"
+          width="18.3px"
+          height="22.76px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -479,6 +589,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="50.71%"
           bottom="37.74%"
@@ -487,8 +601,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262568")}
         ></Icon>
         <Icon
-          width="23.517578125px"
-          height="23.1142578125px"
+          width="23.52px"
+          height="23.11px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -502,6 +616,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="43.89%"
           bottom="44.38%"
@@ -510,8 +628,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262569")}
         ></Icon>
         <Icon
-          width="36.1767578125px"
-          height="52.23046875px"
+          width="36.18px"
+          height="52.23px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -525,6 +643,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="55.07%"
           bottom="18.41%"
@@ -533,8 +655,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262570")}
         ></Icon>
         <Icon
-          width="53.8681640625px"
-          height="60.513671875px"
+          width="53.87px"
+          height="60.51px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -548,6 +670,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="55.05%"
           bottom="14.23%"
@@ -556,8 +682,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262571")}
         ></Icon>
         <Icon
-          width="5.478515625px"
-          height="37.755859375px"
+          width="5.48px"
+          height="37.76px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -571,6 +697,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="59.33%"
           bottom="21.5%"
@@ -579,8 +709,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262572")}
         ></Icon>
         <Icon
-          width="11.7451171875px"
-          height="9.7548828125px"
+          width="11.75px"
+          height="9.75px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -594,6 +724,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="73.88%"
           bottom="21.17%"
@@ -602,8 +736,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262573")}
         ></Icon>
         <Icon
-          width="14.0859375px"
-          height="10.421875px"
+          width="14.09px"
+          height="10.42px"
           viewBox={{ minX: 0, minY: 0, width: 14.0859375, height: 10.421875 }}
           paths={[
             {
@@ -612,6 +746,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="74.67%"
           bottom="20.04%"
@@ -620,8 +758,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262574")}
         ></Icon>
         <Icon
-          width="16.58203125px"
-          height="9.998046875px"
+          width="16.58px"
+          height="10px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -635,6 +773,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="57.32%"
           bottom="37.61%"
@@ -643,8 +785,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262575")}
         ></Icon>
         <Icon
-          width="17.189453125px"
-          height="10.0185546875px"
+          width="17.19px"
+          height="10.02px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -658,6 +800,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="77.62%"
           bottom="17.29%"
@@ -666,8 +812,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262576")}
         ></Icon>
         <Icon
-          width="7.83984375px"
-          height="11.515625px"
+          width="7.84px"
+          height="11.52px"
           viewBox={{ minX: 0, minY: 0, width: 7.83984375, height: 11.515625 }}
           paths={[
             {
@@ -676,6 +822,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="75.78%"
           bottom="18.37%"
@@ -684,8 +834,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262577")}
         ></Icon>
         <Icon
-          width="41.990234375px"
-          height="45.6181640625px"
+          width="41.99px"
+          height="45.62px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -699,6 +849,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="63.44%"
           bottom="13.4%"
@@ -707,8 +861,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262578")}
         ></Icon>
         <Icon
-          width="30.798828125px"
-          height="24.28125px"
+          width="30.8px"
+          height="24.28px"
           viewBox={{ minX: 0, minY: 0, width: 30.798828125, height: 24.28125 }}
           paths={[
             {
@@ -717,6 +871,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="40.96%"
           bottom="46.71%"
@@ -725,8 +883,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262579")}
         ></Icon>
         <Icon
-          width="34.7529296875px"
-          height="19.8701171875px"
+          width="34.75px"
+          height="19.87px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -740,6 +898,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="35.35%"
           bottom="54.57%"
@@ -748,8 +910,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262580")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -763,6 +925,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="35.47%"
           bottom="63.43%"
@@ -771,8 +937,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262581")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -786,6 +952,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="34.39%"
           bottom="64.5%"
@@ -794,8 +964,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262582")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -809,6 +979,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="33.79%"
           bottom="65.11%"
@@ -817,8 +991,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262583")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -832,6 +1006,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="38.22%"
           bottom="60.67%"
@@ -840,8 +1018,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262584")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -855,6 +1033,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="35.71%"
           bottom="63.19%"
@@ -863,8 +1045,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262585")}
         ></Icon>
         <Icon
-          width="95.6416015625px"
-          height="152.59765625px"
+          width="95.64px"
+          height="152.6px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -878,6 +1060,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="11.33%"
           bottom="11.21%"
@@ -886,8 +1072,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262586")}
         ></Icon>
         <Icon
-          width="14.892578125px"
-          height="25.3857421875px"
+          width="14.89px"
+          height="25.39px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -901,6 +1087,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="86.97%"
           bottom="0.15%"
@@ -909,8 +1099,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262587")}
         ></Icon>
         <Icon
-          width="25.14453125px"
-          height="15.4013671875px"
+          width="25.14px"
+          height="15.4px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -924,6 +1114,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="92.14%"
           bottom="0.04%"
@@ -932,8 +1126,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262588")}
         ></Icon>
         <Icon
-          width="125.0166015625px"
-          height="177.0068359375px"
+          width="125.02px"
+          height="177.01px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -947,6 +1141,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="10.15%"
           bottom="0%"
@@ -955,8 +1153,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262589")}
         ></Icon>
         <Icon
-          width="16.939453125px"
-          height="16.1513671875px"
+          width="16.94px"
+          height="16.15px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -970,6 +1168,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="15.82%"
           bottom="75.98%"
@@ -978,8 +1180,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262590")}
         ></Icon>
         <Icon
-          width="8.4619140625px"
-          height="7.6064453125px"
+          width="8.46px"
+          height="7.61px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -993,6 +1195,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="25.28%"
           bottom="70.85%"
@@ -1001,8 +1207,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262591")}
         ></Icon>
         <Icon
-          width="16.939453125px"
-          height="16.1513671875px"
+          width="16.94px"
+          height="16.15px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1016,6 +1222,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="86.61%"
           bottom="5.19%"
@@ -1024,8 +1234,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262592")}
         ></Icon>
         <Icon
-          width="8.4609375px"
-          height="7.6044921875px"
+          width="8.46px"
+          height="7.6px"
           viewBox={{ minX: 0, minY: 0, width: 8.4609375, height: 7.6044921875 }}
           paths={[
             {
@@ -1034,6 +1244,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="81.48%"
           bottom="14.66%"
@@ -1042,8 +1256,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262593")}
         ></Icon>
         <Icon
-          width="34.935546875px"
-          height="32.0419921875px"
+          width="34.94px"
+          height="32.04px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1057,6 +1271,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="48.83%"
           bottom="34.91%"
@@ -1065,8 +1283,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262594")}
         ></Icon>
         <Icon
-          width="20.2685546875px"
-          height="34.0126953125px"
+          width="20.27px"
+          height="34.01px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1080,6 +1298,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="59.87%"
           bottom="22.86%"
@@ -1088,8 +1310,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262595")}
         ></Icon>
         <Icon
-          width="22.6533203125px"
-          height="22.2646484375px"
+          width="22.65px"
+          height="22.26px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1103,6 +1325,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="50.96%"
           bottom="37.74%"
@@ -1111,8 +1337,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262596")}
         ></Icon>
         <Icon
-          width="31.841796875px"
-          height="36.48046875px"
+          width="31.84px"
+          height="36.48px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1126,6 +1352,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="66.76%"
           bottom="14.72%"
@@ -1134,8 +1364,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262597")}
         ></Icon>
         <Icon
-          width="20.7685546875px"
-          height="48.255859375px"
+          width="20.77px"
+          height="48.26px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1149,6 +1379,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="64.55%"
           bottom="10.95%"
@@ -1157,8 +1391,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262598")}
         ></Icon>
         <Icon
-          width="40.12890625px"
-          height="12.1201171875px"
+          width="40.13px"
+          height="12.12px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1172,6 +1406,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="82.89%"
           bottom="10.95%"
@@ -1180,8 +1418,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262599")}
         ></Icon>
         <Icon
-          width="22.3505859375px"
-          height="11.947265625px"
+          width="22.35px"
+          height="11.95px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1195,6 +1433,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="50.07%"
           bottom="43.87%"
@@ -1203,8 +1445,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262600")}
         ></Icon>
         <Icon
-          width="26.4130859375px"
-          height="49.830078125px"
+          width="26.41px"
+          height="49.83px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1218,6 +1460,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="63.75%"
           bottom="10.95%"
@@ -1226,8 +1472,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262601")}
         ></Icon>
         <Icon
-          width="6.3369140625px"
-          height="5.2998046875px"
+          width="6.34px"
+          height="5.3px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1241,6 +1487,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="86.36%"
           bottom="10.95%"
@@ -1249,8 +1499,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262602")}
         ></Icon>
         <Icon
-          width="17.591796875px"
-          height="45.34375px"
+          width="17.59px"
+          height="45.34px"
           viewBox={{ minX: 0, minY: 0, width: 17.591796875, height: 45.34375 }}
           paths={[
             {
@@ -1259,6 +1509,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="66.03%"
           bottom="10.95%"
@@ -1267,8 +1521,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262603")}
         ></Icon>
         <Icon
-          width="16.013671875px"
-          height="7.5859375px"
+          width="16.01px"
+          height="7.59px"
           viewBox={{ minX: 0, minY: 0, width: 16.013671875, height: 7.5859375 }}
           paths={[
             {
@@ -1277,6 +1531,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="62.19%"
           bottom="33.96%"
@@ -1285,8 +1543,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262604")}
         ></Icon>
         <Icon
-          width="85.5615234375px"
-          height="134.1240234375px"
+          width="85.56px"
+          height="134.12px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1300,6 +1558,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="20.96%"
           bottom="10.95%"
@@ -1308,8 +1570,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262605")}
         ></Icon>
         <Icon
-          width="32.2861328125px"
-          height="22.833984375px"
+          width="32.29px"
+          height="22.83px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1323,6 +1585,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="42.66%"
           bottom="45.75%"
@@ -1331,8 +1597,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262606")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1346,6 +1612,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="40.61%"
           bottom="58.29%"
@@ -1354,8 +1624,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262607")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1369,6 +1639,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="40.61%"
           bottom="58.29%"
@@ -1377,8 +1651,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262608")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1392,6 +1666,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="41.61%"
           bottom="57.29%"
@@ -1400,8 +1678,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262609")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1415,6 +1693,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="48.4%"
           bottom="50.5%"
@@ -1423,8 +1705,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262610")}
         ></Icon>
         <Icon
-          width="2.2197265625px"
-          height="2.181640625px"
+          width="2.22px"
+          height="2.18px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1438,6 +1720,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="45%"
           bottom="53.89%"
@@ -1446,8 +1732,8 @@ export default function Signup(props) {
           {...getOverrideProps(overrides, "Vector35262611")}
         ></Icon>
         <Icon
-          width="281.287109375px"
-          height="0.6083984375px"
+          width="281.29px"
+          height="0.61px"
           viewBox={{
             minX: 0,
             minY: 0,
@@ -1461,6 +1747,10 @@ export default function Signup(props) {
               fillRule: "nonzero",
             },
           ]}
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="99.62%"
           bottom="0.07%"
@@ -1472,13 +1762,14 @@ export default function Signup(props) {
       <TextAreaField
         display="flex"
         gap="0"
-        position="absolute"
-        top="303px"
-        left="563px"
         direction="column"
         width="316px"
         height="75px"
         justifyContent="center"
+        alignItems="flex-start"
+        position="absolute"
+        top="303px"
+        left="563px"
         padding="0px 0px 0px 0px"
         label="Email Address:"
         placeholder="enter an email"
@@ -1491,13 +1782,14 @@ export default function Signup(props) {
       <TextAreaField
         display="flex"
         gap="0"
-        position="absolute"
-        top="405px"
-        left="563px"
         direction="column"
         width="316px"
         height="75px"
         justifyContent="center"
+        alignItems="flex-start"
+        position="absolute"
+        top="405px"
+        left="563px"
         padding="0px 0px 0px 0px"
         label="Username:"
         placeholder="enter a username"
@@ -1510,13 +1802,14 @@ export default function Signup(props) {
       <TextAreaField
         display="flex"
         gap="0"
-        position="absolute"
-        top="496px"
-        left="563px"
         direction="column"
         width="316px"
         height="75px"
         justifyContent="center"
+        alignItems="flex-start"
+        position="absolute"
+        top="496px"
+        left="563px"
         padding="0px 0px 0px 0px"
         label="Password:"
         placeholder="enter a password"
@@ -1533,9 +1826,13 @@ export default function Signup(props) {
         color={logInInsteadColor}
         lineHeight="22.5px"
         textAlign="center"
-        display="flex"
+        display="block"
         direction="column"
-        justifyContent="flex-start"
+        justifyContent="unset"
+        width="unset"
+        height="unset"
+        gap="unset"
+        alignItems="unset"
         position="absolute"
         top="626px"
         left="591px"
@@ -1551,6 +1848,10 @@ export default function Signup(props) {
         padding="0px 0px 0px 0px"
         width="165px"
         height="38px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
         position="absolute"
         top="591px"
         left="561px"
@@ -1559,6 +1860,10 @@ export default function Signup(props) {
         <View
           width="165px"
           height="35px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
           position="absolute"
           top="0px"
           left="0px"
@@ -1575,11 +1880,13 @@ export default function Signup(props) {
           color="rgba(254,230,238,1)"
           lineHeight="36px"
           textAlign="left"
-          display="flex"
+          display="block"
           direction="column"
-          justifyContent="flex-start"
+          justifyContent="unset"
           width="99px"
           height="38px"
+          gap="unset"
+          alignItems="unset"
           position="absolute"
           top="0px"
           left="35px"
