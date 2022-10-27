@@ -44,4 +44,5 @@ In developing this website, we used the following technologies and resources:
 * Lilly Moreau: AWS Setup/Architecture Diagram/Integration
 * Alec Hodges: Account Database and Integration
 * Michael Carroll: List of activities in a database with resources
+* Brennan Butler: More activities in list from database
 
