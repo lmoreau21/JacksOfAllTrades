@@ -94,15 +94,15 @@ export default function Top(props) {
   };
   return (
     <Flex
-      gap="39px"
+      gap="0px"
       direction="row"
-      width="unset"
+      width="100vw"
       height="80px"
       justifyContent="center"
       alignItems="center"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      padding="0px 5px 0px 19px"
+      padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       display="flex"
       {...rest}
@@ -358,7 +358,7 @@ export default function Top(props) {
       <Flex
         gap="32px"
         direction="row"
-        width="1019px"
+        width="70vw"
         height="unset"
         justifyContent="flex-end"
         alignItems="center"
@@ -399,7 +399,7 @@ export default function Top(props) {
           <Flex
             gap="5px"
             direction="row"
-            width="283px"
+            width="153px"
             height="unset"
             justifyContent="flex-start"
             alignItems="center"
