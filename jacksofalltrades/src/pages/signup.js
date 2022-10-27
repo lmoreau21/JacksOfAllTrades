@@ -9,6 +9,7 @@ import '@aws-amplify/ui-react/styles.css'
 
 Amplify.configure(config)
 
+//not in use
 const signup = () => {
   return (
     <AmplifyProvider theme={studioTheme}>
@@ -18,26 +19,3 @@ const signup = () => {
 };
 
 export default signup;
-/*
-import { Auth } from 'aws-amplify';
-
-async function signup() {
-    try {
-        const { user } = await Auth.signUp({
-            username,
-            password,
-            attributes: {
-                email,          // optional
-                phone_number,   // optional - E.164 number convention
-                // other custom attributes 
-            },
-            autoSignIn: { // optional - enables auto sign in after user is confirmed
-                enabled: true,
-            }
-        });
-        console.log(user);
-    } catch (error) {
-        console.log('error signing up:', error);
-    }
-}
-*/
