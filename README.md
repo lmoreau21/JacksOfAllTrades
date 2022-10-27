@@ -31,8 +31,17 @@ In developing this website, we used the following technologies and resources:
 
 * AWS Amplify, for hosting our website
 * GraphQL, for backend database management
-* Figma, for designing the appearance of the website
+* Figma, for designing the appearance of the website pages
 * React, for coding and designing our website
 * YouTube, for embedding instructional videos
 * Github, for code sharing
+* Jira, for time and task management between members
+
+## Meet the Team:
+
+* Ian Gourgues: Login/Home page
+* Zack Kramer: 30 Activities display list
+* Lilly Moreau: AWS Setup/Architecture Diagram/Integration
+* Alec Hodges: Account Database and Integration
+* Michael Carroll: List of activities in a database with resources
 
