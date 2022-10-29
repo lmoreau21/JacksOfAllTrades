@@ -31,7 +31,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "function": {
-        "PostConfirmation": {
+        "cognitouserstogroup": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
