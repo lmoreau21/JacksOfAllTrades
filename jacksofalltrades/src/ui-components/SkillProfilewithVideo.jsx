@@ -11,7 +11,7 @@ import {
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
-export default function SkillProfile(props) {
+export default function SkillProfileWithVideo(props) {
   const { skillprofile, rectangle1199, overrides, ...rest } = props;
   
   return (
