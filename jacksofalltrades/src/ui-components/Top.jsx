@@ -95,44 +95,30 @@ export default function Top(props) {
   };
   return (
     <Flex
+      display="flex"
       gap="20px"
       direction="row"
-      width="unset"
+      width="100vw"
       height="80px"
-      justifyContent="center"
-      alignItems="center"
-      position="relative"
-      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-      padding="0px 0px 0px 0px"
+      justifyContent="flex-start"
+      alignItems="flex-start"
+      paddingLeft="0px"
       backgroundColor="rgba(255,255,255,1)"
-      display="flex"
+      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
+      flex='none'
+      order="0"
+      alignSelf="stretch"
+      flexGrow="0"
       {...rest}
       {...getOverrideProps(overrides, "Top")}
     >
       <Flex
-        gap="10px"
-        direction="row"
-        width="1px"
-        height="unset"
-        justifyContent="center"
-        alignItems="center"
-        shrink="0"
-        position="relative"
-        padding="0px 56px 0px 56px"
-        backgroundColor="rgba(149,31,31,1)"
-        display="flex"
-        {...getOverrideProps(overrides, "Frame 421")}
-      ></Flex>
-      <Flex
-        padding="0px 0px 0px 0px"
         width="48px"
         height="68.79px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        shrink="0"
-        position="relative"
+        
+        flex='none'
+        order="0"
+        flexGrow="0"
         {...getOverrideProps(overrides, "Logo")}
       >
         <View
@@ -233,16 +219,20 @@ export default function Top(props) {
         ></Text>
       </Flex>
       <Flex
-        gap="40px"
-        direction="row"
-        width="334px"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="center"
-        shrink="0"
-        position="relative"
-        padding="0px 0px 0px 0px"
         display="flex"
+        direction="row"
+        alignItems="center"
+        justifyContent="flex-start"
+        paddingLeft="0px"
+        gap="30px"
+        width="55vw"
+        height="unset"
+
+        flex="none"
+        order="1"
+        alignSelf="stretch"
+        flexGrow="1"
+        
         {...getOverrideProps(overrides, "Frame 32135842501")}
       >
         <Text
@@ -252,19 +242,14 @@ export default function Top(props) {
           color={homeColor}
           lineHeight="24px"
           textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
+          
           letterSpacing="0.01px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
+          
+          
           children="Home"
+          flex="none"
+          order="0"
+          flexGrow="0"
           onMouseLeave={() => {
             homeOnMouseLeave();
           }}
@@ -283,19 +268,13 @@ export default function Top(props) {
           color={aboutColor}
           lineHeight="24px"
           textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
+         
           letterSpacing="0.01px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
+          
           children="About"
+          flex="none"
+          order="1"
+          flexGrow="0"
           onClick={() => {
             aboutOnClick();
           }}
@@ -314,19 +293,13 @@ export default function Top(props) {
           color={skillColor}
           lineHeight="24px"
           textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
+          
           letterSpacing="0.01px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
+         
           children="Skill"
+          flex="none"
+          order="2"
+          flexGrow="0"
           onClick={() => {
             skillOnClick();
           }}
@@ -345,19 +318,11 @@ export default function Top(props) {
           color={calenderColor}
           lineHeight="24px"
           textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
           letterSpacing="0.01px"
-          width="unset"
-          height="unset"
-          gap="unset"
-          alignItems="unset"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
           children="Calendar"
+          flex="none"
+          order="3"
+          flexGrow="0"
           onMouseOver={() => {
             calenderOnMouseOver();
           }}
@@ -371,72 +336,64 @@ export default function Top(props) {
         ></Text>
       </Flex>
       <Flex
-        gap="32px"
+        display="flex"
+        
         direction="row"
-        width="unset"
+        width="34vw"
         height="unset"
         justifyContent="flex-end"
         alignItems="center"
-        shrink="0"
+        paddingLeft="30vw"
+
+        flex="none"
+        order="2"
         alignSelf="stretch"
-        position="relative"
-        padding="0px 21px 0px 500px"
-        display="flex"
+        flexGrow="1"
         {...getOverrideProps(overrides, "Profile")}
       >
         <Flex
+          display="flex"
           gap="15px"
           direction="row"
-          width="271px"
+          width="30vw"
           height="unset"
-          justifyContent="flex-start"
+          justifyContent="flex-end"
           alignItems="center"
-          shrink="0"
-          position="relative"
-          padding="0px 32px 0px 32px"
-          display="flex"
+          padding="0px 0px"
+          
+          flex="none"
+          order="0"
+          flexGrow="0"
           {...getOverrideProps(overrides, "Frame 41635842506")}
         >
           <View
             width="48px"
             height="48px"
-            display="block"
-            gap="unset"
-            alignItems="unset"
-            justifyContent="unset"
-            shrink="0"
-            position="relative"
+           
             borderRadius="40px"
-            padding="0px 0px 0px 0px"
             backgroundColor="#9a4c4c"
+            flex="none"
+            order="0"
+            flexGrow="0"
             {...getOverrideProps(overrides, "Profile Image")}
           ></View>
           <Flex
-            gap="5px"
-            direction="row"
-            width="50px"
-            height="12px"
-            justifyContent="flex-start"
-            alignItems="center"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
             display="flex"
+            gap="25px"
+            direction="row"
+
+            width="unset"
+            height="unset"
+            
+            alignItems="center"
+            justifyContent="flex-end"
+
+            padding="0px"
+            flex="none"
+            order="1"
+            flexGrow="0"
             {...getOverrideProps(overrides, "Frame 415")}
           >
-            <Flex
-              gap="0"
-              direction="column"
-              width="100px"
-              height="unset"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              display="flex"
-              {...getOverrideProps(overrides, "Frame 32135842509")}
-            >
               <Text
                 fontFamily="Inter"
                 fontSize="16px"
@@ -444,50 +401,23 @@ export default function Top(props) {
                 color="rgba(13,26,38,1)"
                 lineHeight="24px"
                 textAlign="left"
-                display="block"
-                direction="column"
-                justifyContent="unset"
+                display="flex"
+                direction="row"
+                
                 letterSpacing="0.01px"
                 width="unset"
                 height="unset"
-                gap="unset"
-                alignItems="unset"
-                shrink="0"
-                alignSelf="stretch"
-                position="relative"
+              
+                alignItems="center"
+                
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
                 children={authAttributes["email"]}
+                flex="none"
+                order="0"
+                flexGrow="0"
                 {...getOverrideProps(overrides, "Name")}
               ></Text>
-            </Flex>
-          </Flex>
-          <Flex
-            gap="16px"
-            direction="row"
-            width="111px"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="center"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            display="flex"
-            {...getOverrideProps(overrides, "Frame 41636392504")}
-          >
-            <Flex
-              gap="0"
-              direction="column"
-              width="100px"
-              height="unset"
-              justifyContent="flex-start"
-              alignItems="flex-start"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              display="flex"
-              {...getOverrideProps(overrides, "Frame 32136392505")}
-            >
               <Text
                 fontFamily="Inter"
                 fontSize="16px"
@@ -495,20 +425,18 @@ export default function Top(props) {
                 color={settingsColor}
                 lineHeight="24px"
                 textAlign="right"
-                display="block"
-                direction="column"
-                justifyContent="unset"
+                display="flex"
+                direction="row"
+               
                 letterSpacing="0.01px"
-                width="unset"
-                height="unset"
-                gap="unset"
-                alignItems="unset"
-                shrink="0"
-                alignSelf="stretch"
-                position="relative"
+              
+                          
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
                 children="Settings"
+                flex="none"
+                order="1"
+                flexGrow="0"
                 onClick={() => {
                   settingsOnClick();
                 }}
@@ -520,7 +448,6 @@ export default function Top(props) {
                 }}
                 {...getOverrideProps(overrides, "Settings")}
               ></Text>
-            </Flex>
           </Flex>
         </Flex>
       </Flex>

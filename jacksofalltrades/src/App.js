@@ -12,7 +12,7 @@ import { Amplify, Auth } from 'aws-amplify';
 import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from './aws-exports';
-import { Top } from './ui-components';
+import { Top, TopV2 } from './ui-components';
 
 //importing pages of the website
 import Signup from './pages/signup'
