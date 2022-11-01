@@ -20,6 +20,7 @@ export default function Top(props) {
   const variants = [
     {
       overrides: {
+        "Frame 421": {},
         "Rectangle 1191": {},
         "Rectangle 1192": {},
         "Rectangle 1193": {},
@@ -94,9 +95,9 @@ export default function Top(props) {
   };
   return (
     <Flex
-      gap="0px"
+      gap="20px"
       direction="row"
-      width="100vw"
+      width="unset"
       height="80px"
       justifyContent="center"
       alignItems="center"
@@ -108,6 +109,20 @@ export default function Top(props) {
       {...rest}
       {...getOverrideProps(overrides, "Top")}
     >
+      <Flex
+        gap="10px"
+        direction="row"
+        width="1px"
+        height="unset"
+        justifyContent="center"
+        alignItems="center"
+        shrink="0"
+        position="relative"
+        padding="0px 56px 0px 56px"
+        backgroundColor="rgba(149,31,31,1)"
+        display="flex"
+        {...getOverrideProps(overrides, "Frame 421")}
+      ></Flex>
       <Flex
         padding="0px 0px 0px 0px"
         width="48px"
@@ -358,7 +373,7 @@ export default function Top(props) {
       <Flex
         gap="32px"
         direction="row"
-        width="70vw"
+        width="unset"
         height="unset"
         justifyContent="flex-end"
         alignItems="center"
@@ -372,7 +387,7 @@ export default function Top(props) {
         <Flex
           gap="15px"
           direction="row"
-          width="unset"
+          width="271px"
           height="unset"
           justifyContent="flex-start"
           alignItems="center"
@@ -399,8 +414,8 @@ export default function Top(props) {
           <Flex
             gap="5px"
             direction="row"
-            width="153px"
-            height="unset"
+            width="50px"
+            height="12px"
             justifyContent="flex-start"
             alignItems="center"
             shrink="0"
@@ -450,7 +465,7 @@ export default function Top(props) {
           <Flex
             gap="16px"
             direction="row"
-            width="75px"
+            width="111px"
             height="unset"
             justifyContent="flex-start"
             alignItems="center"

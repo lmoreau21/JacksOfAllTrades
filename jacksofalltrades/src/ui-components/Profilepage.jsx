@@ -6,10 +6,11 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import { getOverrideProps, useAuth } from "@aws-amplify/ui-react/internal";
 import { Icon, Text, View } from "@aws-amplify/ui-react";
 export default function Profilepage(props) {
-  const { overrides, ...rest } = props;
+  const { Signin, overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
   return (
     <View
       width="1440px"
@@ -48,6 +49,7 @@ export default function Profilepage(props) {
           position="absolute"
           top="0px"
           left="0px"
+          border="4px SOLID rgba(0,0,0,1)"
           padding="0px 0px 0px 0px"
           backgroundImage="linear-gradient(-45deg, rgba(167,83,83,1), rgba(167,153,153,1))"
           {...getOverrideProps(overrides, "background")}
@@ -62,6 +64,7 @@ export default function Profilepage(props) {
           position="absolute"
           top="497px"
           left="0px"
+          border="4px SOLID rgba(0,0,0,1)"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(0,0,0,1)"
           {...getOverrideProps(overrides, "Line36122570")}
@@ -76,6 +79,7 @@ export default function Profilepage(props) {
           position="absolute"
           top="305px"
           left="0px"
+          border="4px SOLID rgba(0,0,0,1)"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(0,0,0,1)"
           {...getOverrideProps(overrides, "Line36142577")}
@@ -90,6 +94,7 @@ export default function Profilepage(props) {
           position="absolute"
           top="345px"
           left="23px"
+          border="4px SOLID rgba(0,0,0,1)"
           borderRadius="48px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(209,150,150,1)"
@@ -105,6 +110,7 @@ export default function Profilepage(props) {
           position="absolute"
           top="345px"
           left="588px"
+          border="4px SOLID rgba(0,0,0,1)"
           borderRadius="48px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(209,150,150,1)"
@@ -150,7 +156,7 @@ export default function Profilepage(props) {
         left="550px"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Email"
+        children={authAttributes["email"]}
         {...getOverrideProps(overrides, "Email")}
       ></Text>
       <Text

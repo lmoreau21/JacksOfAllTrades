@@ -1274,9 +1274,9 @@ export default createTheme({
         success: { value: "{colors.green.20.value}" },
       },
       border: {
-        primary: { value: "{colors.neutral.60.value}" },
-        secondary: { value: "{colors.neutral.40.value}" },
-        tertiary: { value: "{colors.neutral.20.value}" },
+        primary: { value: "{colors.neutral.40.value}" },
+        secondary: { value: "{colors.neutral.20.value}" },
+        tertiary: { value: "{colors.neutral.10.value}" },
         disabled: { value: "{colors.border.tertiary.value}" },
         focus: { value: "{colors.brand.primary.100.value}" },
         error: { value: "{colors.red.80.value}" },

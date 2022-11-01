@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { SortDirection } from "@aws-amplify/datastore";
-import { Skillprofile } from "../models";
+import { SkillCompleted, Skillprofile, Users } from "../models";
 import {
   getOverrideProps,
   useDataStoreBinding,
@@ -17,11 +17,25 @@ import { Collection } from "@aws-amplify/ui-react";
 export default function SkillList(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const itemsPagination = { sort: (s) => s.title(SortDirection.ASCENDING) };
+  const usersItems = useDataStoreBinding({
+    type: "collection",
+    model: Users,
+  }).items;
+  const skillCompletedItems = useDataStoreBinding({
+    type: "collection",
+    model: SkillCompleted,
+  }).items;
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Skillprofile,
     pagination: itemsPagination,
-  }).items;
+  }).items.map((item) => ({
+    ...item,
+    userss: usersItems.filter((model) => model.skillprofile === item.id),
+    skillcompleteds: skillCompletedItems.filter(
+      (model) => model.skillprofile === item.id
+    ),
+  }));
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection

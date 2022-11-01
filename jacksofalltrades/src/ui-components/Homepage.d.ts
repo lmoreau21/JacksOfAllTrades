@@ -6,9 +6,11 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { ViewProps } from "@aws-amplify/ui-react";
-export declare type HomepageProps = React.PropsWithChildren<Partial<ViewProps> & {
+import { FlexProps } from "@aws-amplify/ui-react";
+import { SyntheticEvent } from "react";
+export declare type HomepageProps = React.PropsWithChildren<Partial<FlexProps> & {
     Line1?: String;
+    mp?: (event: SyntheticEvent) => void;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;

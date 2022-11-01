@@ -6,10 +6,22 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useStateMutationAction,
+} from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Text, TextAreaField, View } from "@aws-amplify/ui-react";
 export default function Login(props) {
   const { overrides, ...rest } = props;
+  const [signUpColor, setSignUpColor] = useStateMutationAction(
+    "rgba(104,112,120,1)"
+  );
+  const signUpOnMouseOver = () => {
+    setSignUpColor("#FFFFFF");
+  };
+  const signUpOnMouseLeave = () => {
+    setSignUpColor("#687078");
+  };
   return (
     <View
       width="1388px"
@@ -402,7 +414,7 @@ export default function Login(props) {
             fontFamily="Kameron"
             fontSize="15px"
             fontWeight="400"
-            color="rgba(104,112,120,1)"
+            color={signUpColor}
             lineHeight="22.5px"
             textAlign="left"
             display="block"
@@ -418,6 +430,12 @@ export default function Login(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Sign Up"
+            onMouseOver={() => {
+              signUpOnMouseOver();
+            }}
+            onMouseLeave={() => {
+              signUpOnMouseLeave();
+            }}
             {...getOverrideProps(overrides, "Sign Up")}
           ></Text>
           <View

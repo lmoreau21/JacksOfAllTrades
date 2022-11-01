@@ -10,10 +10,12 @@ import {
   getOverrideProps,
   useAuthSignOutAction,
 } from "@aws-amplify/ui-react/internal";
-import { Button, Text, View } from "@aws-amplify/ui-react";
+import { Text, View } from "@aws-amplify/ui-react";
 export default function Settingspage(props) {
   const { overrides, ...rest } = props;
-  const changePasswordOnClick = useAuthSignOutAction({ global: true });
+  const signOutThreeSixSixFourTwoFourNineFourOnClick = useAuthSignOutAction({
+    global: true,
+  });
   return (
     <View
       width="1440px"
@@ -88,66 +90,6 @@ export default function Settingspage(props) {
           {...getOverrideProps(overrides, "Background 3")}
         ></View>
       </View>
-      <Button
-        display="flex"
-        gap="0"
-        direction="row"
-        width="264px"
-        height="unset"
-        justifyContent="center"
-        alignItems="center"
-        position="absolute"
-        top="564px"
-        left="588px"
-        padding="8px 16px 8px 16px"
-        opacity="0.75"
-        size="large"
-        isDisabled={true}
-        variation="primary"
-        children="Change Email"
-        {...getOverrideProps(overrides, "Change Email")}
-      ></Button>
-      <Button
-        display="flex"
-        gap="0"
-        direction="row"
-        width="264px"
-        height="unset"
-        justifyContent="center"
-        alignItems="center"
-        position="absolute"
-        top="489px"
-        left="588px"
-        padding="8px 16px 8px 16px"
-        opacity="0.75"
-        size="large"
-        isDisabled={true}
-        variation="primary"
-        children="Change Password"
-        {...getOverrideProps(overrides, "Edit Profile")}
-      ></Button>
-      <Button
-        display="flex"
-        gap="0"
-        direction="row"
-        width="264px"
-        height="unset"
-        justifyContent="center"
-        alignItems="center"
-        position="absolute"
-        top="414px"
-        left="588px"
-        padding="8px 16px 8px 16px"
-        opacity="0.75"
-        size="large"
-        isDisabled={true}
-        variation="primary"
-        children="Sign Out"
-        onClick={() => {
-          changePasswordOnClick();
-        }}
-        {...getOverrideProps(overrides, "Change Password")}
-      ></Button>
       <Text
         fontFamily="Kameron"
         fontSize="45px"
@@ -171,6 +113,162 @@ export default function Settingspage(props) {
         children="Settings"
         {...getOverrideProps(overrides, "Settings")}
       ></Text>
+      <View
+        padding="0px 0px 0px 0px"
+        width="264px"
+        height="46px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="416px"
+        left="588px"
+        onClick={() => {
+          signOutThreeSixSixFourTwoFourNineFourOnClick();
+        }}
+        {...getOverrideProps(overrides, "Sign Out36642494")}
+      >
+        <View
+          width="264px"
+          height="46px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          position="absolute"
+          top="0px"
+          left="0px"
+          borderRadius="8px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(217,217,217,1)"
+          {...getOverrideProps(overrides, "Sign Out Button")}
+        ></View>
+        <Text
+          fontFamily="Kameron"
+          fontSize="24px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="36px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="155px"
+          height="19px"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="7px"
+          left="54px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Sign Out"
+          {...getOverrideProps(overrides, "Sign Out36642489")}
+        ></Text>
+      </View>
+      <View
+        padding="0px 0px 0px 0px"
+        width="264px"
+        height="46px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="489px"
+        left="588px"
+        {...getOverrideProps(overrides, "Change Password36642495")}
+      >
+        <View
+          width="264px"
+          height="46px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          position="absolute"
+          top="0px"
+          left="0px"
+          borderRadius="8px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(217,217,217,1)"
+          {...getOverrideProps(overrides, "Change Password Button")}
+        ></View>
+        <Text
+          fontFamily="Kameron"
+          fontSize="24px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="36px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="246px"
+          height="24px"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="8px"
+          left="10px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Change Password"
+          {...getOverrideProps(overrides, "Change Password36642492")}
+        ></Text>
+      </View>
+      <View
+        padding="0px 0px 0px 0px"
+        width="264px"
+        height="46px"
+        display="block"
+        gap="unset"
+        alignItems="unset"
+        justifyContent="unset"
+        position="absolute"
+        top="562px"
+        left="588px"
+        {...getOverrideProps(overrides, "Change email36642496")}
+      >
+        <View
+          width="264px"
+          height="46px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          position="absolute"
+          top="0px"
+          left="0px"
+          borderRadius="8px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(217,217,217,1)"
+          {...getOverrideProps(overrides, "Change Email Button")}
+        ></View>
+        <Text
+          fontFamily="Kameron"
+          fontSize="24px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          lineHeight="36px"
+          textAlign="center"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="149px"
+          height="21px"
+          gap="unset"
+          alignItems="unset"
+          position="absolute"
+          top="8px"
+          left="57px"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Change email"
+          {...getOverrideProps(overrides, "Change email36642493")}
+        ></Text>
+      </View>
     </View>
   );
 }

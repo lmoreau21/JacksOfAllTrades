@@ -11,18 +11,32 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import { Skillprofile } from "../models";
+import { SkillCompleted, Skillprofile, Users } from "../models";
 import SkillProfile from "./SkillProfile";
 import { Collection } from "@aws-amplify/ui-react";
 export default function SkillProfileCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const itemsFilterObj = { field: "id", operand: "3", operator: "eq" };
   const itemsFilter = createDataStorePredicate(itemsFilterObj);
+  const usersItems = useDataStoreBinding({
+    type: "collection",
+    model: Users,
+  }).items;
+  const skillCompletedItems = useDataStoreBinding({
+    type: "collection",
+    model: SkillCompleted,
+  }).items;
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Skillprofile,
     criteria: itemsFilter,
-  }).items;
+  }).items.map((item) => ({
+    ...item,
+    userss: usersItems.filter((model) => model.skillprofile === item.id),
+    skillcompleteds: skillCompletedItems.filter(
+      (model) => model.skillprofile === item.id
+    ),
+  }));
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection

@@ -27,6 +27,10 @@
         "PostConfirmation": {
           "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
           "s3Key": "amplify-builds/PostConfirmation-5a427241537456575458-build.zip"
+        },
+        "cognitouserstogroup": {
+          "deploymentBucketName": "amplify-jacksofalltrades-dev-163942-deployment",
+          "s3Key": "amplify-builds/cognitouserstogroup-6134614833576f557253-build.zip"
         }
       }
     }

@@ -5,7 +5,7 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import SkillProfilewithVideo from "../ui-components/SkillProfilewithVideo";
+import SkillProfile from "../ui-components/SkillProfile";
 import { Collection } from "@aws-amplify/ui-react";
 import { useParams } from "react-router-dom";
 import Amplify from "aws-amplify";
@@ -37,14 +37,14 @@ function SkillDisplay(props) {
     >
       
       {(item, index) => (
-          <SkillProfilewithVideo
+          <SkillProfile
           
           skillprofile={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
         >
           
-        </SkillProfilewithVideo>
+        </SkillProfile>
         
       )}
     </Collection>
