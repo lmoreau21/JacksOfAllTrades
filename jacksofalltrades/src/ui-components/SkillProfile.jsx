@@ -32,7 +32,7 @@ export default function SkillProfile(props) {
     <Flex
       gap="10px"
       direction="row"
-      width="1293px"
+      width="100vw"
       height="unset"
       justifyContent="center"
       alignItems="center"

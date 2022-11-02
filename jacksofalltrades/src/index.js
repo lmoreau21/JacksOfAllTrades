@@ -10,13 +10,15 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Login, studioTheme } from './ui-components';
 
+import './About-Us.css';
+
 Amplify.configure(config)
 
 const root = ReactDOM.createRoot(document.getElementById("root"));  
 root.render(
   <div
   style={{
-    width: '100%',
+    width: '100vw',
     backgroundColor: "#D3D3D3",
     display: 'flex',
     alignItems: 'center',
