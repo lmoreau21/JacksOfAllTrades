@@ -33,7 +33,7 @@ export default function SkillLinkFinal(props) {
       width="90vw"
       height="272px"
       justifyContent="flex-start"
-      alignItems="center"
+      alignItems="flex-start"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="13px 15px 13px 15px"
@@ -152,8 +152,7 @@ export default function SkillLinkFinal(props) {
           </Flex>
         </Flex>
       </Flex>
-      <Flex
-        
+      <Flex 
         width="40vw"
         height="300px"
         display="flex"
@@ -166,72 +165,51 @@ export default function SkillLinkFinal(props) {
         <Flex
          
           direction="row"
-          width="unset"
+          width="90vw"
           height="unset"
           justifyContent="flex-start"
           alignItems="flex-start"
           
           {...getOverrideProps(overrides, "Frame 422")}
         >
-          <Flex
-            
-            width="30vw"
-            height="300px"
-            display="flex"
-            gap="unset"
-            
-            {...getOverrideProps(overrides, "Group 7")}
-          >
-            <Icon
-              width="35vw"
-              height="300px"
-              viewBox={{ minX: 0, minY: 0, width: 437, height: 207 }}
-              paths={[
-                {
-                  d: "M0 0L0 -1L-1 -1L-1 0L0 0ZM437 0L438 0L438 -1L437 -1L437 0ZM437 207L437 208L438 208L438 207L437 207ZM0 207L-1 207L-1 208L0 208L0 207ZM0 1L437 1L437 -1L0 -1L0 1ZM436 0L436 207L438 207L438 0L436 0ZM437 206L0 206L0 208L437 208L437 206ZM1 207L1 0L-1 0L-1 207L1 207Z",
-                  stroke: "rgba(0,0,0,1)",
-                  fillRule: "nonzero",
-                  strokeWidth: 1,
-                },
-                {
-                  d: "M0 0L437 0L437 207L0 207L0 0Z",
-                  fill: "rgba(255,255,255,0.5)",
-                  fillRule: "nonzero",
-                },
-              ]}
+            <Flex
+              width="50vw"
+              height="220px"
+
+              backgroundColor="rgba(255,255,255,0.5)"
+              border="rgba(0,0,0,1)"
+              borderRadius="2"
               display="flex"
-              
-              justifyContent="flex-start"
-              position="absolute"
-              
-              {...getOverrideProps(overrides, "Background of description")}
-            ></Icon>
-            <Text
-              fontFamily="Kameron"
-              fontSize="14px"
-              fontWeight="400"
-              color="rgba(0,0,0,1)"
-              lineHeight="16.6181640625px"
-              textAlign="left"
-              display="flex"
-              direction="row"
-              justifyContent="unset"
-              width="30vw"
-              height="207px"
-            
               
               position="relative"
-              top="calc(50% - 88.5px - 5px)"
-              left="11px"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children={skillprofile?.description}
-              {...getOverrideProps(overrides, "Description")}
-            ></Text>
-          </Flex>
+              
+              {...getOverrideProps(overrides, "Background of description")}
+            >
+               <Text
+                fontFamily="Kameron"
+                fontSize="14px"
+                fontWeight="400"
+                color="rgba(0,0,0,1)"
+                lineHeight="16.6181640625px"
+                textAlign="left"
+                display="flex"
+                direction="row"
+                justifyContent="flex-start"
+                width="50vw"      
+                
+                position="relative"
+                top="1vw"
+                left="5px"
+                padding="0px 0px 0px 0px"
+                whiteSpace="pre-wrap"
+                children={skillprofile?.description}
+                {...getOverrideProps(overrides, "Description")}
+              ></Text>`
+            </Flex>
+          
           <Image
-            width="40vw"
-            height="207px"
+            width="34vw"
+            height="220px"
             display="flex"
             gap="unset"
             alignItems="unset"
