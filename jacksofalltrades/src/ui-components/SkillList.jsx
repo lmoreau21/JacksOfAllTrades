@@ -42,7 +42,7 @@ export default function SkillList(props) {
       type="list"
       isSearchable="true"
       isPaginated={true}
-      searchPlaceholder="Search..."
+      searchPlaceholder="Search for skill..."
       itemsPerPage={5}
       direction="column"
       alignItems="stretch"
