@@ -2,8 +2,6 @@ import React from 'react';
 //import './App.css';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter}
     from 'react-router-dom';
-import './pages/login.js'
-import './pages/signup.js'
 import './pages/home.js'
 import './aws-exports'
 
@@ -12,10 +10,9 @@ import { Amplify, Auth } from 'aws-amplify';
 import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from './aws-exports';
-import { Top, TopV2 } from './ui-components';
+import TopBarFinal from './ui-components/TopBarFinal.jsx';
 
 //importing pages of the website
-import Signup from './pages/signup'
 import Home from './pages/home'
 import SkillDisplay from './pages/skillprofile';
 import SkillList from './pages/skilllist'
@@ -34,7 +31,7 @@ return (
   <BrowserRouter>
     <div>     
         
-      <Top/>
+      <TopBarFinal/>
       
       <Routes>
           <Route exact path='/' element={<Home/>}/>
@@ -43,7 +40,7 @@ return (
           <Route path='/*' element={<NoPage/>}/>
           <Route exact path='/skilllist' element={<SkillList/>} />
           <Route path = '/skillprofile/:skillid' element={<SkillDisplay/>} />
-          <Route path='/signup' element={<Signup/>} />
+          
           <Route path='/settings' element={<Settings/>}/>
       </Routes>
      

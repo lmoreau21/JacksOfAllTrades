@@ -33,9 +33,9 @@ const AboutUs = () => {
                             <Image src="assets\images\01.png" alt="Lilly" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Lilly Moreau </h2>
                             <p className="title"> Fullstack Engineer </p>
-                            <p> AWS Integrations and Architecture Diagram </p>
+                            <p> AWS and Architecture </p>
                             <p> lmore13@lsu.edu </p>
-                            <p><button className="button" > Contact </button></p>
+                            
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ const AboutUs = () => {
                             <p className="title"> Fullstack Engineer </p>
                             <p> Database and Integrations </p>
                             <p> ahodg31@lsu.edu </p>
-                            <p><button className="button"> Contact </button></p>
+                           
                         </div>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ const AboutUs = () => {
                             <p className="title"> UI Design </p>
                             <p> List of Activities in DB </p>
                             <p> bbutl38@lsu.edu </p>
-                            <p><button className="button"> Contact </button></p>
+                           
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const AboutUs = () => {
                             <p className="title"> FrontEnd Engineer </p>
                             <p> Login & HomePage </p>
                             <p> igourg1@lsu.edu </p>
-                            <p><button className="button"> Contact </button></p>
+                            
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ const AboutUs = () => {
                             <p className="title"> UI Design </p>
                             <p> List of Activities in DB </p>
                             <p> mcarr52@lsu.edu </p>
-                            <p><button className="button"> Contact </button></p>
+                            
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@ const AboutUs = () => {
                             <p className="title"> UI Design </p>
                             <p> Activities Display Listings </p>
                             <p> zkrame1@lsu.edu </p>
-                            <p><button className="button"> Contact </button></p>
+                            
                         </div>
                     </div>
                 </div>

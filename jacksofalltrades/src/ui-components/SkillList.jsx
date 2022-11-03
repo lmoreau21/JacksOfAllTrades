@@ -12,7 +12,7 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import SkillLink from "./SkillLink";
+import SkillLinkFinal from "./SkillLinkFinal";
 import { Collection } from "@aws-amplify/ui-react";
 export default function SkillList(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
@@ -52,11 +52,11 @@ export default function SkillList(props) {
       {...getOverrideProps(overrides, "SkillList")}
     >
       {(item, index) => (
-        <SkillLink
+        <SkillLinkFinal
           skillprofile={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></SkillLink>
+        ></SkillLinkFinal>
       )}
     </Collection>
   );

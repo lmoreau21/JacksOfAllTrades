@@ -32,7 +32,7 @@ export default function SkillProfile(props) {
     <Flex
       gap="10px"
       direction="row"
-      width="100vw"
+      width="90vw"
       height="unset"
       justifyContent="center"
       alignItems="center"
@@ -83,11 +83,11 @@ export default function SkillProfile(props) {
             boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
             padding="0px 0px 0px 0px"
             backgroundColor="rgba(241,239,239,1)"
-            onClick={() => {
-              rectangleOneOneNineNineOnClick();
-            }}
-            {...getOverrideProps(overrides, "Rectangle 1199")}
-          ></View>
+           
+          >
+            <iframe width="100%" height="100%" src= {skillprofile?.video} frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen > </iframe>
+          </View>
+          
           <Flex
             gap="8px"
             direction="column"
