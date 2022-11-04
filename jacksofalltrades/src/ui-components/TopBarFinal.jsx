@@ -18,33 +18,7 @@ import { Flex, Text, View } from "@aws-amplify/ui-react";
 export default function TopBarFinal(props) {
   const { signIn, overrides: overridesProp, ...rest } = props;
   const variants = [
-    {
-      overrides: {
-        "Frame 421": {},
-        "Rectangle 1191": {},
-        "Rectangle 1192": {},
-        "Rectangle 1193": {},
-        J35842498: {},
-        J35842499: {},
-        Logo: {},
-        Home: {},
-        About: {},
-        Skill: {},
-        Calender: {},
-        "Frame 32135842501": {},
-        "Profile Image": {},
-        Name: {},
-        "Frame 32135842509": {},
-        "Frame 415": {},
-        Settings: {},
-        "Frame 32136392505": {},
-        "Frame 41636392504": {},
-        "Frame 41635842506": {},
-        Profile: {},
-        Top: {},
-      },
-      variantValues: { property1: "Default" },
-    },
+    
   ];
   const overrides = mergeVariantsAndOverrides(
     getOverridesFromVariants(variants, props),
@@ -100,22 +74,23 @@ export default function TopBarFinal(props) {
       direction="row"
       width="100vw"
       height="80px"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+      justifyContent="space-between"
+      alignItems="center"
       paddingLeft="0px"
-      backgroundColor="rgba(255,255,255,1)"
+      backgroundColor="#F2F2F2"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       flex='none'
       order="0"
       alignSelf="stretch"
       flexGrow="0"
+      border="2px SOLID rgba(0,0,0,1)"
       {...rest}
       {...getOverrideProps(overrides, "Top")}
     >
+      <Flex>
       <Flex
         width="48px"
         height="68.79px"
-        
         flex='none'
         order="0"
         flexGrow="0"
@@ -129,8 +104,8 @@ export default function TopBarFinal(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="0px"
-          left="23.14px"
+          top="4px"
+          left="25.14px"
           transformOrigin="top left"
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
@@ -145,8 +120,8 @@ export default function TopBarFinal(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="8px"
-          left="22.14px"
+          top="12px"
+          left="26.14px"
           transformOrigin="top left"
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
@@ -161,8 +136,8 @@ export default function TopBarFinal(props) {
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="17px"
-          left="22.14px"
+          top="21px"
+          left="26.14px"
           transformOrigin="top left"
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
@@ -184,8 +159,8 @@ export default function TopBarFinal(props) {
           gap="unset"
           alignItems="unset"
           position="absolute"
-          top="26px"
-          left="40.88px"
+          top="30px"
+          left="44.88px"
           transformOrigin="top left"
           transform="rotate(33.29deg)"
           padding="0px 0px 0px 0px"
@@ -208,8 +183,8 @@ export default function TopBarFinal(props) {
           gap="unset"
           alignItems="unset"
           position="absolute"
-          top="41px"
-          left="9.88px"
+          top="45px"
+          left="13.88px"
           transformOrigin="top left"
           transform="rotate(33.29deg)"
           padding="0px 0px 0px 0px"
@@ -335,15 +310,15 @@ export default function TopBarFinal(props) {
           {...getOverrideProps(overrides, "Calender")}
         ></Text>
       </Flex>
+      </Flex>
       <Flex
         display="flex"
-        
+        paddingRight="15px"
         direction="row"
         width="34vw"
         height="unset"
         justifyContent="flex-end"
         alignItems="center"
-        paddingLeft="30vw"
 
         flex="none"
         order="2"
