@@ -29,8 +29,8 @@ const AboutUs = () => {
             <div className="row">
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
-                        <div className="container" style={{padding: "0 16px"}}>
-                            <Image src="assets\images\01.png" alt="Lilly" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                        <div className="container">
+                            <Image src="assets\images\01.png" alt="Lilly" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Lilly Moreau </h2>
                             <p className="title"> Fullstack Engineer </p>
                             <p> AWS and Architecture </p>
@@ -43,7 +43,7 @@ const AboutUs = () => {
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
                         <div className="container">
-                            <Image src="assets\images\02.jpg" alt="Alec" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                            <Image src="assets\images\02.jpg" alt="Alec" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Alec Hodges </h2>
                             <p className="title"> Fullstack Engineer </p>
                             <p> Database and Integrations </p>
@@ -56,7 +56,7 @@ const AboutUs = () => {
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
                         <div className="container">
-                            <Image src="assets\images\03.jpg" alt="Brennan" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                            <Image src="assets\images\03.jpg" alt="Brennan" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Brennan Butler </h2>
                             <p className="title"> UI Design </p>
                             <p> List of Activities in DB </p>
@@ -69,7 +69,7 @@ const AboutUs = () => {
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
                         <div className="container">
-                            <Image src="assets\images\04.jpg" alt="Ian" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                            <Image src="assets\images\04.jpg" alt="Ian" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Ian Gourgues </h2>
                             <p className="title"> FrontEnd Engineer </p>
                             <p> Login & HomePage </p>
@@ -82,7 +82,7 @@ const AboutUs = () => {
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
                         <div className="container">
-                            <Image src="assets\images\05.jpg" alt="Michael" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                            <Image src="assets\images\05.jpg" alt="Michael" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Michael Carroll </h2>
                             <p className="title"> UI Design </p>
                             <p> List of Activities in DB </p>
@@ -95,7 +95,7 @@ const AboutUs = () => {
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
                         <div className="container">
-                            <Image src="assets\images\06.png" alt="Zach" style={{ display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                            <Image src="assets\images\06.png" alt="Zach" style={{borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
                             <h2> Zack Kramer </h2>
                             <p className="title"> UI Design </p>
                             <p> Activities Display Listings </p>

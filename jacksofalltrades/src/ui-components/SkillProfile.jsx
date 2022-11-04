@@ -34,10 +34,8 @@ export default function SkillProfile(props) {
     Auth.currentAuthenticatedUser().then((user) => {
       console.log('user email = ' + user.attributes.email);
     });
-
     DataStore.save(
       new SkillCompleted({
-
       id: '',
       userEmail: Auth.user.attributes.email,
       isComplete: true
