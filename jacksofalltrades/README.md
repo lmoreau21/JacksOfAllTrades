@@ -1,6 +1,71 @@
-# Getting Started with Create React App
+# Jacks of All Trades
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Website Link
+[Jacks Of All Trades] (https://main.d3hi9mzn0coe5y.amplifyapp.com/)
+
+## About Jacks of All Trades 
+
+Learning new skills can be a difficult task without the proper resources. Many services out there are overly complicated, time consuming, and may charge hidden fees. Our website, Jack of all Trades, allows users to effectively learn new simple skills with provided instructions and an engaging interface.
+
+This site includes features such as the following:
+
+* 22 unique possible skills to learn.
+* The ability to check of completed skills
+* A user-account sign-in for tracking and storing completion of skills
+
+Your goal is to try to learn a new skill every day and potentially find a new passion alongside that!
+
+Some example skills include...
+
+* Mastering card tricks
+* Tying a tie for a formal occasion
+* Learning American Sign Language (ASL)
+* Deciphering Morse Code
+* Playing Chess
+
+and many more!
+
+## Development
+
+In developing this website, we used the following technologies and resources:
+
+* AWS Amplify, for hosting our website
+* GraphQL, for backend database management
+* Figma, for designing the appearance of the website pages
+* React, for coding and designing our website
+* YouTube, for embedding instructional videos
+* Github, for code sharing
+* Jira, for time and task management between members
+
+## Meet the Team:
+
+* Ian Gourgues: Login/Home page
+* Zack Kramer: 30 Activities display list
+* Lilly Moreau: AWS Setup/Architecture Diagram/Integration
+* Alec Hodges: Account Database and Integration
+* Michael Carroll: List of activities in a database with resources
+* Brennan Butler: More activities in list from database
+
+## Information about the code
+Most of our graphics were intially created on figma which got converted to .jsx files in the ui-components. After converting those graphics, we went back through and manually modified them so they displayed information, properly linked, and flexed with the page dimensions changed.
+
+### Specific Files 
+* Everything inside the src/pages
+* src/App.js
+* src/index.js
+* Some Components inside src/ui-components (combination of generated and modified code)
+  * HomeFinal.jsx
+  * Settingpage.jsx
+  * SkillList.jsx
+  * Linkfinal.jsx
+  * SkillProfile.jsx
+  * index.js
+  * NOT studioTheme.js
+* Our data models were created in aws and converted to js and ts files when pulled, but we still had to define and use them. (similar to the graphql folder)
+* Public folder is our images
+* node_modules is generated files needed for node.js and or react
+* amplify is needed for aws configuration
+* 
 
 ## Available Scripts
 
@@ -11,60 +76,15 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
