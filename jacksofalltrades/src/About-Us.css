@@ -21,7 +21,7 @@ body {
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
+    margin: 60px;
   }
   
   .about-section {
@@ -32,7 +32,7 @@ body {
   }
   
   .container {
-    padding: 0 16px;
+    padding: 0 50px;
   }
   
   .container::after, .row::after {
@@ -63,7 +63,7 @@ body {
   
   @media screen and (max-width: 650px) {
     .column {
-      width: 100%;
+      width: 80%;
       display: block;
     }
   }

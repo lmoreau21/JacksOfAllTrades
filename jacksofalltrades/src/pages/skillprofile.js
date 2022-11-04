@@ -8,7 +8,7 @@ import {
 import SkillProfile from "../ui-components/SkillProfile";
 import { Collection } from "@aws-amplify/ui-react";
 import { useParams } from "react-router-dom";
-import Amplify from "aws-amplify";
+import Amplify, { API } from "aws-amplify";
 import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
 
 function SkillDisplay(props) {
