@@ -6,6 +6,8 @@
 
 /* eslint-disable */
 import React from "react";
+import Auth from "@aws-amplify/auth";
+import { DataStore} from "aws-amplify";
 import {
   getOverrideProps,
   useDataStoreUpdateAction,
@@ -14,25 +16,41 @@ import {
 import { SkillCompleted } from "../models";
 import { schema } from "../models/schema";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
+
 export default function SkillProfile(props) {
   const { skillprofile, rectangle1199, skillCompleted, overrides, ...rest } =
     props;
+
   const rectangleOneOneNineNineOnClick = useNavigateAction({
     target: "_blank",
     type: "url",
     url: skillprofile?.video,
   });
-  const buttonOnClick = useDataStoreUpdateAction({
-    fields: { isComplete: "true" },
-    id: skillCompleted?.isComplete,
-    model: SkillCompleted,
-    schema: schema,
-  });
+
+  const { user } = Auth.currentUserInfo();
+
+  function buttonOnClick() {
+
+    Auth.currentAuthenticatedUser().then((user) => {
+      console.log('user email = ' + user.attributes.email);
+    });
+
+    DataStore.save(
+      new SkillCompleted({
+
+      id: '',
+      userEmail: Auth.user.attributes.email,
+      isComplete: true
+    })
+  );
+
+  }
+
   return (
     <Flex
       gap="10px"
       direction="row"
-      width="90vw"
+      width="100vw"
       height="unset"
       justifyContent="center"
       alignItems="center"
@@ -129,7 +147,7 @@ export default function SkillProfile(props) {
             display="flex"
             gap="0"
             direction="row"
-            width="371px"
+            width="250px"
             height="unset"
             justifyContent="center"
             alignItems="center"
@@ -416,4 +434,4 @@ export default function SkillProfile(props) {
       </Flex>
     </Flex>
   );
-}
+};
