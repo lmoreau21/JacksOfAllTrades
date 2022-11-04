@@ -15,12 +15,12 @@ import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 export default function SkillLinkFinal(props) {
   const { skillprofile, overrides, ...rest } = props;
   const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
-    useStateMutationAction("rgba(251,182,205,1)");
+    useStateMutationAction("3px SOLID #000000");
   const skillLinkOnMouseOver = () => {
-    setLinkBackgroundColor("#000000");
+    setLinkBorderBackgroundColor("5px SOLID #9a4c4c");
   };
   const skillLinkOnMouseLeave = () => {
-    setLinkBackgroundColor("#F5BCBC");
+    setLinkBorderBackgroundColor("3px SOLID #000000");
   };
   const skillLinkOnClick = useNavigateAction({
     type: "url",
@@ -30,176 +30,126 @@ export default function SkillLinkFinal(props) {
     <Flex
       gap="5px"
       direction="column"
-      width="90vw"
-      height="272px"
-      justifyContent="flex-start"
-      alignItems="flex-start"
+      width="68vw"
+      height="282px"
+      justifyContent="center"
+      alignItems="center"
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="13px 15px 13px 15px"
+      border={linkBorderBackgroundColor}
+      borderRadius="5px"
       backgroundColor="rgba(255,184,184,1)"
-      onMouseOver={() => {
-        skillLinkOnMouseOver();
-      }}
       onMouseLeave={() => {
         skillLinkOnMouseLeave();
+      }}
+      onMouseOver={() => {
+        skillLinkOnMouseOver();
       }}
       onClick={() => {
         skillLinkOnClick();
       }}
       {...rest}
-      {...getOverrideProps(overrides, "SkillLink")}
+      {...getOverrideProps(overrides, "Link")}
       >
       <Flex
-        gap="10px"
         direction="row"
-        width="unset"
-        height="unset"
-        justifyContent="flex-start"
-        alignItems="flex-start"
+        width="65vw"
+        height="19px"
+        justifyContent="space-between"
+        alignItems="center"
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Text")}
       >
-        <Flex
-          gap="400px"
-          direction="row"
-          width="unset"
-          height="25px"
-          justifyContent="flex-start"
-          alignItems="center"
-          shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 2")}
-        >
           <Text
             fontFamily="Kameron"
             fontSize="20px"
             fontWeight="700"
-            color="rgba(0,0,0,1)"
-            lineHeight="25.41015625px"
+            lineHeight="25px"
             textAlign="left"
-            display="block"
-            direction="column"
-            justifyContent="unset"
-            width="unset"
+            display="flex"
+            direction="row"
             height="22px"
-            gap="unset"
-            alignItems="unset"
-            shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children={skillprofile?.title}
             {...getOverrideProps(overrides, "Skill Name")}
           ></Text>
-          <Flex
-            gap="6px"
-            direction="row"
-            width="unset"
-            height="16px"
-            justifyContent="flex-end"
-            alignItems="flex-start"
+          <Flex gap="3px">
+          <Text
+            fontFamily="Kameron"
+            fontSize="18px"
+            fontWeight="400"
+            lineHeight="21px"
+            textAlign="right"
+            display="flex"
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 420")}
-          >
-            <Text
-              fontFamily="Kameron"
-              fontSize="18px"
-              fontWeight="400"
-              color="rgba(0,0,0,1)"
-              lineHeight="21.3662109375px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Time:"
-              {...getOverrideProps(overrides, "Time:")}
-            ></Text>
-            <Text
-              fontFamily="Kameron"
-              fontSize="18px"
-              fontWeight="400"
-              color="rgba(0,0,0,1)"
-              lineHeight="21.3662109375px"
-              textAlign="left"
-              display="flex"
-              direction="row"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children={skillprofile?.timeEstimate}
-              {...getOverrideProps(overrides, "num")}
-            ></Text>
+            whiteSpace="pre-wrap"
+            children="Time:"
+            {...getOverrideProps(overrides, "Time:")}
+          ></Text>
+          <Text
+            fontFamily="Kameron"
+            fontSize="18px"
+            fontWeight="400"
+            color="rgba(0,0,0,1)"
+            lineHeight="21px"
+            textAlign="left"
+            display="flex"
+            position="relative"
+            whiteSpace="pre-wrap"
+            children={skillprofile?.timeEstimate}
+            {...getOverrideProps(overrides, "num")}
+          ></Text>
           </Flex>
         </Flex>
-      </Flex>
-      <Flex 
-        width="40vw"
-        height="300px"
-        display="flex"
-        direction="row"
-       
-        shrink="0"
-        position="relative"
-        {...getOverrideProps(overrides, "Group 8")}
-      >
         <Flex
-         
+            width="65vw"
+            height=".5px"
+            backgroundColor="rgba(0,0,0,1)"
+            border="1px SOLID rgba(0,0,0,1)"
+            display="flex"
+            position="relative"
+            top="1px"
+        >
+            
+          </Flex>
+        <Flex
           direction="row"
-          width="90vw"
+          width="65vw"
           height="unset"
-          justifyContent="flex-start"
-          alignItems="flex-start"
-          
+          justifyContent="space-between"
+          top="4px"
+          gap="8px"
           {...getOverrideProps(overrides, "Frame 422")}
         >
             <Flex
-              width="50vw"
+              width="37vw"
               height="220px"
-
               backgroundColor="rgba(255,255,255,0.5)"
-              border="rgba(0,0,0,1)"
-              borderRadius="2"
+              border="1px SOLID rgba(0,0,0,1)"
               display="flex"
-              
               position="relative"
               
               {...getOverrideProps(overrides, "Background of description")}
             >
                <Text
                 fontFamily="Kameron"
-                fontSize="14px"
+                fontSize="15px"
                 fontWeight="400"
                 color="rgba(0,0,0,1)"
-                lineHeight="16.6181640625px"
+                lineHeight="20px"
                 textAlign="left"
                 display="flex"
-                direction="row"
-                justifyContent="flex-start"
-                width="50vw"      
-                
+                direction="row"    
                 position="relative"
                 top="1vw"
-                left="5px"
+                left="1vw"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
                 children={skillprofile?.description}
@@ -208,22 +158,20 @@ export default function SkillLinkFinal(props) {
             </Flex>
           
           <Image
-            width="34vw"
+            width="30vw"
             height="220px"
             display="flex"
-            gap="unset"
-            alignItems="unset"
-            justifyContent="unset"
             shrink="0"
             position="relative"
             border="1px SOLID rgba(0,0,0,1)"
             padding="0px 0px 0px 0px"
             objectFit="cover"
+            backgroundColor="#FFFFFF"
             src={skillprofile?.photo}
             {...getOverrideProps(overrides, "Logo 1")}
           ></Image>
         </Flex>
       </Flex>
-    </Flex>
+ 
   );
 }
