@@ -30,7 +30,7 @@ const AboutUs = () => {
                 <div className="column" style={{float: "left", width: "33%", marginBottom: "16px", padding: "0 8px"}}>
                     <div className="card" style={{boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)"}}>
                         <div className="container">
-                            <Image src="assets\images\01.png" alt="Lilly" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%"}}></Image>
+                            <Image src="assets\images\01.jpg" alt="Lilly" style={{ borderRadius: "50%", display: "block", marginTop: "auto", marginLeft: "auto", marginRight: "auto", width: "100%,"}}></Image>
                             <h2> Lilly Moreau </h2>
                             <p className="title"> Fullstack Engineer </p>
                             <p> AWS and Architecture </p>

@@ -8,14 +8,27 @@
 import React from "react";
 import {
   getOverrideProps,
+  useNavigateAction,
+  useStateMutationAction,
   useAuthSignOutAction,
 } from "@aws-amplify/ui-react/internal";
 import { Text, View } from "@aws-amplify/ui-react";
 export default function Settingspage(props) {
   const { overrides, ...rest } = props;
+  const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
+    useStateMutationAction("rgba(217,217,217,1)");
+  const skillLinkOnMouseOver = () => {
+    setLinkBorderBackgroundColor("rgba(209,150,150,1)");
+  };
+  const skillLinkOnMouseLeave = () => {
+    setLinkBorderBackgroundColor("rgba(217,217,217,1)");
+  };
   const signOutThreeSixSixFourTwoFourNineFourOnClick = useAuthSignOutAction({
     global: true,
-  });
+  })
+  
+  ;
+ 
   return (
     <View
       width="100vw"
@@ -104,7 +117,12 @@ export default function Settingspage(props) {
             alignItems="center"
             justifyContent="center"
             position="relative"
-          
+            onMouseLeave={() => {
+              skillLinkOnMouseLeave();
+            }}
+            onMouseOver={() => {
+              skillLinkOnMouseOver();
+            }}
             onClick={() => {
               signOutThreeSixSixFourTwoFourNineFourOnClick();
             }}
@@ -120,7 +138,7 @@ export default function Settingspage(props) {
               position="relative"
               borderRadius="8px"
               padding="0px 0px 0px 0px"
-              backgroundColor="rgba(217,217,217,1)"
+              backgroundColor={linkBorderBackgroundColor}
               {...getOverrideProps(overrides, "Sign Out Button")}
             >
               <Text
@@ -131,6 +149,7 @@ export default function Settingspage(props) {
               lineHeight="36px"
               textAlign="center"
               display="flex"
+              alignItems="center"
               height="46px"
               whiteSpace="pre-wrap"
               children="Sign Out"
