@@ -24,10 +24,7 @@ function SkillDisplay(props) {
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
   return (
     <Collection
-      type="list"
-      isPaginated={true}
-      searchPlaceholder="Search..."
-      itemsPerPage={1}
+      type="list"   
       direction="column"
       alignItems="stretch"
       justifyContent="stretch"
