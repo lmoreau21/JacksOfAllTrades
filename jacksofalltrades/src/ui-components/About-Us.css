@@ -21,6 +21,8 @@ body {
   
   .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-top: 10px;
+    background-color: rgba(223, 205, 205, 0.752);
     margin: 20px;
   }
   

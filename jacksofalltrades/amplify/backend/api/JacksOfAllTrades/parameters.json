@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "JacksOfAllTrades",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authjacksofalltrades9b9a0612",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2022-10-20T23:57:17.104Z"
+}

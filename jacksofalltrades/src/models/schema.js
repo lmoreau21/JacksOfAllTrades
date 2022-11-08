@@ -24,34 +24,6 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "userss": {
-                    "name": "userss",
-                    "isArray": true,
-                    "type": {
-                        "model": "UsersSkillCompleted"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "skillCompleted"
-                    }
-                },
-                "ManySkillCompletedToManySkillProfile": {
-                    "name": "ManySkillCompletedToManySkillProfile",
-                    "isArray": true,
-                    "type": {
-                        "model": "SkillCompletedSkillprofile"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "skillCompleted"
-                    }
-                },
                 "skillTitle": {
                     "name": "skillTitle",
                     "isArray": false,
@@ -63,6 +35,20 @@ export const schema = {
                     "name": "isComplete",
                     "isArray": false,
                     "type": "Boolean",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "usersID": {
+                    "name": "usersID",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "skillprofileID": {
+                    "name": "skillprofileID",
+                    "isArray": false,
+                    "type": "ID",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -89,6 +75,24 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byUsers",
+                        "fields": [
+                            "usersID"
+                        ]
+                    }
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "bySkillprofile",
+                        "fields": [
+                            "skillprofileID"
+                        ]
+                    }
                 },
                 {
                     "type": "auth",
@@ -144,32 +148,18 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "ManyUsersToManySkillProfiles": {
-                    "name": "ManyUsersToManySkillProfiles",
-                    "isArray": true,
-                    "type": {
-                        "model": "UsersSkillprofile"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "users"
-                    }
-                },
                 "ManyUsersToManySkillCompleted": {
                     "name": "ManyUsersToManySkillCompleted",
                     "isArray": true,
                     "type": {
-                        "model": "UsersSkillCompleted"
+                        "model": "SkillCompleted"
                     },
                     "isRequired": true,
                     "attributes": [],
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "users"
+                        "associatedWith": "usersID"
                     }
                 },
                 "createdAt": {
@@ -322,32 +312,18 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "userss": {
-                    "name": "userss",
-                    "isArray": true,
-                    "type": {
-                        "model": "UsersSkillprofile"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "skillprofile"
-                    }
-                },
                 "skillcompleteds": {
                     "name": "skillcompleteds",
                     "isArray": true,
                     "type": {
-                        "model": "SkillCompletedSkillprofile"
+                        "model": "SkillCompleted"
                     },
                     "isRequired": true,
                     "attributes": [],
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "skillprofile"
+                        "associatedWith": "skillprofileID"
                     }
                 },
                 "createdAt": {
@@ -430,250 +406,9 @@ export const schema = {
                     }
                 }
             ]
-        },
-        "UsersSkillCompleted": {
-            "name": "UsersSkillCompleted",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "skillCompleted": {
-                    "name": "skillCompleted",
-                    "isArray": false,
-                    "type": {
-                        "model": "SkillCompleted"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "skillCompletedID"
-                    }
-                },
-                "users": {
-                    "name": "users",
-                    "isArray": false,
-                    "type": {
-                        "model": "Users"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "usersID"
-                    }
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "UsersSkillCompleteds",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "bySkillCompleted",
-                        "fields": [
-                            "skillCompletedID"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byUsers",
-                        "fields": [
-                            "usersID"
-                        ]
-                    }
-                }
-            ]
-        },
-        "SkillCompletedSkillprofile": {
-            "name": "SkillCompletedSkillprofile",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "skillCompleted": {
-                    "name": "skillCompleted",
-                    "isArray": false,
-                    "type": {
-                        "model": "SkillCompleted"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "skillCompletedID"
-                    }
-                },
-                "skillprofile": {
-                    "name": "skillprofile",
-                    "isArray": false,
-                    "type": {
-                        "model": "Skillprofile"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "skillprofileID"
-                    }
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "SkillCompletedSkillprofiles",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "bySkillCompleted",
-                        "fields": [
-                            "skillCompletedID"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "bySkillprofile",
-                        "fields": [
-                            "skillprofileID"
-                        ]
-                    }
-                }
-            ]
-        },
-        "UsersSkillprofile": {
-            "name": "UsersSkillprofile",
-            "fields": {
-                "id": {
-                    "name": "id",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
-                    "attributes": []
-                },
-                "users": {
-                    "name": "users",
-                    "isArray": false,
-                    "type": {
-                        "model": "Users"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "usersID"
-                    }
-                },
-                "skillprofile": {
-                    "name": "skillprofile",
-                    "isArray": false,
-                    "type": {
-                        "model": "Skillprofile"
-                    },
-                    "isRequired": true,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "skillprofileID"
-                    }
-                },
-                "createdAt": {
-                    "name": "createdAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                },
-                "updatedAt": {
-                    "name": "updatedAt",
-                    "isArray": false,
-                    "type": "AWSDateTime",
-                    "isRequired": false,
-                    "attributes": [],
-                    "isReadOnly": true
-                }
-            },
-            "syncable": true,
-            "pluralName": "UsersSkillprofiles",
-            "attributes": [
-                {
-                    "type": "model",
-                    "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byUsers",
-                        "fields": [
-                            "usersID"
-                        ]
-                    }
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "bySkillprofile",
-                        "fields": [
-                            "skillprofileID"
-                        ]
-                    }
-                }
-            ]
         }
     },
     "enums": {},
     "nonModels": {},
-    "codegenVersion": "3.3.1",
-    "version": "437764824218cd728d067df9893f4724"
+    "version": "d9246dd1f728be953901018b9b241711"
 };

@@ -1,0 +1,36 @@
+type SkillCompleted @model @auth(rules: [{allow: private}, {allow: owner}]) {
+  id: ID!
+  userEmail: AWSEmail
+  skillID: String!
+  skillTitle: String!
+  isComplete: Boolean!
+  usersID: ID! @index(name: "byUsers")
+  skillprofileID: ID! @index(name: "bySkillprofile")
+}
+
+type Users @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  userEmail: AWSEmail!
+  group: String!
+  ManyUsersToManySkillCompleted: [SkillCompleted!] @hasMany(indexName: "byUsers", fields: ["id"])
+}
+
+type Skillprofile @model @auth(rules: [{allow: public}, {allow: groups, groups: ["Admin"], operations: [read, create, update, delete]}, {allow: groups, groups: ["Instructor"], operations: [read, create, update, delete]}, {allow: groups, groups: ["User"], operations: [read]}]) {
+  id: ID!
+  title: String
+  description: String
+  instructions: String
+  instructionRights: String
+  category: String
+  difficultyLevel: String
+  materialsRequired: Boolean
+  timeEstimate: String
+  photo: AWSURL
+  photoRights: String
+  video: AWSURL
+  videoRights: String
+  creator: String
+  skillId: ID!
+  skillcompleteds: [SkillCompleted!] @hasMany(indexName: "bySkillprofile", fields: ["id"])
+}
+ 

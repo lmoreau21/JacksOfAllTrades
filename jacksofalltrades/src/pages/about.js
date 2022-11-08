@@ -1,5 +1,5 @@
 import React from "react";
-import '../About-Us.css'
+import '../ui-components/About-Us.css'
 import '@aws-amplify/ui-react/styles.css'
 import { Image, ToggleButton } from "@aws-amplify/ui-react";
 

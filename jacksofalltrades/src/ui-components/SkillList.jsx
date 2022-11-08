@@ -7,7 +7,7 @@
 /* eslint-disable */
 import React from "react";
 import { SortDirection } from "@aws-amplify/datastore";
-import { SkillCompleted, Skillprofile, Users } from "../models";
+import { SkillCompleted, Skillprofile } from "../models";
 import {
   getOverrideProps,
   useDataStoreBinding,
@@ -17,10 +17,6 @@ import { Collection } from "@aws-amplify/ui-react";
 export default function SkillList(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const itemsPagination = { sort: (s) => s.title(SortDirection.ASCENDING) };
-  const usersItems = useDataStoreBinding({
-    type: "collection",
-    model: Users,
-  }).items;
   const skillCompletedItems = useDataStoreBinding({
     type: "collection",
     model: SkillCompleted,
@@ -31,9 +27,8 @@ export default function SkillList(props) {
     pagination: itemsPagination,
   }).items.map((item) => ({
     ...item,
-    userss: usersItems.filter((model) => model.skillprofile === item.id),
     skillcompleteds: skillCompletedItems.filter(
-      (model) => model.skillprofile === item.id
+      (model) => model.skillprofileID === item.id
     ),
   }));
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
@@ -42,7 +37,7 @@ export default function SkillList(props) {
       type="list"
       isSearchable="true"
       isPaginated={true}
-      searchPlaceholder="Search for skill..."
+      searchPlaceholder="Search..."
       itemsPerPage={5}
       direction="column"
       alignItems="stretch"

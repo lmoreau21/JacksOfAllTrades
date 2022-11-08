@@ -3,7 +3,7 @@ import React from 'react';
 import {Amplify} from 'aws-amplify'
 import config from '../aws-exports'
 import {AmplifyProvider} from '@aws-amplify/ui-react'
-import {studioTheme, Home} from '../ui-components'
+import {studioTheme, HomeFinal} from '../ui-components'
 import '@aws-amplify/ui-react/styles.css'
 
 
@@ -13,7 +13,7 @@ const home = () => {
   return (
     <div style={{width:"100vw"}}>
     <AmplifyProvider theme={studioTheme}>
-      <Home/>
+      <HomeFinal/>
     </AmplifyProvider>
     </div>
   );

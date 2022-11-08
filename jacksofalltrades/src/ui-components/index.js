@@ -4,8 +4,8 @@
  * Any changes to this file will be overwritten when running amplify pull. *
  **************************************************************************/
 
-export { default as Top } from "./TopBarFinal";
-export { default as Home } from "./HomeFinal";
+export { default as HomeFinal } from "./HomeFinal";
+export { default as TopBarFinal } from "./TopBarFinal";
 export { default as Settingspage } from "./Settingspage";
 export { default as SkillList } from "./SkillList";
 export { default as SkillProfile } from "./SkillProfile";

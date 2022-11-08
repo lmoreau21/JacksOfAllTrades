@@ -1,10 +1,4 @@
-/***************************************************************************
- * The contents of this file were generated with Amplify Studio.           *
- * Please refrain from making any modifications to this file.              *
- * Any changes to this file will be overwritten when running amplify pull. *
- **************************************************************************/
 
-/* eslint-disable */
 import React from "react";
 import {
   getOverrideProps,
@@ -12,18 +6,11 @@ import {
   useStateMutationAction,
   useAuthSignOutAction,
 } from "@aws-amplify/ui-react/internal";
-import { Text, View } from "@aws-amplify/ui-react";
+import { Button, Text, View } from "@aws-amplify/ui-react";
 export default function Settingspage(props) {
   const { overrides, ...rest } = props;
-  const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
-    useStateMutationAction("rgba(217,217,217,1)");
-  const skillLinkOnMouseOver = () => {
-    setLinkBorderBackgroundColor("rgba(209,150,150,1)");
-  };
-  const skillLinkOnMouseLeave = () => {
-    setLinkBorderBackgroundColor("rgba(217,217,217,1)");
-  };
-  const signOutThreeSixSixFourTwoFourNineFourOnClick = useAuthSignOutAction({
+
+  const signOut = useAuthSignOutAction({
     global: true,
   })
   
@@ -109,58 +96,23 @@ export default function Settingspage(props) {
             children="Settings"
             {...getOverrideProps(overrides, "Settings")}
           ></Text>
-          <View
-            padding="0px 0px 0px 0px"
-            width="unset"
-            height="unset"
-            top="20px"
-            alignItems="center"
-            justifyContent="center"
-            position="relative"
-            onMouseLeave={() => {
-              skillLinkOnMouseLeave();
-            }}
-            onMouseOver={() => {
-              skillLinkOnMouseOver();
-            }}
+            
+          <Button 
+            width="18vw"
+            fontFamily="Kameron"
+           
+            fontSize="18px"
+            backgroundColor="rgba(255,255,255,.5)"
+            marginTop="20px"
             onClick={() => {
-              signOutThreeSixSixFourTwoFourNineFourOnClick();
+              signOut();
             }}
-            {...getOverrideProps(overrides, "Sign Out")}
-          >
-            <View
-              width="18vw"
-              height="46px"
-              display="flex"
-              gap="unset"
-              alignItems="center"
-              justifyContent="center"
-              position="relative"
-              borderRadius="8px"
-              padding="0px 0px 0px 0px"
-              backgroundColor={linkBorderBackgroundColor}
-              {...getOverrideProps(overrides, "Sign Out Button")}
-            >
-              <Text
-              fontFamily="Kameron"
-              fontSize="24px"
-              fontWeight="400"
-              color="rgba(0,0,0,1)"
-              lineHeight="36px"
-              textAlign="center"
-              display="flex"
-              alignItems="center"
-              height="46px"
-              whiteSpace="pre-wrap"
-              children="Sign Out"
-              {...getOverrideProps(overrides, "Sign Out")}
-            ></Text>
-            </View> 
-            </View>
+          >Sign Out
+          </Button>
+          
         </View>
         </View>
-        </View>
-       
+      </View> 
       </View>
     </View>
   );

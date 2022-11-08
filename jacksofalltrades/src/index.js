@@ -10,7 +10,7 @@ import { AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css'
 import { Login, studioTheme } from './ui-components';
 
-import './About-Us.css';
+import './ui-components/About-Us.css';
 
 Amplify.configure(config)
 
