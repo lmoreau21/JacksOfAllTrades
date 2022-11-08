@@ -14,6 +14,7 @@ export default function SkillProfile(props) {
   const { skillprofile, rectangle1199, skillCompleted, items: itemsProp, overrideItems, overrides, ...rest } = props;
   const { user } = Auth.currentUserInfo();
   const authAttributes = useAuth().user?.attributes ?? {};
+
   async function buttonOnClick() {
     setButtonColor("rgba(209,150,150,1)");
     setSkillWord("Congrats! Skill is completed!")
@@ -67,9 +68,6 @@ export default function SkillProfile(props) {
     justifyContent="center"
     padding="0px 0px 35px 0px"
     alignItems="center"
-    onLoad={() =>{
-         
-    }}
     {...getOverrideProps(overrides, "Frame")}
   >
     <View

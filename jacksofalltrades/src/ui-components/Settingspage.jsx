@@ -109,7 +109,6 @@ export default function Settingspage(props) {
             }}
           >Sign Out
           </Button>
-          
         </View>
         </View>
       </View> 

@@ -140,11 +140,7 @@ export default function HomeFinal(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="Are you intrested in learning new skills with ease? Are you board easily? Do you want to find a new trick to excell at? Are you sick and tired off learning usefull things? &#xA;&#xA;If you answered yes to any of the above questions, click below to start learning! Simply choose a skill to learn everytime you visit the website until you feel confident enough to complete a skill."
-            {...getOverrideProps(
-              overrides,
-              "Are you intrested in learning new skills with ease? Are you board easily? Do you want to find a new trick to excell at? Are you sick and tired off learning usefull things? If you answered yes to any of the above questions, click below to start learning! Simply choose a skill to learn everytime you visit the website until you feel confident enough to complete a skill."
-            )}
+            children="Are you intrested in learning new skills with ease? Are you bored easily? Do you want to find a new trick to excel at? Are you sick and tired off learning usefull things? &#xA;&#xA;If you answered yes to any of the above questions, click below to start learning! Simply choose a skill everytime you visit the website and click complete skill when done learning."        
           ></Text>
         </Flex>
         <Flex
