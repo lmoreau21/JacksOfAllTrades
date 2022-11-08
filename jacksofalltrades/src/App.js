@@ -49,7 +49,7 @@ return (
 );
 }
   
-export default withAuthenticator(App);
+export default (App);
 
 /*
 import React, { useState } from 'react';

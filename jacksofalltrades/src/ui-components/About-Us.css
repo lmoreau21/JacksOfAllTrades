@@ -51,10 +51,15 @@ body {
   .button {
     border: none;
     outline: 0;
-    display: inline-block;
+    display: block;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    align-content: center;
+    width: 20vw;
     padding: 8px;
     color: white;
-    background-color: #000;
+    background-color: rgb(210, 171, 171);
     text-align: center;
     cursor: pointer;
     width: 100%;

@@ -3,9 +3,10 @@ import React from 'react';
 
 import {Amplify} from 'aws-amplify'
 import config from '../aws-exports'
-import {AmplifyProvider} from '@aws-amplify/ui-react'
+
 import {studioTheme, SkillList} from '../ui-components'
 import '@aws-amplify/ui-react/styles.css'
+import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 
 Amplify.configure(config)
 
@@ -24,7 +25,7 @@ const SkillDisplay = () => {
   );
 }
 
-export default SkillDisplay;
+export default withAuthenticator(SkillDisplay);
 /*
 import { AmplifyTheme } from 'aws-amplify-react-native';
 
