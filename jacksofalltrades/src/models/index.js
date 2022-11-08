@@ -4,18 +4,13 @@ import { schema } from './schema';
 
 
 
-const { SkillCompleted, Users, ExistingUser, SignIn, Skillprofile, SignUp, SkillCompletedUsers, SkillCompletedSkillprofile, UsersExistingUser, SignInUsers, UsersSkillprofile } = initSchema(schema);
+const { SkillCompleted, Users, Skillprofile, UsersSkillCompleted, SkillCompletedSkillprofile, UsersSkillprofile } = initSchema(schema);
 
 export {
   SkillCompleted,
   Users,
-  ExistingUser,
-  SignIn,
   Skillprofile,
-  SignUp,
-  SkillCompletedUsers,
+  UsersSkillCompleted,
   SkillCompletedSkillprofile,
-  UsersExistingUser,
-  SignInUsers,
   UsersSkillprofile
 };

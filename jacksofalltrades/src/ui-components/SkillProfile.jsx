@@ -8,19 +8,13 @@
 import React from "react";
 import Auth from "@aws-amplify/auth";
 import { DataStore} from "aws-amplify";
-import {
-  getOverrideProps,
-  useStateMutationAction,
-  useDataStoreUpdateAction,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps, useStateMutationAction, useNavigateAction } from "@aws-amplify/ui-react/internal";
 import { SkillCompleted } from "../models";
-import { schema } from "../models/schema";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
 
 export default function SkillProfile(props) {
   
-  const { skillprofile, SkillCompleted, rectangle1199, skillCompleted, overrides, ...rest } =
+  const { skillprofile, rectangle1199, skillCompleted, overrides, ...rest } =
     props;
   
   
@@ -29,21 +23,29 @@ export default function SkillProfile(props) {
     setButtonColor("rgba(209,150,150,1)")
     setSkillWord("Congrats! Skill is completed!")
   }
-  function buttonOnClick() {
+  async function buttonOnClick() {
     setButtonColor("rgba(209,150,150,1)");
     setSkillWord("Congrats! Skill is completed!")
-    Auth.currentAuthenticatedUser().then((user) => {
-      console.log('user email = ' + user.attributes.email);
-    });
-    DataStore.save(
-      new SkillCompleted({
-      id: '',
-      userEmail: Auth.user.attributes.email,
-      isComplete: true
-    })
 
-  );
+    try{
+
+      await DataStore.observeQuery(SkillCompleted);
+  
+      DataStore.save(
+        new SkillCompleted({
+          id: '',
+          userEmail: Auth.user.attributes.email,
+          skillID: skillprofile.skillId,
+          skillTitle: skillprofile.title,
+          isComplete: true,
+      })
+    );
+    console.log("Skill successfully Completed!");
+    } catch (error) {
+      console.log("Error Completing Skill!", error)
+    }
   }
+
   const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
   
   const [buttonColor, setButtonColor] =
