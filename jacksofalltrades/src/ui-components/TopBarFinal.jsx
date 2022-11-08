@@ -334,12 +334,9 @@ export default function TopBarFinal(props) {
           height="unset"
           justifyContent="flex-end"
           alignItems="center"
-          padding="0px 0px"
-          
           flex="none"
           order="0"
           flexGrow="0"
-          {...getOverrideProps(overrides, "Frame 41635842506")}
         >
           <View
             width="48px"
@@ -367,7 +364,6 @@ export default function TopBarFinal(props) {
             flex="none"
             order="1"
             flexGrow="0"
-            {...getOverrideProps(overrides, "Frame 415")}
           >
               <Text
                 fontFamily="Inter"
@@ -377,21 +373,12 @@ export default function TopBarFinal(props) {
                 lineHeight="24px"
                 textAlign="left"
                 display="flex"
-                direction="row"
-                
-                letterSpacing="0.01px"
-                width="unset"
-                height="unset"
-              
+                direction="row"             
                 alignItems="center"
-                
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
                 children={authAttributes["email"]}
                 flex="none"
                 order="0"
                 flexGrow="0"
-                {...getOverrideProps(overrides, "Name")}
               ></Text>
               <Text
                 fontFamily="Inter"
