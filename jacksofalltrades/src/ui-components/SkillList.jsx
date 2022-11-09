@@ -7,13 +7,18 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import SkillLinkFinal from "./SkillLinkFinal";
 import { Collection } from "@aws-amplify/ui-react";
+
+//This function creates a collection of all the skill profiles in the db and displays them to users on the skill list page
 export default function SkillList(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
+  //sorts the page so the skill are displayed in ascending order
   const itemsPagination = { sort: (s) => s.title(SortDirection.ASCENDING) };
+  //pulls skillcompleted which is used to display when the skill is completed
   const skillCompletedItems = useDataStoreBinding({
     type: "collection",
     model: SkillCompleted,
   }).items;
+  //pulls skillprofile which is the content of each skill
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Skillprofile,
@@ -25,11 +30,14 @@ export default function SkillList(props) {
     ),
   }));
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
+
   return (
+    //creats a aws collection that will display a list of all of the the skill profiles in the db
     <Collection
       type="list"
       isSearchable="true"
       isPaginated={true}
+      //allows the user to search
       searchPlaceholder="Search..."
       itemsPerPage={5}
       direction="column"
@@ -40,6 +48,7 @@ export default function SkillList(props) {
       {...getOverrideProps(overrides, "SkillList")}
     >
       {(item, index) => (
+        //overrides the SkillLinkFinal set variables to specifically display each instance
         <SkillLinkFinal
           skillprofile={item}
           key={item.id}

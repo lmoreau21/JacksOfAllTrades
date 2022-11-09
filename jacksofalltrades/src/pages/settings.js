@@ -16,5 +16,6 @@ const Settings = () => {
         </AmplifyProvider>
       );
     }
-    
+
+//withAuthenticator forces the user to be signed in to see this page
 export default withAuthenticator(Settings);
