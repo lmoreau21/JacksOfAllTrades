@@ -54,18 +54,20 @@ Most of our graphics were intially created on figma which got converted to .jsx 
 * src/App.js
 * src/index.js
 * Some Components inside src/ui-components (combination of generated and modified code)
-  * HomeFinal.jsx
+  * HomeFinal.jsx (Ignore past line 212. It is a vector generated image)
   * Settingpage.jsx
+  * SkillLinkFinal.jsx
   * SkillList.jsx
   * Linkfinal.jsx
   * SkillProfile.jsx
+  * AboutUs.css
+  * TopBarFinal.jsx
   * index.js
   * NOT studioTheme.js
 * Our data models were created in aws and converted to js and ts files when pulled, but we still had to define and use them. (similar to the graphql folder)
 * Public folder is our images
 * node_modules is generated files needed for node.js and or react
 * amplify is needed for aws configuration
-* 
 
 ## Available Scripts
 
