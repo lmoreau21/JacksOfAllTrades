@@ -1,22 +1,12 @@
 import React from "react";
 import {
-  getOverrideProps,
-  getOverridesFromVariants,
-  mergeVariantsAndOverrides,
   useAuth,
   useNavigateAction,
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
-import { Button,Flex, Text, View } from "@aws-amplify/ui-react";
-export default function TopBarFinal(props) {
-  const { signIn, overrides: overridesProp, ...rest } = props;
-  const variants = [
-    
-  ];
-  const overrides = mergeVariantsAndOverrides(
-    getOverridesFromVariants(variants, props),
-    overridesProp || {}
-  );
+import { Flex, Text, View } from "@aws-amplify/ui-react";
+
+export default function TopBarFinal() {
   const authAttributes = useAuth().user?.attributes ?? {};
   const [homeColor, setHomeColor] = useStateMutationAction("rgba(0,0,0,1)");
   const [aboutColor, setAboutColor] = useStateMutationAction("rgba(0,0,0,1)");
@@ -46,18 +36,14 @@ export default function TopBarFinal(props) {
       alignSelf="stretch"
       flexGrow="0"
       border="2px SOLID rgba(0,0,0,1)"
-      {...rest}
-      {...getOverrideProps(overrides, "Top")}
     >
       <Flex>
-      
       <Flex
         width="48px"
         height="68.79px"
         flex='none'
         order="0"
         flexGrow="0"
-        {...getOverrideProps(overrides, "Logo")}
       >
         <View
           width="29px"
@@ -73,7 +59,6 @@ export default function TopBarFinal(props) {
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(220,220,220,1)"
-          {...getOverrideProps(overrides, "Rectangle 1191")}
         ></View>
         <View
           width="29px"
@@ -89,7 +74,6 @@ export default function TopBarFinal(props) {
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(242,236,236,1)"
-          {...getOverrideProps(overrides, "Rectangle 1192")}
         ></View>
         <View
           width="29px"
@@ -105,7 +89,6 @@ export default function TopBarFinal(props) {
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(255,250,250,1)"
-          {...getOverrideProps(overrides, "Rectangle 1193")}
         ></View>
         <Text
           fontFamily="Inter"
@@ -129,7 +112,6 @@ export default function TopBarFinal(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="J"
-          {...getOverrideProps(overrides, "J35842498")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -153,7 +135,6 @@ export default function TopBarFinal(props) {
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
           children="J"
-          {...getOverrideProps(overrides, "J35842499")}
         ></Text>
       </Flex>
       <Flex
@@ -165,13 +146,10 @@ export default function TopBarFinal(props) {
         gap="30px"
         width="55vw"
         height="unset"
-
         flex="none"
         order="1"
         alignSelf="stretch"
         flexGrow="1"
-        
-        {...getOverrideProps(overrides, "Frame 32135842501")}
       >
         <Text
           fontFamily="Inter"
@@ -195,9 +173,7 @@ export default function TopBarFinal(props) {
           onClick={() => {
             setHomeColor("#9a4c4c");
           }}
-          {...getOverrideProps(overrides, "Home")}
         ></Text>
-      
         <Text
           fontFamily="Inter"
           fontSize="16px"
@@ -205,9 +181,7 @@ export default function TopBarFinal(props) {
           color={aboutColor}
           lineHeight="24px"
           textAlign="left"
-         
           letterSpacing="0.01px"
-          
           children="About"
           flex="none"
           order="1"
@@ -222,7 +196,6 @@ export default function TopBarFinal(props) {
           onMouseLeave={() => {
             setAboutColor("#000000");
           }}
-          {...getOverrideProps(overrides, "About")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -231,10 +204,8 @@ export default function TopBarFinal(props) {
           color={skillColor}
           lineHeight="24px"
           textAlign="left"
-          
-          letterSpacing="0.01px"
-         
           children="Skill"
+          letterSpacing="0.01px"
           flex="none"
           order="2"
           flexGrow="0"
@@ -249,7 +220,6 @@ export default function TopBarFinal(props) {
            
             setSkillColor("#000000");
           }}
-          {...getOverrideProps(overrides, "Skill")}
         ></Text>
         <Text
           fontFamily="Inter"
@@ -273,7 +243,6 @@ export default function TopBarFinal(props) {
             calenderOnClick();
             setCalenderColor("#9a4c4c");
           }}
-          {...getOverrideProps(overrides, "Calender")}
         ></Text>
       </Flex>
       </Flex>
@@ -285,12 +254,10 @@ export default function TopBarFinal(props) {
         height="unset"
         justifyContent="flex-end"
         alignItems="center"
-
         flex="none"
         order="2"
         alignSelf="stretch"
         flexGrow="1"
-        {...getOverrideProps(overrides, "Profile")}
       >
         <Flex
           display="flex"
@@ -307,25 +274,20 @@ export default function TopBarFinal(props) {
           <View
             width="48px"
             height="48px"
-           
             borderRadius="40px"
             backgroundColor="#9a4c4c"
             flex="none"
             order="0"
             flexGrow="0"
-            
           ></View>
           <Flex
             display="flex"
             gap="25px"
             direction="row"
-
             width="unset"
             height="unset"
-            
             alignItems="center"
             justifyContent="flex-end"
-
             padding="0px"
             flex="none"
             order="1"
@@ -355,10 +317,7 @@ export default function TopBarFinal(props) {
                 textAlign="right"
                 display="flex"
                 direction="row"
-               
-                letterSpacing="0.01px"
-              
-                          
+                letterSpacing="0.01px"                         
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
                 children="Settings"
@@ -376,7 +335,6 @@ export default function TopBarFinal(props) {
                   
                   setSettingsColor("#000000");
                 }}
-                {...getOverrideProps(overrides, "Settings")}
               ></Text>
           </Flex>
         </Flex>

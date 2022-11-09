@@ -9,10 +9,7 @@ import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
 
 
 export default function SkillProfile(props) {
-  
-  
   const { skillprofile, rectangle1199, skillCompleted, items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const { user } = Auth.currentUserInfo();
   const authAttributes = useAuth().user?.attributes ?? {};
 
   async function buttonOnClick() {
@@ -34,15 +31,11 @@ export default function SkillProfile(props) {
       console.log("Error Completing Skill!", error)
     }
   }
-
+  
   const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
-  
-  const [buttonColor, setButtonColor] =
-    useStateMutationAction("rgba(217,217,217,1)");
-  const [skillWord, setSkillWord]=
-    useStateMutationAction("Complete Skill");
+  const [buttonColor, setButtonColor] =useStateMutationAction("rgba(217,217,217,1)");
+  const [skillWord, setSkillWord]=useStateMutationAction("Complete Skill");
  
-  
     const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
     then((results)=>{
       console.log(results[0])
@@ -51,13 +44,11 @@ export default function SkillProfile(props) {
       }
        
     });
-    console.log(completeModel[0]);
-
-
   async function start(){    
       setButtonColor("rgba(209,150,150,1)")
       setSkillWord("Congrats! Skill is completed!")
-    }
+  }
+
   return (
   <Flex
     gap="25px"
