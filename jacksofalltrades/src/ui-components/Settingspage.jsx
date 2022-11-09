@@ -3,11 +3,15 @@ import {
   useAuthSignOutAction,
 } from "@aws-amplify/ui-react/internal";
 import { Button, Text, View } from "@aws-amplify/ui-react";
+
+//settings page allows user to signout
 export default function Settingspage() {
+  //aws variable that will force the user to signout
   const signOut = useAuthSignOutAction({
     global: true,
   }) ;
- 
+  
+  //graphics for the settings page
   return (
     <View
       width="100vw"
@@ -88,6 +92,7 @@ export default function Settingspage() {
             fontSize="18px"
             backgroundColor="rgba(255,255,255,.5)"
             marginTop="20px"
+            //when the user selects the signout button the user will be signed out by using the function above
             onClick={() => {
               signOut();
             }}

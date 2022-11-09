@@ -10,29 +10,23 @@ import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplif
 
 Amplify.configure(config)
 
+//When skilldisplay is called it will generate the skillist react graphic
 const SkillDisplay = () => {
 
   return (
+    //adds additional styling to the page
     <div style=
     {{width:"100%", padding: "30px", display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundImage:"linear-gradient(45deg, rgba(167,83,83,1), rgba(167,153,153,1))"}}>
-    <AmplifyProvider theme={studioTheme}>
+    backgroundImage:"linear-gradient(45deg, rgba(167,83,83,1), rgba(167,153,153,1))"}}
+    >
+    <AmplifyProvider theme={studioTheme} > 
       <SkillList/>
     </AmplifyProvider>
     </div>
   );
 }
 
+//withAuthenticator forces the user to be signed in to see this page
 export default withAuthenticator(SkillDisplay);
-/*
-import { AmplifyTheme } from 'aws-amplify-react-native';
-
-const MySectionHeader = Object.assign({}, AmplifyTheme.sectionHeader, { background: 'orange' });
-const MyTheme = Object.assign({}, AmplifyTheme, { sectionHeader: MySectionHeader });
-
-<Authenticator theme={MyTheme} />
-
-export default withAuthenticator(App);
-*/

@@ -1,49 +1,72 @@
 
 import React from "react";
-import Auth from "@aws-amplify/auth";
 import { DataStore} from "aws-amplify";
 import { getOverrideProps, useDataStoreBinding, useStateMutationAction, useNavigateAction, useAuth } from "@aws-amplify/ui-react/internal";
 import { SkillCompleted } from "../models";
 import { Button, Divider, Flex, Text, View } from "@aws-amplify/ui-react";
-import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
 
-
+//This is the graphics for the SkillProfile page which displays the information on a per skill basis
 export default function SkillProfile(props) {
-  const { skillprofile, rectangle1199, skillCompleted, items: itemsProp, overrideItems, overrides, ...rest } = props;
+  const { skillprofile, skillCompleted, items: itemsProp, overrideItems, overrides, ...rest } = props;
+  //pulls user info
   const authAttributes = useAuth().user?.attributes ?? {};
+  //links return button to the skillist page
+  const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
+  //creates variable buttonColor and setterMethod setButtonColor
+  const [buttonColor, setButtonColor] = useStateMutationAction("rgba(217,217,217,1)");
+  //creates variable skillWord and setterMethod setSkillWord
+  const [skillWord, setSkillWord]=useStateMutationAction("Complete Skill");
+
+  //When page is loded, the complete reflects whether the user has completed a skill by calling the first index in the skillcomplete model
   const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
   then((results)=>{
     console.log(results[0])
     if(results[0].isComplete){
-      start();
+      completeSkill();
     }else{
-      setButtonColor("rgba(217,217,217,1)");
-      setSkillWord("Complete")
-    }
-      
-  });
+      incompleteSkill();
+    } 
+  }
+  );
+
+  //updates color and text on isComplete button
+  function completeSkill(){
+    setButtonColor("rgba(209,150,150,1)");
+    setSkillWord("Congrats! Skill is completed!")
+  }
+  function incompleteSkill(){
+    setButtonColor("rgba(217,217,217,1)");
+    setSkillWord("Complete Skill")
+  }
+
+  /*button on click is called when the user clicks the completed button
+    updated the skill complete model with the isComplete or created a skill complete instance if none exist
+    updated coloring of the button to reflect status
+  */
   async function buttonOnClick() {
+    //retrives SkillCompleted
     const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).then((results)=>{
       console.log(results[0]);
+      //if skillcomplete exists it will flip the boolean and colors
       try{
-      if(results&&results[0].isComplete){
-        setButtonColor("rgba(217,217,217,1)");
-        setSkillWord("Complete")
+        //changes status from complete to incomplete
+        if(results[0].isComplete){
+          completeSkill();
           DataStore.save(SkillCompleted.copyOf(results[0], updated => {
             updated.isComplete = false
             console.log(updated);
           }));
-      }else if(!results[0].isComplete){
-        start();
-        DataStore.save(SkillCompleted.copyOf(results[0], updated => {
-          updated.isComplete = true
-          console.log(updated);
-        }));
+        }else if(!results[0].isComplete){
+          incompleteSkill();
+          DataStore.save(SkillCompleted.copyOf(results[0], updated => {
+            updated.isComplete = true
+            console.log(updated);
+          }
+        ));
       }
-    }catch(error){
-      console.log("Error Completing Skill!", error)
-      setButtonColor("rgba(209,150,150,1)");
-        setSkillWord("Congrats! Skill is completed!")
+    } catch(error) //if the data model doesnt exist it will create a new skill
+    {
+      completeSkill();
         try{
           DataStore.save(
             new SkillCompleted({
@@ -60,15 +83,8 @@ export default function SkillProfile(props) {
     }
     });
   }
-  const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
-  const [buttonColor, setButtonColor] = useStateMutationAction("rgba(217,217,217,1)");
-  const [skillWord, setSkillWord]=useStateMutationAction("Complete Skill");
 
-  async function start(){    
-      setButtonColor("rgba(209,150,150,1)")
-      setSkillWord("Congrats! Skill is completed!")
-  }
-
+  //graphics (yes it is ugly but this was the first time doing this)
   return (
   <Flex
     gap="25px"
@@ -89,9 +105,15 @@ export default function SkillProfile(props) {
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(241,239,239,1)"
-      
     >
-      <iframe width="100%" height="100%" src= {skillprofile?.video} frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen > </iframe>
+      <iframe 
+        width="100%" 
+        height="100%" 
+        //replace video link with the datamodel for video
+        src= {skillprofile?.video} 
+        frameborder="10" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen" > 
+      </iframe>
     </View>
     <Flex
       gap="8px"
@@ -113,6 +135,7 @@ export default function SkillProfile(props) {
         lineHeight="20px"
         textAlign="center"
         direction="column"
+        //replaces title with skillprofile title
         children={skillprofile?.title}
       ></Text>
     </Flex>
@@ -122,6 +145,7 @@ export default function SkillProfile(props) {
       textAlign="center"
       children={skillWord}
       backgroundColor= {buttonColor}
+      //calls the function at the top that modifies whether a skill is completed or not
       onClick={() => {
         buttonOnClick();
       }}
@@ -137,7 +161,6 @@ export default function SkillProfile(props) {
       shrink="0"
       position="relative"
       padding="0px 10px 0px 10px"
-      {...getOverrideProps(overrides, "Frame")}
     >
       <Divider
         width="90vw"
@@ -145,7 +168,6 @@ export default function SkillProfile(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         backgroundColor="rgba(174,179,183,1)"
-        {...getOverrideProps(overrides, "Divider")}
       ></Divider>
       <Flex
         gap="8px"
@@ -155,7 +177,6 @@ export default function SkillProfile(props) {
         shrink="0"
         position="relative"
         padding="0px 20px 0px 20px"
-        {...getOverrideProps(overrides, "Frame")}
       >
         <Text
           fontFamily="Inter"
@@ -168,22 +189,20 @@ export default function SkillProfile(props) {
           direction="column"
           width="90vw"
           children="Skill Description"
-          {...getOverrideProps(overrides, "Skill Description")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
           width="90vw"
+          //change the description to the specific skillprofile description 
           children={skillprofile?.description}
-          {...getOverrideProps(overrides, "Insert Skill Description")}
         ></Text>
       </Flex>
       <Divider
         width="90vw"
         height="1px"
         display="flex"
-        {...getOverrideProps(overrides, "Divider")}
       ></Divider>
       <Flex
         gap="8px"
@@ -191,7 +210,6 @@ export default function SkillProfile(props) {
         width="90vw"
         height="unset"
         padding="0px 20px 0px 20px"
-        {...getOverrideProps(overrides, "Frame")}
       >
         <Text
           fontFamily="Inter"
@@ -203,15 +221,14 @@ export default function SkillProfile(props) {
           direction="column" 
           width="100%"
           children="Instructions"
-          {...getOverrideProps(overrides, "Instructions")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
           width="100%"
+          //changes instructions to the skill profile instance of instructions
           children={skillprofile?.instructions}
-          {...getOverrideProps(overrides, "Insert instructions")}
         ></Text>
       </Flex>
       <Divider
@@ -220,7 +237,6 @@ export default function SkillProfile(props) {
         display="flex"
         size="small"
         orientation="horizontal"
-        {...getOverrideProps(overrides, "Divider")}
       ></Divider>
       <Flex
         gap="8px"
@@ -230,7 +246,6 @@ export default function SkillProfile(props) {
         justifyContent="center"
         alignItems="flex-start"
         padding="0px 0px 0px 20px"
-        {...getOverrideProps(overrides, "Frame 729766962")}
       >
         <Text
           fontFamily="Inter"
@@ -238,25 +253,24 @@ export default function SkillProfile(props) {
           fontWeight="800"
           lineHeight="20px"
           children="Content Provided by:"
-          {...getOverrideProps(overrides, "Content Provided by:")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
+          //displays skill profile video rights
           children={skillprofile?.videoRights}
-          {...getOverrideProps(overrides, "Line One")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
+          //displays skill profile instruction rights
           children={skillprofile?.instructionRights}
-          {...getOverrideProps(overrides, "Line Three36702560")}
         ></Text>
         <Text
           fontFamily="Inter"
           fontSize="16px"
+          //displays skill profile photo rights
           children={skillprofile?.photoRights}
-          {...getOverrideProps(overrides, "Line Three")}
         ></Text>
       </Flex>
     </Flex>
@@ -266,6 +280,7 @@ export default function SkillProfile(props) {
         textAlign="center"
         backgroundColor="rgba(217,217,217,1)"
         children="Back to List"
+        //calls the function at the top that redirects the user to the skill list bage
         onClick={() => {
           returnButtonClick();
         }}

@@ -10,25 +10,34 @@ import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 import { useAuth } from "@aws-amplify/ui-react/internal";
 import { SkillCompleted } from "../models";
 
+//SkillLinkFinal is the mini boxes that comprise the skillList page
 export default function SkillLinkFinal(props) {
+  //pulls the users info
   const authAttributes = useAuth().user?.attributes ?? {};
   const { skillprofile, skillCompleted, overrides, ...rest } = props;
-  const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
-    useStateMutationAction("3px SOLID #000000");
+  
+  //redirects users to the specific skill profile
   const skillLinkOnClick = useNavigateAction({
     type: "url",
     url: `${"/skillprofile/"}${skillprofile?.id}`,
   });
+  //creates variable linkBorderBackgroundColor and setter method setLinkBorderBackgroundColor
+  const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
+    useStateMutationAction("3px SOLID #000000");
+  //creates variable skillTitlePhrase and setter method setSkillTitlePhrase
   const [skillTitlePhrase, setSkillTitlePhrase] = 
     useStateMutationAction(skillprofile?.title);
+  
+  //pulls the skillcomplete data model to search for if the user has completed the skill
   const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
   then((results)=>{
-    console.log(results[0])
+    //the word complete would be appended if the skill is complete
     if(results[0].isComplete){
       setSkillTitlePhrase(skillprofile?.title+" (Completed)")
 }
-      
   });
+
+  //graphics for skilllink final
   return (
     <Flex
       gap="5px"
@@ -40,15 +49,18 @@ export default function SkillLinkFinal(props) {
       position="relative"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="13px 15px 13px 15px"
+      //overrides border color using variable
       border={linkBorderBackgroundColor}
       borderRadius="5px"
       backgroundColor="rgba(255,184,184,1)"
+      //makeshift button by changing the color of the border if the user hovers
       onMouseLeave={() => {
         setLinkBorderBackgroundColor("3px SOLID #000000");
       }}
       onMouseOver={() => {
         setLinkBorderBackgroundColor("5px SOLID #9a4c4c");
       }}
+      //redirects user to specific profile page
       onClick={() => {
         skillLinkOnClick();
       }}
@@ -75,6 +87,7 @@ export default function SkillLinkFinal(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
+            //overrides skill title with the title and the word (complete) if it is complete
             children={skillTitlePhrase}
           ></Text>
           <Flex gap="3px">
@@ -101,6 +114,7 @@ export default function SkillLinkFinal(props) {
             display="flex"
             position="relative"
             whiteSpace="pre-wrap"
+            //override with skill profile time estimate
             children={skillprofile?.timeEstimate}
           ></Text>
           </Flex>
@@ -146,6 +160,7 @@ export default function SkillLinkFinal(props) {
                 left="1vw"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
+                //overides with skill profile description
                 children={skillprofile?.description}
               ></Text>`
             </Flex>
@@ -160,6 +175,7 @@ export default function SkillLinkFinal(props) {
             padding="0px 0px 0px 0px"
             objectFit="cover"
             backgroundColor="#FFFFFF"
+            //overrides with skill profile photo
             src={skillprofile?.photo}
           ></Image>
         </Flex>
