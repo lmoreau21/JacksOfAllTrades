@@ -10,12 +10,6 @@ export default function SkillLinkFinal(props) {
   const { skillprofile, overrides, ...rest } = props;
   const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
     useStateMutationAction("3px SOLID #000000");
-  const skillLinkOnMouseOver = () => {
-    setLinkBorderBackgroundColor("5px SOLID #9a4c4c");
-  };
-  const skillLinkOnMouseLeave = () => {
-    setLinkBorderBackgroundColor("3px SOLID #000000");
-  };
   const skillLinkOnClick = useNavigateAction({
     type: "url",
     url: `${"/skillprofile/"}${skillprofile?.id}`,
@@ -35,16 +29,14 @@ export default function SkillLinkFinal(props) {
       borderRadius="5px"
       backgroundColor="rgba(255,184,184,1)"
       onMouseLeave={() => {
-        skillLinkOnMouseLeave();
+        setLinkBorderBackgroundColor("3px SOLID #000000");
       }}
       onMouseOver={() => {
-        skillLinkOnMouseOver();
+        setLinkBorderBackgroundColor("5px SOLID #9a4c4c");
       }}
       onClick={() => {
         skillLinkOnClick();
       }}
-      {...rest}
-      {...getOverrideProps(overrides, "Link")}
       >
       <Flex
         direction="row"
@@ -55,7 +47,6 @@ export default function SkillLinkFinal(props) {
         shrink="0"
         position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Text")}
       >
           <Text
             fontFamily="Kameron"
@@ -70,7 +61,6 @@ export default function SkillLinkFinal(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children={skillprofile?.title}
-            {...getOverrideProps(overrides, "Skill Name")}
           ></Text>
           <Flex gap="3px">
           <Text
@@ -85,7 +75,6 @@ export default function SkillLinkFinal(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Time:"
-            {...getOverrideProps(overrides, "Time:")}
           ></Text>
           <Text
             fontFamily="Kameron"
@@ -98,7 +87,6 @@ export default function SkillLinkFinal(props) {
             position="relative"
             whiteSpace="pre-wrap"
             children={skillprofile?.timeEstimate}
-            {...getOverrideProps(overrides, "num")}
           ></Text>
           </Flex>
         </Flex>
@@ -120,7 +108,6 @@ export default function SkillLinkFinal(props) {
           justifyContent="space-between"
           top="4px"
           gap="8px"
-          {...getOverrideProps(overrides, "Frame 422")}
         >
             <Flex
               width="37vw"
@@ -129,8 +116,6 @@ export default function SkillLinkFinal(props) {
               border="1px SOLID rgba(0,0,0,1)"
               display="flex"
               position="relative"
-              
-              {...getOverrideProps(overrides, "Background of description")}
             >
                <Text
                 fontFamily="Kameron"
@@ -147,7 +132,6 @@ export default function SkillLinkFinal(props) {
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
                 children={skillprofile?.description}
-                {...getOverrideProps(overrides, "Description")}
               ></Text>`
             </Flex>
           
@@ -162,7 +146,6 @@ export default function SkillLinkFinal(props) {
             objectFit="cover"
             backgroundColor="#FFFFFF"
             src={skillprofile?.photo}
-            {...getOverrideProps(overrides, "Logo 1")}
           ></Image>
         </Flex>
       </Flex>

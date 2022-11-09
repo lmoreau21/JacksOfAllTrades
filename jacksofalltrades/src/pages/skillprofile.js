@@ -10,6 +10,7 @@ import { Collection } from "@aws-amplify/ui-react";
 import { useParams } from "react-router-dom";
 import Amplify, { API } from "aws-amplify";
 import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
+import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 
 function SkillDisplay(props) {
   const {skillid} = useParams()
@@ -47,4 +48,4 @@ function SkillDisplay(props) {
     </Collection>
   );
 }
-export default SkillDisplay;
+export default withAuthenticator(SkillDisplay);

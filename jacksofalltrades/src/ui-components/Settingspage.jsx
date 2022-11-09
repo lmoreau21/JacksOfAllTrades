@@ -1,20 +1,13 @@
 
 import React from "react";
 import {
-  getOverrideProps,
-  useNavigateAction,
-  useStateMutationAction,
   useAuthSignOutAction,
 } from "@aws-amplify/ui-react/internal";
 import { Button, Text, View } from "@aws-amplify/ui-react";
-export default function Settingspage(props) {
-  const { overrides, ...rest } = props;
-
+export default function Settingspage() {
   const signOut = useAuthSignOutAction({
     global: true,
-  })
-  
-  ;
+  }) ;
  
   return (
     <View
@@ -27,8 +20,6 @@ export default function Settingspage(props) {
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
-      {...rest}
-      {...getOverrideProps(overrides, "Settingspage")}
     >
       <View
         padding="0px 0px 0px 0px"
@@ -39,7 +30,6 @@ export default function Settingspage(props) {
         alignItems="center"
         justifyContent="center"
         position="relative"
-        {...getOverrideProps(overrides, "Group 3")}
       >
         <View
           width="100vw"
@@ -50,7 +40,6 @@ export default function Settingspage(props) {
           justifyContent="center"
           padding="0px 0px 0px 0px"
           backgroundImage="linear-gradient(-45deg, rgba(167,83,83,1), rgba(167,153,153,1))"
-          {...getOverrideProps(overrides, "background")}
         >
            <View
           width="50vw"
@@ -66,7 +55,6 @@ export default function Settingspage(props) {
           borderRadius="24px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(209,150,150,1)"
-          {...getOverrideProps(overrides, "Background 2")}
         >
           <View
           width="30vw"
@@ -80,7 +68,6 @@ export default function Settingspage(props) {
           borderRadius="23px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(255,255,255,0.3)"
-          {...getOverrideProps(overrides, "Background 3")}
         >
           <Text
             fontFamily="Kameron"
@@ -94,20 +81,19 @@ export default function Settingspage(props) {
             position="relative"
             whiteSpace="pre-wrap"
             children="Settings"
-            {...getOverrideProps(overrides, "Settings")}
           ></Text>
             
           <Button 
             width="18vw"
             fontFamily="Kameron"
-           
             fontSize="18px"
             backgroundColor="rgba(255,255,255,.5)"
             marginTop="20px"
             onClick={() => {
               signOut();
             }}
-          >Sign Out
+          >
+            Sign Out
           </Button>
         </View>
         </View>
