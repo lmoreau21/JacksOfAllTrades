@@ -11,39 +11,59 @@ import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
 export default function SkillProfile(props) {
   const { skillprofile, rectangle1199, skillCompleted, items: itemsProp, overrideItems, overrides, ...rest } = props;
   const authAttributes = useAuth().user?.attributes ?? {};
-
-  async function buttonOnClick() {
-    setButtonColor("rgba(209,150,150,1)");
-    setSkillWord("Congrats! Skill is completed!")
-
-    try{
-      await DataStore.save(
-        new SkillCompleted({
-        userEmail: authAttributes["email"],
-        skillID: skillprofile.skillId,
-        skillTitle: skillprofile.title,
-        isComplete: true
-      })
-    );
-
-    console.log("Skill successfully Completed!");
-    } catch (error) {
-      console.log("Error Completing Skill!", error)
+  const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
+  then((results)=>{
+    console.log(results[0])
+    if(results[0].isComplete){
+      start();
+    }else{
+      setButtonColor("rgba(217,217,217,1)");
+      setSkillWord("Complete")
     }
-  }
-  
-  const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
-  const [buttonColor, setButtonColor] =useStateMutationAction("rgba(217,217,217,1)");
-  const [skillWord, setSkillWord]=useStateMutationAction("Complete Skill");
- 
-    const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
-    then((results)=>{
-      console.log(results[0])
-      if(results[0]){
+      
+  });
+  async function buttonOnClick() {
+    const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).then((results)=>{
+      console.log(results[0]);
+      try{
+      if(results&&results[0].isComplete){
+        setButtonColor("rgba(217,217,217,1)");
+        setSkillWord("Complete")
+          DataStore.save(SkillCompleted.copyOf(results[0], updated => {
+            updated.isComplete = false
+            console.log(updated);
+          }));
+      }else if(!results[0].isComplete){
         start();
+        DataStore.save(SkillCompleted.copyOf(results[0], updated => {
+          updated.isComplete = true
+          console.log(updated);
+        }));
       }
-       
+    }catch(error){
+      console.log("Error Completing Skill!", error)
+      setButtonColor("rgba(209,150,150,1)");
+        setSkillWord("Congrats! Skill is completed!")
+        try{
+          DataStore.save(
+            new SkillCompleted({
+            userEmail: authAttributes["email"],
+            skillID: skillprofile.skillId,
+            skillTitle: skillprofile.title,
+            isComplete: true
+          })
+        );
+        console.log("Skill successfully Completed!");
+        } catch (error) {
+          console.log("Error Completing Skill!", error)
+        }
+    }
     });
+  }
+  const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
+  const [buttonColor, setButtonColor] = useStateMutationAction("rgba(217,217,217,1)");
+  const [skillWord, setSkillWord]=useStateMutationAction("Complete Skill");
+
   async function start(){    
       setButtonColor("rgba(209,150,150,1)")
       setSkillWord("Congrats! Skill is completed!")
@@ -59,7 +79,6 @@ export default function SkillProfile(props) {
     justifyContent="center"
     padding="0px 0px 35px 0px"
     alignItems="center"
-    {...getOverrideProps(overrides, "Frame")}
   >
     <View
       width="90vw"
@@ -95,7 +114,6 @@ export default function SkillProfile(props) {
         textAlign="center"
         direction="column"
         children={skillprofile?.title}
-        {...getOverrideProps(overrides, "Skill Name")}
       ></Text>
     </Flex>
     <Button

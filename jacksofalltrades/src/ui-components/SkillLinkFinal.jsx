@@ -1,18 +1,33 @@
-
 import React from "react";
 import {
   getOverrideProps,
   useNavigateAction,
   useStateMutationAction,
+  authAttributes
 } from "@aws-amplify/ui-react/internal";
+import { DataStore } from "aws-amplify";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
+import { useAuth } from "@aws-amplify/ui-react/internal";
+import { SkillCompleted } from "../models";
+
 export default function SkillLinkFinal(props) {
-  const { skillprofile, overrides, ...rest } = props;
+  const authAttributes = useAuth().user?.attributes ?? {};
+  const { skillprofile, skillCompleted, overrides, ...rest } = props;
   const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
     useStateMutationAction("3px SOLID #000000");
   const skillLinkOnClick = useNavigateAction({
     type: "url",
     url: `${"/skillprofile/"}${skillprofile?.id}`,
+  });
+  const [skillTitlePhrase, setSkillTitlePhrase] = 
+    useStateMutationAction(skillprofile?.title);
+  const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
+  then((results)=>{
+    console.log(results[0])
+    if(results[0].isComplete){
+      setSkillTitlePhrase(skillprofile?.title+" (Completed)")
+}
+      
   });
   return (
     <Flex
@@ -60,7 +75,7 @@ export default function SkillLinkFinal(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children={skillprofile?.title}
+            children={skillTitlePhrase}
           ></Text>
           <Flex gap="3px">
           <Text

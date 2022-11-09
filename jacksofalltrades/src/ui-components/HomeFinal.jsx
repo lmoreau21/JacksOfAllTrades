@@ -11,19 +11,13 @@ import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 export default function HomeFinal(props) {
   const { overrides, ...rest } = props;
   const [
-    letsGetStartedExclamationMarkColor,
-    setLetsGetStartedExclamationMarkColor,
+    letsGetStartedColor,
+    setLetsGetStartedColor,
   ] = useStateMutationAction("rgba(0,0,0,1)");
-  const letsGetStartedExclamationMarkOnClick = useNavigateAction({
+  const letsGetStartedOnClick = useNavigateAction({
     type: "url",
     url: "/skilllist",
   });
-  const letsGetStartedExclamationMarkOnMouseLeave = () => {
-    setLetsGetStartedExclamationMarkColor("#000000");
-  };
-  const letsGetStartedExclamationMarkOnMouseEnter = () => {
-    setLetsGetStartedExclamationMarkColor("#ffffff");
-  };
   return (
     <Flex
       gap="0"
@@ -36,7 +30,6 @@ export default function HomeFinal(props) {
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
-      {...getOverrideProps(overrides, "Home")}
     >
       <Flex
         gap="50px"
@@ -49,7 +42,6 @@ export default function HomeFinal(props) {
         position="relative"
         padding="54px 0px 88px 0px"
         backgroundImage="linear-gradient(0deg, rgba(152,152,152,0), rgba(147,43,43,0.9533), rgba(147,38,38,1))"
-        {...getOverrideProps(overrides, "Frame 423")}
       >
         <Flex
           gap="10px"
@@ -62,7 +54,6 @@ export default function HomeFinal(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 5")}
         >
           <Text
             fontFamily="Flamenco"
@@ -83,7 +74,6 @@ export default function HomeFinal(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Jacks of All Trades"
-            {...getOverrideProps(overrides, "The Jacks of All Trades (title)")}
           ></Text>
           <Text
             fontFamily="Kaisei Tokumin"
@@ -104,10 +94,6 @@ export default function HomeFinal(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Learn skills the easy way,&#xA;use Jacks of All Trades."
-            {...getOverrideProps(
-              overrides,
-              "Learn skills the easy way, use Jacks of All Trades."
-            )}
           ></Text>
         </Flex>
         <Flex
@@ -120,7 +106,6 @@ export default function HomeFinal(props) {
           shrink="0"
           position="relative"
           padding="63px 57px 78px 57px"
-          {...getOverrideProps(overrides, "Frame 6")}
         >
           <Text
             fontFamily="Dekko"
@@ -139,9 +124,15 @@ export default function HomeFinal(props) {
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Are you intrested in learning new skills with ease? Are you bored easily? Do you want to find a new trick to excel at? Are you sick and tired off learning usefull things? &#xA;&#xA;If you answered yes to any of the above questions, click below to start learning! Simply choose a skill everytime you visit the website and click complete skill when done learning."        
-          ></Text>
+            whiteSpace="pre-wrap"       
+          >
+            Are you intrested in learning new skills with ease? 
+            Are you bored easily?
+            Do you want to find a new trick to excel at? 
+            Are you sick and tired off learning useful things? 
+            If you answered yes to any of the above questions, click "Let's Get Started!" below or the "Skill" tab to start learning! 
+            Simply choose a skill everytime you visit the website and click complete skill when done learning.
+          </Text>
         </Flex>
         <Flex
           padding="0px 0px 0px 0px"
@@ -154,7 +145,6 @@ export default function HomeFinal(props) {
           shrink="0"
           alignSelf="stretch"
           position="relative"
-          {...getOverrideProps(overrides, "Side quotes and images")}
         >
           <Flex
             gap="50px"
@@ -167,13 +157,12 @@ export default function HomeFinal(props) {
             top="0px"
             left="0px"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 4")}
           >
             <Text
               fontFamily="Kaisei Tokumin"
               fontSize="86px"
               fontWeight="400"
-              color={letsGetStartedExclamationMarkColor}
+              color={letsGetStartedColor}
               lineHeight="124.52799987792969px"
               textAlign="center"
               display="block"
@@ -189,15 +178,14 @@ export default function HomeFinal(props) {
               whiteSpace="pre-wrap"
               children="Let’s Get Started!"
               onClick={() => {
-                letsGetStartedExclamationMarkOnClick();
+                letsGetStartedOnClick();
               }}
               onMouseLeave={() => {
-                letsGetStartedExclamationMarkOnMouseLeave();
+                setLetsGetStartedColor("#000000");
               }}
-              onMouseEnter={() => {
-                letsGetStartedExclamationMarkOnMouseEnter();
+              onMouseOver={() => {
+                setLetsGetStartedColor("#ffffff");
               }}
-              {...getOverrideProps(overrides, "Let\u2019s Get Started!")}
             ></Text>
              
             <View

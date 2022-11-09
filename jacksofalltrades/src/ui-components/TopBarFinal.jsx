@@ -164,13 +164,13 @@ export default function TopBarFinal() {
           order="0"
           flexGrow="0"
           onMouseLeave={() => {
-            homeOnClick();
             setHomeColor("#000000");
           }}
           onMouseOver={() => {
             setHomeColor("#9a4c4c");
           }}
           onClick={() => {
+            homeOnClick();
             setHomeColor("#9a4c4c");
           }}
         ></Text>
