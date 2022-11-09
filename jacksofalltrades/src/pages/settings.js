@@ -17,4 +17,4 @@ const Settings = () => {
       );
     }
     
-    export default withAuthenticator(Settings);
+export default withAuthenticator(Settings);

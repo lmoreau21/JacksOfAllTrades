@@ -23,8 +23,6 @@ import About from './pages/about.js'
 
 Amplify.configure(awsconfig);
 
-
-
 function App({signOut,user}) {
   
 return (
@@ -32,7 +30,6 @@ return (
     <div>     
         
       <TopBarFinal/>
-      
       <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route exact path='/Homepage' element={<Home/>}/>
