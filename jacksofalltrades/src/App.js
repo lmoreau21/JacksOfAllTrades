@@ -33,7 +33,6 @@ return (
       <TopBarFinal/>
       <Routes>
           <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/Homepage' element={<Home/>}/>
           <Route path = '/about' element={<About/>}/>
           <Route path='/*' element={<NoPage/>}/>
           <Route exact path='/skilllist' element={<SkillList/>} />
