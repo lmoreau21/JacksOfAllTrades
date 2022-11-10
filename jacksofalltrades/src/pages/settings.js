@@ -8,7 +8,7 @@ import '@aws-amplify/ui-react/styles.css'
 import { withAuthenticator, Button, Heading } from '@aws-amplify/ui-react';
 Amplify.configure(config)
 
-
+//displays settingspage using studio theme
 const Settings = () => {
     return (
         <AmplifyProvider theme={studioTheme}>

@@ -9,6 +9,7 @@ import '@aws-amplify/ui-react/styles.css'
 
 Amplify.configure(config)
 
+//display the home incon using studiotheme
 const home = () => {
   return (
     <div style={{width:"100vw"}}>

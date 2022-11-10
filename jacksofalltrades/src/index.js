@@ -14,6 +14,7 @@ import './ui-components/About-Us.css';
 
 Amplify.configure(config)
 
+//Calls app.js and renders all the grpahics using amplify and react
 const root = ReactDOM.createRoot(document.getElementById("root"));  
 root.render(
   <div

@@ -23,11 +23,14 @@ const AboutUs = () => {
                     </p>
         
                </div>
-            <h1 style={{textAlign: "center"}}> </h1>
-            
-            <a href="https://github.com/lmoreau21/JacksOfAllTrades">
-                <button className="button" style={{width:"30vw", textAlign:"center"}}>Github</button>             
-            </a>
+            <h2 style={{textAlign: "center"}}> Resources </h2>
+            <div style={{
+                alignContent:'center'
+            }}>
+                <a href="https://github.com/lmoreau21/JacksOfAllTrades">
+                    <button className="button" style={{width:"30vw", textAlign:"center"}}>Github</button>             
+                </a>
+            </div>
 
             <h1 style={{textAlign: "center"}}> Our Team</h1>
             <div className="row">
