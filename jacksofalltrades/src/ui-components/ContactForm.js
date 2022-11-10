@@ -2,7 +2,7 @@ import {TextField, Text, Button, View,Flex, withAuthenticator } from '@aws-ampli
 import React, { useState } from 'react'
 
 const ContactForm = () => {
-    //graphics for contact form
+//graphics for contact form
   return(
     <View 
         width="100%"

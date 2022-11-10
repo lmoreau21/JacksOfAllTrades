@@ -10,8 +10,7 @@ export default function Settingspage() {
   const signOut = useAuthSignOutAction({
     global: true,
   }) ;
-  const homeOnClick = useNavigateAction({ type: "url", url: "/" });
-  
+
   //graphics for the settings page
   return (
     <View
@@ -103,7 +102,6 @@ export default function Settingspage() {
             //when the user selects the signout button the user will be signed out by using the function above
             onClick={() => {
               signOut();
-              homeOnClick();
             }}
           >
             Sign Out
