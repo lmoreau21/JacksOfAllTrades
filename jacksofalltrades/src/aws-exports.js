@@ -16,8 +16,8 @@ const awsmobile = {
             "profile",
             "aws.cognito.signin.user.admin"
         ],
-        "redirectSignIn": "https://main.d3hi9mzn0coe5y.amplifyapp.com/login",
-        "redirectSignOut": "https://main.d3hi9mzn0coe5y.amplifyapp.com/login",
+        "redirectSignIn": "https://main.d3hi9mzn0coe5y.amplifyapp.com/",
+        "redirectSignOut": "https://main.d3hi9mzn0coe5y.amplifyapp.com/",
         "responseType": "code"
     },
     "federationTarget": "COGNITO_USER_POOLS",
