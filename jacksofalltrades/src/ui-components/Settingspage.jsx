@@ -1,8 +1,8 @@
 import React from "react";
 import {
-  useAuthSignOutAction,
+  useAuthSignOutAction, useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
-import { Button, Text, View } from "@aws-amplify/ui-react";
+import {Flex, Button, Text, View } from "@aws-amplify/ui-react";
 
 //settings page allows user to signout
 export default function Settingspage() {
@@ -10,6 +10,8 @@ export default function Settingspage() {
   const signOut = useAuthSignOutAction({
     global: true,
   }) ;
+  const homeOnClick = useNavigateAction({ type: "url", url: "/Homepage/" });
+  const onClick = useNavigateAction({ type: "url", url: "https://www.forbes.com/sites/jodiecook/2021/05/13/why-being-a-jack-of-all-trades-is-essential-for-success/?sh=38b970b61c45" });
   
   //graphics for the settings page
   return (
@@ -86,7 +88,11 @@ export default function Settingspage() {
             children="Settings"
 
           ></Text>
-            
+          <Flex
+            alignContent='center'
+            direction="column"
+          >
+          
           <Button 
             width="18vw"
             fontFamily="Kameron"
@@ -96,10 +102,25 @@ export default function Settingspage() {
             //when the user selects the signout button the user will be signed out by using the function above
             onClick={() => {
               signOut();
+              homeOnClick();
             }}
           >
             Sign Out
           </Button>
+          
+          <Button 
+            width="18vw"
+            fontFamily="Kameron"
+            fontSize="18px"
+            backgroundColor="rgba(255,255,255,.5)"
+            onClick={() => {
+              onClick();
+              
+            }}
+          >
+            Do Not Click
+          </Button>
+          </Flex>
         </View>
         </View>
       </View> 

@@ -28,7 +28,7 @@ const AboutUs = () => {
                 alignContent:'center'
             }}>
                 <a href="https://github.com/lmoreau21/JacksOfAllTrades">
-                    <button className="button" style={{width:"30vw", textAlign:"center"}}>Github</button>             
+                    <button className="button" style={{borderRadius:"5px",width:"30vw", marginInline:"35vw", textAlign:"center"}}>Github</button>             
                 </a>
             </div>
 
@@ -42,7 +42,9 @@ const AboutUs = () => {
                             <p className="title"> Fullstack Engineer </p>
                             <p> AWS and Architecture </p>
                             <p> lmore13@lsu.edu </p>
-                            
+                            <a href="mailto:lmore13@lsu.edu">
+                                <button className="button" style={{borderRadius:"5px",width:"88%", marginBottom:"14px"}}>Contact</button>             
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +57,9 @@ const AboutUs = () => {
                             <p className="title"> Fullstack Engineer </p>
                             <p> Database and Integrations </p>
                             <p> ahodg31@lsu.edu </p>
-                           
+                            <a href="mailto:ahodg31@lsu.edu">
+                                <button className="button" style={{borderRadius:"5px",width:"88%", marginBottom:"14px"}}>Contact</button>             
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +72,9 @@ const AboutUs = () => {
                             <p className="title"> UI Design </p>
                             <p> List of Activities in DB </p>
                             <p> bbutl38@lsu.edu </p>
-                           
+                            <a href="mailto:bbutl38@lsu.edu">
+                                <button className="button" style={{borderRadius:"5px",width:"88%", marginBottom:"14px"}}>Contact</button>             
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +87,9 @@ const AboutUs = () => {
                             <p className="title"> FrontEnd Engineer </p>
                             <p> Login & HomePage </p>
                             <p> igourg1@lsu.edu </p>
-                            
+                            <a href="mailto:igourg1@lsu.edu">
+                                <button className="button" style={{borderRadius:"5px",width:"88%", marginBottom:"14px"}}>Contact</button>             
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +102,9 @@ const AboutUs = () => {
                             <p className="title"> UI Design </p>
                             <p> List of Activities in DB </p>
                             <p> mcarr52@lsu.edu </p>
-                            
+                            <a href="mailto:mcarr52@lsu.edu">
+                                <button className="button" style={{borderRadius:"5px",width:"88%", marginBottom:"14px"}}>Contact</button>             
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +117,9 @@ const AboutUs = () => {
                             <p className="title"> UI Design </p>
                             <p> Activities Display Listings </p>
                             <p> zkrame1@lsu.edu </p>
-                            
+                            <a href="mailto:zkrame1@lsu.edu">
+                                <button className="button" style={{borderRadius:"5px",width:"88%", marginBottom:"14px"}}>Contact</button>             
+                            </a>
                         </div>
                     </div>
                 </div>
