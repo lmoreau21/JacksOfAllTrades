@@ -14,7 +14,8 @@ import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
 import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 
 //This function will display will call the skillprofile component using the skill id
-function SkillDisplay(props) {
+function SkillDisplay (props){
+  
   //pulls the skillid by using the url call
   const {skillid} = useParams()
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
@@ -29,7 +30,7 @@ function SkillDisplay(props) {
     criteria: itemsFilter,
   }).items;
   const items = itemsProp !== undefined ? itemsProp : itemsDataStore;
-
+  
   return (
     //creates a collection that will display the matching skill
     <Collection

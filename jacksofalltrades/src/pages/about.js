@@ -1,10 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 import '../ui-components/About-Us.css'
 import '@aws-amplify/ui-react/styles.css'
 import { Image, ToggleButton } from "@aws-amplify/ui-react";
 
-const AboutUs = () => {
-    return(
+class AboutUs extends Component {
+    render(){
+        return(
         <html>
             <body style={{maxWidth: "100%", overflowX: "hidden", height: "auto"}}>
             <div style={{textAlign: "center"}}>
@@ -127,6 +128,7 @@ const AboutUs = () => {
             </body>
         </html>
     );
+}
 }
 
 export default AboutUs;

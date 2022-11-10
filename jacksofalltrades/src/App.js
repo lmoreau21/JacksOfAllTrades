@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 //import './App.css';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter}
     from 'react-router-dom';
@@ -24,8 +24,9 @@ import SkillSuggest from './pages/skillsuggest.js';
 Amplify.configure(awsconfig);
 
 //main routing function
-function App({}) {
+class App extends Component {
 //creates all the routes and calls all of the functions
+render(){
 return (
   <BrowserRouter>
     <div>     
@@ -44,6 +45,7 @@ return (
     </div>
   </BrowserRouter>
 );
+}
 }
   
 export default (App);

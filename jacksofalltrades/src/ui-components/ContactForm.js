@@ -1,7 +1,7 @@
 import {TextField, Text, Button, View,Flex, withAuthenticator } from '@aws-amplify/ui-react'
 import React, { useState } from 'react'
 
-const ContactForm = () => {
+function ContactForm(){
 //graphics for contact form
   return(
     <View 

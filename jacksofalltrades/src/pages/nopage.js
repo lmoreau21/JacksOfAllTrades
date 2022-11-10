@@ -1,5 +1,5 @@
 //404 page appears on every url that doesnt have a graphic
-const nopage = () => {
+function nopage(){
     return <h1>Hey! Don't look! There is nothing here yet...</h1>;
 }
 
