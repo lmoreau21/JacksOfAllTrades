@@ -84,6 +84,7 @@ export default function Settingspage() {
             position="relative"
             whiteSpace="pre-wrap"
             children="Settings"
+
           ></Text>
             
           <Button 

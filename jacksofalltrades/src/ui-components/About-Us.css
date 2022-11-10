@@ -49,24 +49,19 @@ body {
   }
   
   .button {
-    border: none;
+    border: 1;
     outline: 0;
-    display: block;
-    align-items: center;
-    justify-items: center;
-    align-self: center;
-    align-content: center;
+    
     width: 20vw;
     padding: 8px;
-    color: white;
-    background-color: rgb(210, 171, 171);
+    color: black;
+    background-color: rgba(223, 205, 205, 0.752);
     text-align: center;
     cursor: pointer;
-    width: 100%;
   }
   
   .button:hover {
-    background-color: #555;
+    background-color: lightgray;
   }
   
   @media screen and (max-width: 650px) {
