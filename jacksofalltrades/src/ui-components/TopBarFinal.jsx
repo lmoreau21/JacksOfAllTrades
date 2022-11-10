@@ -18,7 +18,7 @@ export default function TopBarFinal() {
   const [settingsColor, setSettingsColor] = useStateMutationAction("rgba(0,0,0,1");
 
   //redirection links to take the user to the correct url on the website when clicked by the user
-  const homeOnClick = useNavigateAction({ type: "url", url: "/Homepage/" });
+  const homeOnClick = useNavigateAction({ type: "url", url: "/" });
   const aboutOnClick = useNavigateAction({ type: "url", url: "/about" });
   const skillOnClick = useNavigateAction({ type: "url", url: "/skilllist" });
   const suggestOnClick = useNavigateAction({ type: "url", url: "/suggest" });

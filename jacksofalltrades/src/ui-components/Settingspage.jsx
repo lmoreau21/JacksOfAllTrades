@@ -2,7 +2,7 @@ import React from "react";
 import {
   useAuthSignOutAction, useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
-import {Flex, Button, Text, View } from "@aws-amplify/ui-react";
+import {Flex, Button, Image, Text, View } from "@aws-amplify/ui-react";
 
 //settings page allows user to signout
 export default function Settingspage() {
@@ -10,8 +10,7 @@ export default function Settingspage() {
   const signOut = useAuthSignOutAction({
     global: true,
   }) ;
-  const homeOnClick = useNavigateAction({ type: "url", url: "/Homepage/" });
-  const onClick = useNavigateAction({ type: "url", url: "https://www.forbes.com/sites/jodiecook/2021/05/13/why-being-a-jack-of-all-trades-is-essential-for-success/?sh=38b970b61c45" });
+  const homeOnClick = useNavigateAction({ type: "url", url: "/" });
   
   //graphics for the settings page
   return (
@@ -90,6 +89,8 @@ export default function Settingspage() {
           ></Text>
           <Flex
             alignContent='center'
+            justifyContent='center'
+            alignItems='center'
             direction="column"
           >
           
@@ -108,18 +109,13 @@ export default function Settingspage() {
             Sign Out
           </Button>
           
-          <Button 
-            width="18vw"
-            fontFamily="Kameron"
-            fontSize="18px"
-            backgroundColor="rgba(255,255,255,.5)"
-            onClick={() => {
-              onClick();
-              
-            }}
-          >
-            Do Not Click
-          </Button>
+          <Text 
+            fontFamily="Inter"
+            fontSize="20px"
+            fontWeight="180"
+            textAlign="center"
+            marginInline="15px"
+          >Before you go always remember <br></br>"A jack of all trades is a master of none, but oftentimes better than a master of one."</Text>
           </Flex>
         </View>
         </View>
