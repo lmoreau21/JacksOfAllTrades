@@ -4,7 +4,7 @@ import {
   useNavigateAction,
   useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
-import { Image, Flex, Text, View } from "@aws-amplify/ui-react";
+import { Image, Flex, Text, View, Icon } from "@aws-amplify/ui-react";
 
 export default function TopBarFinal() {
   //pulls the user info in order to display the email
@@ -46,14 +46,14 @@ export default function TopBarFinal() {
       <Flex>
       
       <Flex
-        width="43px"
+        width="50px"
         height="unset"
         flex='none'
         order="0"
         flexGrow="0"
         paddingLeft="10px"
       >
-        <Image src="assets/logo.png"></Image>
+        <Image src="assets/Logo.png"></Image>
       </Flex>
       <Flex
         //left side of the top bar
