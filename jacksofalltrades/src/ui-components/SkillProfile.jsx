@@ -51,11 +51,13 @@ export default function SkillProfile(props) {
       try{
         //changes status from complete to incomplete
         if(results[0].isComplete){
+          incompleteSkill();
           DataStore.save(SkillCompleted.copyOf(results[0], updated => {
             updated.isComplete = false
             console.log(updated);
           }));
         }else if(!results[0].isComplete){
+          completeSkill();
           DataStore.save(SkillCompleted.copyOf(results[0], updated => {
             updated.isComplete = true
             console.log(updated);
@@ -65,6 +67,7 @@ export default function SkillProfile(props) {
     } catch(error) //if the data model doesnt exist it will create a new skill
     {
         try{
+          completeSkill();
           DataStore.save(
             new SkillCompleted({
             userEmail: authAttributes["email"],
