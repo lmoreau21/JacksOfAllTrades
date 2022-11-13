@@ -8,8 +8,8 @@ import { Image, Flex, Text, View, Icon } from "@aws-amplify/ui-react";
 import { CgProfile } from "@react-icons/all-files/cg/CgProfile";
 import { IconContext } from "@react-icons/all-files/lib";
 
-export default function TopBarFinal() {
-  //pulls the user info in order to display the email
+export function TopBarFinal() {
+  //pulls  user info in order to display the email
   const authAttributes = useAuth().user?.attributes ?? {};
 
   //creates variables with setterMethods for tall of the colors.
