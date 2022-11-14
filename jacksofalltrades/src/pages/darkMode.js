@@ -5,7 +5,7 @@ const initDarkMode = 'light';
 let currentMode = initDarkMode;
 let globalSetMode = () => { throw new Error('you must useDarkMode before setting its state'); };
 
-
+//this singleton function updates all components to dark mode
 export const useDarkMode = singletonHook(initDarkMode, () => {
   const [mode, setMode] = useState(localStorage.getItem('mode'),'light');
   useEffect(()=>{

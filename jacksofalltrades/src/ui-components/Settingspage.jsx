@@ -4,7 +4,6 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import {Flex, Button, Image, Text, View, ToggleButton } from "@aws-amplify/ui-react";
 import { setDarkMode, useDarkMode } from "../pages/darkMode";
-import { useEffect } from "react";
 
 //settings page allows user to signout
 export default function Settingspage() {

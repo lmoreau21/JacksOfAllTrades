@@ -22,8 +22,7 @@ export default function SkillLinkFinal(props) {
     url: `${"/skillprofile/"}${skillprofile?.id}`,
   });
   //creates variable linkBorderBackgroundColor and setter method setLinkBorderBackgroundColor
-  const [linkBorderBackgroundColor, setLinkBorderBackgroundColor] =
-    useStateMutationAction("3px SOLID #000000");
+
   //creates variable skillTitlePhrase and setter method setSkillTitlePhrase
   const [skillTitlePhrase, setSkillTitlePhrase] = 
     useStateMutationAction(skillprofile?.title);

@@ -11,11 +11,6 @@ import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 
 export default function HomeFinal(props) {
   const { overrides, ...rest } = props;
-  //defines variable letsGetStartedColor and setLetsGetStarted()
-  const [
-    letsGetStartedColor,
-    setLetsGetStartedColor,
-  ] = useStateMutationAction("rgba(0,0,0,1)");
   //redirects user to skill list page
   const letsGetStartedOnClick = useNavigateAction({
     type: "url",

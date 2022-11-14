@@ -23,7 +23,7 @@ import SkillSuggest from './pages/skillsuggest.js';
 
 
 
-import { useDarkMode, setDarkMode} from "./pages/darkMode.js";
+import { useDarkMode} from "./pages/darkMode.js";
 import './ui-components/darkMode.css';
 import TopBarFinal from './ui-components/TopBarFinal.jsx';
 
