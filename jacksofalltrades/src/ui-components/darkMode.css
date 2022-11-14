@@ -1,34 +1,33 @@
 
 body.dark {
-  background-color: rgb(28, 27, 27);
-  color: rgb(255, 255, 255);    
-}
-
-body.dark .button {
-border: 1;
-outline: 0;
-
-width: 20vw;
-padding: 8px;
-color: rgb(255, 255, 255);
-background-color: rgba(223, 205, 205, 0.536);
-text-align: center;
-cursor: pointer;
-}
-
-body.dark .button:hover {
-background-color: rgba(138, 88, 88, 0.514);
-border: 2px solid #fff;
+  background-color: rgba(255, 255, 255, 0.758);
+  color: rgb(97, 97, 97);    
 }
 
 
-body.light {
-  background-color: rgb(241, 233, 233);
+body {
+  background-color: rgb(255, 255, 255);
   color: #333;
 }
 
+body.dark .button {
+  border: 1;
+  outline: 0;
+  
+  width: 20vw;
+  padding: 8px;
+  color: rgb(255, 255, 255);
+  background-color: rgba(223, 205, 205, 0.536);
+  text-align: center;
+  cursor: pointer;
+  }
+  
+  body.dark .button:hover {
+  background-color: rgba(138, 88, 88, 0.514);
+  border: 2px solid #fff;
+  }
 
-body.light .button {
+body .button {
   border: 2px solid #333;
   text-align: center;
   outline: 0;
@@ -40,7 +39,7 @@ body.light .button {
   cursor: pointer;
 }
 
-body.light .button:hover {
+body .button:hover {
   background-color: rgba(193, 128, 128, 0.578);
   border: 2px solid #fff;
   
@@ -61,7 +60,7 @@ color:rgb(193, 137, 137);
 cursor: pointer;
 }
 
-body.light .textlink{
+body .textlink{
 color:#333;
 font-family:"Inter";
 font-size:"16px";
@@ -71,7 +70,7 @@ text-align:"left";
 letter-spacing:"0.01px";
 }
 
-body.light .textlink:hover{
+body .textlink:hover{
 color:rgb(144, 91, 91);
 cursor: pointer;
 }
@@ -84,14 +83,14 @@ background-color: rgba(209, 182, 182, 0.752);
 margin: 20px;
 }
 
-body.light .card{
+body .card{
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 padding-top: 10px;
 background-color: rgba(209, 182, 182, 0.752);
 margin: 20px;
 }
 
-body.light .topbar{
+body .topbar{
 background-color: #fff;
 border: 2px solid #333;
 }
@@ -110,12 +109,12 @@ body.dark .skillcard:hover{
   border: 3px SOLID #949090;
 }
 
-body.light .skillcard{
+body .skillcard{
   background-color: rgba(216, 177, 177, 0.713);
   border: 3px SOLID #000000;
 }
 
-body.light .skillcard:hover{
+body .skillcard:hover{
   border: 3px SOLID #f3f3f3;
 }
 
@@ -123,7 +122,7 @@ body.dark .home{
   background-image:linear-gradient(180deg, rgb(60, 15, 15), rgb(107, 101, 101));
 }
 
-body.light .home{
+body .home{
   background-image:linear-gradient(180deg, rgba(167,83,83,1), rgb(220, 220, 220));
 }
 
@@ -131,11 +130,11 @@ body.dark .background{
   background-image:linear-gradient(45deg, rgb(39, 38, 38), rgb(52, 6, 6));
 }
 
-body.light .background{
+body .background{
   background-image:linear-gradient(0deg, rgba(204, 129, 129, 0.815), rgb(222, 203, 203));
 }
 
-body.light .mid-background{
+body .mid-background{
   background-color: rgba(173, 136, 136, 0.5);
 }
 
@@ -143,7 +142,7 @@ body.dark .mid-background{
   background-color: rgb(32, 28, 28);
 }
 
-body.light .small-background{
+body .small-background{
   background-color: rgb(230, 191, 191);
 }
 
@@ -151,7 +150,7 @@ body.dark .small-background{
   background-color: rgb(54, 36, 36);
 }
 
-body.light .text{
+body .text{
   color:rgb(0, 0, 0)
 }
 body.dark .text{
@@ -159,7 +158,7 @@ body.dark .text{
 }
 
 
-body.light .field{
+body .field{
   background-color: #fff;
   color:#333;
 }
@@ -168,7 +167,7 @@ body.dark .field{
   color:#fff;
 }
 
-body.light .logo{
+body .logo{
   color: #9a4c4c
 }
 

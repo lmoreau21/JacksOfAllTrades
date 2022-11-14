@@ -36,7 +36,7 @@ export default createTheme({
           backgroundColor: { value: "{colors.background.warning.value}" },
         },
         success: {
-          color: { value: "{colors.font.success.value}" },
+          color: { value: "{colors.font.primary.value}" },
           backgroundColor: { value: "{colors.background.success.value}" },
         },
       },
@@ -45,7 +45,8 @@ export default createTheme({
         modal: {
           width: { value: "{space.relative.full}" },
           height: { value: "{space.relative.full}" },
-          backgroundColor: { value: "{colors.overlay.50.value}" },
+          backgroundColor: { value:"#D3D3D3" },
+          borderColor:{value:"#FFFFFF"},
           top: { value: "{space.zero}" },
           left: { value: "{space.zero}" },
         },
@@ -65,7 +66,7 @@ export default createTheme({
           },
         },
         orContainer: {
-          color: { value: "{colors.neutral.80.value}" },
+          color: { value: "{colors.neutral.70.value}" },
           orLine: {
             backgroundColor: { value: "{colors.background.primary.value}" },
           },
@@ -133,8 +134,8 @@ export default createTheme({
         borderRadius: { value: "{components.fieldcontrol.borderRadius.value}" },
         color: { value: "{colors.font.primary.value}" },
         _hover: {
-          color: { value: "{colors.font.focus.value}" },
-          backgroundColor: { value: "{colors.brand.primary.10.value}" },
+          color: { value: "{colors.primariy.font.value}" },
+          backgroundColor: { value: "{colors.primary.10.value}" },
           borderColor: { value: "{colors.brand.primary.60.value}" },
         },
         _focus: {
@@ -178,7 +179,7 @@ export default createTheme({
           },
           _hover: {
             borderColor: { value: "transparent" },
-            backgroundColor: { value: "{colors.brand.primary.90.value}" },
+            backgroundColor: { value: "{colors.brand.secondary.80.value}" },
             color: { value: "{colors.font.inverse.value}" },
           },
           _focus: {
@@ -200,7 +201,7 @@ export default createTheme({
           backgroundColor: { value: "transparent" },
           justifyContent: { value: "start" },
           _hover: {
-            color: { value: "{colors.font.inverse.value}" },
+            color: { value: "{colors.font.value}" },
             backgroundColor: { value: "{colors.brand.primary.80.value}" },
           },
           _focus: {
@@ -217,11 +218,11 @@ export default createTheme({
           borderWidth: { value: "0" },
           borderColor: { value: "transparent" },
           backgroundColor: { value: "transparent" },
-          color: { value: "{colors.font.interactive.value}" },
+          color: { value: "{colors.font.value}" },
           _hover: {
             borderColor: { value: "transparent" },
-            backgroundColor: { value: "{colors.brand.primary.10.value}" },
-            color: { value: "{colors.font.hover.value}" },
+            backgroundColor: { value: "{colors.brand.primary.80.value}" },
+            color: { value: "#000000" },
           },
           _focus: {
             borderColor: { value: "transparent" },
@@ -1024,28 +1025,29 @@ export default createTheme({
       },
       tabs: {
         backgroundColor: { value: "transparent" },
-        borderColor: { value: "{colors.border.secondary.value}" },
+        borderColor: { value: "#D3D3D3" },
         borderStyle: { value: "solid" },
         borderWidth: { value: "{borderWidths.medium.value}" },
         gap: { value: "0" },
         item: {
-          backgroundColor: { value: "transparent" },
+          backgroundColor: { value: "solid" },
           borderColor: { value: "{colors.border.secondary.value}" },
           borderStyle: { value: "solid" },
           borderWidth: { value: "{borderWidths.medium.value}" },
-          color: { value: "{colors.font.secondary.value}" },
+          color: { value: "{colors.secondary.value}" },
           fontSize: { value: "{fontSizes.medium.value}" },
           fontWeight: { value: "{fontWeights.bold.value}" },
           paddingVertical: { value: "{space.small.value}" },
           paddingHorizontal: { value: "{space.medium.value}" },
           textAlign: { value: "center" },
           transitionDuration: { value: "{time.medium.value}" },
-          _hover: { color: { value: "{colors.font.hover.value}" } },
-          _focus: { color: { value: "{colors.font.focus.value}" } },
+          _hover: { color: { 
+            value: "#8b0000" }},
+          _focus: { color: { value: "{colors.background.primary.value}" } },
           _active: {
             color: { value: "{colors.font.interactive.value}" },
             borderColor: { value: "{colors.font.interactive.value}" },
-            backgroundColor: { value: "transparent" },
+            backgroundColor: { value: "{colors.background.primary.value}" },
           },
           _disabled: {
             color: { value: "{colors.font.disabled.value}" },
@@ -1166,42 +1168,6 @@ export default createTheme({
         90: { value: "hsl(30, 100%, 20%)" },
         100: { value: "hsl(30, 100%, 15%)" },
       },
-      yellow: {
-        10: { value: "hsl(60, 75%, 95%)" },
-        20: { value: "hsl(60, 75%, 85%)" },
-        40: { value: "hsl(60, 75%, 75%)" },
-        60: { value: "hsl(60, 50%, 50%)" },
-        80: { value: "hsl(60, 95%, 30%)" },
-        90: { value: "hsl(60, 100%, 20%)" },
-        100: { value: "hsl(60, 100%, 15%)" },
-      },
-      green: {
-        10: { value: "hsl(130, 60%, 95%)" },
-        20: { value: "hsl(130, 60%, 90%)" },
-        40: { value: "hsl(130, 44%, 63%)" },
-        60: { value: "hsl(130, 43%, 46%)" },
-        80: { value: "hsl(130, 33%, 37%)" },
-        90: { value: "hsl(130, 27%, 29%)" },
-        100: { value: "hsl(130, 22%, 23%)" },
-      },
-      teal: {
-        10: { value: "hsl(190, 75%, 95%)" },
-        20: { value: "hsl(190, 75%, 85%)" },
-        40: { value: "hsl(190, 70%, 70%)" },
-        60: { value: "hsl(190, 50%, 50%)" },
-        80: { value: "hsl(190, 95%, 30%)" },
-        90: { value: "hsl(190, 100%, 20%)" },
-        100: { value: "hsl(190, 100%, 15%)" },
-      },
-      blue: {
-        10: { value: "hsl(220, 95%, 95%)" },
-        20: { value: "hsl(220, 85%, 85%)" },
-        40: { value: "hsl(220, 70%, 70%)" },
-        60: { value: "hsl(220, 50%, 50%)" },
-        80: { value: "hsl(220, 95%, 30%)" },
-        90: { value: "hsl(220, 100%, 20%)" },
-        100: { value: "hsl(220, 100%, 15%)" },
-      },
       purple: {
         10: { value: "hsl(300, 95%, 95%)" },
         20: { value: "hsl(300, 85%, 85%)" },
@@ -1262,17 +1228,17 @@ export default createTheme({
         info: { value: "{colors.blue.90.value}" },
         warning: { value: "{colors.orange.90.value}" },
         error: { value: "{colors.red.90.value}" },
-        success: { value: "{colors.green.90.value}" },
+        success: { value: "{colors.neutral.90.value}" },
       },
       background: {
         primary: { value: "{colors.red.50.value}" },
         secondary: { value: "{colors.neutral.10.value}" },
         tertiary: { value: "{colors.neutral.20.value}" },
-        disabled: { value: "{colors.background.tertiary.value}" },
+        disabled: { value: "{colors.neutral.value}" },
         info: { value: "{colors.blue.20.value}" },
         warning: { value: "{colors.orange.20.value}" },
         error: { value: "{colors.red.20.value}" },
-        success: { value: "{colors.green.20.value}" },
+        success: { value: "{colors.neutral.20.value}" },
       },
       border: {
         primary: { value: "{colors.neutral.40.value}" },
