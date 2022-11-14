@@ -32,9 +32,9 @@ Amplify.configure(awsconfig);
 //main routing function
 function App () {
 //creates all the routes and calls all of the functions
-//const mode = useDarkMode();
 
-const [mode] = localStorage.getItem('mode');
+//call value from dark mode
+const mode = useDarkMode();
 
 return (
   <BrowserRouter>

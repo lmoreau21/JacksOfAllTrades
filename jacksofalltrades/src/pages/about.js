@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import '../ui-components/studioTheme.js'
 import '@aws-amplify/ui-react/styles.css'
+import '../ui-components/About-Us.css'
 import { Image, ToggleButton } from "@aws-amplify/ui-react";
 
 
