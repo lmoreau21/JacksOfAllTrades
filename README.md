@@ -70,6 +70,15 @@ Most of our graphics were intially created on figma which got converted to .jsx 
 * node_modules is generated files needed for node.js and or react
 * amplify is needed for aws configuration
 * We also have codes from aws lambdas that are located outside of our src folder that are used for the data
+* In the AWS Lambdas folder 3 of the specific lambdas are written
+  * CogntioUsersToDynamoDB: 
+    * index.js
+  * CogntioUsersToGroup-dev: 
+    * index.js
+    * package.json
+    * package-lock.json
+  * ProcessDynamoDBUpdates:
+    * index.js
 
 ## Available Scripts
 
