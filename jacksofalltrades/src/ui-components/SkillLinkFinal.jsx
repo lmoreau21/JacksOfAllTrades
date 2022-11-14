@@ -28,10 +28,10 @@ export default function SkillLinkFinal(props) {
     useStateMutationAction(skillprofile?.title);
   
   //pulls the skillcomplete data model to search for if the user has completed the skill
-  const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).
-  then((results)=>{
+  const completeModel = DataStore.query(SkillCompleted, c => c.userEmail('eq',authAttributes["email"])).then((results)=>{
     //the word complete would be appended if the skill is complete
-    if(results[0].isComplete){
+    console.log(results[0]);
+    if(results.skillID('eq',  skillprofile.skillId)[0].isComplete){
       setSkillTitlePhrase(skillprofile?.title+" (Completed)")
 }
   });

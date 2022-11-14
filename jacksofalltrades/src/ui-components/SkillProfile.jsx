@@ -45,18 +45,18 @@ export default function SkillProfile(props) {
   */
   async function buttonOnClick() {
     //retrives SkillCompleted
-    const completeModel = DataStore.query(SkillCompleted, c => c.skillID('eq',  skillprofile.skillId).userEmail('eq',authAttributes["email"])).then((results)=>{
+    const completeModel = DataStore.query(SkillCompleted, c => c.userEmail('eq',authAttributes["email"])).then((results)=>{
       console.log(results[0]);
       //if skillcomplete exists it will flip the boolean and colors
       try{
         //changes status from complete to incomplete
-        if(results[0].isComplete){
+        if(results.skillID('eq',  skillprofile.skillId)[0].isComplete){
           incompleteSkill();
           DataStore.save(SkillCompleted.copyOf(results[0], updated => {
             updated.isComplete = false
             console.log(updated);
           }));
-        }else if(!results[0].isComplete){
+        }else if(!results.skillID('eq',  skillprofile.skillId)[0].isComplete){
           completeSkill();
           DataStore.save(SkillCompleted.copyOf(results[0], updated => {
             updated.isComplete = true
