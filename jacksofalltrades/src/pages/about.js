@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import '../ui-components/studioTheme.js'
 import '@aws-amplify/ui-react/styles.css'
+import '../ui-components/darkMode.css'
 import '../ui-components/About-Us.css'
 import { Image, ToggleButton } from "@aws-amplify/ui-react";
+import { useDarkMode } from "./darkMode.js";
 
 
 function AboutUs() {
+    const mode = useDarkMode();
     return(
     <html>
-        <div >
-        <body style={{maxWidth: "100%", overflowX: "hidden", height: "auto"}}>
+        <body  className={`App ${mode}`} style={{maxWidth: "100%", overflowX: "hidden", height: "auto"}}>
         <div style={{textAlign: "center"}}>
             <h1> A little about us! </h1>
             <p style={{fontSize: "20px"}}>This is a little introduction to what our project is about and who we are!</p>
@@ -127,7 +129,6 @@ function AboutUs() {
             </div>
         </div>
         </body>
-        </div>
     </html>
     
 );

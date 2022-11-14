@@ -13,7 +13,7 @@ export default function SkillProfile(props) {
   //links return button to the skillist page
   const returnButtonClick = useNavigateAction({ type: "url", url: "/skilllist" });
   //creates variable buttonColor and setterMethod setButtonColor
-  const [buttonColor, setButtonColor] = useStateMutationAction("rgba(217,217,217,1)");
+  const [buttonColor, setButtonColor] = useStateMutationAction("#808080");
   //creates variable skillWord and setterMethod setSkillWord
   const [skillWord, setSkillWord]=useStateMutationAction("Complete Skill");
 
@@ -31,11 +31,11 @@ export default function SkillProfile(props) {
 
   //updates color and text on isComplete button
   function completeSkill(){
-    setButtonColor("rgba(209,150,150,1)");
+    setButtonColor("#FFFFFF");
     setSkillWord("Congrats! Skill is completed!")
   }
   function incompleteSkill(){
-    setButtonColor("rgba(217,217,217,1)");
+    setButtonColor("#808080");
     setSkillWord("Complete Skill")
   }
 
@@ -100,13 +100,13 @@ export default function SkillProfile(props) {
       height="400px"
       alignSelf="center"
       position="relative"
-      border="10px SOLID rgba(255,184,184,1)"
+      border="5x SOLID rgba(255,255,255,1)"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 0px 0px 0px"
     >
       <iframe 
         width="100%" 
-        height="100%" 
+        height="100%"
         //replace video link with the datamodel for video
         src= {skillprofile?.video} 
         frameborder="10" 
@@ -138,6 +138,7 @@ export default function SkillProfile(props) {
       ></Text>
     </Flex>
     <Button
+      className="button"
       fontFamily="Inter"
       fontSize="18px"
       textAlign="center"

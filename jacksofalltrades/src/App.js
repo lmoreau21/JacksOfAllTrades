@@ -26,6 +26,7 @@ import SkillSuggest from './pages/skillsuggest.js';
 import { useDarkMode} from "./pages/darkMode.js";
 import './ui-components/darkMode.css';
 import TopBarFinal from './ui-components/TopBarFinal.jsx';
+import AboutUs from './pages/about.js';
 
 Amplify.configure(awsconfig);
 
@@ -43,7 +44,7 @@ return (
       <TopBar/>
       <Routes>
           <Route exact path='/' element={<Home/>}/>
-          <Route path = '/about' element={<About/>}/>
+          <Route path = '/about' element={<AboutPage/>}/>
           <Route path='/*' element={<NoPage/>}/>
           <Route exact path='/skilllist' element={<SkillList/>} />
           <Route path = '/skillprofile/:skillid' element={<SkillDisplay/>} />
@@ -59,4 +60,10 @@ export const TopBar = () =>{
   const mode = useDarkMode();
   return <div className={`App ${mode}`}><TopBarFinal/></div>;
 }
+
+export const AboutPage = () =>{
+  const mode = useDarkMode();
+  return <body className={`App ${mode}`}><AboutUs/></body>;
+}
+
 export default (App);

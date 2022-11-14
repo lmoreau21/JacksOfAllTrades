@@ -1,13 +1,13 @@
 
 body.dark {
-  background-color: rgba(255, 255, 255, 0.758);
-  color: rgb(97, 97, 97);    
+  background-color: rgb(54, 54, 54);
+  color: rgb(181, 176, 176);
 }
 
 
 body {
-  background-color: rgb(255, 255, 255);
-  color: #333;
+  background-color: rgb(199, 195, 195);
+  color: rgb(57, 56, 56);
 }
 
 body.dark .button {
@@ -17,13 +17,14 @@ body.dark .button {
   width: 20vw;
   padding: 8px;
   color: rgb(255, 255, 255);
-  background-color: rgba(223, 205, 205, 0.536);
+  background-color: rgba(138, 88, 88, 0.514);
   text-align: center;
   cursor: pointer;
+  border: 2px solid #fff;
   }
   
   body.dark .button:hover {
-  background-color: rgba(138, 88, 88, 0.514);
+  background-color: rgba(170, 146, 146, 0.536);
   border: 2px solid #fff;
   }
 
@@ -77,9 +78,9 @@ cursor: pointer;
 
 
 body.dark .card{
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+box-shadow: 0 4px 8px 0 rgba(255, 252, 252, 0.2);
 padding-top: 10px;
-background-color: rgba(209, 182, 182, 0.752);
+background-color: rgba(99, 57, 57, 0.752);
 margin: 20px;
 }
 
@@ -92,13 +93,13 @@ margin: 20px;
 
 body .topbar{
 background-color: #fff;
-border: 1x solid #333;
+border: 2x solid #333;
 }
 
 body.dark .topbar{
   background-color: #333;
-  border: 1px solid #fff;
-  }
+  border: 2px solid #fff;
+}
 
 body.dark .skillcard{
   background-color: rgba(110, 59, 59, 0.729);
