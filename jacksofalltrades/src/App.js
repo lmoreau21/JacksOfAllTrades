@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 //import './App.css';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter}
     from 'react-router-dom';
@@ -10,7 +10,7 @@ import { Amplify, Auth } from 'aws-amplify';
 import { withAuthenticator, Button, Heading, AmplifyProvider } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import awsconfig from './aws-exports';
-import TopBarFinal from './ui-components/TopBarFinal.jsx';
+
 
 //importing pages of the website
 import Home from './pages/home'
@@ -21,17 +21,26 @@ import Settings from './pages/settings.js';
 import About from './pages/about.js'
 import SkillSuggest from './pages/skillsuggest.js';
 
+
+
+import { useDarkMode, setDarkMode} from "./pages/darkMode.js";
+import './ui-components/darkMode.css';
+import TopBarFinal from './ui-components/TopBarFinal.jsx';
+
 Amplify.configure(awsconfig);
 
 //main routing function
-class App extends Component {
+function App () {
 //creates all the routes and calls all of the functions
-render(){
+//const mode = useDarkMode();
+
+const [mode] = localStorage.getItem('mode');
+
 return (
   <BrowserRouter>
-    <div>     
-        
-      <TopBarFinal/>
+    
+    <div className={`App ${mode}`}>     
+      <TopBar/>
       <Routes>
           <Route exact path='/' element={<Home/>}/>
           <Route path = '/about' element={<About/>}/>
@@ -46,6 +55,8 @@ return (
   </BrowserRouter>
 );
 }
+export const TopBar = () =>{
+  const mode = useDarkMode();
+  return <div className={`App ${mode}`}><TopBarFinal/></div>;
 }
-  
 export default (App);

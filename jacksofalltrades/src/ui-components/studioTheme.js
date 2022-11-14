@@ -6,6 +6,7 @@
 
 /* eslint-disable */
 import { createTheme } from "@aws-amplify/ui-react";
+
 export default createTheme({
   name: "studioTheme",
   tokens: {

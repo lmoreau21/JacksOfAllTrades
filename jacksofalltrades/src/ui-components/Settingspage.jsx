@@ -1,8 +1,10 @@
 import React from "react";
 import {
-  useAuthSignOutAction, useNavigateAction,
+  useAuthSignOutAction, useNavigateAction, useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
-import {Flex, Button, Image, Text, View } from "@aws-amplify/ui-react";
+import {Flex, Button, Image, Text, View, ToggleButton } from "@aws-amplify/ui-react";
+import { setDarkMode, useDarkMode } from "../pages/darkMode";
+import { useEffect } from "react";
 
 //settings page allows user to signout
 export default function Settingspage() {
@@ -10,7 +12,16 @@ export default function Settingspage() {
   const signOut = useAuthSignOutAction({
     global: true,
   }) ;
-
+  const mode = useDarkMode();
+  const toggleTheme = () => {
+    console.log(mode)
+    if (mode === 'light') {
+      setDarkMode('dark');
+    } else {
+      setDarkMode('light');
+    }
+  };
+ 
   //graphics for the settings page
   return (
     <View
@@ -35,6 +46,7 @@ export default function Settingspage() {
         position="relative"
       >
         <View
+          className="background"
           width="100vw"
           height="100vh"
           display="flex"
@@ -42,10 +54,10 @@ export default function Settingspage() {
           alignItems="center"
           justifyContent="center"
           padding="0px 0px 0px 0px"
-          backgroundImage="linear-gradient(-45deg, rgba(167,83,83,1), rgba(167,153,153,1))"
         >
            <View
-          width="50vw"
+           className='mid-background'
+          width="60vw"
           height="70vh"
           display="flex"
           direction="row"
@@ -57,10 +69,10 @@ export default function Settingspage() {
           boxShadow="0px 4px 25px rgba(0, 0, 0, 0.25)"
           borderRadius="24px"
           padding="0px 0px 0px 0px"
-          backgroundColor="rgba(209,150,150,1)"
         >
           <View
-          width="30vw"
+          className="small-background"
+          width="40vw"
           height="50vh"
           display="flex"
           gap="unset"
@@ -70,17 +82,15 @@ export default function Settingspage() {
           position="relative"
           borderRadius="23px"
           padding="0px 0px 0px 0px"
-          backgroundColor="rgba(255,255,255,0.3)"
         >
           <Text
+            className="text"
             fontFamily="Kameron"
             fontSize="45px"
             fontWeight="400"
-            color="rgba(0,0,0,1)"
             top="10px"
             lineHeight="67.5px"
             textAlign="center"
-            textDecoration="underline"
             position="relative"
             whiteSpace="pre-wrap"
             children="Settings"
@@ -94,11 +104,11 @@ export default function Settingspage() {
           >
           
           <Button 
+            className="button"
             width="18vw"
             fontFamily="Kameron"
             fontSize="18px"
-            backgroundColor="rgba(255,255,255,.5)"
-            marginTop="20px"
+            marginTop="30px"
             //when the user selects the signout button the user will be signed out by using the function above
             onClick={() => {
               signOut();
@@ -106,14 +116,14 @@ export default function Settingspage() {
           >
             Sign Out
           </Button>
-          
-          <Text 
-            fontFamily="Inter"
-            fontSize="20px"
-            fontWeight="180"
-            textAlign="center"
-            marginInline="15px"
-          >Before you go always remember <br></br>"A jack of all trades is a master of none, but oftentimes better than a master of one."</Text>
+          <Button 
+          onClick={toggleTheme}
+          className="button"
+          width="18vw"
+            fontFamily="Kameron"
+            fontSize="18px"
+            marginTop="20px"
+          >Toggle Theme</Button>
           </Flex>
         </View>
         </View>

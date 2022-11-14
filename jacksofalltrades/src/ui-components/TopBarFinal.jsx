@@ -8,16 +8,16 @@ import { Image, Flex, Text, View, Icon } from "@aws-amplify/ui-react";
 import { CgProfile } from "@react-icons/all-files/cg/CgProfile";
 import { IconContext } from "@react-icons/all-files/lib";
 
-export function TopBarFinal() {
+export default function TopBarFinal() {
   //pulls  user info in order to display the email
   const authAttributes = useAuth().user?.attributes ?? {};
 
   //creates variables with setterMethods for tall of the colors.
-  const [homeColor, setHomeColor] = useStateMutationAction("rgba(0,0,0,1)");
-  const [aboutColor, setAboutColor] = useStateMutationAction("rgba(0,0,0,1)");
-  const [skillColor, setSkillColor] = useStateMutationAction("rgba(0,0,0,1)");
-  const [suggestColor, setSuggestColor] = useStateMutationAction("rgba(0,0,0,1)");
-  const [settingsColor, setSettingsColor] = useStateMutationAction("rgba(0,0,0,1");
+  const [homeColor, setHomeColor] = useStateMutationAction("");
+  const [aboutColor, setAboutColor] = useStateMutationAction("");
+  const [skillColor, setSkillColor] = useStateMutationAction("");
+  const [suggestColor, setSuggestColor] = useStateMutationAction("");
+  const [settingsColor, setSettingsColor] = useStateMutationAction("");
 
   //redirection links to take the user to the correct url on the website when clicked by the user
   const homeOnClick = useNavigateAction({ type: "url", url: "/" });
@@ -29,6 +29,7 @@ export function TopBarFinal() {
   //taskbar graphics
   return (
     <Flex
+      className="topbar"
       display="flex"
       gap="20px"
       direction="row"
@@ -37,13 +38,11 @@ export function TopBarFinal() {
       justifyContent="space-between"
       alignItems="center"
       paddingLeft="0px"
-      backgroundColor="#F2F2F2"
-      boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       flex='none'
       order="0"
       alignSelf="stretch"
       flexGrow="0"
-      border="2px SOLID rgba(0,0,0,1)"
+      
     >
       <Flex>
       
@@ -169,35 +168,24 @@ export function TopBarFinal() {
         alignSelf="stretch"
         flexGrow="1"
       >
-        <Text
-          fontFamily="Inter"
-          fontSize="16px"
-          fontWeight="400"
-          color={homeColor}
-          lineHeight="24px"
-          textAlign="left"
-          letterSpacing="0.01px"
+        
+        <text
+          className="textlink"
           children="Home"
           flex="none"
           order="0"
           flexGrow="0"
           //changes color of Home and redirects the user to the home page
-          onMouseLeave={() => {
-            setHomeColor("#000000");
-          }}
-          onMouseOver={() => {
-            setHomeColor("#9a4c4c");
-          }}
           onClick={() => {
             homeOnClick();
-            setHomeColor("#9a4c4c");
+
           }}
-        ></Text>
-        <Text
+        ></text>
+        <text
+          className="textlink"
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
-          color={aboutColor}
           lineHeight="24px"
           textAlign="left"
           letterSpacing="0.01px"
@@ -206,67 +194,37 @@ export function TopBarFinal() {
           order="1"
           flexGrow="0"
           //changes color of about and redirects the user to the about page
+          
           onClick={() => {
             aboutOnClick();
-            setAboutColor("#9a4c4c");
+
           }}
-          onMouseOver={() => {
-            setAboutColor("#9a4c4c");
-          }}
-          onMouseLeave={() => {
-            setAboutColor("#000000");
-          }}
-        ></Text>
-        <Text
-          fontFamily="Inter"
-          fontSize="16px"
-          fontWeight="400"
-          color={skillColor}
-          lineHeight="24px"
-          textAlign="left"
+          
+        ></text>
+        <text
+          className="textlink"
           children="Skill List"
-          letterSpacing="0.01px"
           flex="none"
           order="2"
           flexGrow="0"
-          //changes color of skill and redirects the user to the skill page
+          //tedirects the user to the skill page
           onClick={() => {
             skillOnClick();
-            setSkillColor("#9a4c4c");
           }}
-          onMouseOver={() => {
-            setSkillColor("#9a4c4c");
-          }}
-          onMouseLeave={() => {
-           
-            setSkillColor("#000000");
-          }}
-        ></Text>
-        <Text
+        ></text>
+        <text
           //this page does not exist (but we wanted to be able to implement it)
-          fontFamily="Inter"
-          fontSize="16px"
-          fontWeight="400"
-          color={suggestColor}
-          lineHeight="24px"
-          textAlign="left"
-          letterSpacing="0.01px"
+          className="textlink"
           children="Suggest a Skill"
           flex="none"
           order="3"
           flexGrow="0"
           //changes color of calender  and redirects the user to the calener page
-          onMouseOver={() => {
-            setSuggestColor("#9a4c4c");
-          }}
-          onMouseLeave={() => {
-            setSuggestColor("#000000");
-          }}
           onClick={() => {
             suggestOnClick();
-            setSuggestColor("#9a4c4c");
           }}
-        ></Text>
+        ></text>
+        
       </Flex>
       </Flex>
       <Flex
@@ -313,7 +271,7 @@ export function TopBarFinal() {
               <CgProfile 
               ></CgProfile>
             </IconContext.Provider>
-              <Text
+              <text
                 fontFamily="Inter"
                 fontSize="16px"
                 fontWeight="400"
@@ -328,36 +286,16 @@ export function TopBarFinal() {
                 flex="none"
                 order="0"
                 flexGrow="0"
-              ></Text>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color={settingsColor}
-                lineHeight="24px"
-                textAlign="right"
-                display="flex"
-                direction="row"
-                letterSpacing="0.01px"                         
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Settings"
-                flex="none"
-                order="1"
-                flexGrow="0"
-                //changes color of setting and redirects the user to the settings page
-                onClick={() => {
-                  settingsOnClick();
-                  setSettingsColor("#9a4c4c");
-                }}
-                onMouseOver={() => {
-                  setSettingsColor("#9a4c4c");
-                }}
-                onMouseLeave={() => {
-                  
-                  setSettingsColor("#000000");
-                }}
-              ></Text>
+                
+              ></text>  
+              <text
+              className="textlink"
+              children="Settings"
+              onClick={() => {
+                settingsOnClick();
+              }}
+              >
+              </text>         
           </Flex>
         </Flex>
       </Flex>

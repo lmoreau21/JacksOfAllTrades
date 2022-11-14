@@ -40,26 +40,17 @@ export default function SkillLinkFinal(props) {
   //graphics for skilllink final
   return (
     <Flex
+      className="skillcard"
       gap="5px"
       direction="column"
       width="68vw"
       height="282px"
       justifyContent="center"
       alignItems="center"
-      position="relative"
+      alignContent="center"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="13px 15px 13px 15px"
-      //overrides border color using variable
-      border={linkBorderBackgroundColor}
       borderRadius="5px"
-      backgroundColor="rgba(255,184,184,1)"
-      //makeshift button by changing the color of the border if the user hovers
-      onMouseLeave={() => {
-        setLinkBorderBackgroundColor("3px SOLID #000000");
-      }}
-      onMouseOver={() => {
-        setLinkBorderBackgroundColor("5px SOLID #9a4c4c");
-      }}
       //redirects user to specific profile page
       onClick={() => {
         skillLinkOnClick();
@@ -76,6 +67,7 @@ export default function SkillLinkFinal(props) {
         padding="0px 0px 0px 0px"
       >
           <Text
+            className="text"
             fontFamily="Kameron"
             fontSize="20px"
             fontWeight="700"
@@ -92,6 +84,7 @@ export default function SkillLinkFinal(props) {
           ></Text>
           <Flex gap="3px">
           <Text
+            className="text"
             fontFamily="Kameron"
             fontSize="18px"
             fontWeight="400"
@@ -105,10 +98,10 @@ export default function SkillLinkFinal(props) {
             children="Time:"
           ></Text>
           <Text
+            className="text"
             fontFamily="Kameron"
             fontSize="18px"
             fontWeight="400"
-            color="rgba(0,0,0,1)"
             lineHeight="21px"
             textAlign="left"
             display="flex"
@@ -139,18 +132,18 @@ export default function SkillLinkFinal(props) {
           gap="8px"
         >
             <Flex
+              className="mid-background"
               width="37vw"
               height="220px"
-              backgroundColor="rgba(255,255,255,0.5)"
               border="1px SOLID rgba(0,0,0,1)"
               display="flex"
               position="relative"
             >
                <Text
+                className="text"
                 fontFamily="Kameron"
                 fontSize="15px"
                 fontWeight="400"
-                color="rgba(0,0,0,1)"
                 lineHeight="20px"
                 textAlign="left"
                 display="flex"

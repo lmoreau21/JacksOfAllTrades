@@ -91,7 +91,6 @@ export default function SkillProfile(props) {
     direction="column"
     width="100vw"
     height="unset"
-    backgroundColor="rgba(255,255,255,1)"
     justifyContent="center"
     padding="0px 0px 35px 0px"
     alignItems="center"
@@ -104,7 +103,6 @@ export default function SkillProfile(props) {
       border="10px SOLID rgba(255,184,184,1)"
       boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(241,239,239,1)"
     >
       <iframe 
         width="100%" 
@@ -128,6 +126,7 @@ export default function SkillProfile(props) {
       padding="20px 0px 0px 0px"
     >
       <Text
+        className="text"
         fontFamily="Flamenco"
         fontSize="48px"
         fontWeight="400"
@@ -179,10 +178,10 @@ export default function SkillProfile(props) {
         padding="0px 20px 0px 20px"
       >
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="24px"
           fontWeight="600"
-          color="rgba(13,26,38,1)"
           lineHeight="30px"
           textAlign="left"
           display="flex"
@@ -191,6 +190,7 @@ export default function SkillProfile(props) {
           children="Skill Description"
         ></Text>
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
@@ -212,10 +212,10 @@ export default function SkillProfile(props) {
         padding="0px 20px 0px 20px"
       >
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="800"
-          color="rgba(13,26,38,1)"
           lineHeight="20px"
           textAlign="left"
           direction="column" 
@@ -223,6 +223,7 @@ export default function SkillProfile(props) {
           children="Instructions"
         ></Text>
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="400"
@@ -248,6 +249,7 @@ export default function SkillProfile(props) {
         padding="0px 0px 0px 20px"
       >
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           fontWeight="800"
@@ -255,18 +257,21 @@ export default function SkillProfile(props) {
           children="Content Provided by:"
         ></Text>
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           //displays skill profile video rights
           children={skillprofile?.videoRights}
         ></Text>
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           //displays skill profile instruction rights
           children={skillprofile?.instructionRights}
         ></Text>
         <Text
+          className="text"
           fontFamily="Inter"
           fontSize="16px"
           //displays skill profile photo rights
@@ -275,10 +280,10 @@ export default function SkillProfile(props) {
       </Flex>
     </Flex>
       <Button
+        className="button"
         fontFamily="Inter"
         fontSize="18px"
         textAlign="center"
-        backgroundColor="rgba(217,217,217,1)"
         children="Back to List"
         //calls the function at the top that redirects the user to the skill list bage
         onClick={() => {

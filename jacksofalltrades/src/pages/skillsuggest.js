@@ -8,9 +8,7 @@ import { studioTheme } from "../ui-components";
 class SkillSuggest extends Component{
     render() {
     return(
-        <AmplifyProvider theme={studioTheme}  >
             <ContactForm />
-        </AmplifyProvider>
     );
 }
 }

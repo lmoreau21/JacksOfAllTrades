@@ -26,6 +26,7 @@ export default function HomeFinal(props) {
   //everything past line ~200 is a generated vector from figma that was not hand written
   return (
     <Flex
+      className="home"
       gap="0"
       direction="column"
       width="unset"
@@ -34,7 +35,6 @@ export default function HomeFinal(props) {
       alignItems="center"
       position="relative"
       padding="0px 0px 0px 0px"
-      backgroundColor="rgba(255,255,255,1)"
       {...rest}
     >
       <Flex
@@ -47,7 +47,7 @@ export default function HomeFinal(props) {
         shrink="0"
         position="relative"
         padding="54px 0px 88px 0px"
-        backgroundImage="linear-gradient(0deg, rgba(152,152,152,0), rgba(147,43,43,0.9533), rgba(147,38,38,1))"
+    
       >
         <Flex
           gap="10px"
@@ -62,11 +62,11 @@ export default function HomeFinal(props) {
           padding="0px 0px 0px 0px"
         >
           <Text
+            className="text"
             fontFamily="Flamenco"
             fontSize="100px"
             fontWeight="400"
-            color="rgba(183,183,183,1)"
-            lineHeight="103.0999984741211px"
+            lineHeight="103px"
             textAlign="center"
             display="flex"
             direction="column"
@@ -82,11 +82,11 @@ export default function HomeFinal(props) {
             children="Jacks of All Trades"
           ></Text>
           <Text
+            className="text"
             fontFamily="Kaisei Tokumin"
             fontSize="40px"
             fontWeight="700"
-            color="rgba(255,255,255,1)"
-            lineHeight="57.91999816894531px"
+            lineHeight="57px"
             textAlign="center"
             display="block"
             direction="column"
@@ -114,10 +114,10 @@ export default function HomeFinal(props) {
           padding="63px 57px 78px 57px"
         >
           <Text
+            className="text"
             fontFamily="Dekko"
             fontSize="25px"
             fontWeight="400"
-            color="rgba(255,255,255,1)"
             lineHeight="40px"
             textAlign="center"
             display="flex"
@@ -165,11 +165,11 @@ export default function HomeFinal(props) {
             padding="0px 0px 0px 0px"
           >
             <Text
+              className="textlink"
               fontFamily="Kaisei Tokumin"
               fontSize="86px"
               fontWeight="400"
               //uses the variable to override color
-              color={letsGetStartedColor}
               lineHeight="124.52799987792969px"
               textAlign="center"
               display="block"
@@ -187,12 +187,6 @@ export default function HomeFinal(props) {
               //call the functions at the top to change variable color or redirect the user
               onClick={() => {
                 letsGetStartedOnClick();
-              }}
-              onMouseLeave={() => {
-                setLetsGetStartedColor("#000000");
-              }}
-              onMouseOver={() => {
-                setLetsGetStartedColor("#ffffff");
               }}
 
               /*

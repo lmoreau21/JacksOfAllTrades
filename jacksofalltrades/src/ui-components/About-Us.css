@@ -1,72 +1,73 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    overflow-x: hidden;
-  }
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 20%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding-top: 10px;
+  background-color: rgba(223, 205, 205, 0.752);
+  margin: 20px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+
+.container {
+  padding: 0 50px;
+  max-height: max-content;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.button {
+  border: 1;
+  outline: 0;
   
-  html {
-    box-sizing: border-box;
-  }
+  width: 20vw;
+  padding: 8px;
+  color: black;
+  background-color: rgba(223, 205, 205, 0.752);
+  text-align: center;
+  cursor: pointer;
   
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
+}
+
+.button:hover {
+  background-color: lightgray;
+}
+
+@media screen and (max-width: 650px) {
   .column {
-    float: left;
-    width: 20%;
-    margin-bottom: 16px;
-    padding: 0 8px;
+    width: 80%;
+    display: block;
   }
-  
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding-top: 10px;
-    background-color: rgba(223, 205, 205, 0.752);
-    margin: 20px;
-  }
-  
-  .about-section {
-    padding: 50px;
-    text-align: center;
-    background-color: #474e5d;
-    color: white;
-  }
-  
-  .container {
-    padding: 0 50px;
-    max-height: max-content;
-  }
-  
-  .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .title {
-    color: grey;
-  }
-  
-  .button {
-    border: 1;
-    outline: 0;
-    
-    width: 20vw;
-    padding: 8px;
-    color: black;
-    background-color: rgba(223, 205, 205, 0.752);
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: lightgray;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 80%;
-      display: block;
-    }
-  }
+}

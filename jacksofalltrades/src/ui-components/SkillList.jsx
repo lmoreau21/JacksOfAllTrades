@@ -6,7 +6,7 @@ import {
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
 import SkillLinkFinal from "./SkillLinkFinal";
-import { Collection } from "@aws-amplify/ui-react";
+import { Collection, Flex } from "@aws-amplify/ui-react";
 
 //This function creates a collection of all the skill profiles in the db and displays them to users on the skill list page
 export default function SkillList(props) {
@@ -33,6 +33,7 @@ export default function SkillList(props) {
 
   return (
     //creats a aws collection that will display a list of all of the the skill profiles in the db
+    <Flex alignContent={"center"}>
     <Collection
       type="list"
       isSearchable="true"
@@ -40,9 +41,12 @@ export default function SkillList(props) {
       //allows the user to search
       searchPlaceholder="Search..."
       itemsPerPage={5}
+      display="flex"
       direction="column"
       alignItems="stretch"
       justifyContent="center"
+      alignContent="center"
+      
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "SkillList")}
@@ -56,5 +60,6 @@ export default function SkillList(props) {
         ></SkillLinkFinal>
       )}
     </Collection>
+    </Flex>
   );
 }
