@@ -5,18 +5,17 @@ function ContactForm(){
 //graphics for contact form
   return(
     <View 
+        className="background"
         width="100%"
         height="100%"
         padding="30px"
         display= 'flex'
         direction="column"
         alignItems= 'center'
-        justifyContent = "center"
-        backgroundImage="linear-gradient(45deg, rgba(167,83,83,1), rgba(167,153,153,1))"
-        
+        justifyContent = "center"        
         >
         <Flex
-            backgroundColor="rgba(209,150,150,1)"
+            className='mid-background'
             border="4px SOLID rgba(0,0,0,1)"
             boxShadow="0px 4px 25px rgba(0, 0, 0, 0.25)"
             borderRadius="24px"
@@ -40,7 +39,7 @@ function ContactForm(){
             position="relative"
             borderRadius="23px"
             padding="0px 0px 0px 0px"
-            backgroundColor="rgba(255,255,255,0.3)"
+            className='small-background'
         >
         
         <form
@@ -58,10 +57,10 @@ function ContactForm(){
                 justifyContent="center"
             >
                 <Text 
+                    className='text'
                     fontFamily="Kameron"
                     fontSize="32px"
                     fontWeight="400"
-                    color="rgba(0,0,0,1)"
                     top="10px"
                     marginBottom="10px"
                     lineHeight="45px"
@@ -118,7 +117,8 @@ function ContactForm(){
                     
                     required />
                 </Flex>
-                <Button type="submit"
+                <button type="submit"
+                className='button'
                 width="18vw"
                 fontFamily="Kameron"
                 fontSize="18px"
@@ -127,7 +127,7 @@ function ContactForm(){
             >
                 Submit
             
-            </Button>
+            </button>
         </Flex>
         </form>
         </Flex>
