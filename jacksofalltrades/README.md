@@ -56,6 +56,7 @@ Most of our graphics were intially created on figma which got converted to .jsx 
 * src/models and src/graphql (generated from graphql in aws and contains data requests and requirements)
 * Components inside src/ui-components (combination of generated and modified code)
   * About-Us.css
+  * darkMode.css (added to use dark mode)
   * HomeFinal.jsx (Ignore past line 200. It is a vector generated image)
   * Settingpage.jsx 
   * SkillLinkFinal.jsx
@@ -68,7 +69,7 @@ Most of our graphics were intially created on figma which got converted to .jsx 
 * Public folder is our images
 * node_modules is generated files needed for node.js and or react
 * amplify is needed for aws configuration
-* We also have two codes from aws lambdas that are located outside of our src folder that are used in teh data
+* We also have codes from aws lambdas that are located outside of our src folder that are used for the data
 
 ## Available Scripts
 
