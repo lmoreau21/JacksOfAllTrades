@@ -16,10 +16,10 @@ function ContactForm(){
         >
         <Flex
             className='mid-background'
-            border="4px SOLID rgba(0,0,0,1)"
+            border="4px SOLID rgba(255,255,255,.5)"
             boxShadow="0px 4px 25px rgba(0, 0, 0, 0.25)"
             borderRadius="24px"
-            width="60vw"
+            width="500px"
             height="80vh"
             padding="30px"
             display= 'flex'
@@ -29,12 +29,13 @@ function ContactForm(){
         >
         
         <Flex
-            width="50vw"
+            width="420px"
             height="70vh"
             display="flex"
             gap="unset"
             alignItems="center"
             justifyContent="flex-start"
+            border="3px SOLID rgba(255,255,255,.5)"
             direction="column"
             position="relative"
             borderRadius="23px"
@@ -80,7 +81,6 @@ function ContactForm(){
                     id="name" 
                     placeholder="Name" 
                     textAlign="center" 
-                    backgroundColor="rgba(255,255,255,.5)"
                     border="1px SOLID rgba(0,0,0,1)"
                     size="40"
                     required/>
@@ -94,7 +94,6 @@ function ContactForm(){
                     placeholder="Email" 
                     type="email"
                     textAlign="center" 
-                    backgroundColor="rgba(255,255,255,.5)"
                     border="1px SOLID rgba(0,0,0,1)"
                     lineHeight="20px"
                     size="40"
@@ -111,7 +110,6 @@ function ContactForm(){
                     type="text"
                     placeholder="Skill Idea or Comment" 
                     textAlign="left" 
-                    backgroundColor="rgba(255,255,255,.5)"
                     border="1px SOLID rgba(0,0,0,1)"
                     lineHeight="20px"
                     
@@ -120,14 +118,10 @@ function ContactForm(){
                 <button type="submit"
                 className='button'
                 width="18vw"
-                fontFamily="Kameron"
-                fontSize="18px"
-                backgroundColor="rgba(255,255,255,.5)"
-                marginTop="0px"
-            >
+                >
                 Submit
             
-            </button>
+                </button>
         </Flex>
         </form>
         </Flex>

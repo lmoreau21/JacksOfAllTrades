@@ -33,20 +33,18 @@ export default function SkillList(props) {
 
   return (
     //creats a aws collection that will display a list of all of the the skill profiles in the db
-    <Flex alignContent={"center"}>
+    <Flex alignContent={"center"} minHeight="100vh">
     <Collection
       type="list"
-      isSearchable="true"
       isPaginated={true}
-      //allows the user to search
-      searchPlaceholder="Search..."
       itemsPerPage={5}
       display="flex"
       direction="column"
       alignItems="stretch"
       justifyContent="center"
       alignContent="center"
-      
+      isSearchable="true"
+      searchPlaceholder="Search..."
       items={items || []}
       {...rest}
       {...getOverrideProps(overrides, "SkillList")}

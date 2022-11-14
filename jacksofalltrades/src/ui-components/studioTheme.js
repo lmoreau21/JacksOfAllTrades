@@ -1231,13 +1231,13 @@ export default createTheme({
       },
       brand: {
         primary: {
-          10: { value: "{colors.pink.10.value}" },
-          20: { value: "{colors.pink.20.value}" },
-          40: { value: "{colors.pink.40.value}" },
-          60: { value: "{colors.pink.60.value}" },
-          80: { value: "{colors.pink.80.value}" },
-          90: { value: "{colors.pink.90.value}" },
-          100: { value: "{colors.pink.100.value}" },
+          10: { value: "{colors.red.10.value}" },
+          20: { value: "{colors.red.20.value}" },
+          40: { value: "{colors.red.40.value}" },
+          60: { value: "{colors.red.60.value}" },
+          80: { value: "{colors.red.80.value}" },
+          90: { value: "{colors.yellow.90.value}" },
+          100: { value: "{colors.red.100.value}" },
         },
         secondary: {
           10: { value: "{colors.neutral.10.value}" },
@@ -1250,7 +1250,7 @@ export default createTheme({
         },
       },
       font: {
-        primary: { value: "{colors.neutral.100.value}" },
+        primary: { value: "{colors.neutral.70.value}" },
         secondary: { value: "{colors.neutral.90.value}" },
         tertiary: { value: "{colors.neutral.80.value}" },
         disabled: { value: "{colors.font.tertiary.value}" },
@@ -1265,7 +1265,7 @@ export default createTheme({
         success: { value: "{colors.green.90.value}" },
       },
       background: {
-        primary: { value: "{colors.white.value}" },
+        primary: { value: "{colors.red.50.value}" },
         secondary: { value: "{colors.neutral.10.value}" },
         tertiary: { value: "{colors.neutral.20.value}" },
         disabled: { value: "{colors.background.tertiary.value}" },

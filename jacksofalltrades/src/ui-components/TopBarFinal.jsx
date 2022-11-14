@@ -12,13 +12,6 @@ export default function TopBarFinal() {
   //pulls  user info in order to display the email
   const authAttributes = useAuth().user?.attributes ?? {};
 
-  //creates variables with setterMethods for tall of the colors.
-  const [homeColor, setHomeColor] = useStateMutationAction("");
-  const [aboutColor, setAboutColor] = useStateMutationAction("");
-  const [skillColor, setSkillColor] = useStateMutationAction("");
-  const [suggestColor, setSuggestColor] = useStateMutationAction("");
-  const [settingsColor, setSettingsColor] = useStateMutationAction("");
-
   //redirection links to take the user to the correct url on the website when clicked by the user
   const homeOnClick = useNavigateAction({ type: "url", url: "/" });
   const aboutOnClick = useNavigateAction({ type: "url", url: "/about" });
@@ -67,7 +60,7 @@ export default function TopBarFinal() {
           justifyContent="unset"
           position="absolute"
           top="4px"
-          left="25.14px"
+          left="25.54px"
           transformOrigin="top left"
           transform="rotate(30.98deg)"
           padding="0px 0px 0px 0px"
@@ -267,10 +260,12 @@ export default function TopBarFinal() {
             order="1"
             flexGrow="0"
           >
-            <IconContext.Provider value={{style:{fontSize: '40px', color: "#9a4c4c"}}}>
+            <div className="logo" >
+            <IconContext.Provider value={{style:{fontSize: '40px'}}}>
               <CgProfile 
               ></CgProfile>
             </IconContext.Provider>
+            </div>
               <text
                 fontFamily="Inter"
                 fontSize="16px"

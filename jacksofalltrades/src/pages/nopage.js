@@ -8,8 +8,8 @@ function NoPage() {
     const mode = useDarkMode();
     return (
     <html>
-        <div className={`App ${mode}`}>
-        <h1>Hey! Don't look! There is nothing here yet...</h1>
+        <div className={`App ${mode}`} style={{height:"100vh"}}>
+        <text className="text">Hey! Don't look! There is nothing here yet...</text>
         </div>
         </html>
     );

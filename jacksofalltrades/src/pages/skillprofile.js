@@ -7,7 +7,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { DataStore } from "@aws-amplify/datastore";
 import SkillProfile from "../ui-components/SkillProfile";
-import { Collection } from "@aws-amplify/ui-react";
+import { Collection, View } from "@aws-amplify/ui-react";
 import { useParams } from "react-router-dom";
 import Amplify, { API } from "aws-amplify";
 import { createDataStorePredicate } from "@aws-amplify/ui-react/internal";
@@ -33,6 +33,7 @@ function SkillDisplay (props){
   
   return (
     //creates a collection that will display the matching skill
+    <View className="background" paddingTop="20px" minHeight="100vh">
     <Collection
       type="list"   
       direction="column"
@@ -55,7 +56,7 @@ function SkillDisplay (props){
         
       )}
     </Collection>
-    
+    </View>
   );
 }
 

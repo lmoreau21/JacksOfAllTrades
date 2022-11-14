@@ -130,7 +130,6 @@ export default function SkillProfile(props) {
         fontFamily="Flamenco"
         fontSize="48px"
         fontWeight="400"
-        color="rgba(13,26,38,1)"
         lineHeight="20px"
         textAlign="center"
         direction="column"
@@ -142,6 +141,7 @@ export default function SkillProfile(props) {
       fontFamily="Inter"
       fontSize="18px"
       textAlign="center"
+      color="#000000"
       children={skillWord}
       backgroundColor= {buttonColor}
       //calls the function at the top that modifies whether a skill is completed or not

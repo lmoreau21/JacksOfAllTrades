@@ -19,11 +19,9 @@ html {
   padding: 0 8px;
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding-top: 10px;
-  background-color: rgba(223, 205, 205, 0.752);
-  margin: 20px;
+.button{
+  min-width:10vw;
+  
 }
 
 .about-section {
@@ -48,22 +46,6 @@ html {
   font-weight: 600;
 }
 
-.button {
-  border: 1;
-  outline: 0;
-  
-  width: 20vw;
-  padding: 8px;
-  color: black;
-  background-color: rgba(223, 205, 205, 0.752);
-  text-align: center;
-  cursor: pointer;
-  
-}
-
-.button:hover {
-  background-color: lightgray;
-}
 
 @media screen and (max-width: 650px) {
   .column {

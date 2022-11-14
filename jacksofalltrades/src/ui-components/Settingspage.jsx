@@ -57,22 +57,22 @@ export default function Settingspage() {
         >
            <View
            className='mid-background'
-          width="60vw"
-          height="70vh"
+          width="400px"
+          height="60vh"
           display="flex"
           direction="row"
           gap="unset"
           alignItems="center"
           justifyContent="center"
           position="relative"
-          border="4px SOLID rgba(0,0,0,1)"
+          border="4px SOLID rgba(255,255,255,.5)"
           boxShadow="0px 4px 25px rgba(0, 0, 0, 0.25)"
           borderRadius="24px"
           padding="0px 0px 0px 0px"
         >
           <View
           className="small-background"
-          width="40vw"
+          width="320px"
           height="50vh"
           display="flex"
           gap="unset"
@@ -82,6 +82,7 @@ export default function Settingspage() {
           position="relative"
           borderRadius="23px"
           padding="0px 0px 0px 0px"
+          border="3px SOLID rgba(255,255,255,.5)"
         >
           <Text
             className="text"
@@ -123,7 +124,7 @@ export default function Settingspage() {
             fontFamily="Kameron"
             fontSize="18px"
             marginTop="20px"
-          >Toggle Theme</Button>
+          >Toggle Dark Mode</Button>
           </Flex>
         </View>
         </View>
