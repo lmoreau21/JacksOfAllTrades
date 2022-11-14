@@ -27,6 +27,7 @@ import { useDarkMode} from "./pages/darkMode.js";
 import './ui-components/darkMode.css';
 import TopBarFinal from './ui-components/TopBarFinal.jsx';
 
+
 Amplify.configure(awsconfig);
 
 //main routing function
@@ -43,7 +44,7 @@ return (
       <TopBar/>
       <Routes>
           <Route exact path='/' element={<Home/>}/>
-          <Route path = '/about' element={<About/>}/>
+          <Route path = '/about' element={<AboutUs/>}/>
           <Route path='/*' element={<NoPage/>}/>
           <Route exact path='/skilllist' element={<SkillList/>} />
           <Route path = '/skillprofile/:skillid' element={<SkillDisplay/>} />

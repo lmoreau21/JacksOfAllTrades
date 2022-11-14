@@ -10,13 +10,12 @@ exports.handler = async (event, context, callback) => {
 
 
         var ddbParams = {
-            TableName: 'Users-p4kfy6ms3rbdzahagmixxr675a-dev',
+            TableName: 'SkillCompleted-p4kfy6ms3rbdzahagmixxr675a-dev',
             Item: {
-                'id': {S: event.request.userAttributes.sub},
-                '__typename': {S: 'User'},
-                'email': {S: event.request.userAttributes.email},
-                'group': {S: event.request.uesrAttributes.group},
-            }
+                id: {S: event.request.userAttributes.sub},
+                userEmail: {S: event.request.userAttributes.email},
+                isComplete: true,
+            },
         };
         
     // Return to Amazon Cognito
