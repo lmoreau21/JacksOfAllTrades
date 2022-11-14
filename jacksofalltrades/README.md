@@ -39,7 +39,7 @@ In developing this website, we used the following technologies and resources:
 
 ## Meet the Team:
 
-* Ian Gourgues: Login/Home page
+* Ian Gourgues: Login and Home page
 * Zack Kramer: 30 Activities display list
 * Lilly Moreau: AWS Setup/Architecture Diagram/Integration
 * Alec Hodges: Account Database and Integration
