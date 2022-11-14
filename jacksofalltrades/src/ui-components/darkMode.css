@@ -102,8 +102,8 @@ body.dark .topbar{
   }
 
 body.dark .skillcard{
-  background-color: rgb(110, 59, 59);
-  border: 3px SOLID #1c1c1c;
+  background-color: rgba(110, 59, 59, 0.729);
+  border: 3px SOLID #000000;
 }
 
 body.dark .skillcard:hover{
@@ -166,4 +166,12 @@ body.light .field{
 body.dark .field{
   background-color: #333;
   color:#fff;
+}
+
+body.light .logo{
+  color: #9a4c4c
+}
+
+body.dark .logo{
+  color: #dadada
 }
