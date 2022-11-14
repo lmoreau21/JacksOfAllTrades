@@ -261,13 +261,14 @@ export default function TopBarFinal() {
             flexGrow="0"
           >
             <div className="logo" >
-            <IconContext.Provider value={{style:{fontSize: '40px'}}}>
+            <IconContext.Provider value={{style:{fontSize: '35px'}}}>
               <CgProfile 
               ></CgProfile>
             </IconContext.Provider>
             </div>
               <text
                 fontFamily="Inter"
+                className="text"
                 fontSize="16px"
                 fontWeight="400"
                 color="rgba(13,26,38,1)"

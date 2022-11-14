@@ -92,12 +92,12 @@ margin: 20px;
 
 body .topbar{
 background-color: #fff;
-border: 2px solid #333;
+border: 1x solid #333;
 }
 
 body.dark .topbar{
   background-color: #333;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   }
 
 body.dark .skillcard{

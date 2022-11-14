@@ -14,10 +14,10 @@ export default function Settingspage() {
   const mode = useDarkMode();
   const toggleTheme = () => {
     console.log(mode)
-    if (mode === '') {
-      setDarkMode('dark');
-    } else {
+    if (mode === 'dark') {
       setDarkMode('');
+    } else {
+      setDarkMode('dark');
     }
   };
  
